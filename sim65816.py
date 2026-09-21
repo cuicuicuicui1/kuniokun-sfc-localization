@@ -53,6 +53,7 @@ class CPU:
         self.vlow = 0
         self.dma_regs = {}
         self.dma_log = []
+        self.dma_visible = False
         self.steps = 0
         self.trace = []
 
@@ -161,12 +162,21 @@ class CPU:
             mode = dmap & 7
             self.dma_log.append((ch, mode, bbad, src, src_bk, size))
             if mode == 1 and bbad == 0x18:
-                # two registers: $2118 then $2119, one VRAM word per 2 source bytes
+                # two registers: $2118 then $2119, one VRAM word per 2 source
+                # bytes.  With dma_visible set the writes go through io_write so
+                # a caller's hook sees a DMA the way it sees a CPU write: the
+                # status screen's glyph uploads are DMA now and their tests watch
+                # for them.  Left off by default -- verify16 accounts for the
+                # engine's own flush DMA separately and must not see it twice.
                 for i in range(0, size, 2):
                     b0 = self.bus.rd(src_bk, (src + i) & 0xFFFF)
                     b1 = self.bus.rd(src_bk, (src + i + 1) & 0xFFFF)
-                    self.vram[self.vaddr & 0x7FFF] = b0 | (b1 << 8)
-                    self.inc_vram()
+                    if self.dma_visible:
+                        self.io_write(0x2118, b0)
+                        self.io_write(0x2119, b1)
+                    else:
+                        self.vram[self.vaddr & 0x7FFF] = b0 | (b1 << 8)
+                        self.inc_vram()
 
     # ---- main loop ---------------------------------------------------
     def run(self, max_steps=100000):

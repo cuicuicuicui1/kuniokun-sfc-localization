@@ -22,6 +22,8 @@ CHECKS = [
     ('test_stalerow.py','残留行 stub 的边界用例'),
     ('test_menuclose.py','菜单关闭时的清行 stub（CMDWIN=0 时自动跳过）'),
     ('test_menuload.py', '用 65816 模型直跑菜单标签上传器'),
+    ('test_itemdraw.py','状态画面道具名：110 条逐个跑 $01:FC75 渲染器'),
+    ('test_labeldraw.py','状态画面标签：跑 $01:F971 解释器逐格核对 23 个字形'),
     ('ipsverify.py',    '交付 IPS 从原版重放 == 交付 ROM'),
 ]
 

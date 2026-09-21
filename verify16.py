@@ -35,6 +35,8 @@ cb.FIXED0 = par['fixed0']
 cb.FIXED_N = par['fixed_n']
 cb.FIXED_CODES.clear()
 cb.FIXED_CODES.update(par['fixed'])
+cb.ITEM_CHARS.clear()
+cb.ITEM_CHARS.update({k: int(v) for k, v in par['item_chars'].items()})
 cell = {k: tuple(v) for k, v in
         json.load(open(BASE + '/cn_glyph_cell.json', encoding='utf-8')).items()}
 rev = {}
@@ -160,6 +162,9 @@ fixed = {k: cb.align_tokens(_orig_text[k], v)
 # entries whose table is kept in Japanese (NO_TRANSLATE): verify the byte image is
 # untouched and that no Chinese code leaks into them
 NO_TR = set()
+# the label codes: read from the slot table the build wrote
+LABEL_CODES = set(c for c in range(256)
+                  if rom[0x1F4B00 + c] != 0xFF)
 for _t, _r in zip(cb.TABLES, cb.REGIONS):
     if _t[0] in cb.NO_TRANSLATE:
         for r in recs:
@@ -167,10 +172,13 @@ for _t, _r in zip(cb.TABLES, cb.REGIONS):
                 NO_TR.add('%06X' % r['text_rom_off'])
 
 
-def _dec(ch):
+def _dec(ch, item=False):
     """byte image of my rebuilt text, up to and including the F3 terminator.
     Control tokens contribute their literal bytes so the comparison is bytewise.
-    Shadowed name glyphs (PRIME + char) are one unit, like in the builder."""
+    Shadowed name glyphs (PRIME + char) are one unit, like in the builder.
+    item=True uses the item names' own code: [ITEM_PREFIX][8x16 id] instead
+    of the glyph pool's two byte code, because their renderer uploads from
+    its own table and never touches a pool slot."""
     out, i = [], 0
     while i < len(ch):
         c = ch[i]
@@ -188,6 +196,9 @@ def _dec(ch):
             out.append(cb.KEEP1[c])
         elif c in cb.FIXED_CODES:
             out.append(cb.FIXED_CODES[c])
+        elif item:
+            out.append(cb.ITEM_PREFIX)
+            out.append(cb.ITEM_CHARS[c])
         else:
             p_ = cell[c]
             out.append(cb.PREFIX0 + p_[0])
@@ -229,7 +240,9 @@ for r in recs:
     if key not in addr:
         fail('entry %s has no rebuilt address' % key)
         continue
-    want, got = _dec(fixed[key] if key in fixed else _orig_text[key]), _act(addr[key])
+    want = _dec(fixed[key] if key in fixed else _orig_text[key],
+                item=(r['table_rom_off'] == cb.ITEM_TABLE))
+    got = _act(addr[key])
     if got != want:
         nm = min(len(got), len(want))
         k = next((i for i in range(nm) if got[i] != want[i]), nm)
@@ -319,6 +332,9 @@ for r in recs:
     key = '%06X' % r['text_rom_off']
     if key in skip or key not in addr:
         continue
+    if r['table_rom_off'] == cb.ITEM_TABLE:
+        continue    # the item names are not drawn by this drawer: they
+                    # go through $01:FC75, covered by test_itemdraw.py
     msg = message_at(addr[key])
     row, col, stage = 0, 0, 0
     cpu = None
@@ -487,6 +503,12 @@ for r in recs[:400]:
     msg = bytes(rom[a:a + 24])
     for i, code in enumerate(msg):
         if code >= 0xF0 or is_cn(code) or is_fx(code):
+            continue
+        if code in LABEL_CODES:
+            # the status script's own codes.  Their FA/FB are repointed at
+            # the labels' 8x16 glyphs on purpose (build_labeldrawer), and
+            # the drawer never sees them: no message carries them.  They
+            # are covered by test_labeldraw.py instead.
             continue
         row, col = i % 3, (i * 5) % 24          # a few different geometries
         c1 = setup(msg, i, row, col, 0, base=cb.E3_DRAWER)
