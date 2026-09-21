@@ -1,0 +1,8106 @@
+[
+ {
+  "table_rom_off": 103349,
+  "index": 0,
+  "ptr_value": 39201,
+  "text_rom_off": 104737,
+  "text": "{E2}は けいけんち {EF}を てに いれた!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 1,
+  "ptr_value": 39222,
+  "text_rom_off": 104758,
+  "text": "{EB}が {EF} {ED}!{F2F4}{F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 2,
+  "ptr_value": 39232,
+  "text_rom_off": 104768,
+  "text": "{E2}の {EB}が {EF} {ED}!{F2F4}{F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 3,
+  "ptr_value": 39245,
+  "text_rom_off": 104781,
+  "text": "{EB}を {ED}!{F2F4}{F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 4,
+  "ptr_value": 39253,
+  "text_rom_off": 104789,
+  "text": "{E7}を {ED}!{F2F4}{F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 5,
+  "ptr_value": 39261,
+  "text_rom_off": 104797,
+  "text": "{E2}は {ED} {EE}!{F2F4}{F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 6,
+  "ptr_value": 39271,
+  "text_rom_off": 104807,
+  "text": "{EB}の こうかが きれた{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 7,
+  "ptr_value": 39284,
+  "text_rom_off": 104820,
+  "text": "{E7}の こうかが きれた{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 8,
+  "ptr_value": 39297,
+  "text_rom_off": 104833,
+  "text": "{E2}:なにも おきねえぞ{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 9,
+  "ptr_value": 39310,
+  "text_rom_off": 104846,
+  "text": "{E2}:これは つかえないぞ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 10,
+  "ptr_value": 39325,
+  "text_rom_off": 104861,
+  "text": "{E2}:げげん!{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 11,
+  "ptr_value": 39333,
+  "text_rom_off": 104869,
+  "text": "{EB}が たりない!{F2F4}{F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 12,
+  "ptr_value": 39344,
+  "text_rom_off": 104880,
+  "text": "{E2}:{E7}{ED}!{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 13,
+  "ptr_value": 39351,
+  "text_rom_off": 104887,
+  "text": "{E2}:{ED}{EE}!{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 14,
+  "ptr_value": 39358,
+  "text_rom_off": 104894,
+  "text": "{F6}{ED}!{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 15,
+  "ptr_value": 39363,
+  "text_rom_off": 104899,
+  "text": "{E2}:くーっ きたきたっ!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 16,
+  "ptr_value": 39377,
+  "text_rom_off": 104913,
+  "text": "{E2}:バリバリだぜ!{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 17,
+  "ptr_value": 39388,
+  "text_rom_off": 104924,
+  "text": "{E2}:うーん もえるぅ♥{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 18,
+  "ptr_value": 39401,
+  "text_rom_off": 104937,
+  "text": "{E2}:ばっちぐぅ!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 19,
+  "ptr_value": 39411,
+  "text_rom_off": 104947,
+  "text": "{E2}:フーーーーーーーーーーーーーーーーーーッ!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 20,
+  "ptr_value": 39436,
+  "text_rom_off": 104972,
+  "text": "{F0}{E2}:その {EE}いヤツを やるんや!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 21,
+  "ptr_value": 39455,
+  "text_rom_off": 104991,
+  "text": "{F0}{E2}:1たい1で しょうぶや!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 22,
+  "ptr_value": 39472,
+  "text_rom_off": 105008,
+  "text": "{E2}:ぱんぱかぱーん! こんしゅうのハイライト!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 23,
+  "ptr_value": 39497,
+  "text_rom_off": 105033,
+  "text": "{E2}:ぼこぼこヘーッド! ばちばちパーンチ!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 24,
+  "ptr_value": 39520,
+  "text_rom_off": 105056,
+  "text": "{E2}:おはようさん {F7}がりあ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 25,
+  "ptr_value": 39535,
+  "text_rom_off": 105071,
+  "text": "{E2}:きみとは つきあってられんわ{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 26,
+  "ptr_value": 39553,
+  "text_rom_off": 105089,
+  "text": "{E2}:ーーーよく ねたなぁ{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 27,
+  "ptr_value": 39567,
+  "text_rom_off": 105103,
+  "text": "{F0}{E2}:{F7}ー{F7}ー{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 28,
+  "ptr_value": 39582,
+  "text_rom_off": 105118,
+  "text": "{E2}:わたしは へんなおじさんです{F2F6}はなしかけないで ください{F2F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 29,
+  "ptr_value": 39615,
+  "text_rom_off": 105151,
+  "text": "{F0}{E2}が ケンカを うってきた!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 30,
+  "ptr_value": 39632,
+  "text_rom_off": 105168,
+  "text": "{E2}:なにメンチきっとるねん!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 31,
+  "ptr_value": 39648,
+  "text_rom_off": 105184,
+  "text": "{E2}:おんなや おもて {ED}{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 32,
+  "ptr_value": 39662,
+  "text_rom_off": 105198,
+  "text": "{E2}:{ED} ええ どきょう してるやんけ!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 33,
+  "ptr_value": 39683,
+  "text_rom_off": 105219,
+  "text": "{E2}:{ED} なにモンや?{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 34,
+  "ptr_value": 39695,
+  "text_rom_off": 105231,
+  "text": "{E2}:おまえ だれに くち きいとんねん!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 35,
+  "ptr_value": 39717,
+  "text_rom_off": 105253,
+  "text": "{E2}:いてまうぞ {ED}!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 36,
+  "ptr_value": 39729,
+  "text_rom_off": 105265,
+  "text": "{E2}:ちょうしに のってんや ないでぇ!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 37,
+  "ptr_value": 39750,
+  "text_rom_off": 105286,
+  "text": "{E2}:ええコト しよかぁ{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 38,
+  "ptr_value": 39763,
+  "text_rom_off": 105299,
+  "text": "{E2}:{ED}{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 39,
+  "ptr_value": 39768,
+  "text_rom_off": 105304,
+  "text": "{E2}:ヒーヒー いわせたろか!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 40,
+  "ptr_value": 39784,
+  "text_rom_off": 105320,
+  "text": "{E2}:ええかげんに しときや!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 41,
+  "ptr_value": 39800,
+  "text_rom_off": 105336,
+  "text": "{E2}:どつくぞ こらぁ!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 42,
+  "ptr_value": 39813,
+  "text_rom_off": 105349,
+  "text": "{E2}:プツーンと きたでぇ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 43,
+  "ptr_value": 39828,
+  "text_rom_off": 105364,
+  "text": "{E2}:ひいぃぃぃぃぃっ!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 44,
+  "ptr_value": 39841,
+  "text_rom_off": 105377,
+  "text": "{E2}:かんにん してぇなーーー{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 45,
+  "ptr_value": 39857,
+  "text_rom_off": 105393,
+  "text": "{E2}:こらアカンわーーー{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 46,
+  "ptr_value": 39870,
+  "text_rom_off": 105406,
+  "text": "{E2}:もう いややっーーー{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 47,
+  "ptr_value": 39884,
+  "text_rom_off": 105420,
+  "text": "{E2}:ひどい ひと やでーーー{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 48,
+  "ptr_value": 39900,
+  "text_rom_off": 105436,
+  "text": "{E2}:{E3}!{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 49,
+  "ptr_value": 39906,
+  "text_rom_off": 105442,
+  "text": "{E2}:だれか たすけてぇ!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 50,
+  "ptr_value": 39920,
+  "text_rom_off": 105456,
+  "text": "{E2}:おまわりさーん!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 51,
+  "ptr_value": 39932,
+  "text_rom_off": 105468,
+  "text": "{E2}:なんやケンカけ すけだち するでぇ{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 52,
+  "ptr_value": 39953,
+  "text_rom_off": 105489,
+  "text": "{E2}:よわいモン いじめは やめとき!{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 53,
+  "ptr_value": 39973,
+  "text_rom_off": 105509,
+  "text": "{E2}:{ED} なに やっとんや!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 54,
+  "ptr_value": 39988,
+  "text_rom_off": 105524,
+  "text": "しかし {E3}は こどくだった!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 55,
+  "ptr_value": 40004,
+  "text_rom_off": 105540,
+  "text": "{F0}{E2}:なんで かてへんのやーーー{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 56,
+  "ptr_value": 40022,
+  "text_rom_off": 105558,
+  "text": "{F0}{E2}:いたい やんけーーー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 57,
+  "ptr_value": 40037,
+  "text_rom_off": 105573,
+  "text": "{E2}:{E3}が くるまで まとう{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 58,
+  "ptr_value": 40052,
+  "text_rom_off": 105588,
+  "text": "{E2}:{E3}は この なかだ{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 59,
+  "ptr_value": 40065,
+  "text_rom_off": 105601,
+  "text": "{E2}:なんだ てめぇ!?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 60,
+  "ptr_value": 40078,
+  "text_rom_off": 105614,
+  "text": "{E2}:{E3} だいじょうぶか?{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 61,
+  "ptr_value": 40092,
+  "text_rom_off": 105628,
+  "text": "{E2}:うん{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 62,
+  "ptr_value": 40098,
+  "text_rom_off": 105634,
+  "text": "{F0}{E2}:さてと{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 63,
+  "ptr_value": 40112,
+  "text_rom_off": 105648,
+  "text": "{F0}{E2}:こんどはオレが あいてだぜ!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 64,
+  "ptr_value": 40131,
+  "text_rom_off": 105667,
+  "text": "{F0}{E2}:4かいには なかまが いるんだぜーーー{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 65,
+  "ptr_value": 40156,
+  "text_rom_off": 105692,
+  "text": "{E2}:でも ひろしはケンカを うられやすいなぁ{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 66,
+  "ptr_value": 40180,
+  "text_rom_off": 105716,
+  "text": "{E2}:やっぱ よわそうに みえるのかな?{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 67,
+  "ptr_value": 40201,
+  "text_rom_off": 105737,
+  "text": "{E2}:とにかく あすからの じゆうじかんは{F2F6}きをつけたほうが いいぜ!{F2F3}",
+  "nbytes": 37
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 68,
+  "ptr_value": 40238,
+  "text_rom_off": 105774,
+  "text": "{F0}{E2}:{F7}それで {E3}に たのみが あるんだ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 69,
+  "ptr_value": 40260,
+  "text_rom_off": 105796,
+  "text": "{F0}{E2}:ーーーーー?{F7}{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 70,
+  "ptr_value": 40272,
+  "text_rom_off": 105808,
+  "text": "{F0}{E2}:あす いっしょに きて ほしいんだけど?{F5}{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 71,
+  "ptr_value": 40298,
+  "text_rom_off": 105834,
+  "text": "{F0}{E2}:よかった! {F7}なら あさ おこしにくるね!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 72,
+  "ptr_value": 40324,
+  "text_rom_off": 105860,
+  "text": "{F0}{E2}:しかたないよねーーー{F7}{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 73,
+  "ptr_value": 40340,
+  "text_rom_off": 105876,
+  "text": "{E2}:わるいな{F7}{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 74,
+  "ptr_value": 40349,
+  "text_rom_off": 105885,
+  "text": "{E2}:ううん きに しないでーーー{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 75,
+  "ptr_value": 40367,
+  "text_rom_off": 105903,
+  "text": "{E2}:じゃあボク そろそろ ねるよ{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 76,
+  "ptr_value": 40385,
+  "text_rom_off": 105921,
+  "text": "{F0}{E2}:ひろしのヤツ あしたデートかぁ?{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 77,
+  "ptr_value": 40406,
+  "text_rom_off": 105942,
+  "text": "{E2}:なら {E3}と いくのは まちがいだぜ{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 78,
+  "ptr_value": 40427,
+  "text_rom_off": 105963,
+  "text": "{E2}:そうそう {E3}は けっこうスケベだからな{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 79,
+  "ptr_value": 40450,
+  "text_rom_off": 105986,
+  "text": "{E2}:てめぇら なにが いいたい?{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 80,
+  "ptr_value": 40468,
+  "text_rom_off": 106004,
+  "text": "{E2}:べ {F7}べつにーーー{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 81,
+  "ptr_value": 40481,
+  "text_rom_off": 106017,
+  "text": "{E2}:オ {F7}オレたちも そろそろ ねるか{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 82,
+  "ptr_value": 40502,
+  "text_rom_off": 106038,
+  "text": "{E2}:でもーーー {F7}デートの じゃまは するなよ!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 83,
+  "ptr_value": 40528,
+  "text_rom_off": 106064,
+  "text": "{F0}{E2}:いやな よかんがする{F7}{F2F6}あしたは きを つけて{F2F3}",
+  "nbytes": 29
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 84,
+  "ptr_value": 40557,
+  "text_rom_off": 106093,
+  "text": "{F0}{E2}:さてーーー {F7}ねるか{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 85,
+  "ptr_value": 40572,
+  "text_rom_off": 106108,
+  "text": "{F0}{E2}:ところで{F7}ー{F7}ー{F7}ー{F2F6}おまえ いつまで いるつもりだ?{F2F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 86,
+  "ptr_value": 40605,
+  "text_rom_off": 106141,
+  "text": "{E2}:え!?{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 87,
+  "ptr_value": 40612,
+  "text_rom_off": 106148,
+  "text": "{F6}ま {F7}きにしない きにしない!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 88,
+  "ptr_value": 40630,
+  "text_rom_off": 106166,
+  "text": "{E2}:なんて ヤツーー{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 89,
+  "ptr_value": 40642,
+  "text_rom_off": 106178,
+  "text": "{F0}{E2}:おはよう!{F2F6}きょうは うめだえきに いきたいんだけど{F2F4}{F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 90,
+  "ptr_value": 40675,
+  "text_rom_off": 106211,
+  "text": "{E2}:じつは {F7}ぶんつう してるコと{F2F6}おひるにあう やくそくをしてるんだ{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 91,
+  "ptr_value": 40713,
+  "text_rom_off": 106249,
+  "text": "{E2}:ちょっとトイレに いってくるね{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 92,
+  "ptr_value": 40732,
+  "text_rom_off": 106268,
+  "text": "{F0}{E2}:ひろし おせーなぁーーー{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 93,
+  "ptr_value": 40749,
+  "text_rom_off": 106285,
+  "text": "{E2}:お {F7}{ED}は きのうのーーー{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 94,
+  "ptr_value": 40766,
+  "text_rom_off": 106302,
+  "text": "{E2}:え? {F7}だれだっけ?{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 95,
+  "ptr_value": 40780,
+  "text_rom_off": 106316,
+  "text": "{F0}{E2}:とりあえず {ED}は さがってな{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 96,
+  "ptr_value": 40799,
+  "text_rom_off": 106335,
+  "text": "{F0}{E2}:かわいいコを いじめちゃ いけないぜ!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 97,
+  "ptr_value": 40823,
+  "text_rom_off": 106359,
+  "text": "{F0}{E2}:いまごろ れんごうほんたいが{F2F6}さくらみやを おそってるはずや{F2F4}{F6}ざまーみろ!{F2F3}",
+  "nbytes": 45
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 98,
+  "ptr_value": 40868,
+  "text_rom_off": 106404,
+  "text": "{E2}:ありがとうーーー{F2F4}{F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 99,
+  "ptr_value": 40881,
+  "text_rom_off": 106417,
+  "text": "{F0}{E2}:わたしは やなぎさわ みほ{F2F6}さくらみやの 2ねんせい です{F2F4}{F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 100,
+  "ptr_value": 40917,
+  "text_rom_off": 106453,
+  "text": "{E2}:さくらみや?{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 101,
+  "ptr_value": 40927,
+  "text_rom_off": 106463,
+  "text": "{F0}{E2}:ごめんーーー{F7} まった?{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 102,
+  "ptr_value": 40944,
+  "text_rom_off": 106480,
+  "text": "{F0}{E2}:{E3}くん!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 103,
+  "ptr_value": 40953,
+  "text_rom_off": 106489,
+  "text": "{F0}{E2}:{E3}さん?{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 104,
+  "ptr_value": 40962,
+  "text_rom_off": 106498,
+  "text": "{F6}どうして {E3}が わかったの?{F7}{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 105,
+  "ptr_value": 40980,
+  "text_rom_off": 106516,
+  "text": "{F0}{E2}:え?{F7} このひとが ひろしくんの いってた{F2F6}{E3}くん なんか?{F2F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 106,
+  "ptr_value": 41016,
+  "text_rom_off": 106552,
+  "text": "{F0}{E2}:じつは れんごうのヤツらに おそわれてな{F2F6}それを {E3}くんに たすけて もろたんや{F2F3}",
+  "nbytes": 46
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 107,
+  "ptr_value": 41062,
+  "text_rom_off": 106598,
+  "text": "{F0}{E2}:ひろし どういうコトだ?{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 108,
+  "ptr_value": 41079,
+  "text_rom_off": 106615,
+  "text": "{E2}:このコが ぶんつうあいての みほさんだよ{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 109,
+  "ptr_value": 41103,
+  "text_rom_off": 106639,
+  "text": "{F7}{F6}じつは {F7}{E3}に {F2F6}みほさんを たすけて あげて ほしくって{F7}ー{F7}ー{F7}ー{F2F4}{F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 110,
+  "ptr_value": 41144,
+  "text_rom_off": 106680,
+  "text": "{F0}{E2}:りゆうは わたしから おはなし します{F7}{F2F6}いま おおさかじゅうの がっこうは {F2F6}おおさかれんごうが しはい してます{F2F3}",
+  "nbytes": 65
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 111,
+  "ptr_value": 41209,
+  "text_rom_off": 106745,
+  "text": "{F0}{E2}:おおさかれんごう?{F7}{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 112,
+  "ptr_value": 41224,
+  "text_rom_off": 106760,
+  "text": "{F0}{E2}:れんごうは ぼうりょくで がくせいを{F2F6}しはい しようとする チームです{F4} {F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 113,
+  "ptr_value": 41267,
+  "text_rom_off": 106803,
+  "text": "{F0}{E2}:みほさんは そんな れんごうに{F2F6}はんたいする どうめいの ひとり なんだよ{F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 114,
+  "ptr_value": 41310,
+  "text_rom_off": 106846,
+  "text": "{F0}{E2}:どうめいと いっても まだ れんごうに{F2F6}たちむかえるような ちからは ありません{F2F4}{F6}そんなときに ひろしくんから{F2F6}{E3}くんのコトを きいたんです{F2F4}{F3}",
+  "nbytes": 80
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 115,
+  "ptr_value": 41390,
+  "text_rom_off": 106926,
+  "text": "{F0}{E2}:ケンカは まけたコトが ないーーーってね!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 116,
+  "ptr_value": 41416,
+  "text_rom_off": 106952,
+  "text": "{F0}{E2}:{E3}くん おねがいです!{F7}{F2F6}わたしたちに ちからを かしてください!{F5}{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 117,
+  "ptr_value": 41456,
+  "text_rom_off": 106992,
+  "text": "{F0}{E2}:つまらない はなしをして ごめんなさい{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 118,
+  "ptr_value": 41480,
+  "text_rom_off": 107016,
+  "text": "{F0}{E2}:じゃあ さっきのヤツらは れんごうなのか?{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 119,
+  "ptr_value": 41506,
+  "text_rom_off": 107042,
+  "text": "{E2}:せやけど どうかしたんですか?{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 120,
+  "ptr_value": 41525,
+  "text_rom_off": 107061,
+  "text": "{F0}{E2}:きのうも ヤツらに おそわれたんだ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 121,
+  "ptr_value": 41547,
+  "text_rom_off": 107083,
+  "text": "{F0}{E2}:たぶん {F7}さくらみやの せいとと{F2F6}まちがえたんやと おもいます{F2F4}{F6}ねっけつこうこうの がくせいふくは{F2F6}さくらみやのと にてるんですよ{F2F4}{F3}",
+  "nbytes": 75
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 122,
+  "ptr_value": 41622,
+  "text_rom_off": 107158,
+  "text": "{F0}{E2}:そういえば さっきのヤツら{F7}{F2F6}さくらみやが こうげきされると いってたぞ!{F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 123,
+  "ptr_value": 41665,
+  "text_rom_off": 107201,
+  "text": "{F0}{E2}:わたしは いそいで もどらな あきません{F2F4}{F6}れんごうの こうげきに まきこまれんように{F2F6}みんなは ホテルに もどってください!{F2F4}{F3}",
+  "nbytes": 71
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 124,
+  "ptr_value": 41736,
+  "text_rom_off": 107272,
+  "text": "おおさかぁ {F7}おおさかぁ{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 125,
+  "ptr_value": 41750,
+  "text_rom_off": 107286,
+  "text": "{F0}{E2}:よしひろの あんないで うめだに いくけど{F2F6}くにおは どうする?{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 126,
+  "ptr_value": 41788,
+  "text_rom_off": 107324,
+  "text": "{F0}{E2}:オレは ダルいから ホテルに いくよ{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 127,
+  "ptr_value": 41811,
+  "text_rom_off": 107347,
+  "text": "{F0}{E2}:そう{F7}ー{F7}ー{F7}ー じゃあね!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 128,
+  "ptr_value": 41830,
+  "text_rom_off": 107366,
+  "text": "{F0}{E2}:さてと{F7} いくか{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 129,
+  "ptr_value": 41843,
+  "text_rom_off": 107379,
+  "text": "{F0}{E2}:{E3}!{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 130,
+  "ptr_value": 41850,
+  "text_rom_off": 107386,
+  "text": "{E2}:りき? なんで ここに いるんだ!?{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 131,
+  "ptr_value": 41872,
+  "text_rom_off": 107408,
+  "text": "{E2}:しゅうがくりょこうに きまってるだろ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 132,
+  "ptr_value": 41894,
+  "text_rom_off": 107430,
+  "text": "{F0}{E2}:どうせホテルも おなじに きまってるから{F2F6}いっしょに いこうぜ!{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 133,
+  "ptr_value": 41932,
+  "text_rom_off": 107468,
+  "text": "{E2}:ああーーー{F7}{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 134,
+  "ptr_value": 41942,
+  "text_rom_off": 107478,
+  "text": "{F0}{E2}:さくらみやのモンやな! かんねん せえや!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 135,
+  "ptr_value": 41968,
+  "text_rom_off": 107504,
+  "text": "{F0}{E2}:くっそぉーーー {F7}おぼえとけや!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 136,
+  "ptr_value": 41989,
+  "text_rom_off": 107525,
+  "text": "{F0}{E2}:おおさかは よく わからんなぁ{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 137,
+  "ptr_value": 42009,
+  "text_rom_off": 107545,
+  "text": "{E2}:くにお たいへんだ!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 138,
+  "ptr_value": 42023,
+  "text_rom_off": 107559,
+  "text": "{E2}:なんだって!?{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 139,
+  "ptr_value": 42034,
+  "text_rom_off": 107570,
+  "text": "{F0}{E2}:よしひろたちが あとをつけてる はずだ{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 140,
+  "ptr_value": 42059,
+  "text_rom_off": 107595,
+  "text": "{F0}{E2}:ひろしが {EC}で {F2F6}ヤンキーに おそわれてる!{F4} {F2F3}",
+  "nbytes": 30
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 141,
+  "ptr_value": 42089,
+  "text_rom_off": 107625,
+  "text": "{E2}:おまえら どうめいのモンやな?{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 142,
+  "ptr_value": 42108,
+  "text_rom_off": 107644,
+  "text": "{F0}{E2}:ボクが どうめいを たすけにきた {E3}だ!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 143,
+  "ptr_value": 42133,
+  "text_rom_off": 107669,
+  "text": "{F0}{E2}:ほな そいつから いてまえや!{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 144,
+  "ptr_value": 42153,
+  "text_rom_off": 107689,
+  "text": "{F0}{E2}:やめろ! やめねえか!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 145,
+  "ptr_value": 42169,
+  "text_rom_off": 107705,
+  "text": "{F0}{E2}:てめえら ひきょうだぞ!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 146,
+  "ptr_value": 42186,
+  "text_rom_off": 107722,
+  "text": "{E2}:ポリさんや! {F7}にげるでぇ!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 147,
+  "ptr_value": 42204,
+  "text_rom_off": 107740,
+  "text": "{E2}:これに こりたら おとなしゅうせいや!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 148,
+  "ptr_value": 42227,
+  "text_rom_off": 107763,
+  "text": "{F0}{E2}:{E3}! {F7}だいじょうぶか!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 149,
+  "ptr_value": 42244,
+  "text_rom_off": 107780,
+  "text": "{F0}{E2}:{F7}ー{F7}ー{F7}ー{F7}ーかっこわるいなぁ{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 150,
+  "ptr_value": 42265,
+  "text_rom_off": 107801,
+  "text": "{F0}{E2}:{E3}{F7} おねがい{F7}ー{F7}ー{F7}ー{F2F6}ボクのぶんまで{F7} たたかって{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 151,
+  "ptr_value": 42305,
+  "text_rom_off": 107841,
+  "text": "{F0}{E2}:ひろし にゅういんだけで すみそうだって{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 152,
+  "ptr_value": 42330,
+  "text_rom_off": 107866,
+  "text": "{E2}:そうかーーー{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 153,
+  "ptr_value": 42340,
+  "text_rom_off": 107876,
+  "text": "{F0}{E2}:{E3}は?{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 154,
+  "ptr_value": 42348,
+  "text_rom_off": 107884,
+  "text": "{E2}:あいつーー {F7}ひろしが やられてるときに{F2F6}たすけに いけなかったって おちこんでたぜ{F2F4}{F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 155,
+  "ptr_value": 42396,
+  "text_rom_off": 107932,
+  "text": "{F0}{E2}:{ED}は これから どうするん{EA}?{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 156,
+  "ptr_value": 42416,
+  "text_rom_off": 107952,
+  "text": "{F0}{E2}:{E3}くんは これから どうするんですか?{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 157,
+  "ptr_value": 42440,
+  "text_rom_off": 107976,
+  "text": "{F0}{E2}:ひろしくんの ともだちで みほ いいますが{F7}{F2F6}{E3}くんは いますか?{F2F4}{F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 158,
+  "ptr_value": 42480,
+  "text_rom_off": 108016,
+  "text": "{F0}{E2}:ひろしが いってたコか?{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 159,
+  "ptr_value": 42497,
+  "text_rom_off": 108033,
+  "text": "{F0}{E2}:ひろしくんが おそわれたコトは ききました{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 160,
+  "ptr_value": 42523,
+  "text_rom_off": 108059,
+  "text": "{F0}{E2}:ひろしくんを おそったのは{F2F6}おおさかれんごうと いうチームです{F2F4}{F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 161,
+  "ptr_value": 42561,
+  "text_rom_off": 108097,
+  "text": "{F0}{E2}:そこで れんごうに はんたいする せいとは{F2F6}どうめいと いうチームを つくったんです{F2F4}{F3}",
+  "nbytes": 49
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 162,
+  "ptr_value": 42610,
+  "text_rom_off": 108146,
+  "text": "{F0}{E2}:ひろしくんは れんごうに やられたんですね{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 163,
+  "ptr_value": 42636,
+  "text_rom_off": 108172,
+  "text": "{F0}{E2}:なんで かんけいない ひろしが!?{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 164,
+  "ptr_value": 42658,
+  "text_rom_off": 108194,
+  "text": "{F0}{E2}:ひろしが どうめいに みかたしたからだ{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 165,
+  "ptr_value": 42682,
+  "text_rom_off": 108218,
+  "text": "{F0}{E2}:じゃあ {E3}も?{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 166,
+  "ptr_value": 42694,
+  "text_rom_off": 108230,
+  "text": "{F0}{E2}:{ED}も そのつもりだけどーーー{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 167,
+  "ptr_value": 42713,
+  "text_rom_off": 108249,
+  "text": "{F0}{E2}:みんなを まきこむワケにはーーー{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 168,
+  "ptr_value": 42734,
+  "text_rom_off": 108270,
+  "text": "{F0}{E2}:いけよ!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 169,
+  "ptr_value": 42743,
+  "text_rom_off": 108279,
+  "text": "{E2}:オレたちなら だいじょうぶ{EA}!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 170,
+  "ptr_value": 42762,
+  "text_rom_off": 108298,
+  "text": "{E2}:ひろしの かたきをとってくれ!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 171,
+  "ptr_value": 42781,
+  "text_rom_off": 108317,
+  "text": "{F0}{E2}:そうだよなーーー{F7}{F2F6}にげるのは オレたちらしく ないよな{F2F3}",
+  "nbytes": 34
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 172,
+  "ptr_value": 42815,
+  "text_rom_off": 108351,
+  "text": "{F0}{E2}:いつものコトだけど くにおと いると{F2F6}たいくつだけは しねえなーーー{F7}{F2F6}オレも やらせて もらうぜ!{F2F3}",
+  "nbytes": 57
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 173,
+  "ptr_value": 42872,
+  "text_rom_off": 108408,
+  "text": "{F0}{E2}:オレに まかせておきなさい!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 174,
+  "ptr_value": 42891,
+  "text_rom_off": 108427,
+  "text": "{E2}:おまえが たたかうワケじゃ ないだろ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 175,
+  "ptr_value": 42913,
+  "text_rom_off": 108449,
+  "text": "{F0}{E2}:{F7}これから どうすれば いいん{EA}?{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 176,
+  "ptr_value": 42935,
+  "text_rom_off": 108471,
+  "text": "{F0}{E2}:こんど しんさいばしで どうめいの{F2F6}しゅうかいを するんですがーーー{F2F4}{F6}そのまえに れんごうの うめだぶたいを{F2F6}たおさなければ うめだから でられません{F2F4}{F3}",
+  "nbytes": 85
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 177,
+  "ptr_value": 43020,
+  "text_rom_off": 108556,
+  "text": "{F0}{E2}:わたしは さくらみやに もどって{F2F6}のこった なかまを あつめな あきません{F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 178,
+  "ptr_value": 43063,
+  "text_rom_off": 108599,
+  "text": "{F0}{E2}:じゃあ {ED}で れんごうの{F2F6}うめだぶたいを たおせば いいんだな?{F2F4}{F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 179,
+  "ptr_value": 43102,
+  "text_rom_off": 108638,
+  "text": "{F0}{E2}:はい{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 180,
+  "ptr_value": 43109,
+  "text_rom_off": 108645,
+  "text": "{F0}{E2}:ほな わたしは これで もどります{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 181,
+  "ptr_value": 43131,
+  "text_rom_off": 108667,
+  "text": "{F0}{E2}:せや!{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 182,
+  "ptr_value": 43139,
+  "text_rom_off": 108675,
+  "text": "{F6}これを つこうて ください{F2F4}{F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 183,
+  "ptr_value": 43156,
+  "text_rom_off": 108692,
+  "text": "{F0}{E2}:きぃ つけて くださいねーーー{F7}{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 184,
+  "ptr_value": 43177,
+  "text_rom_off": 108713,
+  "text": "{F0}{E2}:えきまで おくって いくよ{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 185,
+  "ptr_value": 43195,
+  "text_rom_off": 108731,
+  "text": "{F0}{E2}:オレは じぶんのへやに いるから{F2F6}なにか あったら きてくれ{F2F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 186,
+  "ptr_value": 43231,
+  "text_rom_off": 108767,
+  "text": "{F0}{E2}:{E3}たち おそいやんけ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 187,
+  "ptr_value": 43246,
+  "text_rom_off": 108782,
+  "text": "{E2}:だれか きよったでぇ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 188,
+  "ptr_value": 43261,
+  "text_rom_off": 108797,
+  "text": "{F0}{E2}:なかざきさんから ホームに あつまれと{F2F6}いわれただけで なんも しらんのやーーー{F2F4}{F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 189,
+  "ptr_value": 43308,
+  "text_rom_off": 108844,
+  "text": "{F0}{E2}:おまえら はよ いけや!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 190,
+  "ptr_value": 43325,
+  "text_rom_off": 108861,
+  "text": "{F0}{E2}:しずかに なったでーーー{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 191,
+  "ptr_value": 43342,
+  "text_rom_off": 108878,
+  "text": "{F0}{E2}:さすがに 20にんには かてへんやろ{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 192,
+  "ptr_value": 43365,
+  "text_rom_off": 108901,
+  "text": "{F0}{E2}:せやなーーー {F7}ほな そろそろ でよか{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 193,
+  "ptr_value": 43389,
+  "text_rom_off": 108925,
+  "text": "{E2}:まだ いきてたんけ!?{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 194,
+  "ptr_value": 43404,
+  "text_rom_off": 108940,
+  "text": "{E2}:また フクロに されたいんか!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 195,
+  "ptr_value": 43423,
+  "text_rom_off": 108959,
+  "text": "{F0}{E2}:オレら なんか たんなるザコや{F7}ー{F7}ー{F7}ー{F2F6}れんごうには まだ つよいひとが おるでぇ{F2F4}{F3}",
+  "nbytes": 50
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 196,
+  "ptr_value": 43473,
+  "text_rom_off": 109009,
+  "text": "{F0}{E2}:おかえりなさい{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 197,
+  "ptr_value": 43485,
+  "text_rom_off": 109021,
+  "text": "{F6}これで あしたの しゅうかいに いけますね{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 198,
+  "ptr_value": 43510,
+  "text_rom_off": 109046,
+  "text": "{F6}ばしょは しんさいばしの はしのうえ です{F2F6}おひるには はしのうえへ きてくださいね{F2F4}{F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 199,
+  "ptr_value": 43557,
+  "text_rom_off": 109093,
+  "text": "{F0}{E2}:みほさんとの はなしを きいてしまったんだ{F7}{F2F6}オレも ひろしの かたきが うちたい!{F2F4}{F6}みんなは どこに あつまるんだ?{F2F3}",
+  "nbytes": 67
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 200,
+  "ptr_value": 43624,
+  "text_rom_off": 109160,
+  "text": "{F0}{E2}:おしえてくれ {E3}!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 201,
+  "ptr_value": 43638,
+  "text_rom_off": 109174,
+  "text": "{F0}{E2}:しんさいばしだーーー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 202,
+  "ptr_value": 43653,
+  "text_rom_off": 109189,
+  "text": "{F0}{E2}:ここらに あやしいヤツらが あつまってると{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 203,
+  "ptr_value": 43679,
+  "text_rom_off": 109215,
+  "text": "{F6}きいたけど {ED}や ないんか?{F5}{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 204,
+  "ptr_value": 43697,
+  "text_rom_off": 109233,
+  "text": "{F0}{E2}:よかったーーー {F7}きてくれたんですね{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 205,
+  "ptr_value": 43720,
+  "text_rom_off": 109256,
+  "text": "{F0}{E2}:オレは のだこうこうの おうみ や{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 206,
+  "ptr_value": 43742,
+  "text_rom_off": 109278,
+  "text": "{F0}{E2}:あたしは せんりじょしの さおり{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 207,
+  "ptr_value": 43763,
+  "text_rom_off": 109299,
+  "text": "{F0}{E2}:ボクは えびすこうこうの {E3} ですぅ{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 208,
+  "ptr_value": 43786,
+  "text_rom_off": 109322,
+  "text": "{F0}{E2}:そして さくらみやの わたしを いれた {F2F6}4にんが どうめいの ちゅうしんメンバーや{F2F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 209,
+  "ptr_value": 43834,
+  "text_rom_off": 109370,
+  "text": "{F0}{E2}:いまは まだ れんごうには かてへんけど{F7}{F2F6}れんごうの やりかたを きらってるヤツは{F2F6}まだ よーけ おるはずや!{F2F3}",
+  "nbytes": 63
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 210,
+  "ptr_value": 43897,
+  "text_rom_off": 109433,
+  "text": "{F0}{E2}:たしかに れんごうは こわい やろけど{F2F6}イヤなコトを イヤと いえんよりは マシや{F2F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 211,
+  "ptr_value": 43944,
+  "text_rom_off": 109480,
+  "text": "{F0}{E2}:ボクらは そんな おさえつけられたヤツらを{F2F6}たすけて やりたいんや!{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 212,
+  "ptr_value": 43984,
+  "text_rom_off": 109520,
+  "text": "{F0}{E2}:とにかく {ED}くんが{F2F6}てつどうてくれて おおだすかりや!{F2F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 213,
+  "ptr_value": 44017,
+  "text_rom_off": 109553,
+  "text": "{F0}{E2}:そうやねーーー {F7}この にんずうなら{F2F6}あの さくせんが じっこう でけるわ{F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 214,
+  "ptr_value": 44060,
+  "text_rom_off": 109596,
+  "text": "{F0}{E2}:さくせん?{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 215,
+  "ptr_value": 44070,
+  "text_rom_off": 109606,
+  "text": "{F0}{E2}:どうじに いろんなトコへ こうげきして{F2F6}れんごうを ちらせてから たおしてくんや{F2F4}{F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 216,
+  "ptr_value": 44117,
+  "text_rom_off": 109653,
+  "text": "{F0}{E2}:ほな たんとうちくを きめよか{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 217,
+  "ptr_value": 44137,
+  "text_rom_off": 109673,
+  "text": "{F0}{E2}:まず しんさいばし やけどーーー{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 218,
+  "ptr_value": 44158,
+  "text_rom_off": 109694,
+  "text": "{F0}{E2}:うわさでは しんさいばしと なんばは{F2F6}げすいどうで つながってると いうコトや{F2F4}{F3}",
+  "nbytes": 46
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 219,
+  "ptr_value": 44204,
+  "text_rom_off": 109740,
+  "text": "{E2}:いりぐちを みつけな あかんのやね{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 220,
+  "ptr_value": 44225,
+  "text_rom_off": 109761,
+  "text": "{E2}:とうぜん しゅびぶたいも おおいやろな{F2F4}{F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 221,
+  "ptr_value": 44249,
+  "text_rom_off": 109785,
+  "text": "{F0}{E2}:ほな オレと さおりで いこか{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 222,
+  "ptr_value": 44269,
+  "text_rom_off": 109805,
+  "text": "{F0}{E2}:せやったら なんばからも いって{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 223,
+  "ptr_value": 44290,
+  "text_rom_off": 109826,
+  "text": "{F6}はさみうちに したほうが ええで{F2F4}{F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 224,
+  "ptr_value": 44310,
+  "text_rom_off": 109846,
+  "text": "{F0}{E2}:なんば だったら オレが いこう!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 225,
+  "ptr_value": 44332,
+  "text_rom_off": 109868,
+  "text": "{F0}{E2}:あかん! {ED}では ヤバすぎるで!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 226,
+  "ptr_value": 44353,
+  "text_rom_off": 109889,
+  "text": "{E2}:ほな なんばには ボクも ついてくわ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 227,
+  "ptr_value": 44375,
+  "text_rom_off": 109911,
+  "text": "{F0}{E2}:{F7}わかったよーーー{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 228,
+  "ptr_value": 44389,
+  "text_rom_off": 109925,
+  "text": "{F0}{E2}:ほな {F7}{ED}くんと みほは{F2F6}うめだの しゅうかいじょに いってくれ{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 229,
+  "ptr_value": 44427,
+  "text_rom_off": 109963,
+  "text": "{F0}{E2}:うめだの ちかせんろの どこかに{F2F6}しゅうかいじょの いりぐちが あるんやが{F2F4}{F3}",
+  "nbytes": 44
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 230,
+  "ptr_value": 44471,
+  "text_rom_off": 110007,
+  "text": "{F0}{E2}:なかに はいるにはカギが いるんや{F7}{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 231,
+  "ptr_value": 44494,
+  "text_rom_off": 110030,
+  "text": "{F0}{E2}:そういえば うめだを さぐっていたときに{F2F6}こんなカギを てに いれたんだけどーーー{F2F4}{F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 232,
+  "ptr_value": 44542,
+  "text_rom_off": 110078,
+  "text": "{F0}{E2}:そーーー {F7}それや! そのカギや!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 233,
+  "ptr_value": 44564,
+  "text_rom_off": 110100,
+  "text": "{F0}{E2}:{E3} うけとってくれ!{F2F4}{F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 234,
+  "ptr_value": 44580,
+  "text_rom_off": 110116,
+  "text": "{F0}{E2}:けど {F7}うめだのリーダーは ほくとと いう {F2F6}れんごう してんのうの ひとりや{F2F6}ゆだんしたら あかんでぇ!{F2F4}{F3}",
+  "nbytes": 61
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 235,
+  "ptr_value": 44641,
+  "text_rom_off": 110177,
+  "text": "{F0}{E2}:さくせんが おわったら ここへ あつまろか{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 236,
+  "ptr_value": 44667,
+  "text_rom_off": 110203,
+  "text": "{E2}:せやねーーー{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 237,
+  "ptr_value": 44677,
+  "text_rom_off": 110213,
+  "text": "{F0}{E2}:ほな さくせん かいし や!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 238,
+  "ptr_value": 44696,
+  "text_rom_off": 110232,
+  "text": "{F0}{E2}:みほさんは ホテルで まっていてくれ{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 239,
+  "ptr_value": 44719,
+  "text_rom_off": 110255,
+  "text": "{F0}{E2}:なんで ですか?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 240,
+  "ptr_value": 44732,
+  "text_rom_off": 110268,
+  "text": "{F0}{E2}:おんなのコに ケンカは させたくないんだ{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 241,
+  "ptr_value": 44757,
+  "text_rom_off": 110293,
+  "text": "{F0}{E2}:{F7}ー{F7}ー{F7}ーわかりました{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 242,
+  "ptr_value": 44774,
+  "text_rom_off": 110310,
+  "text": "{F0}{E2}:これは?{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 243,
+  "ptr_value": 44783,
+  "text_rom_off": 110319,
+  "text": "{F0}{E2}:それーーーにいさんのもの なんです{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 244,
+  "ptr_value": 44805,
+  "text_rom_off": 110341,
+  "text": "{F0}{E2}:れんごう してんのうの ひとりーーー{F2F6}じこくてんの まさきが わたしの あにです{F2F4}{F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 245,
+  "ptr_value": 44852,
+  "text_rom_off": 110388,
+  "text": "{F0}{E2}:がくせいどうしの あらそいを なくした{F2F6}りそうきょうを つくるために{F7}{F2F6}しょだい そうちょうが つくったのが{F2F6}おおさかれんごう です{F2F4}{F6}あにも そんな そうちょうに あこがれて{F2F6}れんごうに くわわりましたーーー{F2F4}{F3}",
+  "nbytes": 116
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 246,
+  "ptr_value": 44968,
+  "text_rom_off": 110504,
+  "text": "{F0}{E2}:それが なぜ あんなふうに?{F7}{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 247,
+  "ptr_value": 44988,
+  "text_rom_off": 110524,
+  "text": "{F0}{E2}:とつぜん しょだい そうちょうが {F2F6}いなくなって しまったんですーーー{F2F4}{F6}そして その あとをついだ{F2F6}いまの そうちょうが れんごうをつかって{F2F6}おおさかを しはいしようと しているんです{F4} {F2F3}",
+  "nbytes": 104
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 248,
+  "ptr_value": 45092,
+  "text_rom_off": 110628,
+  "text": "{F0}{E2}:あんなに ぼうりょくが きらいやった{F2F6}あにが いまも れんごうに いるなんてーーー{F2F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 249,
+  "ptr_value": 45139,
+  "text_rom_off": 110675,
+  "text": "{F0}{E2}:わたしは あにを はりたおしたろ おもて{F2F6}どうめいに はいったんです{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 250,
+  "ptr_value": 45179,
+  "text_rom_off": 110715,
+  "text": "{F0}{E2}:まちがいを みとめたら あきまへんやろ{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 251,
+  "ptr_value": 45204,
+  "text_rom_off": 110740,
+  "text": "{F6}ほな わたし ホテルで まってるさかい{F2F6}ぜったいに もどってきて くださいね♥{F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 252,
+  "ptr_value": 45247,
+  "text_rom_off": 110783,
+  "text": "{F0}{E2}:おかえりなさい{F7}{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 253,
+  "ptr_value": 45260,
+  "text_rom_off": 110796,
+  "text": "{F6}これから どない します?{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 254,
+  "ptr_value": 45276,
+  "text_rom_off": 110812,
+  "text": "{F0}{E2}:ここが れんごうの しゅうかいじょ やて{F2F6}しって はいってきたんか!{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 255,
+  "ptr_value": 45316,
+  "text_rom_off": 110852,
+  "text": "{F0}{E2}:うるさいなぁーーー {F7}どない したんや?{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 256,
+  "ptr_value": 45341,
+  "text_rom_off": 110877,
+  "text": "{F0}{E2}:なんや {ED}ーーー{F2F6}こないだで こりんかったんか?{F2F4}{F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 257,
+  "ptr_value": 45372,
+  "text_rom_off": 110908,
+  "text": "{F0}なんばに どうめいが きしゅうを かけるらしい{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 258,
+  "ptr_value": 45398,
+  "text_rom_off": 110934,
+  "text": "かくぶたいは なんばに あつまってくれ{F7}{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 259,
+  "ptr_value": 45420,
+  "text_rom_off": 110956,
+  "text": "        なんばぶたいリーダー わだ{F2F4}{F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 260,
+  "ptr_value": 45444,
+  "text_rom_off": 110980,
+  "text": "{F0}{E2}:れーーー{F7} れんごうの ひとや ないんけ?{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 261,
+  "ptr_value": 45470,
+  "text_rom_off": 111006,
+  "text": "{E2}:ほんまけ?{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 262,
+  "ptr_value": 45479,
+  "text_rom_off": 111015,
+  "text": "{F0}{E2}:しつけえぞ! ほんとうなんだよ!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 263,
+  "ptr_value": 45500,
+  "text_rom_off": 111036,
+  "text": "{F0}{E2}:たすかったぁ!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 264,
+  "ptr_value": 45512,
+  "text_rom_off": 111048,
+  "text": "{F0}{E2}:どうめいの いざわに たのまれて{F2F6}なんばの げすいどうをしらべてたら{F7}{F2F6}れんごうに つかまってしもたんや{F2F4}{F3}",
+  "nbytes": 60
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 265,
+  "ptr_value": 45572,
+  "text_rom_off": 111108,
+  "text": "{F0}{E2}:おまえ どうめい なのか?{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 266,
+  "ptr_value": 45590,
+  "text_rom_off": 111126,
+  "text": "{F0}{E2}:せや {F7}みんなに ほうこくしに いかな!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 267,
+  "ptr_value": 45615,
+  "text_rom_off": 111151,
+  "text": "{F0}{E2}:ほんまに たすかりました {ED}おおきに!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 268,
+  "ptr_value": 45639,
+  "text_rom_off": 111175,
+  "text": "{F6}ぶじで よかった{F2F4}{F6}ほくとを たおしたんですか{F2F6}ほな {ED} しんさいばしに いきましょ{F2F4}{F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 269,
+  "ptr_value": 45687,
+  "text_rom_off": 111223,
+  "text": "{F0}{E2}:もう!{F2F6}ちゃんとホテルで まってたんにーーー{F7}{F2F3}",
+  "nbytes": 29
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 270,
+  "ptr_value": 45716,
+  "text_rom_off": 111252,
+  "text": "{F0}{E2}:あれ ほかの みんなは?{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 271,
+  "ptr_value": 45733,
+  "text_rom_off": 111269,
+  "text": "{E2}:おひるにくる つもりやと おもいます{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 272,
+  "ptr_value": 45755,
+  "text_rom_off": 111291,
+  "text": "{F0}{E2}:このあいだは えらい すんません でした!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 273,
+  "ptr_value": 45781,
+  "text_rom_off": 111317,
+  "text": "{E2}:うらべくん ぶじ やったんか?{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 274,
+  "ptr_value": 45800,
+  "text_rom_off": 111336,
+  "text": "{F0}{E2}:そこにいる ひとに たすけてもろたんや{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 275,
+  "ptr_value": 45824,
+  "text_rom_off": 111360,
+  "text": "{F0}{E2}:とうきょうから きてくれた{F2F6}{ED}くんや{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 276,
+  "ptr_value": 45848,
+  "text_rom_off": 111384,
+  "text": "{F0}{E2}:へーっ {F7}ほな いまは どこに?{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 277,
+  "ptr_value": 45869,
+  "text_rom_off": 111405,
+  "text": "{F0}{E2}:ホテルおおさか だけど?{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 278,
+  "ptr_value": 45886,
+  "text_rom_off": 111422,
+  "text": "{F0}{E2}:さいでっか{F7}ー{F7}ー{F7}ー{F2F6}ホテルおおさか ねぇ{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 34
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 279,
+  "ptr_value": 45920,
+  "text_rom_off": 111456,
+  "text": "{F0}{E2}:どうしたんだ?{F2F4}{F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 280,
+  "ptr_value": 45933,
+  "text_rom_off": 111469,
+  "text": "{F0}{E2}:オレらの さくせんがバレてたんやーーー{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 281,
+  "ptr_value": 45957,
+  "text_rom_off": 111493,
+  "text": "{E2}:れんごうは なんばで まちぶせをーーー{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 282,
+  "ptr_value": 45980,
+  "text_rom_off": 111516,
+  "text": "{F0}{E2}:ほな よしひろくんと いざわくんは?{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 283,
+  "ptr_value": 46003,
+  "text_rom_off": 111539,
+  "text": "{F0}{E2}:たぶん つかまってもうた やろな{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 284,
+  "ptr_value": 46024,
+  "text_rom_off": 111560,
+  "text": "{F0}{E2}:なんばにいけば なんか わかるかもしれん{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 285,
+  "ptr_value": 46049,
+  "text_rom_off": 111585,
+  "text": "{F0}{E2}:けど なんばのえきは てきで{F2F6}いっぱい やったでぇ{F2F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 286,
+  "ptr_value": 46080,
+  "text_rom_off": 111616,
+  "text": "{F0}{E2}:なら ちかから いけば ええやんけ?{F2F4}{F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 287,
+  "ptr_value": 46104,
+  "text_rom_off": 111640,
+  "text": "{F0}{E2}:げすいどうも とちゅうのドアに{F2F6}カギが かかってて さきに いけへんのや{F2F4}{F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 288,
+  "ptr_value": 46147,
+  "text_rom_off": 111683,
+  "text": "{F0}{E2}:そのカギやったら ボクがもってるわ{F7}{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 289,
+  "ptr_value": 46170,
+  "text_rom_off": 111706,
+  "text": "{F0}{E2}:アホ! {F7}それを はよ いえや!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 290,
+  "ptr_value": 46191,
+  "text_rom_off": 111727,
+  "text": "{F0}{E2}:けど これで ふたりを たすけられるでぇ{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 291,
+  "ptr_value": 46216,
+  "text_rom_off": 111752,
+  "text": "{F0}{E2}:でも {F7}れんごうかて アホやないし{F2F6}かんたんには いけんのや ないんか?{F2F3}",
+  "nbytes": 42
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 292,
+  "ptr_value": 46258,
+  "text_rom_off": 111794,
+  "text": "{F0}{E2}:それなりの よういは ひつようだな{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 293,
+  "ptr_value": 46280,
+  "text_rom_off": 111816,
+  "text": "{F0}{E2}:ほな いちど もどってからに しよか?{F7}{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 294,
+  "ptr_value": 46305,
+  "text_rom_off": 111841,
+  "text": "{F0}{E2}:じゃあ きょうは かいさんや{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 295,
+  "ptr_value": 46324,
+  "text_rom_off": 111860,
+  "text": "{F6}いう タレこみは ほんま やったんやな!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 296,
+  "ptr_value": 46347,
+  "text_rom_off": 111883,
+  "text": "{F0}{E2}:どうせ オレらやない いうても{F2F6}しんじてくれへん やろ!{F2F3}",
+  "nbytes": 34
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 297,
+  "ptr_value": 46381,
+  "text_rom_off": 111917,
+  "text": "{F0}{E2}:ここは あたしたちに まかせて{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 298,
+  "ptr_value": 46401,
+  "text_rom_off": 111937,
+  "text": "{F6}{ED}は はよ いくんや!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 299,
+  "ptr_value": 46415,
+  "text_rom_off": 111951,
+  "text": "{F0}{E2}:でーーー {F7}でも{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 300,
+  "ptr_value": 46428,
+  "text_rom_off": 111964,
+  "text": "{F0}{E2}:あたしたちは まだ やらな あかんコトが{F2F6}よーけ あるやろが!{F2F3}",
+  "nbytes": 37
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 301,
+  "ptr_value": 46465,
+  "text_rom_off": 112001,
+  "text": "{F6}はよ いけや!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 302,
+  "ptr_value": 46475,
+  "text_rom_off": 112011,
+  "text": "{F0}{E2}:{ED}も はよ いきや!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 303,
+  "ptr_value": 46490,
+  "text_rom_off": 112026,
+  "text": "{F0}{E2}:よしひろくんたちは まかせたでぇ!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 304,
+  "ptr_value": 46512,
+  "text_rom_off": 112048,
+  "text": "{F0}{E2}:それなら ええんや{F2F6}けど このさきには いかんといてな{F2F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 305,
+  "ptr_value": 46545,
+  "text_rom_off": 112081,
+  "text": "{F0}{E2}:あれ?{F7}{F2F6}みほさん ちいと てつどうて{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 306,
+  "ptr_value": 46570,
+  "text_rom_off": 112106,
+  "text": "{F0}{E2}:きゃあっ!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 307,
+  "ptr_value": 46580,
+  "text_rom_off": 112116,
+  "text": "{F0}{E2}:{E3}さん おつかれさんです!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 308,
+  "ptr_value": 46598,
+  "text_rom_off": 112134,
+  "text": "{E2}:{E3}くん どういうコトやの!?{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 309,
+  "ptr_value": 46616,
+  "text_rom_off": 112152,
+  "text": "{F0}{E2}:わはははははははははははははははははははは{F7}{F2F6}ボクは なんばぶたいのナンバー2やでぇ!{F2F6}どういうコトも なんもないわ!{F2F3}",
+  "nbytes": 66
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 310,
+  "ptr_value": 46682,
+  "text_rom_off": 112218,
+  "text": "{F0}{E2}:{E3}くん なんでや? なにが あったんや?{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 311,
+  "ptr_value": 46707,
+  "text_rom_off": 112243,
+  "text": "{F0}{E2}:つよいほうに つくーーー{F7}{F2F6}かんたんなコトや{F2F3}",
+  "nbytes": 28
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 312,
+  "ptr_value": 46735,
+  "text_rom_off": 112271,
+  "text": "{F0}{E2}:ほなーーー {F7}せいぜい きばってや{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 313,
+  "ptr_value": 46757,
+  "text_rom_off": 112293,
+  "text": "{F0}{E2}:おんなを {F7}とりもどすんやったら{F7}{F2F6}なんばまで いくしかないでぇーーー{F2F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 314,
+  "ptr_value": 46798,
+  "text_rom_off": 112334,
+  "text": "{F0}{E2}:オ{F7} オレたちは {ED}を たおして{F2F6}れんごうに いれて もらうんや!{F2F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 315,
+  "ptr_value": 46837,
+  "text_rom_off": 112373,
+  "text": "{F0}{E2}:これで とうきょうモンも おわりやな{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 316,
+  "ptr_value": 46860,
+  "text_rom_off": 112396,
+  "text": "{E2}:うー{F7} {E3}さん!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 317,
+  "ptr_value": 46872,
+  "text_rom_off": 112408,
+  "text": "{E2}:なんや いきなり!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 318,
+  "ptr_value": 46885,
+  "text_rom_off": 112421,
+  "text": "{F0}{E2}:せやけど おしかったな{F2F6}みほは もう ここには おらんわ!{F2F4}{F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 319,
+  "ptr_value": 46921,
+  "text_rom_off": 112457,
+  "text": "{F0}{E2}:れんごうに さかろうてもムダやでぇ{F7}ー{F7}ー{F7}ー{F2F4}{F3}",
+  "nbytes": 29
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 320,
+  "ptr_value": 46950,
+  "text_rom_off": 112486,
+  "text": "{F0}{E2}:オレは なんばを しきらせてもらってる{F2F6}わだ ちゅうモンや{F2F4}{F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 321,
+  "ptr_value": 46986,
+  "text_rom_off": 112522,
+  "text": "{F0}{E2}:なかなか やる やんけ!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 322,
+  "ptr_value": 47003,
+  "text_rom_off": 112539,
+  "text": "{F6}けど {F7}オレには そのていどや かてへんでぇ{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 323,
+  "ptr_value": 47028,
+  "text_rom_off": 112564,
+  "text": "{F0}{E2}:どや?{F2F6}ねっけつのヤツらは たすけたるさかい{F2F6}そのちからを オレにかさへんか?{F2F3}",
+  "nbytes": 46
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 324,
+  "ptr_value": 47074,
+  "text_rom_off": 112610,
+  "text": "{F0}{E2}:どーーー{F7}{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 325,
+  "ptr_value": 47084,
+  "text_rom_off": 112620,
+  "text": "{F6}どうめいのヤツらを しんさいばしの{F2F6}ちかせんろに とらえたんやーーーー{F2F4}{F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 326,
+  "ptr_value": 47124,
+  "text_rom_off": 112660,
+  "text": "{F6}ほな さっそくやけど{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 327,
+  "ptr_value": 47137,
+  "text_rom_off": 112673,
+  "text": "{F6}そのひとたちに {ED}から{F2F6}れんごうに さからわんように おしえたってや{F2F4}{F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 328,
+  "ptr_value": 47176,
+  "text_rom_off": 112712,
+  "text": "{F0}{E2}:ほな {F7}しごとが おわったら もどってきてや{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 329,
+  "ptr_value": 47203,
+  "text_rom_off": 112739,
+  "text": "{F0}{E2}:うらべくんは まちのようすを しらべてるわ{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 330,
+  "ptr_value": 47229,
+  "text_rom_off": 112765,
+  "text": "{F0}{E2}:どこもポリさんが おりまっせ{F7}{F2F6}やっぱ ここから げすいどうを ぬけて{F2F6}なんばに でるしか にげみちは ないでんな{F2F4}{F3}",
+  "nbytes": 65
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 331,
+  "ptr_value": 47294,
+  "text_rom_off": 112830,
+  "text": "{F0}{E2}:しっ!{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 332,
+  "ptr_value": 47302,
+  "text_rom_off": 112838,
+  "text": "{F0}{E2}:だれか いるぞ!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 333,
+  "ptr_value": 47315,
+  "text_rom_off": 112851,
+  "text": "{F0}{E2}:さすが わださんやでぇ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 334,
+  "ptr_value": 47331,
+  "text_rom_off": 112867,
+  "text": "{E2}:まさかポリさんを りようするとはなぁ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 335,
+  "ptr_value": 47353,
+  "text_rom_off": 112889,
+  "text": "{E2}:これで どうめいも おとなしなるやろ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 336,
+  "ptr_value": 47375,
+  "text_rom_off": 112911,
+  "text": "{F0}{E2}:だれや!{F7}{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 337,
+  "ptr_value": 47385,
+  "text_rom_off": 112921,
+  "text": "{F6}だれやて きいてるやろが!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 338,
+  "ptr_value": 47401,
+  "text_rom_off": 112937,
+  "text": "{F0}{E2}:いまの さわぎで ポリさんが きたで!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 339,
+  "ptr_value": 47425,
+  "text_rom_off": 112961,
+  "text": "{E2}:はよ なかに いくんや!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 340,
+  "ptr_value": 47441,
+  "text_rom_off": 112977,
+  "text": "{F0}{E2}:どうめいの みんなをたすけに きたんだ{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 341,
+  "ptr_value": 47465,
+  "text_rom_off": 113001,
+  "text": "{F0}{E2}:おうみさんたちが れんごうに つかまったと{F2F6}きいてきたんやけどーーー {F7}みつからんなぁ{F2F3}",
+  "nbytes": 49
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 342,
+  "ptr_value": 47514,
+  "text_rom_off": 113050,
+  "text": "{F0}{E2}:ここから さきには いかせへんでぇ!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 343,
+  "ptr_value": 47537,
+  "text_rom_off": 113073,
+  "text": "{F0}{E2}:たすけに きてくれたんけ?{F5}{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 344,
+  "ptr_value": 47556,
+  "text_rom_off": 113092,
+  "text": "{F0}{E2}:たすけに きてくれたんけ?{F2F4}{F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 345,
+  "ptr_value": 47575,
+  "text_rom_off": 113111,
+  "text": "{F0}{E2}:くわしい はなしは あとに して{F2F6}とりあえず ここから にげるぞ!{F2F4}{F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 346,
+  "ptr_value": 47615,
+  "text_rom_off": 113151,
+  "text": "{F6}ほな しんさいばしに あつまろや{F2F4}{F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 347,
+  "ptr_value": 47635,
+  "text_rom_off": 113171,
+  "text": "{F0}{E2}:はしのうえで まってるで!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 348,
+  "ptr_value": 47653,
+  "text_rom_off": 113189,
+  "text": "{F0}{E2}:ちぃとパワーアップしたさかい{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 349,
+  "ptr_value": 47672,
+  "text_rom_off": 113208,
+  "text": "{E2}:こんどは まけへんでぇ!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 350,
+  "ptr_value": 47688,
+  "text_rom_off": 113224,
+  "text": "{F0}{E2}:ひとが なんばのげすいどうで まってたんに{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 351,
+  "ptr_value": 47714,
+  "text_rom_off": 113250,
+  "text": "{E2}:{ED} ワシらが こわくて にげたやろ!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 352,
+  "ptr_value": 47736,
+  "text_rom_off": 113272,
+  "text": "{F6}どうめいのヤツらは したです{F2F4}{F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 353,
+  "ptr_value": 47754,
+  "text_rom_off": 113290,
+  "text": "{F0}{E2}:れんごうには {F7}さからわないほうが いい{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 354,
+  "ptr_value": 47779,
+  "text_rom_off": 113315,
+  "text": "{F0}{E2}:{ED}が おうみさんたちを!?{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 355,
+  "ptr_value": 47797,
+  "text_rom_off": 113333,
+  "text": "{F0}{E2}:いちじは どうなるかと おもうたでーーー{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 356,
+  "ptr_value": 47822,
+  "text_rom_off": 113358,
+  "text": "{F0}{E2}:よしひろくんは なんばから にげたはずやで?{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 357,
+  "ptr_value": 47849,
+  "text_rom_off": 113385,
+  "text": "{F0}{E2}:みほさんは {F7}れんごうに つかまってしまった{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 358,
+  "ptr_value": 47876,
+  "text_rom_off": 113412,
+  "text": "{F0}{E2}:なんでや?{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 359,
+  "ptr_value": 47886,
+  "text_rom_off": 113422,
+  "text": "{F0}{E2}:うらべは れんごうのスパイだったんだ{F2F6}そのコトに きがついたときは もうーーー{F2F3}",
+  "nbytes": 45
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 360,
+  "ptr_value": 47931,
+  "text_rom_off": 113467,
+  "text": "{F0}{E2}:みほは どこへ つれていかれたんや?{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 361,
+  "ptr_value": 47954,
+  "text_rom_off": 113490,
+  "text": "{F0}{E2}:{F7}わからない{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 362,
+  "ptr_value": 47965,
+  "text_rom_off": 113501,
+  "text": "{F0}{E2}:それじゃ どないしようも ないやんけ!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 363,
+  "ptr_value": 47989,
+  "text_rom_off": 113525,
+  "text": "{F0}{E2}:{E3} おちつけや!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 364,
+  "ptr_value": 48002,
+  "text_rom_off": 113538,
+  "text": "{F0}{E2}:せや {F7}みほの にいさんなら{F2F6}なんか わかるかも しれんーーー{F2F3}",
+  "nbytes": 37
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 365,
+  "ptr_value": 48039,
+  "text_rom_off": 113575,
+  "text": "{F0}{E2}:にいさんって {F7}れんごう してんのうのか?{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 366,
+  "ptr_value": 48065,
+  "text_rom_off": 113601,
+  "text": "{F0}{E2}:そやーー {F7}みほの にいさんは えびすちょうを{F2F6}おさめる じこくてんの まさきさんやーーー{F2F4}{F3}",
+  "nbytes": 52
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 367,
+  "ptr_value": 48117,
+  "text_rom_off": 113653,
+  "text": "{F0}{E2}:あのひとなら なにか しってるはずや!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 368,
+  "ptr_value": 48141,
+  "text_rom_off": 113677,
+  "text": "{F0}{E2}:けど {F7}どうめいを たてなおしてからやないと{F2F6}たすけとうても たすけられへんでーーー{F2F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 369,
+  "ptr_value": 48189,
+  "text_rom_off": 113725,
+  "text": "{F0}{E2}:{ED}が えびすちょうに いくよ{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 370,
+  "ptr_value": 48208,
+  "text_rom_off": 113744,
+  "text": "{F0}{E2}:もちろん たてなおしが おわったら{F2F6}きょうりょくして もらうけどな!{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 371,
+  "ptr_value": 48248,
+  "text_rom_off": 113784,
+  "text": "{F0}{E2}:さっきは すんませんでした{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 372,
+  "ptr_value": 48272,
+  "text_rom_off": 113808,
+  "text": "{F0}{E2}:あたしの つかってた ぶきをもってってや{F2F4}{F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 373,
+  "ptr_value": 48298,
+  "text_rom_off": 113834,
+  "text": "{F0}{E2}:なんや みんな? {F7}しゃあないなぁ{F2F6}オレの たからもんも つこうてやってや{F2F4}{F3}",
+  "nbytes": 44
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 374,
+  "ptr_value": 48342,
+  "text_rom_off": 113878,
+  "text": "{F0}{E2}:{ED}だけが たよりや たのんだで!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 375,
+  "ptr_value": 48363,
+  "text_rom_off": 113899,
+  "text": "{F0}{E2}:みほのコト たのんだでぇ!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 376,
+  "ptr_value": 48381,
+  "text_rom_off": 113917,
+  "text": "{F0}{E2}:できるだけ はやく もどります!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 377,
+  "ptr_value": 48402,
+  "text_rom_off": 113938,
+  "text": "{F0}{E2}:いままで れんごうに つかまっていたんだ{F2F6}にげるのに くろうしたよ{ED}{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 378,
+  "ptr_value": 48442,
+  "text_rom_off": 113978,
+  "text": "{F0}{E2}:ねっけつの みんなが しんぱいだから{F2F6}ボクは ホテルに もどるよ{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 379,
+  "ptr_value": 48480,
+  "text_rom_off": 114016,
+  "text": "{F0}{E2}:あとのコトは たのんだぜ{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 380,
+  "ptr_value": 48497,
+  "text_rom_off": 114033,
+  "text": "{F0}{E2}:やすゆきから きいたはなしでは{F2F6}えらい だいかつやく やったそうやな{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 381,
+  "ptr_value": 48537,
+  "text_rom_off": 114073,
+  "text": "{F0}{E2}:でーーー {F7}とりあえず つぎの しごとや{F7}{F2F6}この てがみを えびすちょうにいる{F2F6}まさきに わたしてくれや{F2F4}{F3}",
+  "nbytes": 60
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 382,
+  "ptr_value": 48597,
+  "text_rom_off": 114133,
+  "text": "{F0}{E2}:まさきのトコの へいたいは{F2F6}たんきやで きをつけて いくんやな{F2F3}",
+  "nbytes": 37
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 383,
+  "ptr_value": 48634,
+  "text_rom_off": 114170,
+  "text": "{F0}{E2}:なにを かんがえて いるんだ?{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 384,
+  "ptr_value": 48654,
+  "text_rom_off": 114190,
+  "text": "{F0}{E2}:なんか ようじ け?{F2F6}かんけいないんやったら はよ でてけ!{F2F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 385,
+  "ptr_value": 48690,
+  "text_rom_off": 114226,
+  "text": "{F0}{E2}:はよ でてけと いうてるやろ!{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 386,
+  "ptr_value": 48710,
+  "text_rom_off": 114246,
+  "text": "{E2}:れんごうか どうめいかは しらへんけど{F2F6}ウチは どことも あらそう きはないんや{F2F3}",
+  "nbytes": 45
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 387,
+  "ptr_value": 48755,
+  "text_rom_off": 114291,
+  "text": "{F0}{E2}:おまえらのリーダーに はなしが あるんだ{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 388,
+  "ptr_value": 48780,
+  "text_rom_off": 114316,
+  "text": "{F0}{E2}:これを みてくれ{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 389,
+  "ptr_value": 48793,
+  "text_rom_off": 114329,
+  "text": "{F0}まさきさん {F7}みほさんが れんごうに つかまった{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 390,
+  "ptr_value": 48820,
+  "text_rom_off": 114356,
+  "text": "あんたなら なにか わかるはずや!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 391,
+  "ptr_value": 48839,
+  "text_rom_off": 114375,
+  "text": "きょうりょく してくれーーーーーーーーーいざわ{F2F4}{F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 392,
+  "ptr_value": 48865,
+  "text_rom_off": 114401,
+  "text": "{F0}まさき {F7}おまえの いもうとは オレが あずかった{F2F3}",
+  "nbytes": 28
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 393,
+  "ptr_value": 48893,
+  "text_rom_off": 114429,
+  "text": "えびすちょうと ひきかえちゅうのは どや?{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 394,
+  "ptr_value": 48916,
+  "text_rom_off": 114452,
+  "text": "         なんばぶたいリーダー わだ{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 395,
+  "ptr_value": 48941,
+  "text_rom_off": 114477,
+  "text": "{F0}{E2}:なんやて!?{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 396,
+  "ptr_value": 48952,
+  "text_rom_off": 114488,
+  "text": "{E2}:やりかたが きたないでぇ!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 397,
+  "ptr_value": 48969,
+  "text_rom_off": 114505,
+  "text": "{F0}{E2}:リーダーは どこに いるんだ?{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 398,
+  "ptr_value": 48989,
+  "text_rom_off": 114525,
+  "text": "{F0}{E2}:まさきさんは こうしえんに いるはずや{F2F6}みつけだして このコトをつたえてくれや{F2F4}{F3}",
+  "nbytes": 46
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 399,
+  "ptr_value": 49035,
+  "text_rom_off": 114571,
+  "text": "{E2}:こうしえんに いくんなら{F2F6}うめだからしか いけへんでぇ{F2F3}",
+  "nbytes": 32
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 400,
+  "ptr_value": 49067,
+  "text_rom_off": 114603,
+  "text": "{E2}:これから はんしんのおうえんに いくんや{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 401,
+  "ptr_value": 49092,
+  "text_rom_off": 114628,
+  "text": "{E2}:え? {F7}おうえんだんの みんなやったら{F2F6}タイガースーショップで かいもの してるわ{F2F4}{F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 402,
+  "ptr_value": 49139,
+  "text_rom_off": 114675,
+  "text": "{E2}:よこやまが こうしえんへ はんしんの{F2F6}おうえんに いくとか いってたなぁーーー{F2F4}{F3}",
+  "nbytes": 45
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 403,
+  "ptr_value": 49184,
+  "text_rom_off": 114720,
+  "text": "{E2}:こうしえんに いきたいって?{F2F6}オレの トレインカードを かしてやるよ{F2F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 404,
+  "ptr_value": 49223,
+  "text_rom_off": 114759,
+  "text": "{E2}:ちゃんと かえしてくれよ!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 405,
+  "ptr_value": 49240,
+  "text_rom_off": 114776,
+  "text": "{E2}:にいちゃん! ええせき あるでぇ!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 406,
+  "ptr_value": 49261,
+  "text_rom_off": 114797,
+  "text": "{E2}:こないだも はんしんが まけてるから{F2F6}きょじんファンは ちかづけないよ{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 407,
+  "ptr_value": 49301,
+  "text_rom_off": 114837,
+  "text": "{F0}{E2}:なんや まさきを さがしてるんけ?{F2F6}あいつやったら しりょうかんに おったで{F2F3}",
+  "nbytes": 44
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 408,
+  "ptr_value": 49345,
+  "text_rom_off": 114881,
+  "text": "{F0}{E2}:みかけん かおやなーーー{F7}{F2F6}オレを れんごうの まさきと しってるんけ{F2F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 409,
+  "ptr_value": 49386,
+  "text_rom_off": 114922,
+  "text": "{F0}{E2}:{ED}は とうきょうからきた {EE}だ{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 410,
+  "ptr_value": 49406,
+  "text_rom_off": 114942,
+  "text": "{F0}{E2}:いまは ちょっと ワケがあって{F2F6}{ED}に きょうりょく している{F2F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 411,
+  "ptr_value": 49442,
+  "text_rom_off": 114978,
+  "text": "{F0}{E2}:{ED}が {E3}かーーー{F7}{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 412,
+  "ptr_value": 49456,
+  "text_rom_off": 114992,
+  "text": "{F0}{E2}:{ED}ーーーー{F7}{F2F6}いまの れんごうを どうおもう?{F2F3}",
+  "nbytes": 29
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 413,
+  "ptr_value": 49485,
+  "text_rom_off": 115021,
+  "text": "{F0}{E2}:カッコわるいなーーー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 414,
+  "ptr_value": 49500,
+  "text_rom_off": 115036,
+  "text": "{F0}{E2}:カッコわるい{F7}ー{F7}ー{F7}ーか{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 415,
+  "ptr_value": 49518,
+  "text_rom_off": 115054,
+  "text": "{F0}{E2}:もともと れんごうは おおさかを{F2F6}ほかの ちくから まもるために{F2F6}けっせい されたんやーーー{F2F4}{F3}",
+  "nbytes": 54
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 416,
+  "ptr_value": 49572,
+  "text_rom_off": 115108,
+  "text": "{F0}{E2}:みんな なめられたくなくて ひっしやった{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 417,
+  "ptr_value": 49597,
+  "text_rom_off": 115133,
+  "text": "{F0}{E2}:それがーーー{F7}{F2F6}やっと おおさかが まとまろうと したときに{F2F6}しょだい そうちょうが きえてまったんや{F2F4}{F3}",
+  "nbytes": 59
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 418,
+  "ptr_value": 49656,
+  "text_rom_off": 115192,
+  "text": "{F0}{E2}:リーダーを なくした れんごうは{F2F6}いつ かいさんしても おかしくなかった{F7}{F2F6}そんな れんごうを まとめたんが{F2F6}いまの にだいめ そうちょうや!{F2F4}{F3}",
+  "nbytes": 80
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 419,
+  "ptr_value": 49736,
+  "text_rom_off": 115272,
+  "text": "{F0}{E2}:その けっか れんごうは のこったけど{F2F6}おおさかだけやなく とうきょうまで{F7}{F2F6}ちからで しはいしようと する{F2F6}チームに なって しもうた!{F2F4}{F3}",
+  "nbytes": 78
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 420,
+  "ptr_value": 49814,
+  "text_rom_off": 115350,
+  "text": "{F0}{E2}:オレは にだいめには ついていけんかった{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 421,
+  "ptr_value": 49839,
+  "text_rom_off": 115375,
+  "text": "{F0}{E2}:じゃあ なぜ れんごうに いるんだ?{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 422,
+  "ptr_value": 49862,
+  "text_rom_off": 115398,
+  "text": "{F0}{E2}:オレが にだいめに さからえば ウチの{F2F6}チームの みんなが れんごうに ねらわれる{F7}{F2F6}それが こわかったんやーーー{F2F4}{F3}",
+  "nbytes": 65
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 423,
+  "ptr_value": 49927,
+  "text_rom_off": 115463,
+  "text": "{F0}{E2}:まちがいを みとめたくないな{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 424,
+  "ptr_value": 49946,
+  "text_rom_off": 115482,
+  "text": "{E2}:え?{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 425,
+  "ptr_value": 49952,
+  "text_rom_off": 115488,
+  "text": "{F0}{E2}:みほさんが そう いってたよーーー{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 426,
+  "ptr_value": 49974,
+  "text_rom_off": 115510,
+  "text": "{F6}やっぱ いまの れんごうは まちごうてるな{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 427,
+  "ptr_value": 49998,
+  "text_rom_off": 115534,
+  "text": "{F0}{E2}:みほのコトは オレに まかせてくれ!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 428,
+  "ptr_value": 50021,
+  "text_rom_off": 115557,
+  "text": "{F0}{E2}:せやーーー {F7}こいつを つかうと ええ{F2F4}{F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 429,
+  "ptr_value": 50046,
+  "text_rom_off": 115582,
+  "text": "{F0}{E2}:お? {F7}でてきたわ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 430,
+  "ptr_value": 50061,
+  "text_rom_off": 115597,
+  "text": "{F0}{E2}:はなしは ききましたでぇ{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 431,
+  "ptr_value": 50078,
+  "text_rom_off": 115614,
+  "text": "{F0}{E2}:まさきを そそのかすとは こまったもんや{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 432,
+  "ptr_value": 50103,
+  "text_rom_off": 115639,
+  "text": "{F0}{E2}:ええやないけ{F2F6}ここで びょういんおくりに なるんやし{F2F3}",
+  "nbytes": 32
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 433,
+  "ptr_value": 50135,
+  "text_rom_off": 115671,
+  "text": "{F0}{E2}:いまごろ ホテルにいる ヤツらも{F2F6}よしひろさんに やられてるコトやしな{F2F4}{F3}",
+  "nbytes": 42
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 434,
+  "ptr_value": 50177,
+  "text_rom_off": 115713,
+  "text": "{F0}{E2}:よしひろが? {F7}なんで!?{F7}{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 435,
+  "ptr_value": 50196,
+  "text_rom_off": 115732,
+  "text": "{F0}{E2}:おおさかれんごうの にだいめ そうちょうを{F2F6}つかまえて ほんま しつれいなヤツやで{F2F4}{F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 436,
+  "ptr_value": 50244,
+  "text_rom_off": 115780,
+  "text": "{F0}{E2}:ベッドのうえで ダチに あやまるんやな!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 437,
+  "ptr_value": 50269,
+  "text_rom_off": 115805,
+  "text": "{F0}{E2}:ー{F7}ー{F7}ー{F7}よしひろがーーー{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 438,
+  "ptr_value": 50288,
+  "text_rom_off": 115824,
+  "text": "{F0}{E2}:れんごうに いちどでも さかろうたヤツは{F2F6}みんな こうなるんや!{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 439,
+  "ptr_value": 50326,
+  "text_rom_off": 115862,
+  "text": "{F0}{E2}:ねっけつこうこうも たいしたコトないのぉ{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 440,
+  "ptr_value": 50351,
+  "text_rom_off": 115887,
+  "text": "{F0}{E2}:なかまを まもるコトも できん おとこが{F2F6}リーダーなんやで しょーがないわ!{F2F3}",
+  "nbytes": 44
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 441,
+  "ptr_value": 50395,
+  "text_rom_off": 115931,
+  "text": "{F0}{E2}:ふざけるなよ!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 442,
+  "ptr_value": 50407,
+  "text_rom_off": 115943,
+  "text": "{F0}{E2}:ねっけつを なめて もらっちゃ こまるぜ!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 443,
+  "ptr_value": 50433,
+  "text_rom_off": 115969,
+  "text": "{F0}{E2}:よしひろは オレたちを だましてたんだ!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 444,
+  "ptr_value": 50458,
+  "text_rom_off": 115994,
+  "text": "{F0}{E2}:なんばまで こいーーー{F7}って いってたぜ!{F2F4}{F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 445,
+  "ptr_value": 50485,
+  "text_rom_off": 116021,
+  "text": "{F0}{E2}:やられたヤツらの かたきを とってくれ!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 446,
+  "ptr_value": 50510,
+  "text_rom_off": 116046,
+  "text": "{F0}{E2}:まてや!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 447,
+  "ptr_value": 50519,
+  "text_rom_off": 116055,
+  "text": "{F0}{E2}:わださん {F7}よしひろさんが いうた とおり{F2F6}{ED}が きましたでぇ!{F2F3}",
+  "nbytes": 38
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 448,
+  "ptr_value": 50557,
+  "text_rom_off": 116093,
+  "text": "{F0}{E2}:ワナに かかったな!{F7}{F2F6}れんごう がくせいぶたい ぜんいんが{F2F6}こころの そこから かんげい したるでぇ!{F2F4}{F3}",
+  "nbytes": 60
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 449,
+  "ptr_value": 50617,
+  "text_rom_off": 116153,
+  "text": "{F0}{E2}:まえと おなじや おもたら あかんでぇ!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 450,
+  "ptr_value": 50642,
+  "text_rom_off": 116178,
+  "text": "{E2}:{ED}も ここまでや!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 451,
+  "ptr_value": 50655,
+  "text_rom_off": 116191,
+  "text": "{E2}:このあいだの かりは いま かえしたる!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 452,
+  "ptr_value": 50679,
+  "text_rom_off": 116215,
+  "text": "{F0}{E2}:オレらの いじに かけて{F2F6}ぜったいに ここから いきて かえさんでぇ!{F2F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 453,
+  "ptr_value": 50720,
+  "text_rom_off": 116256,
+  "text": "{F0}{E2}:たーーー{F7}たった {F7}{ED}の {EE}にーーー{F2F4}{F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 454,
+  "ptr_value": 50744,
+  "text_rom_off": 116280,
+  "text": "{F0}{E2}:まさきさんの ぶかで きざきと いいます{F2F4}{F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 455,
+  "ptr_value": 50770,
+  "text_rom_off": 116306,
+  "text": "{F0}{E2}:れんごう ほんたいが よるに{F2F6}えびすちょうを おそうと いうてきました{F2F4}{F3}",
+  "nbytes": 42
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 456,
+  "ptr_value": 50812,
+  "text_rom_off": 116348,
+  "text": "{F0}{E2}:けど {F7}まさきさんは ひとりで ええ いうて{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 457,
+  "ptr_value": 50839,
+  "text_rom_off": 116375,
+  "text": "{F0}{E2}:おねがいします!{F7}{F2F6}まさきさんを たすけたって ください!{F2F4}{F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 458,
+  "ptr_value": 50875,
+  "text_rom_off": 116411,
+  "text": "{F0}{E2}:ふうーーー {F7}まに あった みたいやね!{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 459,
+  "ptr_value": 50900,
+  "text_rom_off": 116436,
+  "text": "{F0}{E2}:{E3}くん だいじょうぶ でっか?{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 460,
+  "ptr_value": 50920,
+  "text_rom_off": 116456,
+  "text": "{F0}{E2}:さて しんうちの とうじょうや!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 461,
+  "ptr_value": 50941,
+  "text_rom_off": 116477,
+  "text": "{F0}{E2}:げーーー {F7}{EE}や!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 462,
+  "ptr_value": 50955,
+  "text_rom_off": 116491,
+  "text": "{F0}{E2}:オレらは いりぐちを みはってるさかい{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 463,
+  "ptr_value": 50979,
+  "text_rom_off": 116515,
+  "text": "{F0}{E2}:きーーー {F7}きてくれたんですねーーー{F2F6}まさきさんは {F7}うえ{F7}ですーーー{F2F4}{F3}",
+  "nbytes": 42
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 464,
+  "ptr_value": 51021,
+  "text_rom_off": 116557,
+  "text": "{F6}{ED}が そうちょうの いってた ヤツか!?{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 465,
+  "ptr_value": 51044,
+  "text_rom_off": 116580,
+  "text": "{F0}{E2}:う{F7}う{F7}ー{F7}ー{F7}ー {F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 466,
+  "ptr_value": 51059,
+  "text_rom_off": 116595,
+  "text": "{F0}{E2}:ち{F7}ー{F7}ー{F7}ーく{F7}しょう{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 467,
+  "ptr_value": 51076,
+  "text_rom_off": 116612,
+  "text": "{F0}{E2}:ウチの チームは {F7}ぜんめつや{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 468,
+  "ptr_value": 51102,
+  "text_rom_off": 116638,
+  "text": "{F0}{E2}:まさきさんを たのみます{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 469,
+  "ptr_value": 51125,
+  "text_rom_off": 116661,
+  "text": "{F0}{E2}:この ボケが どけや!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 470,
+  "ptr_value": 51141,
+  "text_rom_off": 116677,
+  "text": "{F0}{E2}:どかんと いてまうぞ!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 471,
+  "ptr_value": 51157,
+  "text_rom_off": 116693,
+  "text": "{F0}{E2}:こんなザコや オレは たおせへんでぇ!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 472,
+  "ptr_value": 51181,
+  "text_rom_off": 116717,
+  "text": "{F0}{E2}:オレは おぐらに はなしが あるんや!{F2F6}そこを どかんか!{F2F3}",
+  "nbytes": 35
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 473,
+  "ptr_value": 51216,
+  "text_rom_off": 116752,
+  "text": "{F0}{E2}:おぐらぁ いま いくでぇ!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 474,
+  "ptr_value": 51234,
+  "text_rom_off": 116770,
+  "text": "{F0}{E2}:オレらは おおさかを まもる ために{F2F6}あつまったんと ちがうんか?{F2F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 475,
+  "ptr_value": 51273,
+  "text_rom_off": 116809,
+  "text": "{F0}{E2}:なのに なんで ちからを ほしがるんや?{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 476,
+  "ptr_value": 51298,
+  "text_rom_off": 116834,
+  "text": "{F0}{E2}:ちからが そんなに エラいんか?{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 477,
+  "ptr_value": 51319,
+  "text_rom_off": 116855,
+  "text": "{F0}{E2}:なんか いうてみいや!{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 478,
+  "ptr_value": 51335,
+  "text_rom_off": 116871,
+  "text": "{F0}{E2}:{F7}ー{F7}ー{F7}ーあまいな{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 479,
+  "ptr_value": 51350,
+  "text_rom_off": 116886,
+  "text": "{F0}{E2}:ボケだ? {F7}カスだ? {F7}クズだ?{F2F6}ちからが ないから いわれるんとちゃうか?{F7}{F2F6}どんなアホかて ひとをビビらせる ちからを{F2F6}もってれば みんなが アタマさげよるわ!{F2F4}{F3}",
+  "nbytes": 91
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 480,
+  "ptr_value": 51441,
+  "text_rom_off": 116977,
+  "text": "{F0}{E2}:これ いじょうは いうてもムダやな{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 481,
+  "ptr_value": 51463,
+  "text_rom_off": 116999,
+  "text": "{F0}{E2}:{E3} ては だすなよ!{F7}{F2F6}これは オレのケンカや!{F2F3}",
+  "nbytes": 30
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 482,
+  "ptr_value": 51493,
+  "text_rom_off": 117029,
+  "text": "{F0}{E2}:れんごうは {F7}もう とまるコトはできんのや{F2F4}{F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 483,
+  "ptr_value": 51520,
+  "text_rom_off": 117056,
+  "text": "{F0}{E2}:やっぱりーーー {F7}おまえがーーー{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 484,
+  "ptr_value": 51541,
+  "text_rom_off": 117077,
+  "text": "{F0}{E2}:{ED}!{F2F4}{F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 485,
+  "ptr_value": 51549,
+  "text_rom_off": 117085,
+  "text": "{F0}{E2}:みほを かえして ほしかったら{F2F6}おおさかこうまで こい!{F7}{F2F6}そこで すべてのケリを つけてやる!{F2F4}{F3}",
+  "nbytes": 56
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 486,
+  "ptr_value": 51605,
+  "text_rom_off": 117141,
+  "text": "{F0}{E2}:ああーーー {F7}かすっただけやーーー{F7}{F2F6}おおさかこうには バイクでしか いけへんで{F7}{F2F3}",
+  "nbytes": 47
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 487,
+  "ptr_value": 51652,
+  "text_rom_off": 117188,
+  "text": "{F0}{E2}:いててーーー{F7}{F2F6}よしひろが うしろから どつきおった{F2F3}",
+  "nbytes": 32
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 488,
+  "ptr_value": 51684,
+  "text_rom_off": 117220,
+  "text": "{F0}{E2}:で どうやった?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 489,
+  "ptr_value": 51697,
+  "text_rom_off": 117233,
+  "text": "{F0}{E2}:まさきが よしひろに うたれたーーー{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 490,
+  "ptr_value": 51720,
+  "text_rom_off": 117256,
+  "text": "{F0}{E2}:いのちに べつじょうは ないと おもう{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 491,
+  "ptr_value": 51744,
+  "text_rom_off": 117280,
+  "text": "{F0}{E2}:いきはるんですねーー {F7}よしひろの ところに{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 492,
+  "ptr_value": 51771,
+  "text_rom_off": 117307,
+  "text": "{F0}{E2}:オレらは かいめつした れんごうの{F2F6}いきのこりを せっとくして みますわ{F2F3}",
+  "nbytes": 42
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 493,
+  "ptr_value": 51813,
+  "text_rom_off": 117349,
+  "text": "{F0}{E2}:ほんとうは ええヤツらやと おもてますから{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 494,
+  "ptr_value": 51839,
+  "text_rom_off": 117375,
+  "text": "{F0}{E2}:そうだな{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 495,
+  "ptr_value": 51848,
+  "text_rom_off": 117384,
+  "text": "{F0}{E2}:それが すんだら すぐ あとを おいます{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 496,
+  "ptr_value": 51873,
+  "text_rom_off": 117409,
+  "text": "{E2}:また あとで!{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 497,
+  "ptr_value": 51884,
+  "text_rom_off": 117420,
+  "text": "{E2}:さいごやさかい きばってや!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 498,
+  "ptr_value": 51902,
+  "text_rom_off": 117438,
+  "text": "{F0}{E2}:よく きたなーーー{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 499,
+  "ptr_value": 51916,
+  "text_rom_off": 117452,
+  "text": "{F0}{E2}:だが {F7}れんごう してんのう ほんだの{F2F6}なにかけて このさきには いかせん!{F2F4}{F3}",
+  "nbytes": 45
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 500,
+  "ptr_value": 51961,
+  "text_rom_off": 117497,
+  "text": "{F0}{E2}:{ED}くん!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 501,
+  "ptr_value": 51970,
+  "text_rom_off": 117506,
+  "text": "{F0}{E2}:く{F7}く{F7}く{F7}く{F7}く{F2F6}きたな {ED}!{F7}{F2F6}ごくろうさんと いいたいトコやが{F2F6}{EE}には ここで きえてもらうでぇ!{F2F3}",
+  "nbytes": 60
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 502,
+  "ptr_value": 52030,
+  "text_rom_off": 117566,
+  "text": "{F0}{E2}:ちょうど {F7}まえの そうちょう みたいにな!{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 503,
+  "ptr_value": 52057,
+  "text_rom_off": 117593,
+  "text": "{F0}{E2}:しょだい そうちょうを どうしたんだ!?{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 504,
+  "ptr_value": 52082,
+  "text_rom_off": 117618,
+  "text": "{F0}{E2}:オレの じゃまに なるから{F2F6}あるばしょに とじこめて やったのさ!{F2F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 505,
+  "ptr_value": 52121,
+  "text_rom_off": 117657,
+  "text": "{F0}{E2}:なんてコトを!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 506,
+  "ptr_value": 52133,
+  "text_rom_off": 117669,
+  "text": "{F0}{E2}:オレは おおさかに つづいて{F2F6}とうきょうも てに いれる!{F7}{F2F6}そのためには そうちょうと {ED}には{F2F6}いなくなって もらわないと こまるんだよ!{F2F3}",
+  "nbytes": 78
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 507,
+  "ptr_value": 52211,
+  "text_rom_off": 117747,
+  "text": "{F0}{E2}:それじゃあーーー{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 508,
+  "ptr_value": 52224,
+  "text_rom_off": 117760,
+  "text": "{F0}{E2}:そうさーーー {F7}{F2F6}オレは {ED}を たおすために{F2F6}ねっけつ こうこうに もぐりこんだのさ!{F2F3}",
+  "nbytes": 50
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 509,
+  "ptr_value": 52274,
+  "text_rom_off": 117810,
+  "text": "{F0}{E2}:くだらねぇなーーー{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 510,
+  "ptr_value": 52288,
+  "text_rom_off": 117824,
+  "text": "{F0}{E2}:なにぃ!?{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 511,
+  "ptr_value": 52298,
+  "text_rom_off": 117834,
+  "text": "{F0}{E2}:くだらねぇと いったんだよ{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 512,
+  "ptr_value": 52316,
+  "text_rom_off": 117852,
+  "text": "{F0}{E2}:{ED}は じぶんの ちからで{F2F6}ひとを うごかしたいと おもわないのか?{F7}{F2F6}じぶんを バカにする ヤツらを{F2F6}みかえしたいと おもわないのか?{F2F4}{F3}",
+  "nbytes": 76
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 513,
+  "ptr_value": 52392,
+  "text_rom_off": 117928,
+  "text": "{F0}{E2}:だれも ついて こない{F2F6}サルやまの たいしょうに なってか?{F2F4}{F3}",
+  "nbytes": 37
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 514,
+  "ptr_value": 52429,
+  "text_rom_off": 117965,
+  "text": "{F0}{E2}:{ED}と はなしをしても ムダのようだな{F7}{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 515,
+  "ptr_value": 52453,
+  "text_rom_off": 117989,
+  "text": "{F0}{E2}:こいよ よしひろ!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 516,
+  "ptr_value": 52467,
+  "text_rom_off": 118003,
+  "text": "{F0}{E2}:きっちり オトシマエつけてやるぜ!{F2F4}{F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 517,
+  "ptr_value": 52490,
+  "text_rom_off": 118026,
+  "text": "{F0}{E2}:{ED}ほどの ちからが あればーーー{F7}{F2F6}ひとの うえに たつコトも できるだろうに{F7}{F2F6}なぜ その ちからを つかわないんだ{F2F4}{F3}",
+  "nbytes": 67
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 518,
+  "ptr_value": 52557,
+  "text_rom_off": 118093,
+  "text": "{F0}{E2}:ひとの うえに たつとかーーー どうとか{F2F6}そんなコトは どうでも いいコトさーーー{F2F4}{F3}",
+  "nbytes": 48
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 519,
+  "ptr_value": 52605,
+  "text_rom_off": 118141,
+  "text": "{F0}{E2}:ただ じぶんのプライドを じぶんで{F2F6}きずつける ようなコトは しないぜ!{F2F4}{F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 520,
+  "ptr_value": 52648,
+  "text_rom_off": 118184,
+  "text": "{F0}{E2}:けいさつが きたなーーー{F7}{F2F6}オレの ゲームも これで おわりかーーー{F2F4}{F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 521,
+  "ptr_value": 52689,
+  "text_rom_off": 118225,
+  "text": "{F0}{E2}:{E3}くん {F7}ありがとうーーー{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 522,
+  "ptr_value": 52707,
+  "text_rom_off": 118243,
+  "text": "{E2}:けんけつに ごきょうりょく くださぁい♥{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 523,
+  "ptr_value": 52731,
+  "text_rom_off": 118267,
+  "text": "{E2}:じゃあ いきますよぉ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 524,
+  "ptr_value": 52746,
+  "text_rom_off": 118282,
+  "text": "{E2}:ちちちちっ!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 525,
+  "ptr_value": 52756,
+  "text_rom_off": 118292,
+  "text": "{F0}{E2}:どうも ありがとう ございましたぁ♥{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 526,
+  "ptr_value": 52779,
+  "text_rom_off": 118315,
+  "text": "{E2}:これ いじょうは きけんですよ?{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 527,
+  "ptr_value": 52799,
+  "text_rom_off": 118335,
+  "text": "{E2}:かったあ! はんしんが かったでぇ!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 528,
+  "ptr_value": 52821,
+  "text_rom_off": 118357,
+  "text": "{E2}:みどうすじパレードや!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 529,
+  "ptr_value": 52836,
+  "text_rom_off": 118372,
+  "text": "{E2}:サンダースさんの のろいや! かんにんしてぇ!{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 530,
+  "ptr_value": 52863,
+  "text_rom_off": 118399,
+  "text": "{E2}:ちっと まっててや{F7}{F2F6}カギを つこうて あけるさかい{F2F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 531,
+  "ptr_value": 52894,
+  "text_rom_off": 118430,
+  "text": "{E2}:なーーー なんだ?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 532,
+  "ptr_value": 52907,
+  "text_rom_off": 118443,
+  "text": "{E2}:これからも がんばってや♥{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 533,
+  "ptr_value": 52924,
+  "text_rom_off": 118460,
+  "text": "{E2}:あんたのコト すきやねん♥{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 534,
+  "ptr_value": 52941,
+  "text_rom_off": 118477,
+  "text": "{F0}{E2}:ほな いくでぇ!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 535,
+  "ptr_value": 52954,
+  "text_rom_off": 118490,
+  "text": "{F0}{E2}:ありがとう {E3}!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 536,
+  "ptr_value": 52967,
+  "text_rom_off": 118503,
+  "text": "{F0}{E2}:さすが {E3}や!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 537,
+  "ptr_value": 52979,
+  "text_rom_off": 118515,
+  "text": "{F0}{E2}:{E3}なら{F2F6}やってくれると おもうてたでーーー{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 538,
+  "ptr_value": 53006,
+  "text_rom_off": 118542,
+  "text": "{F0}{E2}:これで おおさかも もとどおりや!{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 539,
+  "ptr_value": 53028,
+  "text_rom_off": 118564,
+  "text": "{F0}{E2}:こんどは オレらが{F2F6}おおさかを もりあげてかな あかんでぇ!{F2F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 540,
+  "ptr_value": 53064,
+  "text_rom_off": 118600,
+  "text": "{F0}{E2}:のこされた れんごうの れんちゅうも{F2F6}きょうりょく してくれる いうたしな{F2F3}",
+  "nbytes": 43
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 541,
+  "ptr_value": 53107,
+  "text_rom_off": 118643,
+  "text": "{F0}{E2}:なんか もえて きたでぇ!{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 542,
+  "ptr_value": 53125,
+  "text_rom_off": 118661,
+  "text": "{F0}{E2}:なんもかも これからや!{F2F6}いくでぇ!{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 543,
+  "ptr_value": 53149,
+  "text_rom_off": 118685,
+  "text": "{F0}{E2}:{E3}ーっ!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 544,
+  "ptr_value": 53158,
+  "text_rom_off": 118694,
+  "text": "{F0}{E2}:みんな どうして ここに?{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 545,
+  "ptr_value": 53176,
+  "text_rom_off": 118712,
+  "text": "{F0}{E2}:まさきから きいたんだ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 546,
+  "ptr_value": 53192,
+  "text_rom_off": 118728,
+  "text": "{F0}{E2}:ひろし もう だいじょうぶ なのか?{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 547,
+  "ptr_value": 53215,
+  "text_rom_off": 118751,
+  "text": "{F0}{E2}:すこし いたいけど へいきだよ!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 548,
+  "ptr_value": 53236,
+  "text_rom_off": 118772,
+  "text": "{F0}{E2}:やっぱり よしひろが?{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 549,
+  "ptr_value": 53252,
+  "text_rom_off": 118788,
+  "text": "{F0}{E2}:あいつーーー{F7}{F2F6}もとは いいヤツだったのかもなーーー{F2F3}",
+  "nbytes": 32
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 550,
+  "ptr_value": 53284,
+  "text_rom_off": 118820,
+  "text": "{F0}{E2}:ひとのうえに たちすぎて{F2F6}ひとを みくだして みるコトしか{F7}{F2F6}できなく なっちゃったんだな{F2F3}",
+  "nbytes": 52
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 551,
+  "ptr_value": 53336,
+  "text_rom_off": 118872,
+  "text": "{F0}{E2}:もしかすると よしひろが いちばん{F2F6}かわいそうだったの かもねーーーー{F2F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 552,
+  "ptr_value": 53377,
+  "text_rom_off": 118913,
+  "text": "{F0}{E2}:いけね!{F2F6}はやく にげないと けいさつが くるぜ!{F2F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 553,
+  "ptr_value": 53408,
+  "text_rom_off": 118944,
+  "text": "{F0}{E2}:{E3} いくよ!{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 554,
+  "ptr_value": 53419,
+  "text_rom_off": 118955,
+  "text": "{F0}{E2}:どうかしたん ですか?{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 555,
+  "ptr_value": 53435,
+  "text_rom_off": 118971,
+  "text": "{F0}{E2}:もしかすると よしひろは{F2F6}もう ひとりの オレだったのかもな{F2F6}オレも よしひろも なにが ただしくて{F2F6}なにが まちがいなのか わからなくて{F2F6}あがいていただけなのかも しれない{F2F3}",
+  "nbytes": 96
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 556,
+  "ptr_value": 53531,
+  "text_rom_off": 119067,
+  "text": "{F0}{E2}:でもーーー{F2F6}そうやって ちょっとずつ{F7}{F2F6}じぶんの すきな おとなに ちかづければ{F2F6}ええんや ないですか?{F2F3}",
+  "nbytes": 60
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 557,
+  "ptr_value": 53591,
+  "text_rom_off": 119127,
+  "text": "{F0}{E2}:{F7}ー{F7}ー{F7}ー{F7}ー{F7}ー {F7}そうだな{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 558,
+  "ptr_value": 53612,
+  "text_rom_off": 119148,
+  "text": "{F0}{E2}:じぶんに なにが できるのかを {F2F6}たしかめる ためにも{F7}{F2F6}ここで とまっているワケには いかねえな{F2F3}",
+  "nbytes": 56
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 559,
+  "ptr_value": 53668,
+  "text_rom_off": 119204,
+  "text": "{F0}{E2}:さあ みんなの ところへ いこうぜ!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 560,
+  "ptr_value": 53691,
+  "text_rom_off": 119227,
+  "text": "{F0}{E2}:{E3}くん!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 561,
+  "ptr_value": 53700,
+  "text_rom_off": 119236,
+  "text": "{F0}{E2}:また{F7}ー{F7}ー{F7}ー あえますやろ?{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 562,
+  "ptr_value": 53721,
+  "text_rom_off": 119257,
+  "text": "{F0}{E2}:そうだなーーー{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 563,
+  "ptr_value": 53733,
+  "text_rom_off": 119269,
+  "text": "{F0}{E2}:また あえると いいなーーー{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 564,
+  "ptr_value": 53752,
+  "text_rom_off": 119288,
+  "text": "{F0}{E2}:{ED}を つかうのか?{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 565,
+  "ptr_value": 53766,
+  "text_rom_off": 119302,
+  "text": "{F5}{F2F3}",
+  "nbytes": 3
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 566,
+  "ptr_value": 53769,
+  "text_rom_off": 119305,
+  "text": "{F0}{E2}:あー{F7}ー{F7}ー{F7} こうじ? {F7}オレだけど{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 30
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 567,
+  "ptr_value": 53799,
+  "text_rom_off": 119335,
+  "text": "{E2}:いま どこにいるんだ?{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 568,
+  "ptr_value": 53814,
+  "text_rom_off": 119350,
+  "text": "{E2}:えっと{F7}ー{F7}ー{F7}ー {EC}だけど{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 569,
+  "ptr_value": 53832,
+  "text_rom_off": 119368,
+  "text": "{F0}{E2}:{E7}で いいのか?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 570,
+  "ptr_value": 53845,
+  "text_rom_off": 119381,
+  "text": "{F5}{F2F3}",
+  "nbytes": 3
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 571,
+  "ptr_value": 53848,
+  "text_rom_off": 119384,
+  "text": "{F0}{E2}:まだ かうのか?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 572,
+  "ptr_value": 53861,
+  "text_rom_off": 119397,
+  "text": "{F5}{F2F3}",
+  "nbytes": 3
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 573,
+  "ptr_value": 53864,
+  "text_rom_off": 119400,
+  "text": "{F0}あなたのレベルは {EF}です{F2F4}{F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 574,
+  "ptr_value": 53880,
+  "text_rom_off": 119416,
+  "text": "{EF}の けいけんちで レベルアップします{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 575,
+  "ptr_value": 53901,
+  "text_rom_off": 119437,
+  "text": "{F0}{E2}:まだ やるのか?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 576,
+  "ptr_value": 53914,
+  "text_rom_off": 119450,
+  "text": "{F5}{F2F3}",
+  "nbytes": 3
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 577,
+  "ptr_value": 53917,
+  "text_rom_off": 119453,
+  "text": "{F0}{E2}:えっと きょうのうんは{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 578,
+  "ptr_value": 53939,
+  "text_rom_off": 119475,
+  "text": "{F0}{E2}:{ED}だ{F2F4}{F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 579,
+  "ptr_value": 53947,
+  "text_rom_off": 119483,
+  "text": "{F0}{E2}:さっき みたトコだぜ?{F2F4}{F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 580,
+  "ptr_value": 53964,
+  "text_rom_off": 119500,
+  "text": "{E2}:これから {EC}に いくんや{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 581,
+  "ptr_value": 53980,
+  "text_rom_off": 119516,
+  "text": "{E2}:わるいけど いそいでるんや {F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 582,
+  "ptr_value": 53998,
+  "text_rom_off": 119534,
+  "text": "{E2}:うー {F7}さけの のみすぎで きもちわるいわぁ{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 583,
+  "ptr_value": 54024,
+  "text_rom_off": 119560,
+  "text": "{E2}:あんた なっとうは すきか?{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 584,
+  "ptr_value": 54042,
+  "text_rom_off": 119578,
+  "text": "{E2}:うち なっとう たべるひとは きらいや{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 585,
+  "ptr_value": 54065,
+  "text_rom_off": 119601,
+  "text": "{E2}:いまから {ED}を{F2F6}たべに いくんや♥{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 586,
+  "ptr_value": 54087,
+  "text_rom_off": 119623,
+  "text": "{E2}:いまから みさとえいじさまを みにいくんや{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 587,
+  "ptr_value": 54112,
+  "text_rom_off": 119648,
+  "text": "{E2}:なんか ようけ?{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 588,
+  "ptr_value": 54124,
+  "text_rom_off": 119660,
+  "text": "{E2}:どないでっか?{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 589,
+  "ptr_value": 54135,
+  "text_rom_off": 119671,
+  "text": "{E2}:{ED}! {F7}{F2F6}あれ ケンカうってるんやないの?{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 590,
+  "ptr_value": 54161,
+  "text_rom_off": 119697,
+  "text": "{E2}:ここから でんしゃにのって 1えきめが{F2F6}{EC}の まちや{F2F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 591,
+  "ptr_value": 54192,
+  "text_rom_off": 119728,
+  "text": "{E2}:{EC}に いけば{F2F6}なんか わかるんやない?{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 592,
+  "ptr_value": 54216,
+  "text_rom_off": 119752,
+  "text": "{E2}:{EC}が{F2F6}あやしいんや ないか?{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 593,
+  "ptr_value": 54235,
+  "text_rom_off": 119771,
+  "text": "{E2}:よるの おおさかは あぶないでぇ{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 594,
+  "ptr_value": 54255,
+  "text_rom_off": 119791,
+  "text": "{E2}:つかれたらホテルに もどって やすむんやね{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 595,
+  "ptr_value": 54280,
+  "text_rom_off": 119816,
+  "text": "{E2}:あたらしい ぶきやぼうぐを てに いれたら{F2F6}ちゃんと そうびするコトやな{F2F3}",
+  "nbytes": 41
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 596,
+  "ptr_value": 54321,
+  "text_rom_off": 119857,
+  "text": "{E2}:セーブは こまめに したほうが ええで{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 597,
+  "ptr_value": 54344,
+  "text_rom_off": 119880,
+  "text": "{E2}:{E7} ぐらいは{F2F6}もってたほうが ええと おもうよ{F2F3}",
+  "nbytes": 28
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 598,
+  "ptr_value": 54372,
+  "text_rom_off": 119908,
+  "text": "{E2}:あるいてても ぼーっと してても{F2F6}よるに なるさかい きぃつけるんやね{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 599,
+  "ptr_value": 54412,
+  "text_rom_off": 119948,
+  "text": "{E2}:ちかせんろを あるくときは{F2F6}でんしゃに きぃつけんと はねられるでぇ {F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 600,
+  "ptr_value": 54452,
+  "text_rom_off": 119988,
+  "text": "{E2}:でんしゃに のるには ていきが いるでぇ{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 601,
+  "ptr_value": 54476,
+  "text_rom_off": 120012,
+  "text": "{E2}:あんまり まちのひとを いじめると{F2F6}おまわりさんが くるで きぃつけや{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 602,
+  "ptr_value": 54516,
+  "text_rom_off": 120052,
+  "text": "{E2}:ケンカなんて やめとき{F2F6}まじめに いきるんが いちばんや{F2F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 603,
+  "ptr_value": 54549,
+  "text_rom_off": 120085,
+  "text": "{E2}:これから はんしんは どないなるんやろ?{F2F3}",
+  "nbytes": 24
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 604,
+  "ptr_value": 54573,
+  "text_rom_off": 120109,
+  "text": "{E2}:やばんじんとは くちも ききたないわ!{F2F3}",
+  "nbytes": 23
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 605,
+  "ptr_value": 54596,
+  "text_rom_off": 120132,
+  "text": "{E2}:オレに かつには 100まんねん はやいわ!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 606,
+  "ptr_value": 54622,
+  "text_rom_off": 120158,
+  "text": "{E2}:まえはヤンキーも おとなしかったんやけどなぁ{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 607,
+  "ptr_value": 54648,
+  "text_rom_off": 120184,
+  "text": "{E2}:さいきんヤンキーが どこでも あばれるんや{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 608,
+  "ptr_value": 54673,
+  "text_rom_off": 120209,
+  "text": "{E2}:ほーちょお いーっぽん さらしに まいて♥{F2F3}",
+  "nbytes": 25
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 609,
+  "ptr_value": 54698,
+  "text_rom_off": 120234,
+  "text": "{E2}:あんた わたしの このみやわぁ♥{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 610,
+  "ptr_value": 54718,
+  "text_rom_off": 120254,
+  "text": "{E2}:だれが カバやねん!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 611,
+  "ptr_value": 54732,
+  "text_rom_off": 120268,
+  "text": "{E2}:ごめんください{F2E2}:どなたですか?{F2E2}:となりの {E2}ちゃんです{F2E2}:おはいりください{F2E2}:ありがとう{F2F3}",
+  "nbytes": 54
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 612,
+  "ptr_value": 54786,
+  "text_rom_off": 120322,
+  "text": "{E2}:アホが みーる {F7}ブタのケーツ!{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 613,
+  "ptr_value": 54806,
+  "text_rom_off": 120342,
+  "text": "{E2}:おじゃましんまんにやわ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 614,
+  "ptr_value": 54821,
+  "text_rom_off": 120357,
+  "text": "{E2}:ごめんくさい{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 615,
+  "ptr_value": 54831,
+  "text_rom_off": 120367,
+  "text": "{E2}:アツは ナツいなぁ{F2F6}アツ アツ アツゥー!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 616,
+  "ptr_value": 54857,
+  "text_rom_off": 120393,
+  "text": "{E2}:きょうは これぐらいに しといたるわ{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 617,
+  "ptr_value": 54879,
+  "text_rom_off": 120415,
+  "text": "{E2}:オレは からてを やってたんやぞ!{F2F6}{F7}つうしんきょういく やけどーーー{F2F3}",
+  "nbytes": 40
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 618,
+  "ptr_value": 54919,
+  "text_rom_off": 120455,
+  "text": "{E2}:すきが あったら{F2F6}どっからでも かかってこんかい!{F2F3}",
+  "nbytes": 30
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 619,
+  "ptr_value": 54949,
+  "text_rom_off": 120485,
+  "text": "{F0}{E3}の もちものは いっぱいだ{F2E2}:{E7}を すてようぜ?{F2F3}",
+  "nbytes": 29
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 620,
+  "ptr_value": 54978,
+  "text_rom_off": 120514,
+  "text": "{F0}{E2}:なにを すてるんだ?{F2F4}{F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 621,
+  "ptr_value": 54994,
+  "text_rom_off": 120530,
+  "text": "{F0}{E2}:{E7}を すてるぞ?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 622,
+  "ptr_value": 55007,
+  "text_rom_off": 120543,
+  "text": "{E2}:やっぱ こっちの みかたしよ{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 623,
+  "ptr_value": 55025,
+  "text_rom_off": 120561,
+  "text": "{E3}が {EE}に なった!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 624,
+  "ptr_value": 55037,
+  "text_rom_off": 120573,
+  "text": "{F0}{E2}:なめんなよっ!{F2E2}の いかりの いちげき!{F2F3}",
+  "nbytes": 26
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 625,
+  "ptr_value": 55063,
+  "text_rom_off": 120599,
+  "text": "{F0}{E2}:なに さらすんじゃ ボケぇ!{F2E2}の いかりの いちげき!{F2F3}",
+  "nbytes": 33
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 626,
+  "ptr_value": 55096,
+  "text_rom_off": 120632,
+  "text": "{F0}{E2}:なに するんや!{F2E2}の いかりの いちげき!{F2F3}",
+  "nbytes": 27
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 627,
+  "ptr_value": 55123,
+  "text_rom_off": 120659,
+  "text": "{E3}の いかりの いちげき!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 628,
+  "ptr_value": 55138,
+  "text_rom_off": 120674,
+  "text": "{E3}は にげてしまったーーー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 629,
+  "ptr_value": 55153,
+  "text_rom_off": 120689,
+  "text": "{F0}{E2}:{E3}! {F7}{E3}!{F2F6}だいじょうぶか? しっかり しろよ!{F2F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 630,
+  "ptr_value": 55184,
+  "text_rom_off": 120720,
+  "text": "{F0}{E2}:まさきぃ しねやぁぁぁ!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 631,
+  "ptr_value": 55201,
+  "text_rom_off": 120737,
+  "text": "{F0}{E3}は のろわれてしまった{F7}ー{F7}ー{F7}ー{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 632,
+  "ptr_value": 55222,
+  "text_rom_off": 120758,
+  "text": "{F0}{E2}:にいちゃん どこまで いくんや?{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 633,
+  "ptr_value": 55243,
+  "text_rom_off": 120779,
+  "text": "{F0}シャガーン:マハラパパー! {F7}ねがいごとを どうぞ?{F2F4}{F3}",
+  "nbytes": 30
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 634,
+  "ptr_value": 55273,
+  "text_rom_off": 120809,
+  "text": "{F0}シャガーン:{ED}で よろしいですか?{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 635,
+  "ptr_value": 55293,
+  "text_rom_off": 120829,
+  "text": "シャガーン:では おおせのとおりにーーー {F7}ハパラパラー!{F2F3}",
+  "nbytes": 31
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 636,
+  "ptr_value": 55324,
+  "text_rom_off": 120860,
+  "text": "まちのひとは こわがっている!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 637,
+  "ptr_value": 55341,
+  "text_rom_off": 120877,
+  "text": "まちのひとの めつきが かわった!{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 638,
+  "ptr_value": 55360,
+  "text_rom_off": 120896,
+  "text": "{F0}{EC}{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 639,
+  "ptr_value": 55364,
+  "text_rom_off": 120900,
+  "text": "{E2}:うっ!{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 640,
+  "ptr_value": 55371,
+  "text_rom_off": 120907,
+  "text": "{E7}は こわれてしまったーーー{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 641,
+  "ptr_value": 55387,
+  "text_rom_off": 120923,
+  "text": "{E2}:{F7}ー{F7}ー{F7}ー{F7} ぶじで よかった!{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 642,
+  "ptr_value": 55408,
+  "text_rom_off": 120944,
+  "text": "{E2}:ほら! {F7}いてて{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 643,
+  "ptr_value": 55420,
+  "text_rom_off": 120956,
+  "text": "{E2}:なんだ あいつらぁ{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 644,
+  "ptr_value": 55433,
+  "text_rom_off": 120969,
+  "text": "{F6}なに やってんだよ?{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 645,
+  "ptr_value": 55446,
+  "text_rom_off": 120982,
+  "text": "{E2}:オレらは だれにも まけるワケには いかんのや!{F2F6}{F7}いくでぇ!{F2F3}",
+  "nbytes": 36
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 646,
+  "ptr_value": 55482,
+  "text_rom_off": 121018,
+  "text": "{E2}:おねがい たすけてぇ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 647,
+  "ptr_value": 55497,
+  "text_rom_off": 121033,
+  "text": "{F0}{E2}:{E3}くん おねがいです!{F7}{F2F6}わたしたちに ちからを かしてください!{F2F3}",
+  "nbytes": 39
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 648,
+  "ptr_value": 55536,
+  "text_rom_off": 121072,
+  "text": "{E2}:はよ いくんや!{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 649,
+  "ptr_value": 55548,
+  "text_rom_off": 121084,
+  "text": "{F0}    ゲームデザイナー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 650,
+  "ptr_value": 55563,
+  "text_rom_off": 121099,
+  "text": "{F6}    さわだ のりひろ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 651,
+  "ptr_value": 55578,
+  "text_rom_off": 121114,
+  "text": "{F6}     つだ のぼる{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 652,
+  "ptr_value": 55592,
+  "text_rom_off": 121128,
+  "text": "{F6}    きしもと よしひさ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 653,
+  "ptr_value": 55608,
+  "text_rom_off": 121144,
+  "text": "{F0}   キャラクター デザイン{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 654,
+  "ptr_value": 55625,
+  "text_rom_off": 121161,
+  "text": "{F6}   いしぐろ せいいちろう{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 655,
+  "ptr_value": 55642,
+  "text_rom_off": 121178,
+  "text": "{F6}    ねだち かつゆき{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 656,
+  "ptr_value": 55657,
+  "text_rom_off": 121193,
+  "text": "{F6}   せきかわ じゅんいちろう{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 657,
+  "ptr_value": 55675,
+  "text_rom_off": 121211,
+  "text": "{F6}    さわだ のりひろ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 658,
+  "ptr_value": 55690,
+  "text_rom_off": 121226,
+  "text": "{F0}  バックグラウンド デザイン{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 659,
+  "ptr_value": 55708,
+  "text_rom_off": 121244,
+  "text": "{F6}    かたぎり まさみち{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 660,
+  "ptr_value": 55724,
+  "text_rom_off": 121260,
+  "text": "{F6}   ひらばやし くにひろ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 661,
+  "ptr_value": 55740,
+  "text_rom_off": 121276,
+  "text": "{F6}   いずみやま たけひさ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 662,
+  "ptr_value": 55756,
+  "text_rom_off": 121292,
+  "text": "{F0}     プログラマー{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 663,
+  "ptr_value": 55770,
+  "text_rom_off": 121306,
+  "text": "{F6}     もり しんいち{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 664,
+  "ptr_value": 55785,
+  "text_rom_off": 121321,
+  "text": "{F6}   なんば やすいちろう{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 665,
+  "ptr_value": 55801,
+  "text_rom_off": 121337,
+  "text": "{F6}   すや アダルト なおき{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 666,
+  "ptr_value": 55818,
+  "text_rom_off": 121354,
+  "text": "{F6}   くまがい しんたろう{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 667,
+  "ptr_value": 55834,
+  "text_rom_off": 121370,
+  "text": "{F6}    まつもと やすひろ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 668,
+  "ptr_value": 55850,
+  "text_rom_off": 121386,
+  "text": "{F0}      サウンド{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 669,
+  "ptr_value": 55863,
+  "text_rom_off": 121399,
+  "text": "{F6}    いのうえ あきら{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 670,
+  "ptr_value": 55878,
+  "text_rom_off": 121414,
+  "text": "{F6}     うらべ たく{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 671,
+  "ptr_value": 55892,
+  "text_rom_off": 121428,
+  "text": "{F6}    ひらさわ みちや{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 672,
+  "ptr_value": 55907,
+  "text_rom_off": 121443,
+  "text": "{F0}      せんでん{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 673,
+  "ptr_value": 55920,
+  "text_rom_off": 121456,
+  "text": "{F6}    たにもと あつし{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 674,
+  "ptr_value": 55935,
+  "text_rom_off": 121471,
+  "text": "{F0}    パッケージ えかき{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 675,
+  "ptr_value": 55951,
+  "text_rom_off": 121487,
+  "text": "{F6}    あんどう つとむ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 676,
+  "ptr_value": 55966,
+  "text_rom_off": 121502,
+  "text": "{F0}  アドバタイジング デザイン{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 677,
+  "ptr_value": 55984,
+  "text_rom_off": 121520,
+  "text": "{F6}     むかい くみこ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 678,
+  "ptr_value": 55999,
+  "text_rom_off": 121535,
+  "text": "{F6}     やまね あきこ{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 679,
+  "ptr_value": 56014,
+  "text_rom_off": 121550,
+  "text": "{F0}     きょうりょく{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 680,
+  "ptr_value": 56028,
+  "text_rom_off": 121564,
+  "text": "{F6}  わだ はらまきだけは しゅうじ{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 681,
+  "ptr_value": 56048,
+  "text_rom_off": 121584,
+  "text": "{F6}    たかはし としなり{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 682,
+  "ptr_value": 56064,
+  "text_rom_off": 121600,
+  "text": "{F6}    にしざわ あつゆき{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 683,
+  "ptr_value": 56080,
+  "text_rom_off": 121616,
+  "text": "{F6}    よしはら まさひろ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 684,
+  "ptr_value": 56096,
+  "text_rom_off": 121632,
+  "text": "{F0}     プロデューサー{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 685,
+  "ptr_value": 56111,
+  "text_rom_off": 121647,
+  "text": "{F6}     たき くにお{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 686,
+  "ptr_value": 56125,
+  "text_rom_off": 121661,
+  "text": "{F6}  かぶしきがいしゃ ロッテリア{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 687,
+  "ptr_value": 56144,
+  "text_rom_off": 121680,
+  "text": "{F6} かぶしきがいしゃ はんしんタイガース{F2F3}",
+  "nbytes": 22
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 688,
+  "ptr_value": 56166,
+  "text_rom_off": 121702,
+  "text": "{E2}:ばっちり おぼえておくぜ!{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 689,
+  "ptr_value": 56183,
+  "text_rom_off": 121719,
+  "text": "{F0}{E2}:おぐらぁ いくでぇ!{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 690,
+  "ptr_value": 56198,
+  "text_rom_off": 121734,
+  "text": "てがみは すてられない!{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 691,
+  "ptr_value": 56212,
+  "text_rom_off": 121748,
+  "text": "{F6}     よしだ まさかず{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 692,
+  "ptr_value": 56228,
+  "text_rom_off": 121764,
+  "text": "{F6}     おおた かつのり{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 103349,
+  "index": 693,
+  "ptr_value": 56244,
+  "text_rom_off": 121780,
+  "text": "{F6}     さとう まさや{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 0,
+  "ptr_value": 56481,
+  "text_rom_off": 122017,
+  "text": "にゅうじょうけん{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 1,
+  "ptr_value": 56491,
+  "text_rom_off": 122027,
+  "text": "1くかん ていき{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 2,
+  "ptr_value": 56501,
+  "text_rom_off": 122037,
+  "text": "2くかん ていき{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 3,
+  "ptr_value": 56511,
+  "text_rom_off": 122047,
+  "text": "3くかん ていき{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 4,
+  "ptr_value": 56521,
+  "text_rom_off": 122057,
+  "text": "バイクのキー{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 5,
+  "ptr_value": 56529,
+  "text_rom_off": 122065,
+  "text": "カードロック {F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 6,
+  "ptr_value": 56538,
+  "text_rom_off": 122074,
+  "text": "マスターキー {F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 7,
+  "ptr_value": 56547,
+  "text_rom_off": 122083,
+  "text": "トレインカード{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 8,
+  "ptr_value": 56556,
+  "text_rom_off": 122092,
+  "text": "テレホンカード{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 9,
+  "ptr_value": 56565,
+  "text_rom_off": 122101,
+  "text": "てがみ {F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 10,
+  "ptr_value": 56571,
+  "text_rom_off": 122107,
+  "text": "ひやしあめ{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 11,
+  "ptr_value": 56578,
+  "text_rom_off": 122114,
+  "text": "ウィズパー{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 12,
+  "ptr_value": 56585,
+  "text_rom_off": 122121,
+  "text": "イーストキス{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 13,
+  "ptr_value": 56593,
+  "text_rom_off": 122129,
+  "text": "ゲロリン{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 14,
+  "ptr_value": 56599,
+  "text_rom_off": 122135,
+  "text": "ドッグマン{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 15,
+  "ptr_value": 56606,
+  "text_rom_off": 122142,
+  "text": "マムシケン50{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 16,
+  "ptr_value": 56615,
+  "text_rom_off": 122151,
+  "text": "すこんぶ{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 17,
+  "ptr_value": 56621,
+  "text_rom_off": 122157,
+  "text": "あたりまえクラッカー{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 18,
+  "ptr_value": 56633,
+  "text_rom_off": 122169,
+  "text": "とらゴーフルル{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 19,
+  "ptr_value": 56642,
+  "text_rom_off": 122178,
+  "text": "だいぎんじょう{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 20,
+  "ptr_value": 56651,
+  "text_rom_off": 122187,
+  "text": "すいみんやく{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 21,
+  "ptr_value": 56659,
+  "text_rom_off": 122195,
+  "text": "あぶないくすり{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 22,
+  "ptr_value": 56668,
+  "text_rom_off": 122204,
+  "text": "はりねずみの ぬいぐるみ{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 23,
+  "ptr_value": 56682,
+  "text_rom_off": 122218,
+  "text": "とらつきーの ぬいぐるみ{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 24,
+  "ptr_value": 56696,
+  "text_rom_off": 122232,
+  "text": "はるだんぢ にんぎょう{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 25,
+  "ptr_value": 56709,
+  "text_rom_off": 122245,
+  "text": "おかめのはち にんぎょう{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 26,
+  "ptr_value": 56723,
+  "text_rom_off": 122259,
+  "text": "サインしきし{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 27,
+  "ptr_value": 56731,
+  "text_rom_off": 122267,
+  "text": "チケット{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 28,
+  "ptr_value": 56737,
+  "text_rom_off": 122273,
+  "text": "ガンガンクエスト5{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 29,
+  "ptr_value": 56748,
+  "text_rom_off": 122284,
+  "text": "さいごのファンタジー5{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 30,
+  "ptr_value": 56761,
+  "text_rom_off": 122297,
+  "text": "シルバーネックレス{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 31,
+  "ptr_value": 56772,
+  "text_rom_off": 122308,
+  "text": "ゴールドネックレス{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 32,
+  "ptr_value": 56783,
+  "text_rom_off": 122319,
+  "text": "プラチナネックレス{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 33,
+  "ptr_value": 56794,
+  "text_rom_off": 122330,
+  "text": "とりのつめペンダント{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 34,
+  "ptr_value": 56806,
+  "text_rom_off": 122342,
+  "text": "あおいいしペンダント{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 35,
+  "ptr_value": 56818,
+  "text_rom_off": 122354,
+  "text": "すいしょうペンダント{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 36,
+  "ptr_value": 56830,
+  "text_rom_off": 122366,
+  "text": "うみのさる{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 37,
+  "ptr_value": 56837,
+  "text_rom_off": 122373,
+  "text": "プリペイドカード{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 38,
+  "ptr_value": 56847,
+  "text_rom_off": 122383,
+  "text": "タクシーカード{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 39,
+  "ptr_value": 56856,
+  "text_rom_off": 122392,
+  "text": "ぐんて{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 40,
+  "ptr_value": 56861,
+  "text_rom_off": 122397,
+  "text": "ドライバーグローブ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 41,
+  "ptr_value": 56872,
+  "text_rom_off": 122408,
+  "text": "リストバンド{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 42,
+  "ptr_value": 56880,
+  "text_rom_off": 122416,
+  "text": "へびのゆびわ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 43,
+  "ptr_value": 56888,
+  "text_rom_off": 122424,
+  "text": "シルバーブレスレット{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 44,
+  "ptr_value": 56900,
+  "text_rom_off": 122436,
+  "text": "メリケンサック{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 45,
+  "ptr_value": 56909,
+  "text_rom_off": 122445,
+  "text": "ばいあんのはり{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 46,
+  "ptr_value": 56918,
+  "text_rom_off": 122454,
+  "text": "どくろのゆびわ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 47,
+  "ptr_value": 56927,
+  "text_rom_off": 122463,
+  "text": "パンチンググラブ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 48,
+  "ptr_value": 56937,
+  "text_rom_off": 122473,
+  "text": "さそりのゆびわ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 49,
+  "ptr_value": 56946,
+  "text_rom_off": 122482,
+  "text": "ナックルプロテクター{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 50,
+  "ptr_value": 56958,
+  "text_rom_off": 122494,
+  "text": "ゴールドブレスレット{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 51,
+  "ptr_value": 56970,
+  "text_rom_off": 122506,
+  "text": "アームサポーター{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 52,
+  "ptr_value": 56980,
+  "text_rom_off": 122516,
+  "text": "ちぞめのナックル{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 53,
+  "ptr_value": 56990,
+  "text_rom_off": 122526,
+  "text": "びゃっこのゆびわ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 54,
+  "ptr_value": 57000,
+  "text_rom_off": 122536,
+  "text": "アイアンナックル{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 55,
+  "ptr_value": 57010,
+  "text_rom_off": 122546,
+  "text": "こうけん{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 56,
+  "ptr_value": 57016,
+  "text_rom_off": 122552,
+  "text": "デスナックル{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 57,
+  "ptr_value": 57024,
+  "text_rom_off": 122560,
+  "text": "りゅうじんのゆびわ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 58,
+  "ptr_value": 57035,
+  "text_rom_off": 122571,
+  "text": "カイザーナックル{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 59,
+  "ptr_value": 57045,
+  "text_rom_off": 122581,
+  "text": "きじんのゆびわ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 60,
+  "ptr_value": 57054,
+  "text_rom_off": 122590,
+  "text": "パワーリスト{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 61,
+  "ptr_value": 57062,
+  "text_rom_off": 122598,
+  "text": "かくとうのゆびわ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 62,
+  "ptr_value": 57072,
+  "text_rom_off": 122608,
+  "text": "ふしぎなゆびわ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 63,
+  "ptr_value": 57081,
+  "text_rom_off": 122617,
+  "text": "ほびっとのゆびわ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 64,
+  "ptr_value": 57091,
+  "text_rom_off": 122627,
+  "text": "くろのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 65,
+  "ptr_value": 57099,
+  "text_rom_off": 122635,
+  "text": "あかのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 66,
+  "ptr_value": 57107,
+  "text_rom_off": 122643,
+  "text": "チェックのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 67,
+  "ptr_value": 57117,
+  "text_rom_off": 122653,
+  "text": "ぼたんのうらじ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 68,
+  "ptr_value": 57126,
+  "text_rom_off": 122662,
+  "text": "つるのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 69,
+  "ptr_value": 57134,
+  "text_rom_off": 122670,
+  "text": "さくらのうらじ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 70,
+  "ptr_value": 57143,
+  "text_rom_off": 122679,
+  "text": "つきのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 71,
+  "ptr_value": 57151,
+  "text_rom_off": 122687,
+  "text": "こいのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 72,
+  "ptr_value": 57159,
+  "text_rom_off": 122695,
+  "text": "いだてんのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 73,
+  "ptr_value": 57169,
+  "text_rom_off": 122705,
+  "text": "からじしのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 74,
+  "ptr_value": 57179,
+  "text_rom_off": 122715,
+  "text": "しにがみのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 75,
+  "ptr_value": 57189,
+  "text_rom_off": 122725,
+  "text": "びしゃもんのうらじ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 76,
+  "ptr_value": 57200,
+  "text_rom_off": 122736,
+  "text": "ふうじんのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 77,
+  "ptr_value": 57210,
+  "text_rom_off": 122746,
+  "text": "らいじんのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 78,
+  "ptr_value": 57220,
+  "text_rom_off": 122756,
+  "text": "りゅうのうらじ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 79,
+  "ptr_value": 57229,
+  "text_rom_off": 122765,
+  "text": "おうきょのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 80,
+  "ptr_value": 57239,
+  "text_rom_off": 122775,
+  "text": "しゅらのうらじ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 81,
+  "ptr_value": 57248,
+  "text_rom_off": 122784,
+  "text": "ぬえのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 82,
+  "ptr_value": 57256,
+  "text_rom_off": 122792,
+  "text": "ボディプロテクター{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 83,
+  "ptr_value": 57267,
+  "text_rom_off": 122803,
+  "text": "ロトのうらじ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 84,
+  "ptr_value": 57275,
+  "text_rom_off": 122811,
+  "text": "そうりゅうのうらじ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 85,
+  "ptr_value": 57286,
+  "text_rom_off": 122822,
+  "text": "よしもとのうらじ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 86,
+  "ptr_value": 57296,
+  "text_rom_off": 122832,
+  "text": "べんじょスリッパ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 87,
+  "ptr_value": 57306,
+  "text_rom_off": 122842,
+  "text": "サンダル{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 88,
+  "ptr_value": 57312,
+  "text_rom_off": 122848,
+  "text": "せった{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 89,
+  "ptr_value": 57317,
+  "text_rom_off": 122853,
+  "text": "キャンバスシューズ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 90,
+  "ptr_value": 57328,
+  "text_rom_off": 122864,
+  "text": "あなあきのくつ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 91,
+  "ptr_value": 57337,
+  "text_rom_off": 122873,
+  "text": "デッキシューズ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 92,
+  "ptr_value": 57346,
+  "text_rom_off": 122882,
+  "text": "ラバーソウル{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 93,
+  "ptr_value": 57354,
+  "text_rom_off": 122890,
+  "text": "ブーツ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 94,
+  "ptr_value": 57359,
+  "text_rom_off": 122895,
+  "text": "げた{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 95,
+  "ptr_value": 57363,
+  "text_rom_off": 122899,
+  "text": "おばさんサンダル{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 96,
+  "ptr_value": 57373,
+  "text_rom_off": 122909,
+  "text": "あかいくつ{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 97,
+  "ptr_value": 57380,
+  "text_rom_off": 122916,
+  "text": "バスケットシューズ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 98,
+  "ptr_value": 57391,
+  "text_rom_off": 122927,
+  "text": "デザートブーツ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 99,
+  "ptr_value": 57400,
+  "text_rom_off": 122936,
+  "text": "あんぜんぐつ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 100,
+  "ptr_value": 57408,
+  "text_rom_off": 122944,
+  "text": "ローファー{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 101,
+  "ptr_value": 57415,
+  "text_rom_off": 122951,
+  "text": "プレーントウ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 102,
+  "ptr_value": 57423,
+  "text_rom_off": 122959,
+  "text": "ウイングチップ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 103,
+  "ptr_value": 57432,
+  "text_rom_off": 122968,
+  "text": "ばんちょうのくつ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 104,
+  "ptr_value": 57442,
+  "text_rom_off": 122978,
+  "text": "エナメルシューズ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 105,
+  "ptr_value": 57452,
+  "text_rom_off": 122988,
+  "text": "マイコーのくつ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 106,
+  "ptr_value": 57461,
+  "text_rom_off": 122997,
+  "text": "てつげた{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 107,
+  "ptr_value": 57467,
+  "text_rom_off": 123003,
+  "text": "ハイヒール{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 108,
+  "ptr_value": 57474,
+  "text_rom_off": 123010,
+  "text": "ひみつのシューズ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 121797,
+  "index": 109,
+  "ptr_value": 57484,
+  "text_rom_off": 123020,
+  "text": "カンフーシューズ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 0,
+  "ptr_value": 57566,
+  "text_rom_off": 123102,
+  "text": "レベル{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 1,
+  "ptr_value": 57571,
+  "text_rom_off": 123107,
+  "text": "たいりょく{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 2,
+  "ptr_value": 57578,
+  "text_rom_off": 123114,
+  "text": "きりょく{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 3,
+  "ptr_value": 57584,
+  "text_rom_off": 123120,
+  "text": "ちから{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 4,
+  "ptr_value": 57589,
+  "text_rom_off": 123125,
+  "text": "すばやさ{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 5,
+  "ptr_value": 57595,
+  "text_rom_off": 123131,
+  "text": "こうげきりょく{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 6,
+  "ptr_value": 57604,
+  "text_rom_off": 123140,
+  "text": "しゅびりょく{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 7,
+  "ptr_value": 57612,
+  "text_rom_off": 123148,
+  "text": "うんのよさ{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 8,
+  "ptr_value": 57619,
+  "text_rom_off": 123155,
+  "text": "さいだいたいりょく{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 9,
+  "ptr_value": 57630,
+  "text_rom_off": 123166,
+  "text": "さいだいきりょく{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 10,
+  "ptr_value": 57640,
+  "text_rom_off": 123176,
+  "text": "ジャンプキック{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 11,
+  "ptr_value": 57649,
+  "text_rom_off": 123185,
+  "text": "えりづかみ なげ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 12,
+  "ptr_value": 57659,
+  "text_rom_off": 123195,
+  "text": "ガード{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 13,
+  "ptr_value": 57664,
+  "text_rom_off": 123200,
+  "text": "きめパンチ{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 14,
+  "ptr_value": 57671,
+  "text_rom_off": 123207,
+  "text": "きめキック{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 15,
+  "ptr_value": 57678,
+  "text_rom_off": 123214,
+  "text": "こしかけパンチ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 16,
+  "ptr_value": 57687,
+  "text_rom_off": 123223,
+  "text": "マッハぱんち{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 17,
+  "ptr_value": 57695,
+  "text_rom_off": 123231,
+  "text": "えんずいぎり{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 18,
+  "ptr_value": 57703,
+  "text_rom_off": 123239,
+  "text": "ためパンチ{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 19,
+  "ptr_value": 57710,
+  "text_rom_off": 123246,
+  "text": "ジャーマン スープレックス{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 20,
+  "ptr_value": 57725,
+  "text_rom_off": 123261,
+  "text": "きあい{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 21,
+  "ptr_value": 57730,
+  "text_rom_off": 123266,
+  "text": "たえる{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 22,
+  "ptr_value": 57735,
+  "text_rom_off": 123271,
+  "text": "はやあるき{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 23,
+  "ptr_value": 57742,
+  "text_rom_off": 123278,
+  "text": "なぐる{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 24,
+  "ptr_value": 57747,
+  "text_rom_off": 123283,
+  "text": "ばくしん{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 25,
+  "ptr_value": 57753,
+  "text_rom_off": 123289,
+  "text": "ふんばる{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 26,
+  "ptr_value": 57759,
+  "text_rom_off": 123295,
+  "text": "どきょう{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 27,
+  "ptr_value": 57765,
+  "text_rom_off": 123301,
+  "text": "さとり{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 28,
+  "ptr_value": 57770,
+  "text_rom_off": 123306,
+  "text": "にらむ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 29,
+  "ptr_value": 57775,
+  "text_rom_off": 123311,
+  "text": "ねる{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 30,
+  "ptr_value": 57779,
+  "text_rom_off": 123315,
+  "text": "ぶんなぐる{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 31,
+  "ptr_value": 57786,
+  "text_rom_off": 123322,
+  "text": "こんじょう{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 32,
+  "ptr_value": 57793,
+  "text_rom_off": 123329,
+  "text": "みきる{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 33,
+  "ptr_value": 57798,
+  "text_rom_off": 123334,
+  "text": "ぶっとばす{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123032,
+  "index": 34,
+  "ptr_value": 57805,
+  "text_rom_off": 123341,
+  "text": "おいのり{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 0,
+  "ptr_value": 57913,
+  "text_rom_off": 123449,
+  "text": "うめだ ウメチカ ひがし{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 1,
+  "ptr_value": 57927,
+  "text_rom_off": 123463,
+  "text": "うめだ ウメチカ にし{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 2,
+  "ptr_value": 57940,
+  "text_rom_off": 123476,
+  "text": "うめだ ウメチカ きた{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 3,
+  "ptr_value": 57953,
+  "text_rom_off": 123489,
+  "text": "ホテルおおさか ちか1かい{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 4,
+  "ptr_value": 57968,
+  "text_rom_off": 123504,
+  "text": "ホテルおおさか 1かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 5,
+  "ptr_value": 57981,
+  "text_rom_off": 123517,
+  "text": "ホテルおおさか 2かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 6,
+  "ptr_value": 57994,
+  "text_rom_off": 123530,
+  "text": "ホテルおおさか 3かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 7,
+  "ptr_value": 58007,
+  "text_rom_off": 123543,
+  "text": "ホテルおおさか 4かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 8,
+  "ptr_value": 58020,
+  "text_rom_off": 123556,
+  "text": "しんさいばし ちかがい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 9,
+  "ptr_value": 58033,
+  "text_rom_off": 123569,
+  "text": "しんさいばし しんさいばしすじ{F2F3}",
+  "nbytes": 17
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 10,
+  "ptr_value": 58050,
+  "text_rom_off": 123586,
+  "text": "しんさいばし{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 11,
+  "ptr_value": 58058,
+  "text_rom_off": 123594,
+  "text": "なんば えびすばしすじ{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 12,
+  "ptr_value": 58071,
+  "text_rom_off": 123607,
+  "text": "なんば なんなんタウン{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 13,
+  "ptr_value": 58084,
+  "text_rom_off": 123620,
+  "text": "えびすちょう ちかがい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 14,
+  "ptr_value": 58097,
+  "text_rom_off": 123633,
+  "text": "えびすちょう つうてんかく ほんどおり{F2F3}",
+  "nbytes": 21
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 15,
+  "ptr_value": 58118,
+  "text_rom_off": 123654,
+  "text": "つうてんかく 2かい{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 16,
+  "ptr_value": 58130,
+  "text_rom_off": 123666,
+  "text": "つうてんかく 5かい ひがし{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 17,
+  "ptr_value": 58146,
+  "text_rom_off": 123682,
+  "text": "つうてんかく 5かい にし {F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 18,
+  "ptr_value": 58162,
+  "text_rom_off": 123698,
+  "text": "つうてんかく 5かい みなみ{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 19,
+  "ptr_value": 58178,
+  "text_rom_off": 123714,
+  "text": "つうてんかく 5かい きた{F2F3}",
+  "nbytes": 15
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 20,
+  "ptr_value": 58193,
+  "text_rom_off": 123729,
+  "text": "つうてんかく おくじょう{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 21,
+  "ptr_value": 58207,
+  "text_rom_off": 123743,
+  "text": "こうしえん きゅうじょう どおり{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 22,
+  "ptr_value": 58225,
+  "text_rom_off": 123761,
+  "text": "みどうすじせん うめだ えき{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 23,
+  "ptr_value": 58241,
+  "text_rom_off": 123777,
+  "text": "みどうすじせん しんさいばし えき{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 24,
+  "ptr_value": 58260,
+  "text_rom_off": 123796,
+  "text": "みどうすじせん なんば えき{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 25,
+  "ptr_value": 58276,
+  "text_rom_off": 123812,
+  "text": "さかいすじせん なんば えき{F2F3}",
+  "nbytes": 16
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 26,
+  "ptr_value": 58292,
+  "text_rom_off": 123828,
+  "text": "さかいすじせん えびすちょう えき{F2F3}",
+  "nbytes": 19
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 27,
+  "ptr_value": 58311,
+  "text_rom_off": 123847,
+  "text": "おおさか でんてつ うめだ えき{F2F3}",
+  "nbytes": 18
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 28,
+  "ptr_value": 58329,
+  "text_rom_off": 123865,
+  "text": "おおさか でんてつ こうしえん えき{F2F3}",
+  "nbytes": 20
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 29,
+  "ptr_value": 58349,
+  "text_rom_off": 123885,
+  "text": "うめだ ちかせんろ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 30,
+  "ptr_value": 58360,
+  "text_rom_off": 123896,
+  "text": "しんさいばし ちかせんろ{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 31,
+  "ptr_value": 58374,
+  "text_rom_off": 123910,
+  "text": "なんば ちかせんろ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 32,
+  "ptr_value": 58385,
+  "text_rom_off": 123921,
+  "text": "げすいどう ちか1かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 33,
+  "ptr_value": 58398,
+  "text_rom_off": 123934,
+  "text": "げすいどう ちか2かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 34,
+  "ptr_value": 58411,
+  "text_rom_off": 123947,
+  "text": "げすいどう ちか3かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 35,
+  "ptr_value": 58424,
+  "text_rom_off": 123960,
+  "text": "げすいどう ちか4かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 36,
+  "ptr_value": 58437,
+  "text_rom_off": 123973,
+  "text": "げすいどう ちか5かい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 37,
+  "ptr_value": 58450,
+  "text_rom_off": 123986,
+  "text": "ちか ちゅうしゃじょう{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 38,
+  "ptr_value": 58463,
+  "text_rom_off": 123999,
+  "text": "おおさか こう{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 39,
+  "ptr_value": 58472,
+  "text_rom_off": 124008,
+  "text": "えびすばしビル{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 40,
+  "ptr_value": 58481,
+  "text_rom_off": 124017,
+  "text": "タイガース ショップ{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 41,
+  "ptr_value": 58493,
+  "text_rom_off": 124029,
+  "text": "タイガースしりょうかん{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 42,
+  "ptr_value": 58506,
+  "text_rom_off": 124042,
+  "text": "ゲームセンター{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 43,
+  "ptr_value": 58515,
+  "text_rom_off": 124051,
+  "text": "おおさかこう そうこない{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 44,
+  "ptr_value": 58529,
+  "text_rom_off": 124065,
+  "text": "おおさか えき{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 45,
+  "ptr_value": 58538,
+  "text_rom_off": 124074,
+  "text": "うめだ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 46,
+  "ptr_value": 58543,
+  "text_rom_off": 124079,
+  "text": "なんば{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 47,
+  "ptr_value": 58548,
+  "text_rom_off": 124084,
+  "text": "えびすちょう{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 48,
+  "ptr_value": 58556,
+  "text_rom_off": 124092,
+  "text": "こうしえん{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 123349,
+  "index": 49,
+  "ptr_value": 58563,
+  "text_rom_off": 124099,
+  "text": "ホテルおおさか{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 0,
+  "ptr_value": 58822,
+  "text_rom_off": 124358,
+  "text": "あがった {F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 1,
+  "ptr_value": 58829,
+  "text_rom_off": 124365,
+  "text": "さがった{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 2,
+  "ptr_value": 58835,
+  "text_rom_off": 124371,
+  "text": "おぼえた{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 3,
+  "ptr_value": 58841,
+  "text_rom_off": 124377,
+  "text": "つかった{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 4,
+  "ptr_value": 58847,
+  "text_rom_off": 124383,
+  "text": "すてた{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 5,
+  "ptr_value": 58852,
+  "text_rom_off": 124388,
+  "text": "てに いれた{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 6,
+  "ptr_value": 58860,
+  "text_rom_off": 124396,
+  "text": "ねた{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 7,
+  "ptr_value": 58864,
+  "text_rom_off": 124400,
+  "text": "きぜつした{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 8,
+  "ptr_value": 58871,
+  "text_rom_off": 124407,
+  "text": "きもちわるく なった{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 9,
+  "ptr_value": 58883,
+  "text_rom_off": 124419,
+  "text": "こうかが きれた{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 10,
+  "ptr_value": 58893,
+  "text_rom_off": 124429,
+  "text": "レベルが あがった{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 11,
+  "ptr_value": 58904,
+  "text_rom_off": 124440,
+  "text": "が たりねえぞ{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 12,
+  "ptr_value": 58913,
+  "text_rom_off": 124449,
+  "text": "を もってないぞ{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 13,
+  "ptr_value": 58923,
+  "text_rom_off": 124459,
+  "text": "しろ{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 14,
+  "ptr_value": 58927,
+  "text_rom_off": 124463,
+  "text": "あお{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 15,
+  "ptr_value": 58931,
+  "text_rom_off": 124467,
+  "text": "なめたら かんでぇ{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 16,
+  "ptr_value": 58942,
+  "text_rom_off": 124478,
+  "text": "ふざけんや ないでぇ{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 17,
+  "ptr_value": 58954,
+  "text_rom_off": 124490,
+  "text": "おまえ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 18,
+  "ptr_value": 58959,
+  "text_rom_off": 124495,
+  "text": "おまえら{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 19,
+  "ptr_value": 58965,
+  "text_rom_off": 124501,
+  "text": "ボケ{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 20,
+  "ptr_value": 58969,
+  "text_rom_off": 124505,
+  "text": "カス{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 21,
+  "ptr_value": 58973,
+  "text_rom_off": 124509,
+  "text": "アホ{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 22,
+  "ptr_value": 58977,
+  "text_rom_off": 124513,
+  "text": "みかた{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 23,
+  "ptr_value": 58982,
+  "text_rom_off": 124518,
+  "text": "てき{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 24,
+  "ptr_value": 58986,
+  "text_rom_off": 124522,
+  "text": "くにお{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 25,
+  "ptr_value": 58991,
+  "text_rom_off": 124527,
+  "text": "りき{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 26,
+  "ptr_value": 58995,
+  "text_rom_off": 124531,
+  "text": "くにおくんと りき{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 27,
+  "ptr_value": 59006,
+  "text_rom_off": 124542,
+  "text": "くにおと りき{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 28,
+  "ptr_value": 59015,
+  "text_rom_off": 124551,
+  "text": "くにお りき{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 29,
+  "ptr_value": 59023,
+  "text_rom_off": 124559,
+  "text": "あんた{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 30,
+  "ptr_value": 59028,
+  "text_rom_off": 124564,
+  "text": "あんたら{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 31,
+  "ptr_value": 59034,
+  "text_rom_off": 124570,
+  "text": "オレ{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 32,
+  "ptr_value": 59038,
+  "text_rom_off": 124574,
+  "text": "オレら{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 33,
+  "ptr_value": 59043,
+  "text_rom_off": 124579,
+  "text": "どうめい{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 34,
+  "ptr_value": 59049,
+  "text_rom_off": 124585,
+  "text": "れんごう{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 35,
+  "ptr_value": 59055,
+  "text_rom_off": 124591,
+  "text": "ヤツ{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 36,
+  "ptr_value": 59059,
+  "text_rom_off": 124595,
+  "text": "ヤツら{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 37,
+  "ptr_value": 59064,
+  "text_rom_off": 124600,
+  "text": "でんわ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 38,
+  "ptr_value": 59069,
+  "text_rom_off": 124605,
+  "text": "じはんき{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 39,
+  "ptr_value": 59075,
+  "text_rom_off": 124611,
+  "text": "キックアウト{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 40,
+  "ptr_value": 59083,
+  "text_rom_off": 124619,
+  "text": "アイテムキャッチャー{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 41,
+  "ptr_value": 59095,
+  "text_rom_off": 124631,
+  "text": "うらないマシーン{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 42,
+  "ptr_value": 59105,
+  "text_rom_off": 124641,
+  "text": "スロットマシーン{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 43,
+  "ptr_value": 59115,
+  "text_rom_off": 124651,
+  "text": "テレホンカード{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 44,
+  "ptr_value": 59124,
+  "text_rom_off": 124660,
+  "text": "プリペイドカード{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 45,
+  "ptr_value": 59134,
+  "text_rom_off": 124670,
+  "text": "かね{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 46,
+  "ptr_value": 59138,
+  "text_rom_off": 124674,
+  "text": "だいきち{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 47,
+  "ptr_value": 59144,
+  "text_rom_off": 124680,
+  "text": "ちゅうきち{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 48,
+  "ptr_value": 59151,
+  "text_rom_off": 124687,
+  "text": "きち{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 49,
+  "ptr_value": 59155,
+  "text_rom_off": 124691,
+  "text": "きょう{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 50,
+  "ptr_value": 59160,
+  "text_rom_off": 124696,
+  "text": "だいきょう{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 51,
+  "ptr_value": 59167,
+  "text_rom_off": 124703,
+  "text": "あずかる{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 52,
+  "ptr_value": 59173,
+  "text_rom_off": 124709,
+  "text": "かえす{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 53,
+  "ptr_value": 59178,
+  "text_rom_off": 124714,
+  "text": "にいさん{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 54,
+  "ptr_value": 59184,
+  "text_rom_off": 124720,
+  "text": "ひとり{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 55,
+  "ptr_value": 59189,
+  "text_rom_off": 124725,
+  "text": "ふたり{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 56,
+  "ptr_value": 59194,
+  "text_rom_off": 124730,
+  "text": "きあいを いれた{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 57,
+  "ptr_value": 59204,
+  "text_rom_off": 124740,
+  "text": "ちからを こめた{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 58,
+  "ptr_value": 59214,
+  "text_rom_off": 124750,
+  "text": "ガンを とばした{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 59,
+  "ptr_value": 59224,
+  "text_rom_off": 124760,
+  "text": "こんじょうを みせた{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 60,
+  "ptr_value": 59236,
+  "text_rom_off": 124772,
+  "text": "いのった{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 61,
+  "ptr_value": 59242,
+  "text_rom_off": 124778,
+  "text": "ゲロゲロに{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 62,
+  "ptr_value": 59249,
+  "text_rom_off": 124785,
+  "text": "たべた{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 63,
+  "ptr_value": 59254,
+  "text_rom_off": 124790,
+  "text": "よんだ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 64,
+  "ptr_value": 59259,
+  "text_rom_off": 124795,
+  "text": "みせびらかした{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 65,
+  "ptr_value": 59268,
+  "text_rom_off": 124804,
+  "text": "つけてみた{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 66,
+  "ptr_value": 59275,
+  "text_rom_off": 124811,
+  "text": "のんだ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 67,
+  "ptr_value": 59280,
+  "text_rom_off": 124816,
+  "text": "くさいいきを{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 68,
+  "ptr_value": 59288,
+  "text_rom_off": 124824,
+  "text": "フッといきを{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 69,
+  "ptr_value": 59296,
+  "text_rom_off": 124832,
+  "text": "ふきかけた{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 70,
+  "ptr_value": 59303,
+  "text_rom_off": 124839,
+  "text": "ほほを{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 71,
+  "ptr_value": 59308,
+  "text_rom_off": 124844,
+  "text": "すりよせた{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 72,
+  "ptr_value": 59315,
+  "text_rom_off": 124851,
+  "text": "ゲロゲロな{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 73,
+  "ptr_value": 59322,
+  "text_rom_off": 124858,
+  "text": "きぶんに なった!{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 74,
+  "ptr_value": 59333,
+  "text_rom_off": 124869,
+  "text": "さわやかな{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 75,
+  "ptr_value": 59340,
+  "text_rom_off": 124876,
+  "text": "ヘナヘナに{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 76,
+  "ptr_value": 59347,
+  "text_rom_off": 124883,
+  "text": "なってしまった!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 77,
+  "ptr_value": 59357,
+  "text_rom_off": 124893,
+  "text": "ちゃんと{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 78,
+  "ptr_value": 59363,
+  "text_rom_off": 124899,
+  "text": "うごけるようになった!{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 79,
+  "ptr_value": 59376,
+  "text_rom_off": 124912,
+  "text": "かんぜんに{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 80,
+  "ptr_value": 59383,
+  "text_rom_off": 124919,
+  "text": "ふっかつした!{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 81,
+  "ptr_value": 59392,
+  "text_rom_off": 124928,
+  "text": "はんぶん{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 82,
+  "ptr_value": 59398,
+  "text_rom_off": 124934,
+  "text": "ぜんぶ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 83,
+  "ptr_value": 59403,
+  "text_rom_off": 124939,
+  "text": "やめる{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 84,
+  "ptr_value": 59408,
+  "text_rom_off": 124944,
+  "text": "ホテルに かえりたい{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 85,
+  "ptr_value": 59420,
+  "text_rom_off": 124956,
+  "text": "たいりょくが ほしい{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 86,
+  "ptr_value": 59432,
+  "text_rom_off": 124968,
+  "text": "きりょくが ほしい{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 87,
+  "ptr_value": 59443,
+  "text_rom_off": 124979,
+  "text": "ぜんぶ かいふくしたい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 88,
+  "ptr_value": 59456,
+  "text_rom_off": 124992,
+  "text": "けんこうに なりたい{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 89,
+  "ptr_value": 59468,
+  "text_rom_off": 125004,
+  "text": "なかまが ほしい{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 90,
+  "ptr_value": 59478,
+  "text_rom_off": 125014,
+  "text": "つよくなりたい{F2F3}",
+  "nbytes": 9
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 91,
+  "ptr_value": 59487,
+  "text_rom_off": 125023,
+  "text": "おんなのこに もてたい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 92,
+  "ptr_value": 59500,
+  "text_rom_off": 125036,
+  "text": "おんなのこに なりたい{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 93,
+  "ptr_value": 59513,
+  "text_rom_off": 125049,
+  "text": "しあわせに なりたい{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 94,
+  "ptr_value": 59525,
+  "text_rom_off": 125061,
+  "text": "どりょくが したい{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 95,
+  "ptr_value": 59536,
+  "text_rom_off": 125072,
+  "text": "アイテム{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 96,
+  "ptr_value": 59542,
+  "text_rom_off": 125078,
+  "text": "そうびした{F2F3}",
+  "nbytes": 7
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 97,
+  "ptr_value": 59549,
+  "text_rom_off": 125085,
+  "text": "どきょうを きめた{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 98,
+  "ptr_value": 59560,
+  "text_rom_off": 125096,
+  "text": "うたれづよく なった{F2F3}",
+  "nbytes": 12
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 99,
+  "ptr_value": 59572,
+  "text_rom_off": 125108,
+  "text": "てきの わざを みきった{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 100,
+  "ptr_value": 59586,
+  "text_rom_off": 125122,
+  "text": "こぶしを にぎった{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 101,
+  "ptr_value": 59597,
+  "text_rom_off": 125133,
+  "text": "いかりに ひを つけた{F2F3}",
+  "nbytes": 13
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 102,
+  "ptr_value": 59610,
+  "text_rom_off": 125146,
+  "text": "いだてんこぞうに なった{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 103,
+  "ptr_value": 59624,
+  "text_rom_off": 125160,
+  "text": "ぼうそうやろうに なった{F2F3}",
+  "nbytes": 14
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 104,
+  "ptr_value": 59638,
+  "text_rom_off": 125174,
+  "text": "さとりを ひらいた{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 105,
+  "ptr_value": 59649,
+  "text_rom_off": 125185,
+  "text": "ぐっと こらえた{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 106,
+  "ptr_value": 59659,
+  "text_rom_off": 125195,
+  "text": "てっさ{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 107,
+  "ptr_value": 59664,
+  "text_rom_off": 125200,
+  "text": "てっちり{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 108,
+  "ptr_value": 59670,
+  "text_rom_off": 125206,
+  "text": "おおたこ{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 109,
+  "ptr_value": 59676,
+  "text_rom_off": 125212,
+  "text": "おこのみやき{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 110,
+  "ptr_value": 59684,
+  "text_rom_off": 125220,
+  "text": "ぶたまん{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 111,
+  "ptr_value": 59690,
+  "text_rom_off": 125226,
+  "text": "チーズケーキ{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 112,
+  "ptr_value": 59698,
+  "text_rom_off": 125234,
+  "text": "ラーメン{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 113,
+  "ptr_value": 59704,
+  "text_rom_off": 125240,
+  "text": "インディアンカレー{F2F3}",
+  "nbytes": 11
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 114,
+  "ptr_value": 59715,
+  "text_rom_off": 125251,
+  "text": "わさびアイス{F2F3}",
+  "nbytes": 8
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 115,
+  "ptr_value": 59723,
+  "text_rom_off": 125259,
+  "text": "いかやき{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 116,
+  "ptr_value": 59729,
+  "text_rom_off": 125265,
+  "text": "かに{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 117,
+  "ptr_value": 59733,
+  "text_rom_off": 125269,
+  "text": "えび{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 118,
+  "ptr_value": 59737,
+  "text_rom_off": 125273,
+  "text": "バカに なった!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 119,
+  "ptr_value": 59747,
+  "text_rom_off": 125283,
+  "text": "おかしくなった!{F2F3}",
+  "nbytes": 10
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 120,
+  "ptr_value": 59757,
+  "text_rom_off": 125293,
+  "text": "あさ{F2F3}",
+  "nbytes": 4
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 121,
+  "ptr_value": 59761,
+  "text_rom_off": 125297,
+  "text": "みせた{F2F3}",
+  "nbytes": 5
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 122,
+  "ptr_value": 59766,
+  "text_rom_off": 125302,
+  "text": " ひとつ{F2F3}",
+  "nbytes": 6
+ },
+ {
+  "table_rom_off": 124110,
+  "index": 123,
+  "ptr_value": 59772,
+  "text_rom_off": 125308,
+  "text": "てがみを{F2F3}",
+  "nbytes": 6
+ }
+]

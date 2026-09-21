@@ -1,0 +1,2741 @@
+[
+ {
+  "file": "Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1)\\Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc",
+  "file_size": 524288,
+  "copier_header": 0,
+  "rom_size": 524288,
+  "crc32": "55E44983",
+  "md5": "6b179fa5b98b1cb006c1f899829178fb",
+  "sha1": "95b8e45c194618fc122ca10d5af5dbf9b9077aac",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "DORAEMON YOUSEINOKUNI",
+   "map_mode_byte": "31",
+   "map_mode": "HiROM+Fast",
+   "cart_type": "00",
+   "rom_size_byte": "09",
+   "declared_size": "4Mbit/512K",
+   "sram": "00",
+   "country": "Japan",
+   "version": 1,
+   "checksum_stored": "946D",
+   "checksum_complement": "6B92",
+   "checksum_calc": "946B",
+   "checksum_ok": false
+  },
+  "free_space_total": 0,
+  "free_space_top": [],
+  "sjis": {
+   "hiragana": 593,
+   "katakana": 422,
+   "kanji": 23971,
+   "total": 24986
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "000000",
+    "count": 2003
+   },
+   {
+    "offset": "040000",
+    "count": 2001
+   },
+   {
+    "offset": "068000",
+    "count": 1966
+   },
+   {
+    "offset": "050000",
+    "count": 1914
+   },
+   {
+    "offset": "058000",
+    "count": 1904
+   },
+   {
+    "offset": "010000",
+    "count": 1848
+   },
+   {
+    "offset": "060000",
+    "count": 1760
+   },
+   {
+    "offset": "048000",
+    "count": 1703
+   },
+   {
+    "offset": "070000",
+    "count": 1652
+   },
+   {
+    "offset": "018000",
+    "count": 1573
+   }
+  ],
+  "ptr2_count": 91,
+  "ptr2_top": [
+   {
+    "offset": "077E36",
+    "entries": 293
+   },
+   {
+    "offset": "04F9EA",
+    "entries": 257
+   },
+   {
+    "offset": "04FE4C",
+    "entries": 218
+   },
+   {
+    "offset": "0268C6",
+    "entries": 182
+   },
+   {
+    "offset": "00FEC0",
+    "entries": 128
+   },
+   {
+    "offset": "03FF02",
+    "entries": 127
+   },
+   {
+    "offset": "03BF1A",
+    "entries": 115
+   },
+   {
+    "offset": "04D786",
+    "entries": 97
+   },
+   {
+    "offset": "00FC18",
+    "entries": 96
+   },
+   {
+    "offset": "05E95E",
+    "entries": 81
+   }
+  ],
+  "ptr3_count": 77,
+  "ptr3_top": [
+   {
+    "offset": "077E37",
+    "entries": 195,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "077E37",
+    "entries": 195,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "077E37",
+    "entries": 195,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "04FE53",
+    "entries": 143,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "04FE53",
+    "entries": 143,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "04FE53",
+    "entries": 143,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "00FEC0",
+    "entries": 85,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "00FEC0",
+    "entries": 85,
+    "order": "bank_lo_hi"
+   }
+  ]
+ },
+ {
+  "file": "Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon 2 - Nobita no Toys Land Daibouken (Japan)\\Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc",
+  "file_size": 1048576,
+  "copier_header": 0,
+  "rom_size": 1048576,
+  "crc32": "D343B398",
+  "md5": "3908a11b8a82bc2e99766a1ed9ca17e4",
+  "sha1": "8672e208c3716b8fae3fd612bc80679a5459b616",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "DORAEMON2 TOYSLAND",
+   "map_mode_byte": "31",
+   "map_mode": "HiROM+Fast",
+   "cart_type": "00",
+   "rom_size_byte": "0A",
+   "declared_size": "8Mbit/1M",
+   "sram": "00",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "136F",
+   "checksum_complement": "EC90",
+   "checksum_calc": "13EC",
+   "checksum_ok": false
+  },
+  "free_space_total": 107858,
+  "free_space_top": [
+   {
+    "offset": "0690AF",
+    "size": 28497,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "07C032",
+    "size": 16334,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "00D202",
+    "size": 11678,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "045911",
+    "size": 9967,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "0EBDFC",
+    "size": 8708,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "0DDFD1",
+    "size": 8239,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "0B9072",
+    "size": 3982,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "0BF07A",
+    "size": 3974,
+    "fill": "0xFF"
+   }
+  ],
+  "sjis": {
+   "hiragana": 660,
+   "katakana": 814,
+   "kanji": 33701,
+   "total": 35175
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "0F8000",
+    "count": 1972
+   },
+   {
+    "offset": "038000",
+    "count": 1624
+   },
+   {
+    "offset": "0C0000",
+    "count": 1526
+   },
+   {
+    "offset": "0B8000",
+    "count": 1468
+   },
+   {
+    "offset": "0F0000",
+    "count": 1441
+   },
+   {
+    "offset": "0A8000",
+    "count": 1424
+   },
+   {
+    "offset": "000000",
+    "count": 1346
+   },
+   {
+    "offset": "0C8000",
+    "count": 1346
+   },
+   {
+    "offset": "080000",
+    "count": 1340
+   },
+   {
+    "offset": "0B0000",
+    "count": 1337
+   }
+  ],
+  "ptr2_count": 174,
+  "ptr2_top": [
+   {
+    "offset": "0690AE",
+    "entries": 14249
+   },
+   {
+    "offset": "07C030",
+    "entries": 8168
+   },
+   {
+    "offset": "00D202",
+    "entries": 5839
+   },
+   {
+    "offset": "045910",
+    "entries": 4984
+   },
+   {
+    "offset": "0EBDFA",
+    "entries": 4355
+   },
+   {
+    "offset": "0DDFD0",
+    "entries": 4120
+   },
+   {
+    "offset": "0B9072",
+    "entries": 1991
+   },
+   {
+    "offset": "0BF07A",
+    "entries": 1987
+   },
+   {
+    "offset": "08F0A0",
+    "entries": 1968
+   },
+   {
+    "offset": "0FF36E",
+    "entries": 1608
+   }
+  ],
+  "ptr3_count": 237,
+  "ptr3_top": [
+   {
+    "offset": "0690B0",
+    "entries": 9498,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0690B0",
+    "entries": 9498,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0690B0",
+    "entries": 9498,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "07C031",
+    "entries": 5445,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "07C034",
+    "entries": 5444,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "07C034",
+    "entries": 5444,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "00D202",
+    "entries": 3892,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "00D202",
+    "entries": 3892,
+    "order": "bank_lo_hi"
+   }
+  ]
+ },
+ {
+  "file": "Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon 3 - Nobita to Toki no Hougyoku (Japan)\\Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc",
+  "file_size": 1572864,
+  "copier_header": 0,
+  "rom_size": 1572864,
+  "crc32": "560C5EAB",
+  "md5": "649899053bdfff915268bc78b532af3f",
+  "sha1": "34680c83d64bbff58aaab4b6d7029aef8a1cd558",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "DORAEMON TOKIHOUGYOKU",
+   "map_mode_byte": "31",
+   "map_mode": "HiROM+Fast",
+   "cart_type": "00",
+   "rom_size_byte": "0B",
+   "declared_size": "16Mbit/2M",
+   "sram": "00",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "2010",
+   "checksum_complement": "DFEF",
+   "checksum_calc": "20DF",
+   "checksum_ok": false,
+   "non_power_of_two": "mirrored: 1572864 -> 1048576 (tail 524288)"
+  },
+  "free_space_total": 103880,
+  "free_space_top": [
+   {
+    "offset": "0DB94E",
+    "size": 18098,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "09CD69",
+    "size": 12951,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "15D75E",
+    "size": 10402,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "0CD85A",
+    "size": 10150,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "16D9F8",
+    "size": 9736,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "01DAE3",
+    "size": 9505,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "05DCA7",
+    "size": 9049,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "02EDD6",
+    "size": 4650,
+    "fill": "0xFF"
+   }
+  ],
+  "sjis": {
+   "hiragana": 404,
+   "katakana": 878,
+   "kanji": 45644,
+   "total": 46926
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "0E0000",
+    "count": 2308
+   },
+   {
+    "offset": "000000",
+    "count": 2058
+   },
+   {
+    "offset": "150000",
+    "count": 2004
+   },
+   {
+    "offset": "0F0000",
+    "count": 1699
+   },
+   {
+    "offset": "0B0000",
+    "count": 1683
+   },
+   {
+    "offset": "110000",
+    "count": 1617
+   },
+   {
+    "offset": "100000",
+    "count": 1616
+   },
+   {
+    "offset": "0E8000",
+    "count": 1615
+   },
+   {
+    "offset": "148000",
+    "count": 1461
+   },
+   {
+    "offset": "130000",
+    "count": 1436
+   }
+  ],
+  "ptr2_count": 355,
+  "ptr2_top": [
+   {
+    "offset": "0DB94E",
+    "entries": 9049
+   },
+   {
+    "offset": "09CD68",
+    "entries": 6476
+   },
+   {
+    "offset": "15D75E",
+    "entries": 5201
+   },
+   {
+    "offset": "0CD85A",
+    "entries": 5075
+   },
+   {
+    "offset": "16D9EA",
+    "entries": 4875
+   },
+   {
+    "offset": "01DAE2",
+    "entries": 4753
+   },
+   {
+    "offset": "05DCA6",
+    "entries": 4525
+   },
+   {
+    "offset": "02EDD6",
+    "entries": 2325
+   },
+   {
+    "offset": "08F0B6",
+    "entries": 1957
+   },
+   {
+    "offset": "03F41C",
+    "entries": 1522
+   }
+  ],
+  "ptr3_count": 317,
+  "ptr3_top": [
+   {
+    "offset": "0DB94D",
+    "entries": 6033,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0DB950",
+    "entries": 6032,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0DB950",
+    "entries": 6032,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "09CD6A",
+    "entries": 4316,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "09CD6A",
+    "entries": 4316,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "09CD6A",
+    "entries": 4316,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "15D75D",
+    "entries": 3467,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "15D760",
+    "entries": 3466,
+    "order": "bank_lo_hi"
+   }
+  ]
+ },
+ {
+  "file": "Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon 4 - Nobita to Tsuki no Oukoku (Japan)\\Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc",
+  "file_size": 1572864,
+  "copier_header": 0,
+  "rom_size": 1572864,
+  "crc32": "4097BC01",
+  "md5": "930cb24c28f2851f8c3a99a588b9fe8b",
+  "sha1": "e9c04238c10240a2c9f8dbd7cf1e3021f01c9c6d",
+  "header": {
+   "mapping_guess": "LoROM",
+   "internal_title": "DORAEMON4NOBITATOTUKI",
+   "map_mode_byte": "30",
+   "map_mode": "LoROM+Fast",
+   "cart_type": "00",
+   "rom_size_byte": "0B",
+   "declared_size": "16Mbit/2M",
+   "sram": "00",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "2036",
+   "checksum_complement": "DFC9",
+   "checksum_calc": "20DF",
+   "checksum_ok": false,
+   "non_power_of_two": "mirrored: 1572864 -> 1048576 (tail 524288)"
+  },
+  "free_space_total": 26496,
+  "free_space_top": [
+   {
+    "offset": "06D200",
+    "size": 4613,
+    "fill": "0x00"
+   },
+   {
+    "offset": "172FFE",
+    "size": 4130,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0FCFEF",
+    "size": 3602,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0F1500",
+    "size": 2849,
+    "fill": "0x00"
+   },
+   {
+    "offset": "1617BE",
+    "size": 2120,
+    "fill": "0x00"
+   },
+   {
+    "offset": "03B080",
+    "size": 1792,
+    "fill": "0x00"
+   },
+   {
+    "offset": "069FFD",
+    "size": 1549,
+    "fill": "0x00"
+   },
+   {
+    "offset": "023334",
+    "size": 1496,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 730,
+   "katakana": 763,
+   "kanji": 27329,
+   "total": 28822
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "010000",
+    "count": 1823
+   },
+   {
+    "offset": "0A0000",
+    "count": 1443
+   },
+   {
+    "offset": "008000",
+    "count": 1430
+   },
+   {
+    "offset": "090000",
+    "count": 1332
+   },
+   {
+    "offset": "088000",
+    "count": 1323
+   },
+   {
+    "offset": "080000",
+    "count": 1286
+   },
+   {
+    "offset": "028000",
+    "count": 1284
+   },
+   {
+    "offset": "098000",
+    "count": 1278
+   },
+   {
+    "offset": "0A8000",
+    "count": 1220
+   },
+   {
+    "offset": "038000",
+    "count": 981
+   }
+  ],
+  "ptr2_count": 1357,
+  "ptr2_top": [
+   {
+    "offset": "06D200",
+    "entries": 2308
+   },
+   {
+    "offset": "172FFE",
+    "entries": 2065
+   },
+   {
+    "offset": "0FCFF0",
+    "entries": 1800
+   },
+   {
+    "offset": "0F1500",
+    "entries": 1424
+   },
+   {
+    "offset": "1617BE",
+    "entries": 1061
+   },
+   {
+    "offset": "03B080",
+    "entries": 896
+   },
+   {
+    "offset": "069FFE",
+    "entries": 777
+   },
+   {
+    "offset": "023334",
+    "entries": 748
+   },
+   {
+    "offset": "17FB3C",
+    "entries": 609
+   },
+   {
+    "offset": "022B34",
+    "entries": 524
+   }
+  ],
+  "ptr3_count": 1768,
+  "ptr3_top": [
+   {
+    "offset": "06D202",
+    "entries": 1537,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "06D202",
+    "entries": 1537,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "06D202",
+    "entries": 1537,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "173000",
+    "entries": 1376,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "173000",
+    "entries": 1376,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "173000",
+    "entries": 1376,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "0FCFEF",
+    "entries": 1201,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "0FCFEF",
+    "entries": 1200,
+    "order": "lo_hi_bank"
+   }
+  ]
+ },
+ {
+  "file": "Hero Senki - Project Olympus (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Hero Senki - Project Olympus (Japan) 优先级高\\Hero Senki - Project Olympus (Japan).sfc",
+  "file_size": 1572864,
+  "copier_header": 0,
+  "rom_size": 1572864,
+  "crc32": "789DA99C",
+  "md5": "4db71054142a1dbe0d3dcceeb4e5c7bb",
+  "sha1": "1c846ff08ff25325fbbef1f9acf10f6e73349f7e",
+  "header": {
+   "mapping_guess": "LoROM",
+   "internal_title": "�-�- ���",
+   "map_mode_byte": "20",
+   "map_mode": "LoROM",
+   "cart_type": "02",
+   "rom_size_byte": "0B",
+   "declared_size": "16Mbit/2M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "52B9",
+   "checksum_complement": "AD46",
+   "checksum_calc": "52AD",
+   "checksum_ok": false,
+   "non_power_of_two": "mirrored: 1572864 -> 1048576 (tail 524288)"
+  },
+  "free_space_total": 86110,
+  "free_space_top": [
+   {
+    "offset": "094F93",
+    "size": 12400,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0BE5A7",
+    "size": 6745,
+    "fill": "0x00"
+   },
+   {
+    "offset": "086CEB",
+    "size": 4885,
+    "fill": "0x00"
+   },
+   {
+    "offset": "116D15",
+    "size": 4846,
+    "fill": "0x00"
+   },
+   {
+    "offset": "136FCE",
+    "size": 4146,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0B7041",
+    "size": 4031,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0CF1C7",
+    "size": 3641,
+    "fill": "0x00"
+   },
+   {
+    "offset": "00721A",
+    "size": 3494,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 910,
+   "katakana": 821,
+   "kanji": 39849,
+   "total": 41580
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "120000",
+    "count": 2069
+   },
+   {
+    "offset": "070000",
+    "count": 1625
+   },
+   {
+    "offset": "130000",
+    "count": 1487
+   },
+   {
+    "offset": "138000",
+    "count": 1353
+   },
+   {
+    "offset": "000000",
+    "count": 1199
+   },
+   {
+    "offset": "128000",
+    "count": 1177
+   },
+   {
+    "offset": "028000",
+    "count": 1101
+   },
+   {
+    "offset": "038000",
+    "count": 1053
+   },
+   {
+    "offset": "030000",
+    "count": 1045
+   },
+   {
+    "offset": "068000",
+    "count": 995
+   }
+  ],
+  "ptr2_count": 266,
+  "ptr2_top": [
+   {
+    "offset": "094F94",
+    "entries": 6199
+   },
+   {
+    "offset": "0BE5A8",
+    "entries": 3373
+   },
+   {
+    "offset": "086CEC",
+    "entries": 2444
+   },
+   {
+    "offset": "116D16",
+    "entries": 2422
+   },
+   {
+    "offset": "136FCE",
+    "entries": 2073
+   },
+   {
+    "offset": "0B7042",
+    "entries": 2015
+   },
+   {
+    "offset": "0CF1C8",
+    "entries": 1821
+   },
+   {
+    "offset": "00721A",
+    "entries": 1747
+   },
+   {
+    "offset": "0EF426",
+    "entries": 1518
+   },
+   {
+    "offset": "0D7428",
+    "entries": 1517
+   }
+  ],
+  "ptr3_count": 386,
+  "ptr3_top": [
+   {
+    "offset": "094F94",
+    "entries": 4133,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "094F94",
+    "entries": 4133,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "094F94",
+    "entries": 4133,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "0BE5A7",
+    "entries": 2249,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0BE5A7",
+    "entries": 2248,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0BE5A7",
+    "entries": 2248,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "086CED",
+    "entries": 1628,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "086CED",
+    "entries": 1627,
+    "order": "lo_hi_bank"
+   }
+  ]
+ },
+ {
+  "file": "SRW4_DC_原版.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-DC\\SRW4_DC_原版.smc",
+  "file_size": 4194304,
+  "copier_header": 0,
+  "rom_size": 4194304,
+  "crc32": "D326F0FD",
+  "md5": "35b57b8e9cf2e8db40be6416023ab42a",
+  "sha1": "32e288011290e44b25e1c04996837f27fa30b730",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "SUPER ROBOT WARS4",
+   "map_mode_byte": "31",
+   "map_mode": "HiROM+Fast",
+   "cart_type": "02",
+   "rom_size_byte": "0C",
+   "declared_size": "32Mbit/4M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 1,
+   "checksum_stored": "93B3",
+   "checksum_complement": "6C4C",
+   "checksum_calc": "B6E7",
+   "checksum_ok": false
+  },
+  "free_space_total": 1059196,
+  "free_space_top": [
+   {
+    "offset": "36BBFF",
+    "size": 607230,
+    "fill": "0x00"
+   },
+   {
+    "offset": "302538",
+    "size": 429770,
+    "fill": "0x00"
+   },
+   {
+    "offset": "1BE4DC",
+    "size": 6948,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "2FF7FF",
+    "size": 2049,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0DF93C",
+    "size": 1732,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "25F99E",
+    "size": 1634,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "27F9E1",
+    "size": 1567,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "08FA61",
+    "size": 1439,
+    "fill": "0xFF"
+   }
+  ],
+  "sjis": {
+   "hiragana": 1858,
+   "katakana": 3256,
+   "kanji": 105293,
+   "total": 110407
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "2B8000",
+    "count": 3062
+   },
+   {
+    "offset": "2D0000",
+    "count": 2705
+   },
+   {
+    "offset": "280000",
+    "count": 2685
+   },
+   {
+    "offset": "218000",
+    "count": 2648
+   },
+   {
+    "offset": "290000",
+    "count": 2638
+   },
+   {
+    "offset": "2D8000",
+    "count": 2566
+   },
+   {
+    "offset": "2A8000",
+    "count": 2548
+   },
+   {
+    "offset": "298000",
+    "count": 2493
+   },
+   {
+    "offset": "288000",
+    "count": 2456
+   },
+   {
+    "offset": "2A0000",
+    "count": 2410
+   }
+  ],
+  "ptr2_count": 382,
+  "ptr2_top": [
+   {
+    "offset": "36BC00",
+    "entries": 303614
+   },
+   {
+    "offset": "302538",
+    "entries": 214886
+   },
+   {
+    "offset": "1BE4DC",
+    "entries": 3474
+   },
+   {
+    "offset": "2FF800",
+    "entries": 1025
+   },
+   {
+    "offset": "0DF93C",
+    "entries": 866
+   },
+   {
+    "offset": "25F99E",
+    "entries": 817
+   },
+   {
+    "offset": "27F9E0",
+    "entries": 784
+   },
+   {
+    "offset": "08FA60",
+    "entries": 720
+   },
+   {
+    "offset": "10FAD8",
+    "entries": 660
+   },
+   {
+    "offset": "15FB3A",
+    "entries": 611
+   }
+  ],
+  "ptr3_count": 204,
+  "ptr3_top": [
+   {
+    "offset": "36BC00",
+    "entries": 202410,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "36BC00",
+    "entries": 202409,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "36BC00",
+    "entries": 202409,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "30253A",
+    "entries": 143257,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "30253A",
+    "entries": 143256,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "30253A",
+    "entries": 143256,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "1BE4DD",
+    "entries": 2315,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "1BE4DD",
+    "entries": 2315,
+    "order": "bank_lo_hi"
+   }
+  ]
+ },
+ {
+  "file": "SRW4_KKNK_4.06後期原版_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-KKNK-完整版\\SRW4_KKNK_4.06後期原版_JAPAN.smc",
+  "file_size": 8388608,
+  "copier_header": 0,
+  "rom_size": 8388608,
+  "crc32": "50D1E809",
+  "md5": "7bf4b7dfc42cdd757960898239ead1f1",
+  "sha1": "3f4738bad454b7511d5c0585cda96be9f7e47427",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "SUPER ROBOT WARS4",
+   "map_mode_byte": "35",
+   "map_mode": "ExHiROM+Fast",
+   "cart_type": "02",
+   "rom_size_byte": "0D",
+   "declared_size": "64Mbit/8M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 1,
+   "checksum_stored": "08AC",
+   "checksum_complement": "F753",
+   "checksum_calc": "4689",
+   "checksum_ok": false
+  },
+  "free_space_total": 3859366,
+  "free_space_top": [
+   {
+    "offset": "51E75B",
+    "size": 3020962,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3CF40F",
+    "size": 232433,
+    "fill": "0x00"
+   },
+   {
+    "offset": "410000",
+    "size": 151544,
+    "fill": "0x00"
+   },
+   {
+    "offset": "43573B",
+    "size": 72487,
+    "fill": "0x00"
+   },
+   {
+    "offset": "332CE6",
+    "size": 49691,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3A60E1",
+    "size": 36728,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3C4040",
+    "size": 34624,
+    "fill": "0x00"
+   },
+   {
+    "offset": "358BA8",
+    "size": 29785,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 2149,
+   "katakana": 4722,
+   "kanji": 143995,
+   "total": 150866
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "2B8000",
+    "count": 3060
+   },
+   {
+    "offset": "2D0000",
+    "count": 2715
+   },
+   {
+    "offset": "218000",
+    "count": 2648
+   },
+   {
+    "offset": "290000",
+    "count": 2636
+   },
+   {
+    "offset": "2D8000",
+    "count": 2580
+   },
+   {
+    "offset": "2A8000",
+    "count": 2550
+   },
+   {
+    "offset": "298000",
+    "count": 2505
+   },
+   {
+    "offset": "2A0000",
+    "count": 2420
+   },
+   {
+    "offset": "280000",
+    "count": 2416
+   },
+   {
+    "offset": "288000",
+    "count": 2387
+   }
+  ],
+  "ptr2_count": 1029,
+  "ptr2_top": [
+   {
+    "offset": "51E75C",
+    "entries": 1510480
+   },
+   {
+    "offset": "3CF410",
+    "entries": 116216
+   },
+   {
+    "offset": "410000",
+    "entries": 75773
+   },
+   {
+    "offset": "43573C",
+    "entries": 36244
+   },
+   {
+    "offset": "332CE6",
+    "entries": 24845
+   },
+   {
+    "offset": "3A60E2",
+    "entries": 18363
+   },
+   {
+    "offset": "3C4040",
+    "entries": 17312
+   },
+   {
+    "offset": "358BA8",
+    "entries": 14946
+   },
+   {
+    "offset": "382A3E",
+    "entries": 14702
+   },
+   {
+    "offset": "3B8AD4",
+    "entries": 12311
+   }
+  ],
+  "ptr3_count": 742,
+  "ptr3_top": [
+   {
+    "offset": "51E75C",
+    "entries": 1006987,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "51E75C",
+    "entries": 1006987,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "51E75C",
+    "entries": 1006987,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "3CF410",
+    "entries": 77477,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "3CF410",
+    "entries": 77477,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "3CF410",
+    "entries": 77477,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "410000",
+    "entries": 50515,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "410000",
+    "entries": 50514,
+    "order": "lo_hi_bank"
+   }
+  ]
+ },
+ {
+  "file": "srw4_rankaku_後期原版_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-rankaku-完整版 优先级高 比较简单可以参考第四次原版的文本，只加了一些对话，没有大幅改动\\srw4_rankaku_後期原版_JAPAN.smc",
+  "file_size": 8388608,
+  "copier_header": 0,
+  "rom_size": 8388608,
+  "crc32": "D01DBDAF",
+  "md5": "550a9d3ee01fbbf3cac972e7ea98e20c",
+  "sha1": "551f92512857d444eaba2d1b2d3bcff1024ccda2",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "SUPER ROBOT WARS4",
+   "map_mode_byte": "35",
+   "map_mode": "ExHiROM+Fast",
+   "cart_type": "02",
+   "rom_size_byte": "0D",
+   "declared_size": "64Mbit/8M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 1,
+   "checksum_stored": "22CC",
+   "checksum_complement": "DD33",
+   "checksum_calc": "F047",
+   "checksum_ok": false
+  },
+  "free_space_total": 4585913,
+  "free_space_top": [
+   {
+    "offset": "46F7C7",
+    "size": 3737654,
+    "fill": "0x00"
+   },
+   {
+    "offset": "350C85",
+    "size": 750459,
+    "fill": "0x00"
+   },
+   {
+    "offset": "332C38",
+    "size": 49865,
+    "fill": "0x00"
+   },
+   {
+    "offset": "30CB98",
+    "size": 13416,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "329DEA",
+    "size": 6679,
+    "fill": "0x00"
+   },
+   {
+    "offset": "1BE4DC",
+    "size": 4484,
+    "fill": "0xFF"
+   },
+   {
+    "offset": "32EF10",
+    "size": 4337,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3073ED",
+    "size": 2836,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 1909,
+   "katakana": 3691,
+   "kanji": 120844,
+   "total": 126444
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "2B8000",
+    "count": 3062
+   },
+   {
+    "offset": "2D0000",
+    "count": 2715
+   },
+   {
+    "offset": "218000",
+    "count": 2648
+   },
+   {
+    "offset": "290000",
+    "count": 2638
+   },
+   {
+    "offset": "2D8000",
+    "count": 2580
+   },
+   {
+    "offset": "2A8000",
+    "count": 2548
+   },
+   {
+    "offset": "298000",
+    "count": 2493
+   },
+   {
+    "offset": "280000",
+    "count": 2419
+   },
+   {
+    "offset": "2A0000",
+    "count": 2410
+   },
+   {
+    "offset": "288000",
+    "count": 2380
+   }
+  ],
+  "ptr2_count": 929,
+  "ptr2_top": [
+   {
+    "offset": "46F7C8",
+    "entries": 1868826
+   },
+   {
+    "offset": "350C86",
+    "entries": 375229
+   },
+   {
+    "offset": "332C38",
+    "entries": 24932
+   },
+   {
+    "offset": "30CB98",
+    "entries": 6708
+   },
+   {
+    "offset": "329DEA",
+    "entries": 3339
+   },
+   {
+    "offset": "32EF10",
+    "entries": 2680
+   },
+   {
+    "offset": "1BE4DC",
+    "entries": 2242
+   },
+   {
+    "offset": "31F59A",
+    "entries": 1587
+   },
+   {
+    "offset": "3073EE",
+    "entries": 1417
+   },
+   {
+    "offset": "32B800",
+    "entries": 1024
+   }
+  ],
+  "ptr3_count": 401,
+  "ptr3_top": [
+   {
+    "offset": "46F7C9",
+    "entries": 1245884,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "46F7C9",
+    "entries": 1245884,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "46F7C9",
+    "entries": 1245884,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "350C87",
+    "entries": 250152,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "350C87",
+    "entries": 250152,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "350C87",
+    "entries": 250152,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "332C39",
+    "entries": 16621,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "332C39",
+    "entries": 16621,
+    "order": "bank_lo_hi"
+   }
+  ]
+ },
+ {
+  "file": "srw4_提坦斯完整_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-提坦斯\\srw4_提坦斯完整_JAPAN.smc",
+  "file_size": 4194304,
+  "copier_header": 0,
+  "rom_size": 4194304,
+  "crc32": "DBE4DBD2",
+  "md5": "ebb34224f40bf87ebbbee3259e5e1868",
+  "sha1": "1a3290a6c3a7f3df50af6afbe191522d827bbf49",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "SUPER ROBOT WARS4",
+   "map_mode_byte": "31",
+   "map_mode": "HiROM+Fast",
+   "cart_type": "02",
+   "rom_size_byte": "0C",
+   "declared_size": "32Mbit/4M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 1,
+   "checksum_stored": "915B",
+   "checksum_complement": "6EA4",
+   "checksum_calc": "4B04",
+   "checksum_ok": false
+  },
+  "free_space_total": 899187,
+  "free_space_top": [
+   {
+    "offset": "36D2D4",
+    "size": 138541,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3D0E72",
+    "size": 127375,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3B5D8C",
+    "size": 107124,
+    "fill": "0x00"
+   },
+   {
+    "offset": "349330",
+    "size": 93392,
+    "fill": "0x00"
+   },
+   {
+    "offset": "39F431",
+    "size": 68559,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3F056D",
+    "size": 64147,
+    "fill": "0x00"
+   },
+   {
+    "offset": "31604A",
+    "size": 40886,
+    "fill": "0x00"
+   },
+   {
+    "offset": "336978",
+    "size": 38556,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 1676,
+   "katakana": 3147,
+   "kanji": 110606,
+   "total": 115429
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "290000",
+    "count": 2746
+   },
+   {
+    "offset": "280000",
+    "count": 2709
+   },
+   {
+    "offset": "2D0000",
+    "count": 2699
+   },
+   {
+    "offset": "218000",
+    "count": 2648
+   },
+   {
+    "offset": "2B8000",
+    "count": 2642
+   },
+   {
+    "offset": "298000",
+    "count": 2635
+   },
+   {
+    "offset": "2A8000",
+    "count": 2625
+   },
+   {
+    "offset": "288000",
+    "count": 2622
+   },
+   {
+    "offset": "2D8000",
+    "count": 2580
+   },
+   {
+    "offset": "2A0000",
+    "count": 2576
+   }
+  ],
+  "ptr2_count": 443,
+  "ptr2_top": [
+   {
+    "offset": "36D2D4",
+    "entries": 69270
+   },
+   {
+    "offset": "3D0E72",
+    "entries": 63708
+   },
+   {
+    "offset": "3B5D8C",
+    "entries": 53563
+   },
+   {
+    "offset": "349330",
+    "entries": 46698
+   },
+   {
+    "offset": "39F432",
+    "entries": 34280
+   },
+   {
+    "offset": "3F056E",
+    "entries": 32072
+   },
+   {
+    "offset": "31604A",
+    "entries": 20444
+   },
+   {
+    "offset": "336978",
+    "entries": 19278
+   },
+   {
+    "offset": "32841A",
+    "entries": 15861
+   },
+   {
+    "offset": "392A24",
+    "entries": 15087
+   }
+  ],
+  "ptr3_count": 352,
+  "ptr3_top": [
+   {
+    "offset": "36D2D4",
+    "entries": 46180,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "36D2D4",
+    "entries": 46180,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "36D2D4",
+    "entries": 46180,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "3D0E74",
+    "entries": 42458,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "3D0E74",
+    "entries": 42458,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "3D0E74",
+    "entries": 42457,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "3B5D8D",
+    "entries": 35708,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "3B5D8D",
+    "entries": 35707,
+    "order": "lo_hi_bank"
+   }
+  ]
+ },
+ {
+  "file": "srw4_TitaharuDX_v05_09_原版_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-春风DX 优先级中 游戏本体有个路线暂时未做完\\srw4_TitaharuDX_v05_09_原版_JAPAN.smc",
+  "file_size": 4194304,
+  "copier_header": 0,
+  "rom_size": 4194304,
+  "crc32": "C112B01C",
+  "md5": "9fa0682b90cf4be9c6878804f5f572d4",
+  "sha1": "d3f05abd3d87d41030dc27598d4134d0628ef5a5",
+  "header": {
+   "mapping_guess": "HiROM",
+   "internal_title": "SUPER ROBOT WARS4",
+   "map_mode_byte": "31",
+   "map_mode": "HiROM+Fast",
+   "cart_type": "02",
+   "rom_size_byte": "0C",
+   "declared_size": "32Mbit/4M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 1,
+   "checksum_stored": "915B",
+   "checksum_complement": "6EA4",
+   "checksum_calc": "31D7",
+   "checksum_ok": false
+  },
+  "free_space_total": 477560,
+  "free_space_top": [
+   {
+    "offset": "300380",
+    "size": 64640,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3F056D",
+    "size": 64147,
+    "fill": "0x00"
+   },
+   {
+    "offset": "3E97DA",
+    "size": 26663,
+    "fill": "0x00"
+   },
+   {
+    "offset": "340CE0",
+    "size": 21280,
+    "fill": "0x00"
+   },
+   {
+    "offset": "38AE97",
+    "size": 16746,
+    "fill": "0x00"
+   },
+   {
+    "offset": "31604A",
+    "size": 16310,
+    "fill": "0x00"
+   },
+   {
+    "offset": "32A892",
+    "size": 14974,
+    "fill": "0x00"
+   },
+   {
+    "offset": "33B990",
+    "size": 13938,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 6172,
+   "katakana": 5824,
+   "kanji": 131703,
+   "total": 143699
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "3A0000",
+    "count": 8366
+   },
+   {
+    "offset": "298000",
+    "count": 2837
+   },
+   {
+    "offset": "280000",
+    "count": 2819
+   },
+   {
+    "offset": "290000",
+    "count": 2777
+   },
+   {
+    "offset": "2A0000",
+    "count": 2697
+   },
+   {
+    "offset": "2D0000",
+    "count": 2671
+   },
+   {
+    "offset": "2A8000",
+    "count": 2670
+   },
+   {
+    "offset": "218000",
+    "count": 2648
+   },
+   {
+    "offset": "2B8000",
+    "count": 2643
+   },
+   {
+    "offset": "2D8000",
+    "count": 2570
+   }
+  ],
+  "ptr2_count": 491,
+  "ptr2_top": [
+   {
+    "offset": "300380",
+    "entries": 32320
+   },
+   {
+    "offset": "3F056E",
+    "entries": 32072
+   },
+   {
+    "offset": "3E97DA",
+    "entries": 13352
+   },
+   {
+    "offset": "340CE0",
+    "entries": 10640
+   },
+   {
+    "offset": "38AE98",
+    "entries": 8372
+   },
+   {
+    "offset": "31604A",
+    "entries": 8156
+   },
+   {
+    "offset": "32A892",
+    "entries": 7487
+   },
+   {
+    "offset": "33B990",
+    "entries": 6970
+   },
+   {
+    "offset": "36D2D4",
+    "entries": 6038
+   },
+   {
+    "offset": "397176",
+    "entries": 5958
+   }
+  ],
+  "ptr3_count": 466,
+  "ptr3_top": [
+   {
+    "offset": "300380",
+    "entries": 21547,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "300380",
+    "entries": 21546,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "300380",
+    "entries": 21546,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "3F056F",
+    "entries": 21381,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "3F056F",
+    "entries": 21381,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "3F056F",
+    "entries": 21381,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "3E97DA",
+    "entries": 8888,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "3E97DA",
+    "entries": 8888,
+    "order": "hi_lo_bank"
+   }
+  ]
+ },
+ {
+  "file": "SF8127.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\初代热血硬派 优先级高\\SF8127.smc",
+  "file_size": 1048576,
+  "copier_header": 0,
+  "rom_size": 1048576,
+  "crc32": "56C05339",
+  "md5": "089a633c541caf3fc7c48fae9fbfc8ff",
+  "sha1": "a77a297fc858cd78b7219dbf83a9934fe3eccc7f",
+  "header": {
+   "mapping_guess": "LoROM",
+   "internal_title": "����� ���� ��� �����",
+   "map_mode_byte": "20",
+   "map_mode": "LoROM",
+   "cart_type": "02",
+   "rom_size_byte": "0A",
+   "declared_size": "8Mbit/1M",
+   "sram": "01",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "492E",
+   "checksum_complement": "B6D1",
+   "checksum_calc": "49B6",
+   "checksum_ok": false
+  },
+  "free_space_total": 0,
+  "free_space_top": [],
+  "sjis": {
+   "hiragana": 610,
+   "katakana": 830,
+   "kanji": 22654,
+   "total": 24094
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "010000",
+    "count": 1470
+   },
+   {
+    "offset": "008000",
+    "count": 1398
+   },
+   {
+    "offset": "000000",
+    "count": 1356
+   },
+   {
+    "offset": "038000",
+    "count": 1183
+   },
+   {
+    "offset": "018000",
+    "count": 1026
+   },
+   {
+    "offset": "050000",
+    "count": 961
+   },
+   {
+    "offset": "040000",
+    "count": 938
+   },
+   {
+    "offset": "058000",
+    "count": 906
+   },
+   {
+    "offset": "090000",
+    "count": 879
+   },
+   {
+    "offset": "060000",
+    "count": 838
+   }
+  ],
+  "ptr2_count": 92,
+  "ptr2_top": [
+   {
+    "offset": "059EFC",
+    "entries": 231
+   },
+   {
+    "offset": "0061CA",
+    "entries": 191
+   },
+   {
+    "offset": "00136C",
+    "entries": 132
+   },
+   {
+    "offset": "00EBAA",
+    "entries": 129
+   },
+   {
+    "offset": "01E4CE",
+    "entries": 124
+   },
+   {
+    "offset": "0537C0",
+    "entries": 121
+   },
+   {
+    "offset": "0571A8",
+    "entries": 116
+   },
+   {
+    "offset": "052F24",
+    "entries": 85
+   },
+   {
+    "offset": "05627C",
+    "entries": 78
+   },
+   {
+    "offset": "00ACFA",
+    "entries": 74
+   }
+  ],
+  "ptr3_count": 77,
+  "ptr3_top": [
+   {
+    "offset": "059EFD",
+    "entries": 154,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "059EFD",
+    "entries": 153,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "059EFD",
+    "entries": 153,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "0537C2",
+    "entries": 80,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0537C2",
+    "entries": 80,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "0537C2",
+    "entries": 79,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0571A9",
+    "entries": 77,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0571A9",
+    "entries": 77,
+    "order": "hi_lo_bank"
+   }
+  ]
+ },
+ {
+  "file": "天3动漫2002剧情+奥运篇.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\天使之翼3\\天3动漫2002剧情+奥运篇.smc",
+  "file_size": 1048576,
+  "copier_header": 0,
+  "rom_size": 1048576,
+  "crc32": "97623F6B",
+  "md5": "cfcb0f166f075d23989b05a99d4be19c",
+  "sha1": "2c8701d68ee717da768cf905b0b72e95be70ccae",
+  "header": {
+   "mapping_guess": "LoROM",
+   "internal_title": "������ ���� 3",
+   "map_mode_byte": "20",
+   "map_mode": "LoROM",
+   "cart_type": "02",
+   "rom_size_byte": "0A",
+   "declared_size": "8Mbit/1M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "3138",
+   "checksum_complement": "CEC7",
+   "checksum_calc": "32AA",
+   "checksum_ok": false
+  },
+  "free_space_total": 25479,
+  "free_space_top": [
+   {
+    "offset": "0B577F",
+    "size": 10376,
+    "fill": "0x00"
+   },
+   {
+    "offset": "06EBFE",
+    "size": 5122,
+    "fill": "0x00"
+   },
+   {
+    "offset": "09F660",
+    "size": 2464,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0A771F",
+    "size": 2289,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0AF93B",
+    "size": 1743,
+    "fill": "0x00"
+   },
+   {
+    "offset": "097B3C",
+    "size": 1220,
+    "fill": "0x00"
+   },
+   {
+    "offset": "087B60",
+    "size": 1194,
+    "fill": "0x00"
+   },
+   {
+    "offset": "08FBD5",
+    "size": 1071,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 336,
+   "katakana": 428,
+   "kanji": 19319,
+   "total": 20083
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "000000",
+    "count": 1513
+   },
+   {
+    "offset": "0F8000",
+    "count": 1444
+   },
+   {
+    "offset": "010000",
+    "count": 1437
+   },
+   {
+    "offset": "070000",
+    "count": 1193
+   },
+   {
+    "offset": "028000",
+    "count": 1120
+   },
+   {
+    "offset": "0E8000",
+    "count": 1101
+   },
+   {
+    "offset": "0E0000",
+    "count": 972
+   },
+   {
+    "offset": "008000",
+    "count": 959
+   },
+   {
+    "offset": "018000",
+    "count": 919
+   },
+   {
+    "offset": "0D0000",
+    "count": 878
+   }
+  ],
+  "ptr2_count": 432,
+  "ptr2_top": [
+   {
+    "offset": "0B5780",
+    "entries": 5187
+   },
+   {
+    "offset": "06EBFE",
+    "entries": 2561
+   },
+   {
+    "offset": "09F660",
+    "entries": 1252
+   },
+   {
+    "offset": "0A7720",
+    "entries": 1152
+   },
+   {
+    "offset": "0AF93C",
+    "entries": 874
+   },
+   {
+    "offset": "097B3C",
+    "entries": 615
+   },
+   {
+    "offset": "087B60",
+    "entries": 600
+   },
+   {
+    "offset": "08FBD6",
+    "entries": 539
+   },
+   {
+    "offset": "0D0000",
+    "entries": 335
+   },
+   {
+    "offset": "0CA2B4",
+    "entries": 316
+   }
+  ],
+  "ptr3_count": 470,
+  "ptr3_top": [
+   {
+    "offset": "0B5781",
+    "entries": 3459,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0B5781",
+    "entries": 3458,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0B5781",
+    "entries": 3458,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "06EC00",
+    "entries": 1707,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "06EC00",
+    "entries": 1706,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "06EC00",
+    "entries": 1706,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "09F662",
+    "entries": 821,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "09F662",
+    "entries": 820,
+    "order": "lo_hi_bank"
+   }
+  ]
+ },
+ {
+  "file": "天3改版米迦勒 (1).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\天使之翼3\\天3改版米迦勒 (1).sfc",
+  "file_size": 1049088,
+  "copier_header": 512,
+  "rom_size": 1048576,
+  "crc32": "97623F6B",
+  "md5": "cfcb0f166f075d23989b05a99d4be19c",
+  "sha1": "2c8701d68ee717da768cf905b0b72e95be70ccae",
+  "header": {
+   "mapping_guess": "LoROM",
+   "internal_title": "������ ���� 3",
+   "map_mode_byte": "20",
+   "map_mode": "LoROM",
+   "cart_type": "02",
+   "rom_size_byte": "0A",
+   "declared_size": "8Mbit/1M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "3138",
+   "checksum_complement": "CEC7",
+   "checksum_calc": "32AA",
+   "checksum_ok": false
+  },
+  "free_space_total": 25479,
+  "free_space_top": [
+   {
+    "offset": "0B577F",
+    "size": 10376,
+    "fill": "0x00"
+   },
+   {
+    "offset": "06EBFE",
+    "size": 5122,
+    "fill": "0x00"
+   },
+   {
+    "offset": "09F660",
+    "size": 2464,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0A771F",
+    "size": 2289,
+    "fill": "0x00"
+   },
+   {
+    "offset": "0AF93B",
+    "size": 1743,
+    "fill": "0x00"
+   },
+   {
+    "offset": "097B3C",
+    "size": 1220,
+    "fill": "0x00"
+   },
+   {
+    "offset": "087B60",
+    "size": 1194,
+    "fill": "0x00"
+   },
+   {
+    "offset": "08FBD5",
+    "size": 1071,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 336,
+   "katakana": 428,
+   "kanji": 19319,
+   "total": 20083
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "000000",
+    "count": 1513
+   },
+   {
+    "offset": "0F8000",
+    "count": 1444
+   },
+   {
+    "offset": "010000",
+    "count": 1437
+   },
+   {
+    "offset": "070000",
+    "count": 1193
+   },
+   {
+    "offset": "028000",
+    "count": 1120
+   },
+   {
+    "offset": "0E8000",
+    "count": 1101
+   },
+   {
+    "offset": "0E0000",
+    "count": 972
+   },
+   {
+    "offset": "008000",
+    "count": 959
+   },
+   {
+    "offset": "018000",
+    "count": 919
+   },
+   {
+    "offset": "0D0000",
+    "count": 878
+   }
+  ],
+  "ptr2_count": 432,
+  "ptr2_top": [
+   {
+    "offset": "0B5780",
+    "entries": 5187
+   },
+   {
+    "offset": "06EBFE",
+    "entries": 2561
+   },
+   {
+    "offset": "09F660",
+    "entries": 1252
+   },
+   {
+    "offset": "0A7720",
+    "entries": 1152
+   },
+   {
+    "offset": "0AF93C",
+    "entries": 874
+   },
+   {
+    "offset": "097B3C",
+    "entries": 615
+   },
+   {
+    "offset": "087B60",
+    "entries": 600
+   },
+   {
+    "offset": "08FBD6",
+    "entries": 539
+   },
+   {
+    "offset": "0D0000",
+    "entries": 335
+   },
+   {
+    "offset": "0CA2B4",
+    "entries": 316
+   }
+  ],
+  "ptr3_count": 470,
+  "ptr3_top": [
+   {
+    "offset": "0B5781",
+    "entries": 3459,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0B5781",
+    "entries": 3458,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0B5781",
+    "entries": 3458,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "06EC00",
+    "entries": 1707,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "06EC00",
+    "entries": 1706,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "06EC00",
+    "entries": 1706,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "09F662",
+    "entries": 821,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "09F662",
+    "entries": 820,
+    "order": "lo_hi_bank"
+   }
+  ]
+ },
+ {
+  "file": "天使之翼4 无限体力.sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\天使之翼4 无限体力(1)\\天使之翼4 无限体力.sfc",
+  "file_size": 1572864,
+  "copier_header": 0,
+  "rom_size": 1572864,
+  "crc32": "6CF42497",
+  "md5": "750c6236184e09bbf6bc8dc160f3a6ca",
+  "sha1": "c344d352be92bb05c31d77ab9d1fca8fbdc5f5c9",
+  "header": {
+   "mapping_guess": "LoROM",
+   "internal_title": "������ ���� 4",
+   "map_mode_byte": "20",
+   "map_mode": "LoROM",
+   "cart_type": "02",
+   "rom_size_byte": "0B",
+   "declared_size": "16Mbit/2M",
+   "sram": "03",
+   "country": "Japan",
+   "version": 0,
+   "checksum_stored": "77FB",
+   "checksum_complement": "8804",
+   "checksum_calc": "8C47",
+   "checksum_ok": false,
+   "non_power_of_two": "mirrored: 1572864 -> 1048576 (tail 524288)"
+  },
+  "free_space_total": 8194,
+  "free_space_top": [
+   {
+    "offset": "0558B6",
+    "size": 3402,
+    "fill": "0x00"
+   },
+   {
+    "offset": "056618",
+    "size": 2536,
+    "fill": "0x00"
+   },
+   {
+    "offset": "032437",
+    "size": 2256,
+    "fill": "0x00"
+   }
+  ],
+  "sjis": {
+   "hiragana": 406,
+   "katakana": 449,
+   "kanji": 30887,
+   "total": 31742
+  },
+  "sjis_hot_blocks": [
+   {
+    "offset": "078000",
+    "count": 2439
+   },
+   {
+    "offset": "098000",
+    "count": 2378
+   },
+   {
+    "offset": "0C0000",
+    "count": 2375
+   },
+   {
+    "offset": "070000",
+    "count": 2077
+   },
+   {
+    "offset": "038000",
+    "count": 1838
+   },
+   {
+    "offset": "010000",
+    "count": 1559
+   },
+   {
+    "offset": "008000",
+    "count": 1177
+   },
+   {
+    "offset": "0A0000",
+    "count": 1132
+   },
+   {
+    "offset": "028000",
+    "count": 1048
+   },
+   {
+    "offset": "030000",
+    "count": 971
+   }
+  ],
+  "ptr2_count": 378,
+  "ptr2_top": [
+   {
+    "offset": "0558B6",
+    "entries": 1701
+   },
+   {
+    "offset": "056618",
+    "entries": 1268
+   },
+   {
+    "offset": "032438",
+    "entries": 1127
+   },
+   {
+    "offset": "095000",
+    "entries": 713
+   },
+   {
+    "offset": "0D0000",
+    "entries": 528
+   },
+   {
+    "offset": "057404",
+    "entries": 510
+   },
+   {
+    "offset": "137C2E",
+    "entries": 497
+   },
+   {
+    "offset": "057058",
+    "entries": 468
+   },
+   {
+    "offset": "0C8000",
+    "entries": 448
+   },
+   {
+    "offset": "090000",
+    "entries": 382
+   }
+  ],
+  "ptr3_count": 278,
+  "ptr3_top": [
+   {
+    "offset": "0558B6",
+    "entries": 1134,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "0558B6",
+    "entries": 1134,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "0558B6",
+    "entries": 1134,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "056618",
+    "entries": 845,
+    "order": "lo_hi_bank"
+   },
+   {
+    "offset": "056618",
+    "entries": 845,
+    "order": "bank_lo_hi"
+   },
+   {
+    "offset": "056618",
+    "entries": 845,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "032438",
+    "entries": 752,
+    "order": "hi_lo_bank"
+   },
+   {
+    "offset": "032438",
+    "entries": 751,
+    "order": "lo_hi_bank"
+   }
+  ]
+ }
+]

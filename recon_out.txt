@@ -1,0 +1,142 @@
+==============================================================================
+Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1)\Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc
+  size=524288 (hdr=0) crc32=55E44983
+  title='DORAEMON YOUSEINOKUNI' map=HiROM+Fast   size=4Mbit/512K  country=Japan ver=1
+  checksum stored=946D calc=946B ok=False
+  free>=1K: 0 bytes total | top: 
+  Shift-JIS: hira=593 kata=422 kanji=23971 total=24986
+  SJ hot: 000000:2003, 040000:2001, 068000:1966, 050000:1914, 058000:1904
+  ptr2 tables=91 | top 077E36(293), 04F9EA(257), 04FE4C(218), 0268C6(182)
+  ptr3 tables=77 | top 077E37(195,lo_hi_bank), 077E37(195,bank_lo_hi), 077E37(195,hi_lo_bank), 04FE53(143,lo_hi_bank)
+==============================================================================
+Doraemon 2 - Nobita no Toys Land Daibouken (Japan)\Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc
+  size=1048576 (hdr=0) crc32=D343B398
+  title='DORAEMON2 TOYSLAND'   map=HiROM+Fast   size=8Mbit/1M    country=Japan ver=0
+  checksum stored=136F calc=13EC ok=False
+  free>=1K: 107858 bytes total | top: 0690AF(28497,0xFF), 07C032(16334,0xFF), 00D202(11678,0xFF), 045911(9967,0xFF)
+  Shift-JIS: hira=660 kata=814 kanji=33701 total=35175
+  SJ hot: 0F8000:1972, 038000:1624, 0C0000:1526, 0B8000:1468, 0F0000:1441
+  ptr2 tables=174 | top 0690AE(14249), 07C030(8168), 00D202(5839), 045910(4984)
+  ptr3 tables=237 | top 0690B0(9498,lo_hi_bank), 0690B0(9498,bank_lo_hi), 0690B0(9498,hi_lo_bank), 07C031(5445,lo_hi_bank)
+==============================================================================
+Doraemon 3 - Nobita to Toki no Hougyoku (Japan)\Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc
+  size=1572864 (hdr=0) crc32=560C5EAB
+  title='DORAEMON TOKIHOUGYOKU' map=HiROM+Fast   size=16Mbit/2M   country=Japan ver=0
+  checksum stored=2010 calc=20DF ok=False
+  free>=1K: 103880 bytes total | top: 0DB94E(18098,0xFF), 09CD69(12951,0xFF), 15D75E(10402,0xFF), 0CD85A(10150,0xFF)
+  Shift-JIS: hira=404 kata=878 kanji=45644 total=46926
+  SJ hot: 0E0000:2308, 000000:2058, 150000:2004, 0F0000:1699, 0B0000:1683
+  ptr2 tables=355 | top 0DB94E(9049), 09CD68(6476), 15D75E(5201), 0CD85A(5075)
+  ptr3 tables=317 | top 0DB94D(6033,lo_hi_bank), 0DB950(6032,bank_lo_hi), 0DB950(6032,hi_lo_bank), 09CD6A(4316,lo_hi_bank)
+==============================================================================
+Doraemon 4 - Nobita to Tsuki no Oukoku (Japan)\Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc
+  size=1572864 (hdr=0) crc32=4097BC01
+  title='DORAEMON4NOBITATOTUKI' map=LoROM+Fast   size=16Mbit/2M   country=Japan ver=0
+  checksum stored=2036 calc=20DF ok=False
+  free>=1K: 26496 bytes total | top: 06D200(4613,0x00), 172FFE(4130,0x00), 0FCFEF(3602,0x00), 0F1500(2849,0x00)
+  Shift-JIS: hira=730 kata=763 kanji=27329 total=28822
+  SJ hot: 010000:1823, 0A0000:1443, 008000:1430, 090000:1332, 088000:1323
+  ptr2 tables=1357 | top 06D200(2308), 172FFE(2065), 0FCFF0(1800), 0F1500(1424)
+  ptr3 tables=1768 | top 06D202(1537,lo_hi_bank), 06D202(1537,bank_lo_hi), 06D202(1537,hi_lo_bank), 173000(1376,lo_hi_bank)
+==============================================================================
+Hero Senki - Project Olympus (Japan) 优先级高\Hero Senki - Project Olympus (Japan).sfc
+  size=1572864 (hdr=0) crc32=789DA99C
+  title='�-�- ���'             map=LoROM        size=16Mbit/2M   country=Japan ver=0
+  checksum stored=52B9 calc=52AD ok=False
+  free>=1K: 86110 bytes total | top: 094F93(12400,0x00), 0BE5A7(6745,0x00), 086CEB(4885,0x00), 116D15(4846,0x00)
+  Shift-JIS: hira=910 kata=821 kanji=39849 total=41580
+  SJ hot: 120000:2069, 070000:1625, 130000:1487, 138000:1353, 000000:1199
+  ptr2 tables=266 | top 094F94(6199), 0BE5A8(3373), 086CEC(2444), 116D16(2422)
+  ptr3 tables=386 | top 094F94(4133,lo_hi_bank), 094F94(4133,bank_lo_hi), 094F94(4133,hi_lo_bank), 0BE5A7(2249,bank_lo_hi)
+==============================================================================
+SRW4-DC\SRW4_DC_原版.smc
+  size=4194304 (hdr=0) crc32=D326F0FD
+  title='SUPER ROBOT WARS4'    map=HiROM+Fast   size=32Mbit/4M   country=Japan ver=1
+  checksum stored=93B3 calc=B6E7 ok=False
+  free>=1K: 1059196 bytes total | top: 36BBFF(607230,0x00), 302538(429770,0x00), 1BE4DC(6948,0xFF), 2FF7FF(2049,0x00)
+  Shift-JIS: hira=1858 kata=3256 kanji=105293 total=110407
+  SJ hot: 2B8000:3062, 2D0000:2705, 280000:2685, 218000:2648, 290000:2638
+  ptr2 tables=382 | top 36BC00(303614), 302538(214886), 1BE4DC(3474), 2FF800(1025)
+  ptr3 tables=204 | top 36BC00(202410,hi_lo_bank), 36BC00(202409,lo_hi_bank), 36BC00(202409,bank_lo_hi), 30253A(143257,lo_hi_bank)
+==============================================================================
+SRW4-KKNK-完整版\SRW4_KKNK_4.06後期原版_JAPAN.smc
+  size=8388608 (hdr=0) crc32=50D1E809
+  title='SUPER ROBOT WARS4'    map=ExHiROM+Fast size=64Mbit/8M   country=Japan ver=1
+  checksum stored=08AC calc=4689 ok=False
+  free>=1K: 3859366 bytes total | top: 51E75B(3020962,0x00), 3CF40F(232433,0x00), 410000(151544,0x00), 43573B(72487,0x00)
+  Shift-JIS: hira=2149 kata=4722 kanji=143995 total=150866
+  SJ hot: 2B8000:3060, 2D0000:2715, 218000:2648, 290000:2636, 2D8000:2580
+  ptr2 tables=1029 | top 51E75C(1510480), 3CF410(116216), 410000(75773), 43573C(36244)
+  ptr3 tables=742 | top 51E75C(1006987,lo_hi_bank), 51E75C(1006987,bank_lo_hi), 51E75C(1006987,hi_lo_bank), 3CF410(77477,lo_hi_bank)
+==============================================================================
+SRW4-rankaku-完整版 优先级高 比较简单可以参考第四次原版的文本，只加了一些对话，没有大幅改动\srw4_rankaku_後期原版_JAPAN.smc
+  size=8388608 (hdr=0) crc32=D01DBDAF
+  title='SUPER ROBOT WARS4'    map=ExHiROM+Fast size=64Mbit/8M   country=Japan ver=1
+  checksum stored=22CC calc=F047 ok=False
+  free>=1K: 4585913 bytes total | top: 46F7C7(3737654,0x00), 350C85(750459,0x00), 332C38(49865,0x00), 30CB98(13416,0xFF)
+  Shift-JIS: hira=1909 kata=3691 kanji=120844 total=126444
+  SJ hot: 2B8000:3062, 2D0000:2715, 218000:2648, 290000:2638, 2D8000:2580
+  ptr2 tables=929 | top 46F7C8(1868826), 350C86(375229), 332C38(24932), 30CB98(6708)
+  ptr3 tables=401 | top 46F7C9(1245884,lo_hi_bank), 46F7C9(1245884,bank_lo_hi), 46F7C9(1245884,hi_lo_bank), 350C87(250152,lo_hi_bank)
+==============================================================================
+SRW4-提坦斯\srw4_提坦斯完整_JAPAN.smc
+  size=4194304 (hdr=0) crc32=DBE4DBD2
+  title='SUPER ROBOT WARS4'    map=HiROM+Fast   size=32Mbit/4M   country=Japan ver=1
+  checksum stored=915B calc=4B04 ok=False
+  free>=1K: 899187 bytes total | top: 36D2D4(138541,0x00), 3D0E72(127375,0x00), 3B5D8C(107124,0x00), 349330(93392,0x00)
+  Shift-JIS: hira=1676 kata=3147 kanji=110606 total=115429
+  SJ hot: 290000:2746, 280000:2709, 2D0000:2699, 218000:2648, 2B8000:2642
+  ptr2 tables=443 | top 36D2D4(69270), 3D0E72(63708), 3B5D8C(53563), 349330(46698)
+  ptr3 tables=352 | top 36D2D4(46180,lo_hi_bank), 36D2D4(46180,bank_lo_hi), 36D2D4(46180,hi_lo_bank), 3D0E74(42458,bank_lo_hi)
+==============================================================================
+SRW4-春风DX 优先级中 游戏本体有个路线暂时未做完\srw4_TitaharuDX_v05_09_原版_JAPAN.smc
+  size=4194304 (hdr=0) crc32=C112B01C
+  title='SUPER ROBOT WARS4'    map=HiROM+Fast   size=32Mbit/4M   country=Japan ver=1
+  checksum stored=915B calc=31D7 ok=False
+  free>=1K: 477560 bytes total | top: 300380(64640,0x00), 3F056D(64147,0x00), 3E97DA(26663,0x00), 340CE0(21280,0x00)
+  Shift-JIS: hira=6172 kata=5824 kanji=131703 total=143699
+  SJ hot: 3A0000:8366, 298000:2837, 280000:2819, 290000:2777, 2A0000:2697
+  ptr2 tables=491 | top 300380(32320), 3F056E(32072), 3E97DA(13352), 340CE0(10640)
+  ptr3 tables=466 | top 300380(21547,hi_lo_bank), 300380(21546,lo_hi_bank), 300380(21546,bank_lo_hi), 3F056F(21381,lo_hi_bank)
+==============================================================================
+初代热血硬派 优先级高\SF8127.smc
+  size=1048576 (hdr=0) crc32=56C05339
+  title='����� ���� ��� �����' map=LoROM        size=8Mbit/1M    country=Japan ver=0
+  checksum stored=492E calc=49B6 ok=False
+  free>=1K: 0 bytes total | top: 
+  Shift-JIS: hira=610 kata=830 kanji=22654 total=24094
+  SJ hot: 010000:1470, 008000:1398, 000000:1356, 038000:1183, 018000:1026
+  ptr2 tables=92 | top 059EFC(231), 0061CA(191), 00136C(132), 00EBAA(129)
+  ptr3 tables=77 | top 059EFD(154,lo_hi_bank), 059EFD(153,bank_lo_hi), 059EFD(153,hi_lo_bank), 0537C2(80,bank_lo_hi)
+==============================================================================
+天使之翼3\天3动漫2002剧情+奥运篇.smc
+  size=1048576 (hdr=0) crc32=97623F6B
+  title='������ ���� 3'        map=LoROM        size=8Mbit/1M    country=Japan ver=0
+  checksum stored=3138 calc=32AA ok=False
+  free>=1K: 25479 bytes total | top: 0B577F(10376,0x00), 06EBFE(5122,0x00), 09F660(2464,0x00), 0A771F(2289,0x00)
+  Shift-JIS: hira=336 kata=428 kanji=19319 total=20083
+  SJ hot: 000000:1513, 0F8000:1444, 010000:1437, 070000:1193, 028000:1120
+  ptr2 tables=432 | top 0B5780(5187), 06EBFE(2561), 09F660(1252), 0A7720(1152)
+  ptr3 tables=470 | top 0B5781(3459,lo_hi_bank), 0B5781(3458,bank_lo_hi), 0B5781(3458,hi_lo_bank), 06EC00(1707,hi_lo_bank)
+==============================================================================
+天使之翼3\天3改版米迦勒 (1).sfc
+  size=1049088 (hdr=512) crc32=97623F6B
+  title='������ ���� 3'        map=LoROM        size=8Mbit/1M    country=Japan ver=0
+  checksum stored=3138 calc=32AA ok=False
+  free>=1K: 25479 bytes total | top: 0B577F(10376,0x00), 06EBFE(5122,0x00), 09F660(2464,0x00), 0A771F(2289,0x00)
+  Shift-JIS: hira=336 kata=428 kanji=19319 total=20083
+  SJ hot: 000000:1513, 0F8000:1444, 010000:1437, 070000:1193, 028000:1120
+  ptr2 tables=432 | top 0B5780(5187), 06EBFE(2561), 09F660(1252), 0A7720(1152)
+  ptr3 tables=470 | top 0B5781(3459,lo_hi_bank), 0B5781(3458,bank_lo_hi), 0B5781(3458,hi_lo_bank), 06EC00(1707,hi_lo_bank)
+==============================================================================
+天使之翼4 无限体力(1)\天使之翼4 无限体力.sfc
+  size=1572864 (hdr=0) crc32=6CF42497
+  title='������ ���� 4'        map=LoROM        size=16Mbit/2M   country=Japan ver=0
+  checksum stored=77FB calc=8C47 ok=False
+  free>=1K: 8194 bytes total | top: 0558B6(3402,0x00), 056618(2536,0x00), 032437(2256,0x00)
+  Shift-JIS: hira=406 kata=449 kanji=30887 total=31742
+  SJ hot: 078000:2439, 098000:2378, 0C0000:2375, 070000:2077, 038000:1838
+  ptr2 tables=378 | top 0558B6(1701), 056618(1268), 032438(1127), 095000(713)
+  ptr3 tables=278 | top 0558B6(1134,lo_hi_bank), 0558B6(1134,bank_lo_hi), 0558B6(1134,hi_lo_bank), 056618(845,lo_hi_bank)
+
+JSON -> C:\Users\<user>\.zcode\workspace\default\sfc-recon\recon.json

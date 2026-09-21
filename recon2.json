@@ -1,0 +1,1933 @@
+[
+ {
+  "file": "Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1)\\Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc",
+  "rom_size": 524288,
+  "file_size": 524288,
+  "copier_header": 0,
+  "crc32": "55E44983",
+  "header": {
+   "mapping": "HiROM+Fast",
+   "map_mode_byte": "31",
+   "title_ascii": "DORAEMON YOUSEINOKUNI",
+   "title_sjis": "DORAEMON YOUSEINOKUNI",
+   "title_is_sjis": false,
+   "rom_size_byte": "09",
+   "country": 0,
+   "version": 1,
+   "checksum_stored": "946D",
+   "checksum_calc": "946B",
+   "checksum_ok": false
+  },
+  "free_total": 0,
+  "free_top": [],
+  "text_runs_total": 9092,
+  "text_runs_jp": 58,
+  "jp_chars_total": 506,
+  "jp_chars_in_runs": 1702,
+  "char_kinds": {
+   "kanji": 488,
+   "other": 155,
+   "ascii": 869,
+   "kata": 8,
+   "punct": 172,
+   "hira": 10
+  },
+  "run_len_hist": {
+   "8": 15,
+   "16": 13,
+   "24": 8,
+   "32": 8,
+   "40": 8,
+   "48": 1,
+   "56": 2,
+   "64": 1,
+   "88": 2
+  },
+  "text_hot": [
+   {
+    "off": "0x078000",
+    "jp_chars": 96
+   },
+   {
+    "off": "0x038000",
+    "jp_chars": 85
+   },
+   {
+    "off": "0x010000",
+    "jp_chars": 78
+   },
+   {
+    "off": "0x018000",
+    "jp_chars": 73
+   },
+   {
+    "off": "0x020000",
+    "jp_chars": 45
+   },
+   {
+    "off": "0x008000",
+    "jp_chars": 31
+   },
+   {
+    "off": "0x028000",
+    "jp_chars": 30
+   },
+   {
+    "off": "0x048000",
+    "jp_chars": 20
+   }
+  ],
+  "text_bytes_covered": 2535,
+  "ptr_tables_validated": [
+   {
+    "off": "0x02AAE4",
+    "entries": 23,
+    "kind": "u16",
+    "on_text": 15,
+    "ratio": 0.652,
+    "samples": [
+     {
+      "ptr": 43845,
+      "rom": "0x02ABA2"
+     },
+     {
+      "ptr": 43849,
+      "rom": "0x02ABA2"
+     },
+     {
+      "ptr": 43853,
+      "rom": "0x02ABA2"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 29,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon 2 - Nobita no Toys Land Daibouken (Japan)\\Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc",
+  "rom_size": 1048576,
+  "file_size": 1048576,
+  "copier_header": 0,
+  "crc32": "D343B398",
+  "header": {
+   "mapping": "HiROM+Fast",
+   "map_mode_byte": "31",
+   "title_ascii": "DORAEMON2 TOYSLAND",
+   "title_sjis": "DORAEMON2 TOYSLAND",
+   "title_is_sjis": false,
+   "rom_size_byte": "0A",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "136F",
+   "checksum_calc": "13EC",
+   "checksum_ok": false
+  },
+  "free_total": 107858,
+  "free_top": [
+   {
+    "off": "0x0690AF",
+    "size": 28497,
+    "fill": "FF"
+   },
+   {
+    "off": "0x07C032",
+    "size": 16334,
+    "fill": "FF"
+   },
+   {
+    "off": "0x00D202",
+    "size": 11678,
+    "fill": "FF"
+   },
+   {
+    "off": "0x045911",
+    "size": 9967,
+    "fill": "FF"
+   },
+   {
+    "off": "0x0EBDFC",
+    "size": 8708,
+    "fill": "FF"
+   },
+   {
+    "off": "0x0DDFD1",
+    "size": 8239,
+    "fill": "FF"
+   }
+  ],
+  "text_runs_total": 9970,
+  "text_runs_jp": 67,
+  "jp_chars_total": 637,
+  "jp_chars_in_runs": 2342,
+  "char_kinds": {
+   "ascii": 1422,
+   "kanji": 630,
+   "other": 281,
+   "kata": 6,
+   "punct": 2,
+   "hira": 1
+  },
+  "run_len_hist": {
+   "8": 33,
+   "16": 11,
+   "24": 4,
+   "32": 2,
+   "40": 2,
+   "48": 5,
+   "56": 1,
+   "64": 2,
+   "80": 1,
+   "96": 1,
+   "120": 1,
+   "128": 4
+  },
+  "text_hot": [
+   {
+    "off": "0x028000",
+    "jp_chars": 136
+   },
+   {
+    "off": "0x010000",
+    "jp_chars": 113
+   },
+   {
+    "off": "0x058000",
+    "jp_chars": 98
+   },
+   {
+    "off": "0x048000",
+    "jp_chars": 68
+   },
+   {
+    "off": "0x030000",
+    "jp_chars": 66
+   },
+   {
+    "off": "0x018000",
+    "jp_chars": 39
+   },
+   {
+    "off": "0x0F8000",
+    "jp_chars": 28
+   },
+   {
+    "off": "0x078000",
+    "jp_chars": 20
+   }
+  ],
+  "text_bytes_covered": 3262,
+  "ptr_tables_validated": [],
+  "ptr_candidates_raw": 53,
+  "ptr_validated_count": 0,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon 3 - Nobita to Toki no Hougyoku (Japan)\\Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc",
+  "rom_size": 1572864,
+  "file_size": 1572864,
+  "copier_header": 0,
+  "crc32": "560C5EAB",
+  "header": {
+   "mapping": "HiROM+Fast",
+   "map_mode_byte": "31",
+   "title_ascii": "DORAEMON TOKIHOUGYOKU",
+   "title_sjis": "DORAEMON TOKIHOUGYOKU",
+   "title_is_sjis": false,
+   "rom_size_byte": "0B",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "2010",
+   "checksum_calc": "20DF",
+   "checksum_ok": false
+  },
+  "free_total": 103880,
+  "free_top": [
+   {
+    "off": "0x0DB94E",
+    "size": 18098,
+    "fill": "FF"
+   },
+   {
+    "off": "0x09CD69",
+    "size": 12951,
+    "fill": "FF"
+   },
+   {
+    "off": "0x15D75E",
+    "size": 10402,
+    "fill": "FF"
+   },
+   {
+    "off": "0x0CD85A",
+    "size": 10150,
+    "fill": "FF"
+   },
+   {
+    "off": "0x16D9F8",
+    "size": 9736,
+    "fill": "FF"
+   },
+   {
+    "off": "0x01DAE3",
+    "size": 9505,
+    "fill": "FF"
+   }
+  ],
+  "text_runs_total": 12544,
+  "text_runs_jp": 19,
+  "jp_chars_total": 288,
+  "jp_chars_in_runs": 410,
+  "char_kinds": {
+   "ascii": 87,
+   "kanji": 246,
+   "other": 35,
+   "kata": 42
+  },
+  "run_len_hist": {
+   "8": 12,
+   "16": 3,
+   "24": 1,
+   "32": 1,
+   "56": 1,
+   "128": 1
+  },
+  "text_hot": [
+   {
+    "off": "0x048000",
+    "jp_chars": 128
+   },
+   {
+    "off": "0x080000",
+    "jp_chars": 39
+   },
+   {
+    "off": "0x008000",
+    "jp_chars": 30
+   },
+   {
+    "off": "0x000000",
+    "jp_chars": 22
+   },
+   {
+    "off": "0x168000",
+    "jp_chars": 14
+   },
+   {
+    "off": "0x020000",
+    "jp_chars": 13
+   },
+   {
+    "off": "0x170000",
+    "jp_chars": 13
+   },
+   {
+    "off": "0x050000",
+    "jp_chars": 8
+   }
+  ],
+  "text_bytes_covered": 733,
+  "ptr_tables_validated": [],
+  "ptr_candidates_raw": 99,
+  "ptr_validated_count": 0,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Doraemon 4 - Nobita to Tsuki no Oukoku (Japan)\\Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc",
+  "rom_size": 1572864,
+  "file_size": 1572864,
+  "copier_header": 0,
+  "crc32": "4097BC01",
+  "header": {
+   "mapping": "LoROM+Fast",
+   "map_mode_byte": "30",
+   "title_ascii": "DORAEMON4NOBITATOTUKI",
+   "title_sjis": "DORAEMON4NOBITATOTUKI",
+   "title_is_sjis": false,
+   "rom_size_byte": "0B",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "2036",
+   "checksum_calc": "20DF",
+   "checksum_ok": false
+  },
+  "free_total": 26496,
+  "free_top": [
+   {
+    "off": "0x06D200",
+    "size": 4613,
+    "fill": "00"
+   },
+   {
+    "off": "0x172FFE",
+    "size": 4130,
+    "fill": "00"
+   },
+   {
+    "off": "0x0FCFEF",
+    "size": 3602,
+    "fill": "00"
+   },
+   {
+    "off": "0x0F1500",
+    "size": 2849,
+    "fill": "00"
+   },
+   {
+    "off": "0x1617BE",
+    "size": 2120,
+    "fill": "00"
+   },
+   {
+    "off": "0x03B080",
+    "size": 1792,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 11980,
+  "text_runs_jp": 99,
+  "jp_chars_total": 769,
+  "jp_chars_in_runs": 3527,
+  "char_kinds": {
+   "ascii": 2470,
+   "kanji": 704,
+   "other": 281,
+   "kata": 34,
+   "punct": 7,
+   "hira": 31
+  },
+  "run_len_hist": {
+   "8": 68,
+   "16": 6,
+   "24": 3,
+   "32": 3,
+   "40": 4,
+   "48": 1,
+   "64": 1,
+   "72": 1,
+   "80": 2,
+   "96": 1,
+   "104": 1,
+   "128": 8
+  },
+  "text_hot": [
+   {
+    "off": "0x028000",
+    "jp_chars": 160
+   },
+   {
+    "off": "0x168000",
+    "jp_chars": 108
+   },
+   {
+    "off": "0x088000",
+    "jp_chars": 65
+   },
+   {
+    "off": "0x038000",
+    "jp_chars": 49
+   },
+   {
+    "off": "0x0A8000",
+    "jp_chars": 47
+   },
+   {
+    "off": "0x090000",
+    "jp_chars": 46
+   },
+   {
+    "off": "0x080000",
+    "jp_chars": 35
+   },
+   {
+    "off": "0x098000",
+    "jp_chars": 35
+   }
+  ],
+  "text_bytes_covered": 4584,
+  "ptr_tables_validated": [],
+  "ptr_candidates_raw": 40,
+  "ptr_validated_count": 0,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "Hero Senki - Project Olympus (Japan).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\Hero Senki - Project Olympus (Japan) 优先级高\\Hero Senki - Project Olympus (Japan).sfc",
+  "rom_size": 1572864,
+  "file_size": 1572864,
+  "copier_header": 0,
+  "crc32": "789DA99C",
+  "header": {
+   "mapping": "LoROM",
+   "map_mode_byte": "20",
+   "title_ascii": "�-�- ���",
+   "title_sjis": "ﾋ-ﾛ- ｾﾝｷ",
+   "title_is_sjis": true,
+   "rom_size_byte": "0B",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "52B9",
+   "checksum_calc": "52AD",
+   "checksum_ok": false
+  },
+  "free_total": 86110,
+  "free_top": [
+   {
+    "off": "0x094F93",
+    "size": 12400,
+    "fill": "00"
+   },
+   {
+    "off": "0x0BE5A7",
+    "size": 6745,
+    "fill": "00"
+   },
+   {
+    "off": "0x086CEB",
+    "size": 4885,
+    "fill": "00"
+   },
+   {
+    "off": "0x116D15",
+    "size": 4846,
+    "fill": "00"
+   },
+   {
+    "off": "0x136FCE",
+    "size": 4146,
+    "fill": "00"
+   },
+   {
+    "off": "0x0B7041",
+    "size": 4031,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 8222,
+  "text_runs_jp": 71,
+  "jp_chars_total": 2387,
+  "jp_chars_in_runs": 3045,
+  "char_kinds": {
+   "kata": 47,
+   "ascii": 393,
+   "other": 263,
+   "kanji": 2270,
+   "punct": 2,
+   "hira": 70
+  },
+  "run_len_hist": {
+   "8": 26,
+   "16": 11,
+   "24": 10,
+   "32": 5,
+   "40": 1,
+   "48": 4,
+   "56": 1,
+   "64": 2,
+   "72": 1,
+   "96": 3,
+   "104": 1,
+   "128": 6
+  },
+  "text_hot": [
+   {
+    "off": "0x120000",
+    "jp_chars": 817
+   },
+   {
+    "off": "0x130000",
+    "jp_chars": 751
+   },
+   {
+    "off": "0x138000",
+    "jp_chars": 261
+   },
+   {
+    "off": "0x098000",
+    "jp_chars": 190
+   },
+   {
+    "off": "0x128000",
+    "jp_chars": 152
+   },
+   {
+    "off": "0x018000",
+    "jp_chars": 44
+   },
+   {
+    "off": "0x070000",
+    "jp_chars": 40
+   },
+   {
+    "off": "0x008000",
+    "jp_chars": 27
+   }
+  ],
+  "text_bytes_covered": 5697,
+  "ptr_tables_validated": [
+   {
+    "off": "0x0180E4",
+    "entries": 29,
+    "kind": "u16",
+    "on_text": 15,
+    "ratio": 0.517,
+    "samples": [
+     {
+      "ptr": 32992,
+      "rom": "0x018140"
+     },
+     {
+      "ptr": 32993,
+      "rom": "0x018140"
+     },
+     {
+      "ptr": 32994,
+      "rom": "0x018140"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 130,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "SRW4_DC_原版.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-DC\\SRW4_DC_原版.smc",
+  "rom_size": 4194304,
+  "file_size": 4194304,
+  "copier_header": 0,
+  "crc32": "D326F0FD",
+  "header": {
+   "mapping": "HiROM+Fast",
+   "map_mode_byte": "31",
+   "title_ascii": "SUPER ROBOT WARS4",
+   "title_sjis": "SUPER ROBOT WARS4",
+   "title_is_sjis": false,
+   "rom_size_byte": "0C",
+   "country": 0,
+   "version": 1,
+   "checksum_stored": "93B3",
+   "checksum_calc": "B6E7",
+   "checksum_ok": false
+  },
+  "free_total": 1059196,
+  "free_top": [
+   {
+    "off": "0x36BBFF",
+    "size": 607230,
+    "fill": "00"
+   },
+   {
+    "off": "0x302538",
+    "size": 429770,
+    "fill": "00"
+   },
+   {
+    "off": "0x1BE4DC",
+    "size": 6948,
+    "fill": "FF"
+   },
+   {
+    "off": "0x2FF7FF",
+    "size": 2049,
+    "fill": "00"
+   },
+   {
+    "off": "0x0DF93C",
+    "size": 1732,
+    "fill": "FF"
+   },
+   {
+    "off": "0x25F99E",
+    "size": 1634,
+    "fill": "FF"
+   }
+  ],
+  "text_runs_total": 30174,
+  "text_runs_jp": 289,
+  "jp_chars_total": 4218,
+  "jp_chars_in_runs": 9821,
+  "char_kinds": {
+   "other": 1266,
+   "kanji": 3737,
+   "ascii": 4225,
+   "punct": 112,
+   "kata": 212,
+   "hira": 269
+  },
+  "run_len_hist": {
+   "8": 86,
+   "16": 69,
+   "24": 37,
+   "32": 30,
+   "40": 11,
+   "48": 12,
+   "56": 4,
+   "64": 12,
+   "72": 8,
+   "80": 5,
+   "88": 2,
+   "104": 2,
+   "112": 1,
+   "128": 10
+  },
+  "text_hot": [
+   {
+    "off": "0x218000",
+    "jp_chars": 1043
+   },
+   {
+    "off": "0x128000",
+    "jp_chars": 560
+   },
+   {
+    "off": "0x1B8000",
+    "jp_chars": 388
+   },
+   {
+    "off": "0x280000",
+    "jp_chars": 376
+   },
+   {
+    "off": "0x120000",
+    "jp_chars": 348
+   },
+   {
+    "off": "0x0C0000",
+    "jp_chars": 224
+   },
+   {
+    "off": "0x2B8000",
+    "jp_chars": 210
+   },
+   {
+    "off": "0x0B0000",
+    "jp_chars": 118
+   }
+  ],
+  "text_bytes_covered": 15417,
+  "ptr_tables_validated": [
+   {
+    "off": "0x2140D6",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 12,
+    "ratio": 0.545,
+    "samples": [
+     {
+      "ptr": 35213,
+      "rom": "0x2189B0"
+     },
+     {
+      "ptr": 35504,
+      "rom": "0x218A70"
+     },
+     {
+      "ptr": 35511,
+      "rom": "0x218A70"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 294,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [
+   {
+    "off": "0x2E8200",
+    "score": 3.32,
+    "ink": 0.27,
+    "nonblank": 1.0,
+    "r0blank": 0.77
+   },
+   {
+    "off": "0x226200",
+    "score": 3.29,
+    "ink": 0.337,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   },
+   {
+    "off": "0x2E6A00",
+    "score": 3.28,
+    "ink": 0.341,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   }
+  ],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "SRW4_KKNK_4.06後期原版_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-KKNK-完整版\\SRW4_KKNK_4.06後期原版_JAPAN.smc",
+  "rom_size": 8388608,
+  "file_size": 8388608,
+  "copier_header": 0,
+  "crc32": "50D1E809",
+  "header": {
+   "mapping": "ExHiROM+Fast",
+   "map_mode_byte": "35",
+   "title_ascii": "SUPER ROBOT WARS4",
+   "title_sjis": "SUPER ROBOT WARS4",
+   "title_is_sjis": false,
+   "rom_size_byte": "0D",
+   "country": 0,
+   "version": 1,
+   "checksum_stored": "08AC",
+   "checksum_calc": "4689",
+   "checksum_ok": false
+  },
+  "free_total": 3859366,
+  "free_top": [
+   {
+    "off": "0x51E75B",
+    "size": 3020962,
+    "fill": "00"
+   },
+   {
+    "off": "0x3CF40F",
+    "size": 232433,
+    "fill": "00"
+   },
+   {
+    "off": "0x410000",
+    "size": 151544,
+    "fill": "00"
+   },
+   {
+    "off": "0x43573B",
+    "size": 72487,
+    "fill": "00"
+   },
+   {
+    "off": "0x332CE6",
+    "size": 49691,
+    "fill": "00"
+   },
+   {
+    "off": "0x3A60E1",
+    "size": 36728,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 37605,
+  "text_runs_jp": 272,
+  "jp_chars_total": 3891,
+  "jp_chars_in_runs": 9413,
+  "char_kinds": {
+   "other": 1237,
+   "kanji": 3647,
+   "ascii": 4233,
+   "punct": 52,
+   "kata": 159,
+   "hira": 85
+  },
+  "run_len_hist": {
+   "8": 84,
+   "16": 59,
+   "24": 35,
+   "32": 28,
+   "40": 12,
+   "48": 10,
+   "56": 5,
+   "64": 11,
+   "72": 8,
+   "80": 5,
+   "88": 2,
+   "104": 2,
+   "112": 1,
+   "128": 10
+  },
+  "text_hot": [
+   {
+    "off": "0x218000",
+    "jp_chars": 1043
+   },
+   {
+    "off": "0x128000",
+    "jp_chars": 524
+   },
+   {
+    "off": "0x1B8000",
+    "jp_chars": 388
+   },
+   {
+    "off": "0x120000",
+    "jp_chars": 348
+   },
+   {
+    "off": "0x0C0000",
+    "jp_chars": 224
+   },
+   {
+    "off": "0x2B8000",
+    "jp_chars": 211
+   },
+   {
+    "off": "0x0B0000",
+    "jp_chars": 118
+   },
+   {
+    "off": "0x048000",
+    "jp_chars": 75
+   }
+  ],
+  "text_bytes_covered": 14593,
+  "ptr_tables_validated": [
+   {
+    "off": "0x2140D6",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 12,
+    "ratio": 0.545,
+    "samples": [
+     {
+      "ptr": 35213,
+      "rom": "0x2189B0"
+     },
+     {
+      "ptr": 35504,
+      "rom": "0x218A70"
+     },
+     {
+      "ptr": 35511,
+      "rom": "0x218A70"
+     }
+    ]
+   },
+   {
+    "off": "0x31C720",
+    "entries": 21,
+    "kind": "u16",
+    "on_text": 13,
+    "ratio": 0.619,
+    "samples": [
+     {
+      "ptr": 54199,
+      "rom": "0x00D413"
+     },
+     {
+      "ptr": 54210,
+      "rom": "0x00D413"
+     },
+     {
+      "ptr": 54221,
+      "rom": "0x00D413"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 352,
+  "ptr_validated_count": 2,
+  "font_cands_2bpp": [
+   {
+    "off": "0x2E8200",
+    "score": 3.32,
+    "ink": 0.27,
+    "nonblank": 1.0,
+    "r0blank": 0.77
+   },
+   {
+    "off": "0x226200",
+    "score": 3.29,
+    "ink": 0.337,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   },
+   {
+    "off": "0x2E6A00",
+    "score": 3.28,
+    "ink": 0.341,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   }
+  ],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "srw4_rankaku_後期原版_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-rankaku-完整版 优先级高 比较简单可以参考第四次原版的文本，只加了一些对话，没有大幅改动\\srw4_rankaku_後期原版_JAPAN.smc",
+  "rom_size": 8388608,
+  "file_size": 8388608,
+  "copier_header": 0,
+  "crc32": "D01DBDAF",
+  "header": {
+   "mapping": "ExHiROM+Fast",
+   "map_mode_byte": "35",
+   "title_ascii": "SUPER ROBOT WARS4",
+   "title_sjis": "SUPER ROBOT WARS4",
+   "title_is_sjis": false,
+   "rom_size_byte": "0D",
+   "country": 0,
+   "version": 1,
+   "checksum_stored": "22CC",
+   "checksum_calc": "F047",
+   "checksum_ok": false
+  },
+  "free_total": 4585913,
+  "free_top": [
+   {
+    "off": "0x46F7C7",
+    "size": 3737654,
+    "fill": "00"
+   },
+   {
+    "off": "0x350C85",
+    "size": 750459,
+    "fill": "00"
+   },
+   {
+    "off": "0x332C38",
+    "size": 49865,
+    "fill": "00"
+   },
+   {
+    "off": "0x30CB98",
+    "size": 13416,
+    "fill": "FF"
+   },
+   {
+    "off": "0x329DEA",
+    "size": 6679,
+    "fill": "00"
+   },
+   {
+    "off": "0x1BE4DC",
+    "size": 4484,
+    "fill": "FF"
+   }
+  ],
+  "text_runs_total": 32863,
+  "text_runs_jp": 270,
+  "jp_chars_total": 3968,
+  "jp_chars_in_runs": 9363,
+  "char_kinds": {
+   "other": 1213,
+   "kanji": 3742,
+   "ascii": 4128,
+   "punct": 54,
+   "kata": 149,
+   "hira": 77
+  },
+  "run_len_hist": {
+   "8": 84,
+   "16": 57,
+   "24": 36,
+   "32": 29,
+   "40": 10,
+   "48": 9,
+   "56": 5,
+   "64": 12,
+   "72": 8,
+   "80": 5,
+   "88": 2,
+   "104": 2,
+   "112": 1,
+   "128": 10
+  },
+  "text_hot": [
+   {
+    "off": "0x218000",
+    "jp_chars": 1043
+   },
+   {
+    "off": "0x128000",
+    "jp_chars": 570
+   },
+   {
+    "off": "0x1B8000",
+    "jp_chars": 388
+   },
+   {
+    "off": "0x120000",
+    "jp_chars": 348
+   },
+   {
+    "off": "0x0C0000",
+    "jp_chars": 224
+   },
+   {
+    "off": "0x2B8000",
+    "jp_chars": 211
+   },
+   {
+    "off": "0x0B0000",
+    "jp_chars": 118
+   },
+   {
+    "off": "0x320000",
+    "jp_chars": 94
+   }
+  ],
+  "text_bytes_covered": 14598,
+  "ptr_tables_validated": [
+   {
+    "off": "0x2140D6",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 12,
+    "ratio": 0.545,
+    "samples": [
+     {
+      "ptr": 35213,
+      "rom": "0x2189B0"
+     },
+     {
+      "ptr": 35504,
+      "rom": "0x218A70"
+     },
+     {
+      "ptr": 35511,
+      "rom": "0x218A70"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 335,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [
+   {
+    "off": "0x2E8200",
+    "score": 3.32,
+    "ink": 0.27,
+    "nonblank": 1.0,
+    "r0blank": 0.77
+   },
+   {
+    "off": "0x226200",
+    "score": 3.29,
+    "ink": 0.337,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   },
+   {
+    "off": "0x2E6A00",
+    "score": 3.28,
+    "ink": 0.341,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   }
+  ],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "srw4_提坦斯完整_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-提坦斯\\srw4_提坦斯完整_JAPAN.smc",
+  "rom_size": 4194304,
+  "file_size": 4194304,
+  "copier_header": 0,
+  "crc32": "DBE4DBD2",
+  "header": {
+   "mapping": "HiROM+Fast",
+   "map_mode_byte": "31",
+   "title_ascii": "SUPER ROBOT WARS4",
+   "title_sjis": "SUPER ROBOT WARS4",
+   "title_is_sjis": false,
+   "rom_size_byte": "0C",
+   "country": 0,
+   "version": 1,
+   "checksum_stored": "915B",
+   "checksum_calc": "4B04",
+   "checksum_ok": false
+  },
+  "free_total": 899187,
+  "free_top": [
+   {
+    "off": "0x36D2D4",
+    "size": 138541,
+    "fill": "00"
+   },
+   {
+    "off": "0x3D0E72",
+    "size": 127375,
+    "fill": "00"
+   },
+   {
+    "off": "0x3B5D8C",
+    "size": 107124,
+    "fill": "00"
+   },
+   {
+    "off": "0x349330",
+    "size": 93392,
+    "fill": "00"
+   },
+   {
+    "off": "0x39F431",
+    "size": 68559,
+    "fill": "00"
+   },
+   {
+    "off": "0x3F056D",
+    "size": 64147,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 32023,
+  "text_runs_jp": 290,
+  "jp_chars_total": 4215,
+  "jp_chars_in_runs": 10174,
+  "char_kinds": {
+   "other": 1314,
+   "kanji": 4009,
+   "ascii": 4589,
+   "punct": 56,
+   "kata": 146,
+   "hira": 60
+  },
+  "run_len_hist": {
+   "8": 83,
+   "16": 56,
+   "24": 42,
+   "32": 37,
+   "40": 12,
+   "48": 11,
+   "56": 7,
+   "64": 13,
+   "72": 8,
+   "80": 7,
+   "88": 2,
+   "104": 2,
+   "112": 1,
+   "128": 9
+  },
+  "text_hot": [
+   {
+    "off": "0x218000",
+    "jp_chars": 1043
+   },
+   {
+    "off": "0x128000",
+    "jp_chars": 451
+   },
+   {
+    "off": "0x1B8000",
+    "jp_chars": 388
+   },
+   {
+    "off": "0x120000",
+    "jp_chars": 348
+   },
+   {
+    "off": "0x2B8000",
+    "jp_chars": 232
+   },
+   {
+    "off": "0x0C0000",
+    "jp_chars": 223
+   },
+   {
+    "off": "0x368000",
+    "jp_chars": 203
+   },
+   {
+    "off": "0x0B0000",
+    "jp_chars": 118
+   }
+  ],
+  "text_bytes_covered": 15759,
+  "ptr_tables_validated": [
+   {
+    "off": "0x2140D6",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 12,
+    "ratio": 0.545,
+    "samples": [
+     {
+      "ptr": 35213,
+      "rom": "0x2189B0"
+     },
+     {
+      "ptr": 35504,
+      "rom": "0x218A70"
+     },
+     {
+      "ptr": 35511,
+      "rom": "0x218A70"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 277,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [
+   {
+    "off": "0x2E8200",
+    "score": 3.32,
+    "ink": 0.27,
+    "nonblank": 1.0,
+    "r0blank": 0.77
+   },
+   {
+    "off": "0x226200",
+    "score": 3.29,
+    "ink": 0.337,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   },
+   {
+    "off": "0x2E6A00",
+    "score": 3.28,
+    "ink": 0.341,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   }
+  ],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "srw4_TitaharuDX_v05_09_原版_JAPAN.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\SRW4-春风DX 优先级中 游戏本体有个路线暂时未做完\\srw4_TitaharuDX_v05_09_原版_JAPAN.smc",
+  "rom_size": 4194304,
+  "file_size": 4194304,
+  "copier_header": 0,
+  "crc32": "C112B01C",
+  "header": {
+   "mapping": "HiROM+Fast",
+   "map_mode_byte": "31",
+   "title_ascii": "SUPER ROBOT WARS4",
+   "title_sjis": "SUPER ROBOT WARS4",
+   "title_is_sjis": false,
+   "rom_size_byte": "0C",
+   "country": 0,
+   "version": 1,
+   "checksum_stored": "915B",
+   "checksum_calc": "31D7",
+   "checksum_ok": false
+  },
+  "free_total": 477560,
+  "free_top": [
+   {
+    "off": "0x300380",
+    "size": 64640,
+    "fill": "00"
+   },
+   {
+    "off": "0x3F056D",
+    "size": 64147,
+    "fill": "00"
+   },
+   {
+    "off": "0x3E97DA",
+    "size": 26663,
+    "fill": "00"
+   },
+   {
+    "off": "0x340CE0",
+    "size": 21280,
+    "fill": "00"
+   },
+   {
+    "off": "0x38AE97",
+    "size": 16746,
+    "fill": "00"
+   },
+   {
+    "off": "0x31604A",
+    "size": 16310,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 39037,
+  "text_runs_jp": 804,
+  "jp_chars_total": 12009,
+  "jp_chars_in_runs": 21094,
+  "char_kinds": {
+   "other": 1594,
+   "kanji": 5532,
+   "ascii": 5674,
+   "punct": 1817,
+   "kata": 2085,
+   "hira": 4392
+  },
+  "run_len_hist": {
+   "8": 178,
+   "16": 308,
+   "24": 182,
+   "32": 51,
+   "40": 23,
+   "48": 12,
+   "56": 8,
+   "64": 13,
+   "72": 7,
+   "80": 6,
+   "88": 2,
+   "104": 2,
+   "112": 4,
+   "128": 8
+  },
+  "text_hot": [
+   {
+    "off": "0x3A0000",
+    "jp_chars": 7594
+   },
+   {
+    "off": "0x218000",
+    "jp_chars": 1043
+   },
+   {
+    "off": "0x128000",
+    "jp_chars": 526
+   },
+   {
+    "off": "0x1B8000",
+    "jp_chars": 388
+   },
+   {
+    "off": "0x120000",
+    "jp_chars": 348
+   },
+   {
+    "off": "0x2B8000",
+    "jp_chars": 232
+   },
+   {
+    "off": "0x0C0000",
+    "jp_chars": 213
+   },
+   {
+    "off": "0x368000",
+    "jp_chars": 123
+   }
+  ],
+  "text_bytes_covered": 36514,
+  "ptr_tables_validated": [
+   {
+    "off": "0x2140D6",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 12,
+    "ratio": 0.545,
+    "samples": [
+     {
+      "ptr": 35213,
+      "rom": "0x2189B0"
+     },
+     {
+      "ptr": 35504,
+      "rom": "0x218A70"
+     },
+     {
+      "ptr": 35511,
+      "rom": "0x218A70"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 309,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [
+   {
+    "off": "0x2E8200",
+    "score": 3.32,
+    "ink": 0.27,
+    "nonblank": 1.0,
+    "r0blank": 0.77
+   },
+   {
+    "off": "0x226200",
+    "score": 3.29,
+    "ink": 0.337,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   },
+   {
+    "off": "0x2E6A00",
+    "score": 3.28,
+    "ink": 0.341,
+    "nonblank": 1.0,
+    "r0blank": 1.0
+   }
+  ],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "SF8127.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\初代热血硬派 优先级高\\SF8127.smc",
+  "rom_size": 1048576,
+  "file_size": 1048576,
+  "copier_header": 0,
+  "crc32": "56C05339",
+  "header": {
+   "mapping": "LoROM",
+   "map_mode_byte": "20",
+   "title_ascii": "����� ���� ��� �����",
+   "title_sjis": "ｼｮﾀﾞｲ ﾈｯｹﾂ ｺｳﾊ ｸﾆｵｸﾝ",
+   "title_is_sjis": true,
+   "rom_size_byte": "0A",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "492E",
+   "checksum_calc": "49B6",
+   "checksum_ok": false
+  },
+  "free_total": 0,
+  "free_top": [],
+  "text_runs_total": 7803,
+  "text_runs_jp": 102,
+  "jp_chars_total": 908,
+  "jp_chars_in_runs": 2639,
+  "char_kinds": {
+   "ascii": 1253,
+   "other": 455,
+   "kata": 32,
+   "kanji": 811,
+   "punct": 23,
+   "hira": 65
+  },
+  "run_len_hist": {
+   "8": 55,
+   "16": 9,
+   "24": 16,
+   "32": 6,
+   "40": 4,
+   "48": 3,
+   "64": 1,
+   "72": 2,
+   "80": 2,
+   "128": 4
+  },
+  "text_hot": [
+   {
+    "off": "0x058000",
+    "jp_chars": 136
+   },
+   {
+    "off": "0x0C8000",
+    "jp_chars": 110
+   },
+   {
+    "off": "0x038000",
+    "jp_chars": 71
+   },
+   {
+    "off": "0x010000",
+    "jp_chars": 64
+   },
+   {
+    "off": "0x040000",
+    "jp_chars": 59
+   },
+   {
+    "off": "0x0E8000",
+    "jp_chars": 52
+   },
+   {
+    "off": "0x048000",
+    "jp_chars": 50
+   },
+   {
+    "off": "0x050000",
+    "jp_chars": 49
+   }
+  ],
+  "text_bytes_covered": 4025,
+  "ptr_tables_validated": [],
+  "ptr_candidates_raw": 43,
+  "ptr_validated_count": 0,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "天3动漫2002剧情+奥运篇.smc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\天使之翼3\\天3动漫2002剧情+奥运篇.smc",
+  "rom_size": 1048576,
+  "file_size": 1048576,
+  "copier_header": 0,
+  "crc32": "97623F6B",
+  "header": {
+   "mapping": "LoROM",
+   "map_mode_byte": "20",
+   "title_ascii": "������ ���� 3",
+   "title_sjis": "ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 3",
+   "title_is_sjis": true,
+   "rom_size_byte": "0A",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "3138",
+   "checksum_calc": "32AA",
+   "checksum_ok": false
+  },
+  "free_total": 25479,
+  "free_top": [
+   {
+    "off": "0x0B577F",
+    "size": 10376,
+    "fill": "00"
+   },
+   {
+    "off": "0x06EBFE",
+    "size": 5122,
+    "fill": "00"
+   },
+   {
+    "off": "0x09F660",
+    "size": 2464,
+    "fill": "00"
+   },
+   {
+    "off": "0x0A771F",
+    "size": 2289,
+    "fill": "00"
+   },
+   {
+    "off": "0x0AF93B",
+    "size": 1743,
+    "fill": "00"
+   },
+   {
+    "off": "0x097B3C",
+    "size": 1220,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 4331,
+  "text_runs_jp": 151,
+  "jp_chars_total": 1888,
+  "jp_chars_in_runs": 3076,
+  "char_kinds": {
+   "ascii": 843,
+   "other": 331,
+   "kanji": 1820,
+   "kata": 49,
+   "punct": 14,
+   "hira": 19
+  },
+  "run_len_hist": {
+   "8": 96,
+   "16": 21,
+   "24": 11,
+   "32": 11,
+   "40": 1,
+   "48": 2,
+   "56": 2,
+   "64": 2,
+   "80": 1,
+   "88": 1,
+   "96": 1,
+   "120": 1,
+   "128": 1
+  },
+  "text_hot": [
+   {
+    "off": "0x028000",
+    "jp_chars": 301
+   },
+   {
+    "off": "0x000000",
+    "jp_chars": 279
+   },
+   {
+    "off": "0x0E8000",
+    "jp_chars": 170
+   },
+   {
+    "off": "0x0F8000",
+    "jp_chars": 168
+   },
+   {
+    "off": "0x0C8000",
+    "jp_chars": 146
+   },
+   {
+    "off": "0x0E0000",
+    "jp_chars": 137
+   },
+   {
+    "off": "0x070000",
+    "jp_chars": 130
+   },
+   {
+    "off": "0x038000",
+    "jp_chars": 111
+   }
+  ],
+  "text_bytes_covered": 5309,
+  "ptr_tables_validated": [
+   {
+    "off": "0x021104",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 22,
+    "ratio": 1.0,
+    "samples": [
+     {
+      "ptr": 37168,
+      "rom": "0x02111A"
+     },
+     {
+      "ptr": 37169,
+      "rom": "0x02111A"
+     },
+     {
+      "ptr": 37170,
+      "rom": "0x02111A"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 79,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "天3改版米迦勒 (1).sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\天使之翼3\\天3改版米迦勒 (1).sfc",
+  "rom_size": 1048576,
+  "file_size": 1049088,
+  "copier_header": 512,
+  "crc32": "97623F6B",
+  "header": {
+   "mapping": "LoROM",
+   "map_mode_byte": "20",
+   "title_ascii": "������ ���� 3",
+   "title_sjis": "ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 3",
+   "title_is_sjis": true,
+   "rom_size_byte": "0A",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "3138",
+   "checksum_calc": "32AA",
+   "checksum_ok": false
+  },
+  "free_total": 25479,
+  "free_top": [
+   {
+    "off": "0x0B577F",
+    "size": 10376,
+    "fill": "00"
+   },
+   {
+    "off": "0x06EBFE",
+    "size": 5122,
+    "fill": "00"
+   },
+   {
+    "off": "0x09F660",
+    "size": 2464,
+    "fill": "00"
+   },
+   {
+    "off": "0x0A771F",
+    "size": 2289,
+    "fill": "00"
+   },
+   {
+    "off": "0x0AF93B",
+    "size": 1743,
+    "fill": "00"
+   },
+   {
+    "off": "0x097B3C",
+    "size": 1220,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 4331,
+  "text_runs_jp": 151,
+  "jp_chars_total": 1888,
+  "jp_chars_in_runs": 3076,
+  "char_kinds": {
+   "ascii": 843,
+   "other": 331,
+   "kanji": 1820,
+   "kata": 49,
+   "punct": 14,
+   "hira": 19
+  },
+  "run_len_hist": {
+   "8": 96,
+   "16": 21,
+   "24": 11,
+   "32": 11,
+   "40": 1,
+   "48": 2,
+   "56": 2,
+   "64": 2,
+   "80": 1,
+   "88": 1,
+   "96": 1,
+   "120": 1,
+   "128": 1
+  },
+  "text_hot": [
+   {
+    "off": "0x028000",
+    "jp_chars": 301
+   },
+   {
+    "off": "0x000000",
+    "jp_chars": 279
+   },
+   {
+    "off": "0x0E8000",
+    "jp_chars": 170
+   },
+   {
+    "off": "0x0F8000",
+    "jp_chars": 168
+   },
+   {
+    "off": "0x0C8000",
+    "jp_chars": 146
+   },
+   {
+    "off": "0x0E0000",
+    "jp_chars": 137
+   },
+   {
+    "off": "0x070000",
+    "jp_chars": 130
+   },
+   {
+    "off": "0x038000",
+    "jp_chars": 111
+   }
+  ],
+  "text_bytes_covered": 5309,
+  "ptr_tables_validated": [
+   {
+    "off": "0x021104",
+    "entries": 22,
+    "kind": "u16",
+    "on_text": 22,
+    "ratio": 1.0,
+    "samples": [
+     {
+      "ptr": 37168,
+      "rom": "0x02111A"
+     },
+     {
+      "ptr": 37169,
+      "rom": "0x02111A"
+     },
+     {
+      "ptr": 37170,
+      "rom": "0x02111A"
+     }
+    ]
+   }
+  ],
+  "ptr_candidates_raw": 79,
+  "ptr_validated_count": 1,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ },
+ {
+  "file": "天使之翼4 无限体力.sfc",
+  "path": "F:\\BaiduNetdiskDownload\\SFC\\天使之翼4 无限体力(1)\\天使之翼4 无限体力.sfc",
+  "rom_size": 1572864,
+  "file_size": 1572864,
+  "copier_header": 0,
+  "crc32": "6CF42497",
+  "header": {
+   "mapping": "LoROM",
+   "map_mode_byte": "20",
+   "title_ascii": "������ ���� 4",
+   "title_sjis": "ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 4",
+   "title_is_sjis": true,
+   "rom_size_byte": "0B",
+   "country": 0,
+   "version": 0,
+   "checksum_stored": "77FB",
+   "checksum_calc": "8C47",
+   "checksum_ok": false
+  },
+  "free_total": 8194,
+  "free_top": [
+   {
+    "off": "0x0558B6",
+    "size": 3402,
+    "fill": "00"
+   },
+   {
+    "off": "0x056618",
+    "size": 2536,
+    "fill": "00"
+   },
+   {
+    "off": "0x032437",
+    "size": 2256,
+    "fill": "00"
+   }
+  ],
+  "text_runs_total": 6518,
+  "text_runs_jp": 154,
+  "jp_chars_total": 1824,
+  "jp_chars_in_runs": 4127,
+  "char_kinds": {
+   "ascii": 1720,
+   "kanji": 1734,
+   "kata": 17,
+   "other": 564,
+   "hira": 73,
+   "punct": 19
+  },
+  "run_len_hist": {
+   "8": 59,
+   "16": 34,
+   "24": 18,
+   "32": 15,
+   "40": 6,
+   "48": 5,
+   "56": 4,
+   "64": 6,
+   "72": 1,
+   "80": 2,
+   "88": 3,
+   "128": 1
+  },
+  "text_hot": [
+   {
+    "off": "0x078000",
+    "jp_chars": 385
+   },
+   {
+    "off": "0x0C8000",
+    "jp_chars": 232
+   },
+   {
+    "off": "0x070000",
+    "jp_chars": 187
+   },
+   {
+    "off": "0x0E0000",
+    "jp_chars": 183
+   },
+   {
+    "off": "0x038000",
+    "jp_chars": 103
+   },
+   {
+    "off": "0x0A0000",
+    "jp_chars": 94
+   },
+   {
+    "off": "0x008000",
+    "jp_chars": 92
+   },
+   {
+    "off": "0x018000",
+    "jp_chars": 90
+   }
+  ],
+  "text_bytes_covered": 6534,
+  "ptr_tables_validated": [],
+  "ptr_candidates_raw": 119,
+  "ptr_validated_count": 0,
+  "font_cands_2bpp": [],
+  "font_cands_4bpp": []
+ }
+]

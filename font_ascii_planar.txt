@@ -1,0 +1,2560 @@
+tile 0x00
+        
+        
+        
+        
+        
+        
+        
+        
+
+tile 0x01
+   #    
+    #   
+   .    
+   o#   
+   #    
+    #   
+   .    
+   o#   
+
+tile 0x02
+ . .    
+  . .   
+ . .    
+  . .   
+ . .    
+  . .   
+        
+ ....   
+
+tile 0x03
+  ooo   
+        
+   o    
+        
+....... 
+        
+ .....  
+        
+
+tile 0x04
+  #oo   
+        
+  ##    
+        
+  #..   
+        
+  ....  
+        
+
+tile 0x05
+ .#     
+   #    
+ #. o#  
+  o.  # 
+    #o  
+ #.. .o 
+   .    
+    #oo 
+
+tile 0x06
+ o. o   
+  oo oo 
+ # .oo  
+  #   o 
+  #o    
+ o  ooo 
+ . . .  
+  #oo . 
+
+tile 0x07
+  ..    
+    .   
+   .    
+  . .   
+  .     
+   .    
+        
+  .     
+
+tile 0x08
+ o ..   
+  o  .  
+  #     
+ o #..  
+ . oo   
+  #  o  
+ .      
+  .ooo  
+
+tile 0x09
+ .. o   
+   . o  
+   #    
+ .. #   
+ oo .   
+   # .  
+    .   
+ oo  .  
+
+tile 0x0A
+  o#o   
+    .   
+ # # #  
+  o # # 
+  .#.   
+ #  o## 
+   .    
+  .o#.  
+
+tile 0x0B
+   o    
+ oo ooo 
+   #    
+    #   
+   .    
+   o#   
+ .....  
+      . 
+
+tile 0x0C
+ oo     
+   o    
+  o     
+ o o    
+ o      
+  o     
+        
+ o      
+
+tile 0x0D
+        
+  oooo  
+        
+        
+        
+        
+  ....  
+        
+
+tile 0x0E
+        
+        
+   oo   
+     o  
+   oo   
+     o  
+        
+   ooo  
+
+tile 0x0F
+   o    
+    o   
+  o     
+   o    
+ o   .  
+  o   . 
+    .   
+ o   .  
+
+tile 0x10
+ o .. o 
+  o  . o
+  #  #  
+ o #. # 
+ . oo . 
+  #  # .
+ .    . 
+  .oo  .
+
+tile 0x11
+   #    
+    #   
+  .#    
+    #   
+  o#o   
+  . .o  
+   .    
+  oo#o  
+
+tile 0x12
+  #...  
+   ooo# 
+ #    # 
+  #... #
+ ooooo# 
+ .     #
+   ...  
+ ooooo##
+
+tile 0x13
+  ....o 
+    oo.o
+ #    # 
+  .... #
+  oooo. 
+ #    o#
+    ..  
+  oooo#.
+
+tile 0x14
+ ooo##o 
+      .o
+   . #  
+ ooo# #o
+  . o#o 
+   .  .o
+ .   .  
+  . oo#o
+
+tile 0x15
+ .....# 
+       #
+ #    o 
+  #....#
+ .####  
+ o    #o
+      . 
+  ooooo.
+
+tile 0x16
+ o....o 
+  oooo.o
+ #    # 
+  #... #
+ .oooo  
+ o.   ##
+ .....  
+  oooo# 
+
+tile 0x17
+ ...#.. 
+     o .
+ .  o . 
+  ...# .
+   oo#  
+ ..   # 
+     .  
+   ooo# 
+
+tile 0x18
+ o....o 
+  oooo.o
+ #    # 
+  #... #
+ .oooo. 
+ o.   o#
+  ....  
+ .oooo#.
+
+tile 0x19
+  ....o 
+  oooo.o
+ .   o. 
+  ....o.
+ .ooo . 
+  .  o .
+  ..... 
+ .ooo  .
+
+tile 0x1A
+        
+        
+   ##   
+     #  
+   ##   
+     #  
+        
+   ###  
+
+tile 0x1B
+        
+        
+   o    
+    o   
+   #    
+    #   
+        
+   ##   
+
+tile 0x1C
+   o .  
+  o   . 
+    #   
+   o .  
+   . o  
+    # o 
+  .     
+   . oo 
+
+tile 0x1D
+  oooo  
+      o 
+        
+  ooooo 
+  ....  
+      . 
+        
+  ..... 
+
+tile 0x1E
+  . o   
+     o  
+   #    
+  . o   
+  o .   
+   #    
+     .  
+  o . . 
+
+tile 0x1F
+  .#..  
+    oo. 
+ .    . 
+  .##. .
+ . o  . 
+  . o  .
+    ..  
+ ..oo . 
+
+tile 0x20
+o #... o
+        
+o. oo .o
+        
+.o .. o.
+        
+. #ooo .
+        
+
+tile 0x21
+ o##oo  
+    . o 
+ o . o  
+  oo# o 
+oo# #oo 
+   # . o
+  . .   
+ooo#o#oo
+
+tile 0x22
+.#...o  
+  ooo.o 
+ #   #  
+. #.. # 
+o#ooo.  
+  .  o# 
+ ....   
+ooooo#. 
+
+tile 0x23
+o ....  
+ o    . 
+ #   #  
+o #.. # 
+. ooo   
+ #   #. 
+.       
+ .ooo   
+
+tile 0x24
+.#.. o  
+  o . o 
+ #  #   
+. #. #  
+o#oo .  
+  . # . 
+ .   .  
+oo#o  . 
+
+tile 0x25
+.#.#..  
+  o o . 
+ #   #  
+. ### # 
+o#o#oo  
+  . ..# 
+ ...    
+oooo#oo 
+
+tile 0x26
+.#.#..  
+  o o . 
+ #   .  
+. ### . 
+o#o.    
+  .o... 
+ ...    
+oooo.   
+
+tile 0x27
+o ..##  
+ o    # 
+ #   #  
+o #.# # 
+. oooo  
+ #   .# 
+.       
+ .ooooo 
+
+tile 0x28
+.#. .#. 
+  o#o o.
+ #   #  
+. #.. #.
+o#o o#o 
+  .o  .o
+ .....  
+oooooo#o
+
+tile 0x29
+ .#.    
+   o.   
+  #     
+   #.   
+ o#o    
+   .o   
+  .     
+ oo#o   
+
+tile 0x2A
+   .#.  
+     o. 
+o   #   
+   . #. 
+ ooo.   
+o   o#  
+    .   
+ oooo.  
+
+tile 0x2B
+.#.o..  
+  o.o . 
+ #  #   
+. #. #  
+o#o.oo  
+  .o. o 
+ ..     
+ooo#ooo 
+
+tile 0x2C
+.#.     
+  o.    
+ #   o  
+. #.  o 
+o#oooo  
+  .   o 
+ .      
+oo#oooo 
+
+tile 0x2D
+.#   #. 
+  #   o.
+ #. .#  
+. o.  #.
+o#o.o#o 
+  .o. .o
+ .   .  
+oo###o#o
+
+tile 0x2E
+.#  ##. 
+  #o  o.
+ #   #  
+. # o #.
+o##  #  
+   o  # 
+ . . .  
+oo#o o# 
+
+tile 0x2F
+o....o  
+ o   .o 
+#    #  
+ #... # 
+.oooo.  
+o.   o. 
+.    .  
+ #ooo . 
+
+tile 0x30
+.#...   
+  ooo#  
+ #   .  
+. #.. . 
+o#o  .  
+  .o  . 
+ ....   
+oooo .. 
+
+tile 0x31
+o..#.o  
+ o   .o 
+#   o.  
+ #.#.o. 
+.ooo #  
+o.  o # 
+.    .  
+ #oo o# 
+
+tile 0x32
+.#..#   
+  oo #  
+ #   #  
+. #.# # 
+o#o  #o 
+  .o  .o
+ ....   
+oooo ##o
+
+tile 0x33
+ ....o  
+ oooo.o 
+#   .o  
+ ... .o 
+#oooo   
+ .  .#o 
+ ....   
+#ooooo  
+
+tile 0x34
+ ..#..  
+    o . 
+.  #  . 
+ .. #. .
+  o#o   
+.   .o..
+   .    
+  oo#o  
+
+tile 0x35
+.#. .#. 
+  o.  o.
+ #   #  
+. #.. #.
+ .ooo.  
+ o.  o# 
+ .   .  
+  #ooo. 
+
+tile 0x36
+..# #.. 
+   # o .
+ . o .  
+. #.# ..
+ . o .  
+  . o . 
+  . .   
+ . #o.  
+
+tile 0x37
+.#.o.#. 
+  o.o o.
+ #o o#  
+. .#. #.
+ # . #  
+  #o# # 
+ . . .  
+ o# .o# 
+
+tile 0x38
+..o o.. 
+  .o o .
+ #   #  
+  # o # 
+oo. .oo 
+  o. . o
+   .    
+ooo .ooo
+
+tile 0x39
+.. o .. 
+  . o  .
+ . o .  
+  . o . 
+  #o#   
+   . #  
+   .    
+  oo#o  
+
+tile 0x3A
+.#....  
+  o   . 
+#   .o  
+ #.. .o 
+ooo#oo  
+..  . o 
+  .     
+ooo#ooo 
+
+tile 0x3B
+ #..    
+  o .   
+ #      
+  #..   
+ #oo    
+  . o   
+ .      
+ o#oo   
+
+tile 0x3C
+. o .   
+ # oo.  
+ #o#    
+  . #   
+  #     
+ # ##   
+ ...    
+  oo.   
+
+tile 0x3D
+ ..#    
+    #   
+   #    
+ .. #   
+ oo#    
+    #   
+   .    
+ ooo#   
+
+tile 0x3E
+        
+        
+....... 
+        
+        
+        
+        
+        
+
+tile 0x3F
+        
+        
+        
+        
+ooooo   
+     o  
+        
+oooooo  
+
+tile 0x40
+#  .    
+#   .   
+# .     
+#  .    
+# ..    
+#   .   
+#       
+# ...   
+
+tile 0x41
+     o o
+      oo
+     o.#
+      oo
+     #.o
+      o#
+     # o
+      ##
+
+tile 0x42
+        
+oooooooo
+........
+oooooooo
+        
+########
+........
+########
+
+tile 0x43
+     # #
+      ##
+     # #
+      ##
+     # #
+      ##
+     # #
+      ##
+
+tile 0x44
+#  oo#  
+ ##.. ##
+# #..## 
+ # oo  #
+#  oo#  
+ ##.. ##
+.    .  
+o####o##
+
+tile 0x45
+o     o 
+.#####.#
+# o . o 
+ #.#o#.#
+.o   .  
+o.###o##
+.     . 
+o#####o#
+
+tile 0x46
+  #..   
+## oo###
+ o o    
+#.#.####
+o...#o  
+.ooo .##
+   .    
+###o####
+
+tile 0x47
+  #oo   
+## ..###
+  ##    
+##  ####
+  #..   
+## oo###
+  ....  
+##oooo##
+
+tile 0x48
+  ooo   
+##...###
+   o    
+###.####
+....... 
+ooooooo#
+ .....  
+#ooooo##
+
+tile 0x49
+        
+########
+        
+########
+        
+########
+        
+########
+
+tile 0x4A
+        
+   .. o 
+        
+o######o
+        
+o   ...o
+   o    
+ ...#.. 
+
+tile 0x4B
+ o.. #  
+oo  oo  
+o#. ### 
+oo oooo 
+ o oo##.
+ o oooo 
+ .. oo..
+ .. oo  
+
+tile 0x4C
+   ooo  
+..#####.
+ ..###. 
+..#####.
+ ..oo#. 
+..#####.
+    ... 
+..#####.
+
+tile 0x4D
+oooooooo
+o oooooo
+oooooooo
+oo   ooo
+ ##ooo# 
+ ###### 
+...... .
+........
+
+tile 0x4E
+o       
+ ooooo o
+        
+ o##..o 
+        
+ .####. 
+.       
+ .......
+
+tile 0x4F
+o  oo##o
+oooo#ooo
+o##oo##o
+o##o###o
+.#o#oo#.
+.#o##o#.
+. #oo#..
+..#oo#..
+
+tile 0x50
+#       
+#oooooo 
+#      o
+o.ooooo 
+#       
+#.o  o  
+#       
+#.o. #  
+
+tile 0x51
+   ooo  
+..#####.
+ ..###. 
+..#####.
+ ..oo#. 
+..#####.
+    ... 
+..#####.
+
+tile 0x52
+o o  o o
+oooooooo
+oooooooo
+########
+........
+########
+. .  . .
+........
+
+tile 0x53
+  ...#  
+ # ## # 
+  #oo#  
+ # ## # 
+  #..#  
+ # ## # 
+  ooo#  
+ # ## # 
+
+tile 0x54
+ o o o  
+  o o o 
+ oo oo  
+   o  o 
+.#. .#. 
+  o.o o.
+ .   .  
+.o...o#.
+
+tile 0x55
+ o  o   
+  o  o  
+ o  o   
+  o  o  
+..o#.o  
+ o. o.o 
+ .  .   
+. #oo#o 
+
+tile 0x56
+  o o   
+   o o  
+  o o   
+   o o  
+...o... 
+   .o  .
+ .   .  
+  .## . 
+
+tile 0x57
+ o o o  
+  o o o 
+ oo oo  
+   o  o 
+.#. .#. 
+  o.o o.
+ .   .  
+.o...o#.
+
+tile 0x58
+  o     
+ o o    
+ o o    
+  o o   
+## ##   
+  #  #  
+ . .    
+#o#o#o  
+
+tile 0x59
+  oo    
+ o  o   
+  o     
+   o    
+.#  ..  
+  #   . 
+o#  .   
+. #  .  
+
+tile 0x5A
+  o     
+oo o    
+ o  o   
+  o  o  
+#####   
+     #  
+.  .    
+o##o#o  
+
+tile 0x5B
+        
+oooooooo
+...##...
+ooo oooo
+   oo   
+###.####
+...##...
+###.####
+
+tile 0x5C
+ #      
+  #     
+ #      
+  #     
+ #      
+  #     
+        
+ ##     
+
+tile 0x5D
+   ##   
+### ####
+   ##   
+### ####
+   ##   
+### ####
+   ##   
+### ####
+
+tile 0x5E
+        
+        
+        
+        
+        
+        
+        
+        
+
+tile 0x5F
+        
+        
+        
+        
+        
+        
+        
+        
+
+tile 0x60
+ooo#ooo 
+    .  o
+  ###   
+oo   #oo
+ #####  
+      # 
+....... 
+ oooooo.
+
+tile 0x61
+ ##o##  
+   .  # 
+..###.. 
+     o .
+...#... 
+    o  .
+....... 
+   o   .
+
+tile 0x62
+oo.#.oo 
+  o o. o
+  .#.   
+ooo o#oo
+.#####. 
+      o.
+....... 
+ oooooo.
+
+tile 0x63
+ oo#oo  
+    . o 
+  ###   
+     #  
+ ..#..  
+    o . 
+....... 
+   o   .
+
+tile 0x64
+ o    o 
+  o    o
+ o....o 
+  o   .o
+ .oooo. 
+ o....o.
+ .    . 
+  #ooo .
+
+tile 0x65
+ oooooo 
+       o
+ o####o 
+      .o
+ .####. 
+ o    o.
+ ...... 
+  oooo .
+
+tile 0x66
+ o.o    
+  o.o   
+#....   
+ o o .  
+ #oooo  
+# ....o 
+  ...   
+ #ooo#o 
+
+tile 0x67
+ oooo   
+     o  
+o #o o  
+ o .o o 
+o##..o  
+   o .o 
+  .     
+o#o..#o 
+
+tile 0x68
+o    o  
+ o    o 
+o o  o  
+ o o  o 
+.o  .   
+o.o  #o 
+.    .  
+ #    . 
+
+tile 0x69
+    o   
+ooo  o  
+ ..#    
+    #   
+ oo     
+ ..#.   
+....    
+ oo .   
+
+tile 0x6A
+  o     
+ o o    
+ o.#    
+  o #   
+o   oo  
+ o.#. o 
+ ...    
+o   #oo 
+
+tile 0x6B
+ oooo   
+     oo 
+o #  o  
+ o #o o 
+ ##.o.  
+o  o.o. 
+  .  .  
+ #o## . 
+
+tile 0x6C
+ o   o  
+o ooo o 
+ o oo   
+  o  o  
+ # .    
+  #o#   
+.....   
+ oo  .  
+
+tile 0x6D
+oo o o  
+  o o o 
+o  o o  
+ o  o o 
+  o#o   
+o   .o  
+. ...   
+ .ooo.  
+
+tile 0x6E
+ ooo    
+    ooo 
+o  oo   
+ oo  o  
+ oo# o  
+o   # o 
+   ...  
+ ooooo# 
+
+tile 0x6F
+    o   
+oooo o  
+    o   
+     o  
+ ooo    
+    o   
+....    
+ ooo.   
+
+tile 0x70
+        
+########
+        
+########
+        
+########
+        
+########
+
+tile 0x71
+o # o o 
+ o # o o
+o.##. o 
+ o  o. o
+oo#  o  
+ . #..o 
+ .....  
+ooo  o. 
+
+tile 0x72
+o     o 
+ o     o
+# o . o 
+ # o . o
+.o   .  
+o.o   #o
+.     . 
+ #     .
+
+tile 0x73
+ ....o  
+     .o 
+    o   
+ ....#  
+.###.   
+    o.  
+     .  
+.###. . 
+
+tile 0x74
+  #..   
+   o .  
+ o o    
+  #.#.  
+o...#o  
+ o o .o 
+   .    
+o.. #oo 
+
+tile 0x75
+ o#  .o 
+   #oo o
+o.#.  # 
+ o o.. #
+ o# oo  
+o. #. #.
+  ....  
+ ooooo. 
+
+tile 0x76
+ o. o   
+  o. ooo
+o . o.  
+ o . o. 
+#.##  . 
+ o  ## .
+ .  . . 
+#o##o. .
+
+tile 0x77
+  . o   
+ooo# oo 
+#....   
+    o.  
+ oo#oo  
+#.. ..o 
+......  
+ ooooo# 
+
+tile 0x78
+  o .   
+ o   .  
+   #    
+  o .   
+  . o   
+   # o  
+ .      
+  . oo  
+
+tile 0x79
+#    #  
+ #    # 
+#    #  
+ #    # 
+# .##.. 
+ #   o .
+.    .  
+o#.## ..
+
+tile 0x7A
+ o      
+  o     
+o.....  
+ o    . 
+ ooo#oo 
+o... ..o
+        
+ ooo#ooo
+
+tile 0x7B
+o  .    
+ ooo#oo 
+#.....  
+ o    . 
+ ooo#o  
+#... .# 
+ .....  
+ ooooo# 
+
+tile 0x7C
+#    o  
+ #      
+#   o   
+ #   o  
+.ooo    
+o.  o   
+.       
+ #oo    
+
+tile 0x7D
+  oo#   
+ o   #  
+....#.. 
+  oo o .
+  ##.   
+..  o...
+ .  .   
+  ## .  
+
+tile 0x7E
+ #  o.  
+  #  o. 
+ #   .  
+  # o . 
+..####. 
+ o    o.
+ .   .  
+. ###o#.
+
+tile 0x7F
+ .#..   
+oo oo#o 
+ o .    
+ .# .   
+  #ooo  
+ o .  o 
+......  
+  oooo# 
+
+tile 0x80
+o.      
+ o.     
+#..#    
+ o      
+o.  ### 
+.o.#   #
+ .      
+oo. ####
+
+tile 0x81
+o .  o  
+ oo#o o 
+.....o  
+o    .o 
+ #ooo   
+. ...#  
+ ....   
+ oooo.  
+
+tile 0x82
+      o 
+       o
+  ...#  
+      # 
+.. oo . 
+  ...# .
+      . 
+.. oo  .
+
+tile 0x83
+.#....  
+  o   . 
+ o .    
+..# ... 
+  #oo   
+ o . o  
+ .      
+  #ooo  
+
+tile 0x84
+o.      
+ o.     
+o . ..  
+ o .  . 
+ o##oo  
+o   ..o 
+ .      
+ o##ooo 
+
+tile 0x85
+o. ooo  
+ o.   o 
+#.# .## 
+ o #o  #
+ . oo#  
+#o#.. #.
+.    .  
+ . ooo. 
+
+tile 0x86
+o o     
+ o      
+# o.... 
+ #     .
+#  oo#o 
+ #o.. .#
+.       
+o# oo#oo
+
+tile 0x87
+o o. oo 
+ o o.  o
+# #.#.o 
+ # o o.o
+ # .oo# 
+# #o.. #
+.. .  . 
+ o. #oo#
+
+tile 0x88
+ #  ooo 
+  #    o
+## #..o 
+  # oo.o
+ #. oo# 
+# o#.. #
+ .    . 
+ o# ooo#
+
+tile 0x89
+o o   o 
+ o o   o
+o #.. o 
+ o o . o
+ # .o#  
+o # . # 
+.  .  . 
+ #  ## .
+
+tile 0x8A
+#  oo#  
+ #    # 
+# #..## 
+ # oo  #
+#  oo#  
+ ##.. ##
+.    .  
+o# ooo# 
+
+tile 0x8B
+#..  o  
+ o .  o 
+o.  o.  
+.o.  o. 
+.ooo .. 
+o.  o  .
+.    .  
+ #oo  ..
+
+tile 0x8C
+o . o o 
+ o # o o
+oo .# o 
+  #  # o
+o .#o o 
+ o  .o o
+   . .  
+o .o#o#o
+
+tile 0x8D
+     o  
+o   o   
+  .   o 
+     o  
+ . .    
+  .   o 
+.   .   
+ . .    
+
+tile 0x8E
+# .###. 
+ #     .
+# o  #o 
+ #.## .#
+# .###. 
+ #o   o.
+.    .  
+o#.##o..
+
+tile 0x8F
+ oo#    
+o   #oo 
+#..##.  
+ oo   . 
+ oo# o  
+#.. #.# 
+......  
+ ooo o# 
+
+tile 0x90
+o.#. oo 
+ o o#  o
+o o. #  
+ #.o. #o
+oo .o.  
+  o .o. 
+ .....  
+oo  o . 
+
+tile 0x91
+o #   o 
+ o #   o
+#.#. .o 
+   o. .o
+ o#ooo. 
+#. ...o.
+ ..     
+ oo#oo..
+
+tile 0x92
+o o.  o 
+ o o.  o
+# #...o 
+ # o  .o
+ # .oo. 
+# # ..o.
+.. .  . 
+ o. #o .
+
+tile 0x93
+ #    o 
+o #oo  o
+.#..  o 
+  o .  o
+ .ooo#  
+.o... # 
+....  . 
+  oo#o .
+
+tile 0x94
+ .o.oo  
+oo.o. o 
+ .o...  
+  .ooo. 
+ .# . . 
+   # . .
+..    . 
+  #o.  .
+
+tile 0x95
+# oo#o  
+ #   .o 
+. ..#.  
+o#oo o. 
+.. o. . 
+  ..o. .
+.   . . 
+ . o . .
+
+tile 0x96
+ oo#    
+    #   
+o  ##.  
+ oo  o. 
+ oo# o  
+o   #.# 
+   .    
+ ooo.oo 
+
+tile 0x97
+o .  o  
+ oo#o o 
+.  ..o  
+o..  .o 
+.oooo   
+ . ..#  
+.....   
+ oooo.  
+
+tile 0x98
+. ..o   
+o#  .o  
+.. o.   
+  ..o.  
+.oo .   
+ . o .  
+.   .   
+ #o  .  
+
+tile 0x99
+.##. o  
+o  o. o 
+o .o o  
+.#o.# o 
+ ####   
+o    #  
+.    .  
+ #### . 
+
+tile 0x9A
+ #  .o  
+  #  .o 
+## . #  
+  # . # 
+ #.  .o 
+# o. o.o
+ .   .  
+ o#   #o
+
+tile 0x9B
+o....o  
+ oooo.o 
+   . o  
+o.. . o 
+ o#oo   
+   . o  
+ ....   
+ oooo.  
+
+tile 0x9C
+ #    o 
+  #    o
+## ...o 
+  #   .o
+ #. oo. 
+# o...o.
+ .    . 
+ o# oo .
+
+tile 0x9D
+ o #  o 
+  o #  o
+ o #  o 
+  o #  o
+o . oo  
+ o #  o 
+  .     
+o  .oo  
+
+tile 0x9E
+   o  o 
+    o  o
+    o o 
+   o o o
+    o   
+     ooo
+     .  
+    oo. 
+
+tile 0x9F
+   o  o 
+    oo o
+   o  o 
+    o  o
+    oo  
+   o  o 
+    ..  
+    oo. 
+
+tile 0xA0
+oooooo  
+      o 
+        
+ooooooo 
+        
+        
+        
+        
+
+tile 0xA1
+...#... 
+    oo .
+  o   . 
+...#.. .
+ o .  . 
+  o .  .
+   . .  
+ o  . . 
+
+tile 0xA2
+oo o .  
+  o o . 
+   o .  
+oo  o . 
+   o.   
+    o.  
+  ..    
+   o#   
+
+tile 0xA3
+   .  o 
+oo  .  o
+.....#. 
+      o.
+. ooo . 
+ ....# .
+.     . 
+ .ooo  .
+
+tile 0xA4
+   o    
+    o   
+ ..#..  
+    o . 
+ooo#ooo 
+ .. ...o
+   .    
+oooo#ooo
+
+tile 0xA5
+  o #   
+   o #  
+.#..#.. 
+  o  o .
+o   #   
+.#.. #..
+   ..   
+o   o#  
+
+tile 0xA6
+ o.  o  
+  o.  o 
+.#...#  
+  o   # 
+o .oo.  
+.# ..o. 
+  .  .  
+o  #o . 
+
+tile 0xA7
+ooo#ooo 
+    .  o
+...#... 
+ooo ooo#
+   #    
+... #...
+   .    
+   o#   
+
+tile 0xA8
+ .   o  
+o .   o 
+ ...#.  
+     o. 
+ #oo .  
+  ..# . 
+.    .  
+ #oo  . 
+
+tile 0xA9
+ .  o   
+o .  o  
+ ..#... 
+    o  .
+ #o .   
+  .# ...
+.   .   
+ #o  .  
+
+tile 0xAA
+     o  
+      o 
+.....#  
+      # 
+ooooo#  
+..... # 
+     .  
+oooooo# 
+
+tile 0xAB
+ .   #  
+ o#   # 
+....#.. 
+     o .
+ #oo .  
+. ..# ..
+ .   .  
+ o#o  . 
+
+tile 0xAC
+..   o  
+  oo  o 
+  . o   
+.. . o  
+##oo  . 
+  ..o  .
+  .   . 
+##o#   .
+
+tile 0xAD
+..##..  
+    o . 
+ o  o.  
+..##.o. 
+o   .o  
+ o  o.  
+   .    
+o   .oo 
+
+tile 0xAE
+ #      
+  # o   
+.#....  
+  o   . 
+ .ooo#  
+.o... # 
+ .  .   
+  #oo#o 
+
+tile 0xAF
+    o   
+ oo  o  
+.  o .  
+ .  o . 
+ #o  .  
+. .o  . 
+ .   .  
+ o#   . 
+
+tile 0xB0
+ ....#  
+o  oo # 
+ .  o.  
+  ...o. 
+ ##o .  
+   .o . 
+.  ...  
+ ##o  . 
+
+tile 0xB1
+   #..  
+ooo oo#o
+ .#.    
+   o... 
+oo .    
+ .#     
+....... 
+oo     .
+
+tile 0xB2
+. . o . 
+ . . o .
+ . #  . 
+. . #  .
+ #o.  . 
+  .o.  .
+     .  
+ ##.. . 
+
+tile 0xB3
+ ..#..  
+    o . 
+  o     
+ ..#... 
+##..... 
+  o    .
+   .    
+##. ....
+
+tile 0xB4
+#  oo   
+ #o  o  
+#       
+ # ooo  
+#       
+ #      
+...     
+oo      
+
+tile 0xB5
+   #    
+    #   
+  o.    
+   o.   
+##....  
+  o   . 
+   .    
+##. ... 
+
+tile 0xB6
+        
+        
+ ....   
+     .  
+oooooo  
+ .....o 
+        
+ooooooo 
+
+tile 0xB7
+ ..#..  
+  o o . 
+  o o.  
+ ..#.o. 
+oo   #  
+  o o # 
+  . .   
+oo . #o 
+
+tile 0xB8
+ o # o  
+  o #   
+#..#..o 
+ o  oo.o
+   o.   
+#...o.#o
+  ...   
+   oo.  
+
+tile 0xB9
+   o    
+    o   
+  o  .  
+   o  . 
+oo   .  
+  o   . 
+    .   
+oo   .  
+
+tile 0xBA
+ o   o  
+  o   o 
+ o . o  
+  o . o 
+o.  .o  
+ o.  .o 
+ .  .   
+o .  #o 
+
+tile 0xBB
+o       
+ ooo    
+#       
+ #      
+.ooo##  
+o.    # 
+....    
+ ooo### 
+
+tile 0xBC
+     o  
+      o 
+....#.  
+     o. 
+ ooo .  
+....# . 
+     .  
+ ooo  . 
+
+tile 0xBD
+     o  
+o     o 
+  .   o 
+   .   o
+ . .    
+  . .   
+.   .   
+ .   .  
+
+tile 0xBE
+o  #  o 
+ o  #o o
+#..#..# 
+ o  o  #
+   #    
+##. #.##
+ . . .  
+  . . . 
+
+tile 0xBF
+ o  o   
+  o  o  
+..##... 
+ o  o  .
+   o  . 
+..#.#. .
+     .  
+   oo . 
+
+tile 0xC0
+ ...    
+   o#o  
+ooo .   
+ ... .  
+ ..ooo  
+ooo ..o 
+   ..   
+ ..oo#o 
+
+tile 0xC1
+ o . o  
+  o . o 
+ o .ooo 
+  o .  o
+oo#o  o 
+   .oo o
+  .  .  
+ooo#  #o
+
+tile 0xC2
+  o o.  
+   o  . 
+ #   #  
+  o o # 
+o . .   
+ #   #o 
+   .    
+o . .   
+
+tile 0xC3
+ .#...  
+oo ooo#o
+  #     
+ . #... 
+  .oooo 
+  o.   o
+....... 
+   oooo#
+
+tile 0xC4
+  #  o  
+   #  o 
+  # o   
+   # o  
+..#.... 
+   oo  .
+  .   . 
+..o#.. .
+
+tile 0xC5
+    o   
+     o  
+ ...#   
+     #  
+oooo#oo 
+ ... . o
+    .   
+ooooo#oo
+
+tile 0xC6
+.....#  
+ooooo # 
+     #  
+..... # 
+ooooo#  
+      # 
+......  
+oooooo# 
+
+tile 0xC7
+ ....o  
+     .o 
+    o   
+ ....#  
+.###..  
+    o . 
+     .  
+.###. . 
+
+tile 0xC8
+.   #   
+o#   #  
+.  o.   
+ .  o.  
+.oo .   
+ . o .  
+.   .   
+ #o  .  
+
+tile 0xC9
+ o #  o 
+  o #  o
+ # # o  
+  # # o 
+o. #o   
+ o. .o  
+ . .    
+o .o#   
+
+tile 0xCA
+#    o  
+ #    o 
+#   o   
+ #   o  
+#ooo    
+ .  o   
+.    .  
+o#oo  . 
+
+tile 0xCB
+o    o  
+ o    o 
+#....#  
+ o    # 
+#oooo#  
+ .... # 
+.    .  
+o#oooo# 
+
+tile 0xCC
+     o  
+      o 
+....#.  
+     o. 
+. oo .  
+ ...# . 
+     .  
+..oo  . 
+
+tile 0xCD
+    o   
+     o  
+.  o    
+    o   
+o#o  .  
+.  o  . 
+     .  
+o#o   . 
+
+tile 0xCE
+ o      
+  ooo   
+  .     
+ oo.    
+.  .    
+  . .   
+ . .    
+. . .   
+
+tile 0xCF
+ oo     
+o  oo   
+ ..     
+ oo#    
+.  .    
+ .. .   
+.  .    
+ .  .   
+
+tile 0xD0
+        
+        
+        
+        
+        
+        
+        
+        
+
+tile 0xD1
+ oo     
+   o    
+o  o    
+ oo o   
+ oo     
+o  o    
+        
+ oo     
+
+tile 0xD2
+  ...   
+  oo .  
+  .     
+   ...  
+  .     
+   .    
+  .     
+   .    
+
+tile 0xD3
+   o    
+    o   
+   o    
+    o   
+ ooo    
+    o   
+   .    
+ ooo#   
+
+tile 0xD4
+o       
+        
+ o      
+o       
+  o     
+ o      
+        
+  o     
+
+tile 0xD5
+ oo     
+   o    
+        
+ ooo    
+        
+        
+ ..     
+   .    
+
+tile 0xD6
+     o  
+ oooo o 
+....#.  
+     o. 
+ ooo .  
+....# . 
+ .....  
+ ooo  . 
+
+tile 0xD7
+  oo    
+    o   
+  o     
+   o    
+.#...   
+  o  .  
+    .   
+.#.. .  
+
+tile 0xD8
+o o     
+ o o    
+  o.    
+o  o.   
+  #     
+   #    
+ ..     
+  o#    
+
+tile 0xD9
+    o   
+oo   o  
+  .o    
+   .o   
+.##..   
+   o .  
+.   .   
+ ##. .  
+
+tile 0xDA
+  o     
+   o    
+  o     
+   o    
+#####   
+     #  
+  .     
+##o###  
+
+tile 0xDB
+  oo    
+    o   
+ o #    
+  o #   
+#..#.   
+ o  o.  
+   .    
+#..o#.  
+
+tile 0xDC
+ o o    
+  o o   
+ #      
+  #o    
+.#...   
+  o  .  
+ .  .   
+.o#. .  
+
+tile 0xDD
+   o    
+    o   
+   o    
+    o   
+o###oo  
+    . o 
+   .    
+o##o#oo 
+
+tile 0xDE
+oooo    
+    o   
+   o    
+ooo o   
+####    
+    #   
+   .    
+###o#   
+
+tile 0xDF
+    o   
+oooo o  
+   o    
+    o   
+.o# .   
+ . # .  
+. . .   
+ #o. .  
+
+tile 0xE0
+      oo
+     o o
+      oo
+     o.#
+      o#
+     #.o
+      ##
+     # o
+
+tile 0xE1
+        
+        
+        
+........
+........
+        
+........
+........
+
+tile 0xE2
+      ##
+     # .
+      .#
+     #o.
+      ..
+     .o#
+      ..
+     . .
+
+tile 0xE3
+      ##
+     # #
+      oo
+     #.#
+      ##
+     # o
+      ##
+     #.#
+
+tile 0xE4
+########
+        
+........
+oooooooo
+        
+########
+        
+........
+
+tile 0xE5
+.       
+        
+.       
+        
+        
+.       
+        
+.       
+
+tile 0xE6
+ o    o 
+  oooo  
+        
+   #    
+        
+   .    
+        
+   .    
+
+tile 0xE7
+oooooooo
+........
+########
+        
+########
+        
+........
+oooooooo
+
+tile 0xE8
+oooooooo
+#.......
+########
+        
+########
+.       
+ .......
+#ooooooo
+
+tile 0xE9
+oooooooo
+##......
+########
+        
+########
+..      
+  ......
+##oooooo
+
+tile 0xEA
+oooooooo
+###.....
+########
+        
+########
+...     
+   .....
+###ooooo
+
+tile 0xEB
+oooooooo
+####....
+########
+        
+########
+....    
+    ....
+####oooo
+
+tile 0xEC
+oooooooo
+#####...
+########
+        
+########
+.....   
+     ...
+#####ooo
+
+tile 0xED
+oooooooo
+######..
+########
+        
+########
+......  
+      ..
+######oo
+
+tile 0xEE
+oooooooo
+#######.
+########
+        
+########
+....... 
+       .
+#######o
+
+tile 0xEF
+oooooooo
+########
+########
+        
+########
+........
+        
+########
+
+tile 0xF0
+      ##
+     # #
+      ##
+     # #
+      ##
+     # #
+      ##
+     # #
+
+tile 0xF1
+        
+        
+        
+        
+        
+        
+        
+        
+
+tile 0xF2
+o       
+        
+#       
+        
+#       
+        
+.       
+        
+
+tile 0xF3
+##  #   
+  ## ## 
+##  #   
+  ## ## 
+##  #   
+  ## ## 
+##  #   
+  ## ## 
+
+tile 0xF4
+##  #ooo
+  ## ...
+##  #o  
+  ## .##
+##  #.  
+  ## o##
+##  #...
+  ## ooo
+
+tile 0xF5
+oooooooo
+        
+        
+########
+        
+########
+........
+        
+
+tile 0xF6
+        
+  o     
+        
+  .     
+        
+.....   
+        
+.....   
+
+tile 0xF7
+oooooooo
+........
+########
+        
+########
+        
+........
+oooooooo
+
+tile 0xF8
+oooooooo
+#.......
+########
+        
+########
+.       
+ .......
+#ooooooo
+
+tile 0xF9
+oooooooo
+##......
+########
+        
+########
+..      
+  ......
+##oooooo
+
+tile 0xFA
+oooooooo
+###.....
+########
+        
+########
+...     
+   .....
+###ooooo
+
+tile 0xFB
+oooooooo
+####....
+########
+        
+########
+....    
+    ....
+####oooo
+
+tile 0xFC
+oooooooo
+#####...
+########
+        
+########
+.....   
+     ...
+#####ooo
+
+tile 0xFD
+oooooooo
+######..
+########
+        
+########
+......  
+      ..
+######oo
+
+tile 0xFE
+oooooooo
+#######.
+########
+        
+########
+....... 
+       .
+#######o
+
+tile 0xFF
+oooooooo
+########
+########
+        
+########
+........
+        
+########
+

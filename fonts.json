@@ -1,0 +1,869 @@
+[
+ {
+  "file": "Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc",
+  "tag": "DoraemonNo",
+  "2bpp": [
+   {
+    "start": 477952,
+    "end": 478976,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.65,
+    "nonblank": 0.938,
+    "r0blank": 0.406,
+    "r7blank": 0.359
+   }
+  ],
+  "4bpp": []
+ },
+ {
+  "file": "Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc",
+  "tag": "Doraemon2N",
+  "2bpp": [
+   {
+    "start": 654080,
+    "end": 655872,
+    "bytes": 1792,
+    "tiles": 112,
+    "eq": 0.761,
+    "nonblank": 0.979,
+    "r0blank": 0.031,
+    "r7blank": 0.203
+   },
+   {
+    "start": 324352,
+    "end": 325632,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.766,
+    "nonblank": 0.977,
+    "r0blank": 0.047,
+    "r7blank": 0.047
+   },
+   {
+    "start": 908800,
+    "end": 910080,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.839,
+    "nonblank": 0.906,
+    "r0blank": 0.102,
+    "r7blank": 0.109
+   },
+   {
+    "start": 64768,
+    "end": 65792,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.686,
+    "nonblank": 1.0,
+    "r0blank": 0.0,
+    "r7blank": 0.0
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 588032,
+    "end": 590848,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.906,
+    "nonblank": 0.781,
+    "r0blank": 0.242,
+    "r7blank": 0.227
+   },
+   {
+    "start": 908544,
+    "end": 911104,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.797,
+    "nonblank": 0.969,
+    "r0blank": 0.068,
+    "r7blank": 0.104
+   },
+   {
+    "start": 324096,
+    "end": 326400,
+    "bytes": 2304,
+    "tiles": 144,
+    "eq": 0.75,
+    "nonblank": 0.984,
+    "r0blank": 0.039,
+    "r7blank": 0.062
+   },
+   {
+    "start": 522496,
+    "end": 524800,
+    "bytes": 2304,
+    "tiles": 144,
+    "eq": 0.828,
+    "nonblank": 0.984,
+    "r0blank": 0.016,
+    "r7blank": 0.016
+   }
+  ]
+ },
+ {
+  "file": "Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc",
+  "tag": "Doraemon3N",
+  "2bpp": [
+   {
+    "start": 326144,
+    "end": 327936,
+    "bytes": 1792,
+    "tiles": 112,
+    "eq": 0.856,
+    "nonblank": 0.945,
+    "r0blank": 0.109,
+    "r7blank": 0.105
+   },
+   {
+    "start": 1441024,
+    "end": 1442560,
+    "bytes": 1536,
+    "tiles": 96,
+    "eq": 0.816,
+    "nonblank": 0.797,
+    "r0blank": 0.328,
+    "r7blank": 0.266
+   },
+   {
+    "start": 258560,
+    "end": 259840,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.782,
+    "nonblank": 0.883,
+    "r0blank": 0.172,
+    "r7blank": 0.18
+   },
+   {
+    "start": 383744,
+    "end": 385024,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.808,
+    "nonblank": 0.953,
+    "r0blank": 0.094,
+    "r7blank": 0.102
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 258304,
+    "end": 262656,
+    "bytes": 4352,
+    "tiles": 272,
+    "eq": 0.773,
+    "nonblank": 0.965,
+    "r0blank": 0.078,
+    "r7blank": 0.105
+   },
+   {
+    "start": 383488,
+    "end": 386048,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.792,
+    "nonblank": 0.99,
+    "r0blank": 0.062,
+    "r7blank": 0.094
+   },
+   {
+    "start": 850176,
+    "end": 852736,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.812,
+    "nonblank": 0.938,
+    "r0blank": 0.062,
+    "r7blank": 0.094
+   },
+   {
+    "start": 1440000,
+    "end": 1442560,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.844,
+    "nonblank": 0.906,
+    "r0blank": 0.167,
+    "r7blank": 0.146
+   }
+  ]
+ },
+ {
+  "file": "Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc",
+  "tag": "Doraemon4N",
+  "2bpp": [
+   {
+    "start": 1425408,
+    "end": 1442304,
+    "bytes": 16896,
+    "tiles": 1056,
+    "eq": 0.947,
+    "nonblank": 0.679,
+    "r0blank": 0.473,
+    "r7blank": 0.472
+   },
+   {
+    "start": 89088,
+    "end": 98304,
+    "bytes": 9216,
+    "tiles": 576,
+    "eq": 0.853,
+    "nonblank": 0.925,
+    "r0blank": 0.389,
+    "r7blank": 0.367
+   },
+   {
+    "start": 1400576,
+    "end": 1409536,
+    "bytes": 8960,
+    "tiles": 560,
+    "eq": 0.936,
+    "nonblank": 0.71,
+    "r0blank": 0.469,
+    "r7blank": 0.444
+   },
+   {
+    "start": 128512,
+    "end": 131072,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.807,
+    "nonblank": 0.949,
+    "r0blank": 0.397,
+    "r7blank": 0.312
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 489216,
+    "end": 492032,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.755,
+    "nonblank": 0.771,
+    "r0blank": 0.562,
+    "r7blank": 0.823
+   },
+   {
+    "start": 1418752,
+    "end": 1420800,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.656,
+    "nonblank": 0.609,
+    "r0blank": 0.5,
+    "r7blank": 0.5
+   }
+  ]
+ },
+ {
+  "file": "Hero Senki - Project Olympus (Japan).sfc",
+  "tag": "HeroSenkiP",
+  "2bpp": [
+   {
+    "start": 106752,
+    "end": 110592,
+    "bytes": 3840,
+    "tiles": 240,
+    "eq": 0.972,
+    "nonblank": 0.972,
+    "r0blank": 0.05,
+    "r7blank": 0.056
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 106240,
+    "end": 110848,
+    "bytes": 4608,
+    "tiles": 288,
+    "eq": 0.943,
+    "nonblank": 1.0,
+    "r0blank": 0.048,
+    "r7blank": 0.081
+   }
+  ]
+ },
+ {
+  "file": "SRW4_DC_原版.smc",
+  "tag": "SRW4DC原版sm",
+  "2bpp": [
+   {
+    "start": 915200,
+    "end": 917760,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.854,
+    "nonblank": 0.93,
+    "r0blank": 0.148,
+    "r7blank": 0.152
+   },
+   {
+    "start": 588032,
+    "end": 590080,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.734,
+    "nonblank": 1.0,
+    "r0blank": 0.023,
+    "r7blank": 0.031
+   },
+   {
+    "start": 850944,
+    "end": 852224,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.701,
+    "nonblank": 0.992,
+    "r0blank": 0.039,
+    "r7blank": 0.023
+   },
+   {
+    "start": 654080,
+    "end": 655104,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.756,
+    "nonblank": 1.0,
+    "r0blank": 0.0,
+    "r7blank": 0.0
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 915200,
+    "end": 918016,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.82,
+    "nonblank": 0.98,
+    "r0blank": 0.082,
+    "r7blank": 0.117
+   },
+   {
+    "start": 587776,
+    "end": 590336,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.688,
+    "nonblank": 1.0,
+    "r0blank": 0.026,
+    "r7blank": 0.057
+   }
+  ]
+ },
+ {
+  "file": "SRW4_KKNK_4.06後期原版_JAPAN.smc",
+  "tag": "SRW4KKNK40",
+  "2bpp": [
+   {
+    "start": 3168768,
+    "end": 3174656,
+    "bytes": 5888,
+    "tiles": 368,
+    "eq": 0.967,
+    "nonblank": 1.0,
+    "r0blank": 0.669,
+    "r7blank": 0.463
+   },
+   {
+    "start": 915200,
+    "end": 917760,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.863,
+    "nonblank": 0.91,
+    "r0blank": 0.152,
+    "r7blank": 0.164
+   },
+   {
+    "start": 588032,
+    "end": 590080,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.734,
+    "nonblank": 1.0,
+    "r0blank": 0.023,
+    "r7blank": 0.031
+   },
+   {
+    "start": 3104256,
+    "end": 3105792,
+    "bytes": 1536,
+    "tiles": 96,
+    "eq": 0.84,
+    "nonblank": 0.917,
+    "r0blank": 0.167,
+    "r7blank": 0.161
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 3168768,
+    "end": 3174912,
+    "bytes": 6144,
+    "tiles": 384,
+    "eq": 0.956,
+    "nonblank": 1.0,
+    "r0blank": 0.676,
+    "r7blank": 0.478
+   },
+   {
+    "start": 914944,
+    "end": 918016,
+    "bytes": 3072,
+    "tiles": 192,
+    "eq": 0.8,
+    "nonblank": 0.963,
+    "r0blank": 0.119,
+    "r7blank": 0.15
+   },
+   {
+    "start": 3177472,
+    "end": 3180288,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.754,
+    "nonblank": 0.812,
+    "r0blank": 0.188,
+    "r7blank": 0.188
+   },
+   {
+    "start": 587776,
+    "end": 590336,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.688,
+    "nonblank": 1.0,
+    "r0blank": 0.026,
+    "r7blank": 0.057
+   }
+  ]
+ },
+ {
+  "file": "srw4_rankaku_後期原版_JAPAN.smc",
+  "tag": "srw4rankak",
+  "2bpp": [
+   {
+    "start": 3169792,
+    "end": 3174656,
+    "bytes": 4864,
+    "tiles": 304,
+    "eq": 0.925,
+    "nonblank": 1.0,
+    "r0blank": 0.652,
+    "r7blank": 0.422
+   },
+   {
+    "start": 915200,
+    "end": 917760,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.863,
+    "nonblank": 0.91,
+    "r0blank": 0.152,
+    "r7blank": 0.164
+   },
+   {
+    "start": 588032,
+    "end": 590080,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.735,
+    "nonblank": 1.0,
+    "r0blank": 0.023,
+    "r7blank": 0.031
+   },
+   {
+    "start": 654080,
+    "end": 655104,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.65,
+    "nonblank": 1.0,
+    "r0blank": 0.0,
+    "r7blank": 0.0
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 3170048,
+    "end": 3174912,
+    "bytes": 4864,
+    "tiles": 304,
+    "eq": 0.911,
+    "nonblank": 1.0,
+    "r0blank": 0.682,
+    "r7blank": 0.462
+   },
+   {
+    "start": 914944,
+    "end": 918016,
+    "bytes": 3072,
+    "tiles": 192,
+    "eq": 0.8,
+    "nonblank": 0.963,
+    "r0blank": 0.119,
+    "r7blank": 0.15
+   },
+   {
+    "start": 3177472,
+    "end": 3180288,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.73,
+    "nonblank": 0.812,
+    "r0blank": 0.188,
+    "r7blank": 0.188
+   },
+   {
+    "start": 587776,
+    "end": 590336,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.688,
+    "nonblank": 1.0,
+    "r0blank": 0.026,
+    "r7blank": 0.057
+   }
+  ]
+ },
+ {
+  "file": "srw4_提坦斯完整_JAPAN.smc",
+  "tag": "srw4提坦斯完整J",
+  "2bpp": [
+   {
+    "start": 3106560,
+    "end": 3109376,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.847,
+    "nonblank": 0.975,
+    "r0blank": 0.3,
+    "r7blank": 0.131
+   },
+   {
+    "start": 915200,
+    "end": 917760,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.843,
+    "nonblank": 0.93,
+    "r0blank": 0.152,
+    "r7blank": 0.164
+   },
+   {
+    "start": 588032,
+    "end": 590080,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.734,
+    "nonblank": 1.0,
+    "r0blank": 0.023,
+    "r7blank": 0.031
+   },
+   {
+    "start": 1219072,
+    "end": 1220096,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.783,
+    "nonblank": 0.734,
+    "r0blank": 0.266,
+    "r7blank": 0.297
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 914944,
+    "end": 918016,
+    "bytes": 3072,
+    "tiles": 192,
+    "eq": 0.759,
+    "nonblank": 0.975,
+    "r0blank": 0.109,
+    "r7blank": 0.163
+   },
+   {
+    "start": 3106560,
+    "end": 3109376,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.738,
+    "nonblank": 1.0,
+    "r0blank": 0.219,
+    "r7blank": 0.105
+   },
+   {
+    "start": 587776,
+    "end": 590336,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.688,
+    "nonblank": 1.0,
+    "r0blank": 0.026,
+    "r7blank": 0.057
+   },
+   {
+    "start": 3063808,
+    "end": 3065856,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.75,
+    "nonblank": 1.0,
+    "r0blank": 0.0,
+    "r7blank": 0.031
+   }
+  ]
+ },
+ {
+  "file": "srw4_TitaharuDX_v05_09_原版_JAPAN.smc",
+  "tag": "srw4Titaha",
+  "2bpp": [
+   {
+    "start": 3106560,
+    "end": 3109376,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.847,
+    "nonblank": 0.975,
+    "r0blank": 0.3,
+    "r7blank": 0.131
+   },
+   {
+    "start": 915200,
+    "end": 917760,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.841,
+    "nonblank": 0.93,
+    "r0blank": 0.152,
+    "r7blank": 0.164
+   },
+   {
+    "start": 588032,
+    "end": 590080,
+    "bytes": 2048,
+    "tiles": 128,
+    "eq": 0.734,
+    "nonblank": 1.0,
+    "r0blank": 0.023,
+    "r7blank": 0.031
+   },
+   {
+    "start": 1219072,
+    "end": 1220096,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.725,
+    "nonblank": 0.812,
+    "r0blank": 0.203,
+    "r7blank": 0.234
+   }
+  ],
+  "4bpp": [
+   {
+    "start": 914944,
+    "end": 918016,
+    "bytes": 3072,
+    "tiles": 192,
+    "eq": 0.756,
+    "nonblank": 0.978,
+    "r0blank": 0.106,
+    "r7blank": 0.159
+   },
+   {
+    "start": 3106560,
+    "end": 3109376,
+    "bytes": 2816,
+    "tiles": 176,
+    "eq": 0.738,
+    "nonblank": 1.0,
+    "r0blank": 0.219,
+    "r7blank": 0.105
+   },
+   {
+    "start": 587776,
+    "end": 590336,
+    "bytes": 2560,
+    "tiles": 160,
+    "eq": 0.688,
+    "nonblank": 1.0,
+    "r0blank": 0.026,
+    "r7blank": 0.057
+   }
+  ]
+ },
+ {
+  "file": "SF8127.smc",
+  "tag": "SF8127smc",
+  "2bpp": [
+   {
+    "start": 64512,
+    "end": 65792,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.679,
+    "nonblank": 0.703,
+    "r0blank": 0.344,
+    "r7blank": 0.352
+   },
+   {
+    "start": 129792,
+    "end": 131072,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.726,
+    "nonblank": 0.727,
+    "r0blank": 0.383,
+    "r7blank": 0.383
+   }
+  ],
+  "4bpp": []
+ },
+ {
+  "file": "天3动漫2002剧情+奥运篇.smc",
+  "tag": "天3动漫2002剧情",
+  "2bpp": [
+   {
+    "start": 753664,
+    "end": 770560,
+    "bytes": 16896,
+    "tiles": 1056,
+    "eq": 0.782,
+    "nonblank": 0.826,
+    "r0blank": 0.359,
+    "r7blank": 0.385
+   },
+   {
+    "start": 186368,
+    "end": 195328,
+    "bytes": 8960,
+    "tiles": 560,
+    "eq": 0.746,
+    "nonblank": 0.83,
+    "r0blank": 0.362,
+    "r7blank": 0.365
+   },
+   {
+    "start": 131840,
+    "end": 135424,
+    "bytes": 3584,
+    "tiles": 224,
+    "eq": 0.714,
+    "nonblank": 0.854,
+    "r0blank": 0.324,
+    "r7blank": 0.331
+   },
+   {
+    "start": 49152,
+    "end": 51456,
+    "bytes": 2304,
+    "tiles": 144,
+    "eq": 0.814,
+    "nonblank": 0.807,
+    "r0blank": 0.396,
+    "r7blank": 0.422
+   }
+  ],
+  "4bpp": []
+ },
+ {
+  "file": "天3改版米迦勒 (1).sfc",
+  "tag": "天3改版米迦勒1sf",
+  "2bpp": [
+   {
+    "start": 753664,
+    "end": 770560,
+    "bytes": 16896,
+    "tiles": 1056,
+    "eq": 0.782,
+    "nonblank": 0.826,
+    "r0blank": 0.359,
+    "r7blank": 0.385
+   },
+   {
+    "start": 186368,
+    "end": 195328,
+    "bytes": 8960,
+    "tiles": 560,
+    "eq": 0.746,
+    "nonblank": 0.83,
+    "r0blank": 0.362,
+    "r7blank": 0.365
+   },
+   {
+    "start": 131840,
+    "end": 135424,
+    "bytes": 3584,
+    "tiles": 224,
+    "eq": 0.714,
+    "nonblank": 0.854,
+    "r0blank": 0.324,
+    "r7blank": 0.331
+   },
+   {
+    "start": 49152,
+    "end": 51456,
+    "bytes": 2304,
+    "tiles": 144,
+    "eq": 0.814,
+    "nonblank": 0.807,
+    "r0blank": 0.396,
+    "r7blank": 0.422
+   }
+  ],
+  "4bpp": []
+ },
+ {
+  "file": "天使之翼4 无限体力.sfc",
+  "tag": "天使之翼4无限体力s",
+  "2bpp": [
+   {
+    "start": 1314304,
+    "end": 1317376,
+    "bytes": 3072,
+    "tiles": 192,
+    "eq": 0.673,
+    "nonblank": 0.816,
+    "r0blank": 0.478,
+    "r7blank": 0.556
+   },
+   {
+    "start": 1324288,
+    "end": 1325568,
+    "bytes": 1280,
+    "tiles": 80,
+    "eq": 0.666,
+    "nonblank": 0.844,
+    "r0blank": 0.406,
+    "r7blank": 0.617
+   },
+   {
+    "start": 359424,
+    "end": 360448,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.68,
+    "nonblank": 0.734,
+    "r0blank": 0.469,
+    "r7blank": 0.469
+   },
+   {
+    "start": 424960,
+    "end": 425984,
+    "bytes": 1024,
+    "tiles": 64,
+    "eq": 0.652,
+    "nonblank": 0.641,
+    "r0blank": 0.5,
+    "r7blank": 0.484
+   }
+  ],
+  "4bpp": []
+ }
+]

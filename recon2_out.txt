@@ -1,0 +1,142 @@
+============================================================================
+Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1)\Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1).sfc
+  HiROM+Fast | size=524288 | hdr=0 | crc32=55E44983 | title='DORAEMON YOUSEINOKUNI'
+  checksum ok=False (stored=946D calc=946B)  free>=1K: 0 B  top=
+  SJIS runs>=8: 9092 (JP-bearing 58) | jp chars in runs=1702 | bytes=2535
+  kinds={'kanji': 488, 'other': 155, 'ascii': 869, 'kata': 8, 'punct': 172, 'hira': 10}
+  hot: 0x078000:96, 0x038000:85, 0x010000:78, 0x018000:73, 0x020000:45
+  ptr: raw=29 validated=1 | 0x02AAE4 u16 ent=23 ontext=15 r=0.652
+  font2bpp: 
+  font4bpp: 
+============================================================================
+Doraemon 2 - Nobita no Toys Land Daibouken (Japan)\Doraemon 2 - Nobita no Toys Land Daibouken (Japan).sfc
+  HiROM+Fast | size=1048576 | hdr=0 | crc32=D343B398 | title='DORAEMON2 TOYSLAND'
+  checksum ok=False (stored=136F calc=13EC)  free>=1K: 107858 B  top=0x0690AF(28497,FF), 0x07C032(16334,FF), 0x00D202(11678,FF)
+  SJIS runs>=8: 9970 (JP-bearing 67) | jp chars in runs=2342 | bytes=3262
+  kinds={'ascii': 1422, 'kanji': 630, 'other': 281, 'kata': 6, 'punct': 2, 'hira': 1}
+  hot: 0x028000:136, 0x010000:113, 0x058000:98, 0x048000:68, 0x030000:66
+  ptr: raw=53 validated=0 
+  font2bpp: 
+  font4bpp: 
+============================================================================
+Doraemon 3 - Nobita to Toki no Hougyoku (Japan)\Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc
+  HiROM+Fast | size=1572864 | hdr=0 | crc32=560C5EAB | title='DORAEMON TOKIHOUGYOKU'
+  checksum ok=False (stored=2010 calc=20DF)  free>=1K: 103880 B  top=0x0DB94E(18098,FF), 0x09CD69(12951,FF), 0x15D75E(10402,FF)
+  SJIS runs>=8: 12544 (JP-bearing 19) | jp chars in runs=410 | bytes=733
+  kinds={'ascii': 87, 'kanji': 246, 'other': 35, 'kata': 42}
+  hot: 0x048000:128, 0x080000:39, 0x008000:30, 0x000000:22, 0x168000:14
+  ptr: raw=99 validated=0 
+  font2bpp: 
+  font4bpp: 
+============================================================================
+Doraemon 4 - Nobita to Tsuki no Oukoku (Japan)\Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc
+  LoROM+Fast | size=1572864 | hdr=0 | crc32=4097BC01 | title='DORAEMON4NOBITATOTUKI'
+  checksum ok=False (stored=2036 calc=20DF)  free>=1K: 26496 B  top=0x06D200(4613,00), 0x172FFE(4130,00), 0x0FCFEF(3602,00)
+  SJIS runs>=8: 11980 (JP-bearing 99) | jp chars in runs=3527 | bytes=4584
+  kinds={'ascii': 2470, 'kanji': 704, 'other': 281, 'kata': 34, 'punct': 7, 'hira': 31}
+  hot: 0x028000:160, 0x168000:108, 0x088000:65, 0x038000:49, 0x0A8000:47
+  ptr: raw=40 validated=0 
+  font2bpp: 
+  font4bpp: 
+============================================================================
+Hero Senki - Project Olympus (Japan) 优先级高\Hero Senki - Project Olympus (Japan).sfc
+  LoROM | size=1572864 | hdr=0 | crc32=789DA99C | title='�-�- ���'  [SJIS title: 'ﾋ-ﾛ- ｾﾝｷ']
+  checksum ok=False (stored=52B9 calc=52AD)  free>=1K: 86110 B  top=0x094F93(12400,00), 0x0BE5A7(6745,00), 0x086CEB(4885,00)
+  SJIS runs>=8: 8222 (JP-bearing 71) | jp chars in runs=3045 | bytes=5697
+  kinds={'kata': 47, 'ascii': 393, 'other': 263, 'kanji': 2270, 'punct': 2, 'hira': 70}
+  hot: 0x120000:817, 0x130000:751, 0x138000:261, 0x098000:190, 0x128000:152
+  ptr: raw=130 validated=1 | 0x0180E4 u16 ent=29 ontext=15 r=0.517
+  font2bpp: 
+  font4bpp: 
+============================================================================
+SRW4-DC\SRW4_DC_原版.smc
+  HiROM+Fast | size=4194304 | hdr=0 | crc32=D326F0FD | title='SUPER ROBOT WARS4'
+  checksum ok=False (stored=93B3 calc=B6E7)  free>=1K: 1059196 B  top=0x36BBFF(607230,00), 0x302538(429770,00), 0x1BE4DC(6948,FF)
+  SJIS runs>=8: 30174 (JP-bearing 289) | jp chars in runs=9821 | bytes=15417
+  kinds={'other': 1266, 'kanji': 3737, 'ascii': 4225, 'punct': 112, 'kata': 212, 'hira': 269}
+  hot: 0x218000:1043, 0x128000:560, 0x1B8000:388, 0x280000:376, 0x120000:348
+  ptr: raw=294 validated=1 | 0x2140D6 u16 ent=22 ontext=12 r=0.545
+  font2bpp: 0x2E8200 sc=3.3 ink=0.270 nb=1.00, 0x226200 sc=3.3 ink=0.337 nb=1.00, 0x2E6A00 sc=3.3 ink=0.341 nb=1.00
+  font4bpp: 
+============================================================================
+SRW4-KKNK-完整版\SRW4_KKNK_4.06後期原版_JAPAN.smc
+  ExHiROM+Fast | size=8388608 | hdr=0 | crc32=50D1E809 | title='SUPER ROBOT WARS4'
+  checksum ok=False (stored=08AC calc=4689)  free>=1K: 3859366 B  top=0x51E75B(3020962,00), 0x3CF40F(232433,00), 0x410000(151544,00)
+  SJIS runs>=8: 37605 (JP-bearing 272) | jp chars in runs=9413 | bytes=14593
+  kinds={'other': 1237, 'kanji': 3647, 'ascii': 4233, 'punct': 52, 'kata': 159, 'hira': 85}
+  hot: 0x218000:1043, 0x128000:524, 0x1B8000:388, 0x120000:348, 0x0C0000:224
+  ptr: raw=352 validated=2 | 0x2140D6 u16 ent=22 ontext=12 r=0.545; 0x31C720 u16 ent=21 ontext=13 r=0.619
+  font2bpp: 0x2E8200 sc=3.3 ink=0.270 nb=1.00, 0x226200 sc=3.3 ink=0.337 nb=1.00, 0x2E6A00 sc=3.3 ink=0.341 nb=1.00
+  font4bpp: 
+============================================================================
+SRW4-rankaku-完整版 优先级高 比较简单可以参考第四次原版的文本，只加了一些对话，没有大幅改动\srw4_rankaku_後期原版_JAPAN.smc
+  ExHiROM+Fast | size=8388608 | hdr=0 | crc32=D01DBDAF | title='SUPER ROBOT WARS4'
+  checksum ok=False (stored=22CC calc=F047)  free>=1K: 4585913 B  top=0x46F7C7(3737654,00), 0x350C85(750459,00), 0x332C38(49865,00)
+  SJIS runs>=8: 32863 (JP-bearing 270) | jp chars in runs=9363 | bytes=14598
+  kinds={'other': 1213, 'kanji': 3742, 'ascii': 4128, 'punct': 54, 'kata': 149, 'hira': 77}
+  hot: 0x218000:1043, 0x128000:570, 0x1B8000:388, 0x120000:348, 0x0C0000:224
+  ptr: raw=335 validated=1 | 0x2140D6 u16 ent=22 ontext=12 r=0.545
+  font2bpp: 0x2E8200 sc=3.3 ink=0.270 nb=1.00, 0x226200 sc=3.3 ink=0.337 nb=1.00, 0x2E6A00 sc=3.3 ink=0.341 nb=1.00
+  font4bpp: 
+============================================================================
+SRW4-提坦斯\srw4_提坦斯完整_JAPAN.smc
+  HiROM+Fast | size=4194304 | hdr=0 | crc32=DBE4DBD2 | title='SUPER ROBOT WARS4'
+  checksum ok=False (stored=915B calc=4B04)  free>=1K: 899187 B  top=0x36D2D4(138541,00), 0x3D0E72(127375,00), 0x3B5D8C(107124,00)
+  SJIS runs>=8: 32023 (JP-bearing 290) | jp chars in runs=10174 | bytes=15759
+  kinds={'other': 1314, 'kanji': 4009, 'ascii': 4589, 'punct': 56, 'kata': 146, 'hira': 60}
+  hot: 0x218000:1043, 0x128000:451, 0x1B8000:388, 0x120000:348, 0x2B8000:232
+  ptr: raw=277 validated=1 | 0x2140D6 u16 ent=22 ontext=12 r=0.545
+  font2bpp: 0x2E8200 sc=3.3 ink=0.270 nb=1.00, 0x226200 sc=3.3 ink=0.337 nb=1.00, 0x2E6A00 sc=3.3 ink=0.341 nb=1.00
+  font4bpp: 
+============================================================================
+SRW4-春风DX 优先级中 游戏本体有个路线暂时未做完\srw4_TitaharuDX_v05_09_原版_JAPAN.smc
+  HiROM+Fast | size=4194304 | hdr=0 | crc32=C112B01C | title='SUPER ROBOT WARS4'
+  checksum ok=False (stored=915B calc=31D7)  free>=1K: 477560 B  top=0x300380(64640,00), 0x3F056D(64147,00), 0x3E97DA(26663,00)
+  SJIS runs>=8: 39037 (JP-bearing 804) | jp chars in runs=21094 | bytes=36514
+  kinds={'other': 1594, 'kanji': 5532, 'ascii': 5674, 'punct': 1817, 'kata': 2085, 'hira': 4392}
+  hot: 0x3A0000:7594, 0x218000:1043, 0x128000:526, 0x1B8000:388, 0x120000:348
+  ptr: raw=309 validated=1 | 0x2140D6 u16 ent=22 ontext=12 r=0.545
+  font2bpp: 0x2E8200 sc=3.3 ink=0.270 nb=1.00, 0x226200 sc=3.3 ink=0.337 nb=1.00, 0x2E6A00 sc=3.3 ink=0.341 nb=1.00
+  font4bpp: 
+============================================================================
+初代热血硬派 优先级高\SF8127.smc
+  LoROM | size=1048576 | hdr=0 | crc32=56C05339 | title='����� ���� ��� �����'  [SJIS title: 'ｼｮﾀﾞｲ ﾈｯｹﾂ ｺｳﾊ ｸﾆｵｸﾝ']
+  checksum ok=False (stored=492E calc=49B6)  free>=1K: 0 B  top=
+  SJIS runs>=8: 7803 (JP-bearing 102) | jp chars in runs=2639 | bytes=4025
+  kinds={'ascii': 1253, 'other': 455, 'kata': 32, 'kanji': 811, 'punct': 23, 'hira': 65}
+  hot: 0x058000:136, 0x0C8000:110, 0x038000:71, 0x010000:64, 0x040000:59
+  ptr: raw=43 validated=0 
+  font2bpp: 
+  font4bpp: 
+============================================================================
+天使之翼3\天3动漫2002剧情+奥运篇.smc
+  LoROM | size=1048576 | hdr=0 | crc32=97623F6B | title='������ ���� 3'  [SJIS title: 'ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 3']
+  checksum ok=False (stored=3138 calc=32AA)  free>=1K: 25479 B  top=0x0B577F(10376,00), 0x06EBFE(5122,00), 0x09F660(2464,00)
+  SJIS runs>=8: 4331 (JP-bearing 151) | jp chars in runs=3076 | bytes=5309
+  kinds={'ascii': 843, 'other': 331, 'kanji': 1820, 'kata': 49, 'punct': 14, 'hira': 19}
+  hot: 0x028000:301, 0x000000:279, 0x0E8000:170, 0x0F8000:168, 0x0C8000:146
+  ptr: raw=79 validated=1 | 0x021104 u16 ent=22 ontext=22 r=1.0
+  font2bpp: 
+  font4bpp: 
+============================================================================
+天使之翼3\天3改版米迦勒 (1).sfc
+  LoROM | size=1048576 | hdr=512 | crc32=97623F6B | title='������ ���� 3'  [SJIS title: 'ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 3']
+  checksum ok=False (stored=3138 calc=32AA)  free>=1K: 25479 B  top=0x0B577F(10376,00), 0x06EBFE(5122,00), 0x09F660(2464,00)
+  SJIS runs>=8: 4331 (JP-bearing 151) | jp chars in runs=3076 | bytes=5309
+  kinds={'ascii': 843, 'other': 331, 'kanji': 1820, 'kata': 49, 'punct': 14, 'hira': 19}
+  hot: 0x028000:301, 0x000000:279, 0x0E8000:170, 0x0F8000:168, 0x0C8000:146
+  ptr: raw=79 validated=1 | 0x021104 u16 ent=22 ontext=22 r=1.0
+  font2bpp: 
+  font4bpp: 
+============================================================================
+天使之翼4 无限体力(1)\天使之翼4 无限体力.sfc
+  LoROM | size=1572864 | hdr=0 | crc32=6CF42497 | title='������ ���� 4'  [SJIS title: 'ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 4']
+  checksum ok=False (stored=77FB calc=8C47)  free>=1K: 8194 B  top=0x0558B6(3402,00), 0x056618(2536,00), 0x032437(2256,00)
+  SJIS runs>=8: 6518 (JP-bearing 154) | jp chars in runs=4127 | bytes=6534
+  kinds={'ascii': 1720, 'kanji': 1734, 'kata': 17, 'other': 564, 'hira': 73, 'punct': 19}
+  hot: 0x078000:385, 0x0C8000:232, 0x070000:187, 0x0E0000:183, 0x038000:103
+  ptr: raw=119 validated=0 
+  font2bpp: 
+  font4bpp: 
+
+JSON -> recon2.json

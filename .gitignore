@@ -1,0 +1,53 @@
+# --- 绝不入库：游戏本体与 ROM 派生的二进制 ---
+*.smc
+*.sfc
+*.srm
+*.frz
+*.bin
+*.vram
+*.wram
+*.npy
+*.bak
+
+# --- 本地大件：模拟器、字体、探针 dump、截图 ---
+dl/
+fonts/
+fontcmp/
+tools/
+testrom/
+tests/
+__pycache__/
+*.log
+*.out
+
+# hw/ 里只保留模拟器探针脚本（.lua），其余是几万个截图和 VRAM dump
+hw/*
+!hw/*.lua
+
+# 只留交付用的补丁，其余实验补丁不入库
+*.ips
+!kuniokun_cn.ips
+
+# --- 其他项目（英雄战记 / SRW4 / 通用文档），不属于本游戏 ---
+*HeroSenki*
+*英雄战记*
+srw4_*
+hs_*
+oldman_*
+SFC汉化可行性报告*
+HANDOFF.md
+asar 补丁模板.md
+工具配置指南.md
+
+# --- 构建器的历史备份 ---
+*.bak_*
+
+# --- 其他游戏的字体渲染图（只留本作 SF8127）---
+F_*.png
+!F_SF8127*.png
+*[Rr][Ww]4*
+*enki*
+*Senki*
+
+*DORA*
+*Doraemon*

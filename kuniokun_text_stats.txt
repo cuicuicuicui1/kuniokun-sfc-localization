@@ -1,0 +1,84 @@
+SF8127 text extraction stats
+total strings: 1013
+total text bytes: 19931
+total decoded characters: 29680
+
+REGIONS
+----------------------------------------------------------------------
+table_rom_off 0x0193B5   script/status (large)
+region ROM     0x019921..0x01DBC3  (17058 bytes)
+strings 694
+  sample 0x019921: {E2}は けいけんち {EF}を てに いれた!{F2F3}
+  sample 0x019936: {EB}が {EF} {ED}!{F2F4}{F3}
+  sample 0x019940: {E2}の {EB}が {EF} {ED}!{F2F4}{F3}
+----------------------------------------------------------------------
+table_rom_off 0x01DBC5   items/shop
+region ROM     0x01DCA1..0x01E096  (1013 bytes)
+strings 110
+  sample 0x01DCA1: にゅうじょうけん{F2F3}
+  sample 0x01DCAB: 1くかん ていき{F2F3}
+  sample 0x01DCB5: 2くかん ていき{F2F3}
+----------------------------------------------------------------------
+table_rom_off 0x01E098   menus A
+region ROM     0x01E0DE..0x01E1D3  (245 bytes)
+strings 35
+  sample 0x01E0DE: レベル{F2F3}
+  sample 0x01E0E3: たいりょく{F2F3}
+  sample 0x01E0EA: きりょく{F2F3}
+----------------------------------------------------------------------
+table_rom_off 0x01E1D5   menus B
+region ROM     0x01E239..0x01E4CC  (659 bytes)
+strings 50
+  sample 0x01E239: うめだ ウメチカ ひがし{F2F3}
+  sample 0x01E247: うめだ ウメチカ にし{F2F3}
+  sample 0x01E254: うめだ ウメチカ きた{F2F3}
+----------------------------------------------------------------------
+table_rom_off 0x01E4CE   menus C
+region ROM     0x01E5C6..0x01E982  (956 bytes)
+strings 124
+  sample 0x01E5C6: あがった {F2F3}
+  sample 0x01E5CD: さがった{F2F3}
+  sample 0x01E5D3: おぼえた{F2F3}
+
+CLASSIFICATION (heuristic)
+  dialogue (speaker ":")   591
+  short/menu/name          326
+  medium                   89
+  long text                7
+
+per region:
+  0x0193B5 script/status (large)  {'medium': 82, 'short/menu/name': 14, 'dialogue (speaker ":")': 591, 'long text': 7}
+  0x01DBC5 items/shop             {'short/menu/name': 110}
+  0x01E098 menus A                {'short/menu/name': 35}
+  0x01E1D5 menus B                {'short/menu/name': 43, 'medium': 7}
+  0x01E4CE menus C                {'short/menu/name': 124}
+
+CONTROL BYTES F2xx (occurrences)
+  F2F3 917
+  F2F6 211
+  F2F4 105
+  F2E2 8
+
+  per region:
+    0x0193B5 script/status (large)  {'F2F3': 598, 'F2F4': 105, 'F2F6': 211, 'F2E2': 8}
+    0x01DBC5 items/shop             {'F2F3': 110}
+    0x01E098 menus A                {'F2F3': 35}
+    0x01E1D5 menus B                {'F2F3': 50}
+    0x01E4CE menus C                {'F2F3': 124}
+
+UNKNOWN TILE PLACEHOLDERS {XX} (tile number: count)
+  E2 592
+  F0 432
+  F7 254
+  F3 96
+  F6 66
+  ED 57
+  E3 51
+  E7 8
+  EE 8
+  F5 8
+  EC 7
+  EF 5
+  EB 5
+  F4 3
+  EA 3

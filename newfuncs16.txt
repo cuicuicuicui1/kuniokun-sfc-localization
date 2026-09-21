@@ -1,0 +1,219 @@
+def build_drawer_copy():
+    """Draw one 16x16 Chinese glyph as two tile pairs in two screen cells.
+
+    Entered through a JML planted at ROM 0x01FA30, so PBR is $3E inside this code
+    and an RTS would return into the wrong bank: every exit is an explicit JML
+    into bank $03.  The character code is read from RAM $12 exactly like the
+    original drawer does, because the row eraser ($FA0B, sub 6) calls the drawer
+    with a leftover A that has nothing to do with the character.
+
+    Nothing here keeps state in WRAM.  The glyph bank, the id and the two tile
+    pairs ride on the stack, the pool offset is in Y and the upload queue cursor
+    in X.  The area the old build used ($0d40-$0d5f, with WIPE_PEND at $0d43) is
+    the game's own workspace:
+
+        $01:88C0 STA $0D43   $01:81B9/$01:81FB/$01:8DAF STZ $0D43
+        $0C:C793/$0C:C913 STZ $0D42         $01:831F STA $0D44
+        $01:889C/$01:8DB2 STA/STZ $0D53     $01:8DAC STZ $0D54
+        $01:8E71/$01:8EE0 STA $0D54         $01:8DA9 STA $0D55
+        $05:BCC1/$05:BCDE STA $0D40         $09:FF36 STA $0D51
+        $02:8029/$02:8180/$02:824E/$02:82FC STZ $0D5F   (see scratch_hits)
+
+    so the engine zeroed the wipe flags between arming and staging and the box
+    was never blanked.  Blanking now happens once per message at $3E:8800.
+
+    A glyph occupies four tiles that need not be adjacent: the slot table gives
+    two consecutive free tile pairs, the left screen cell shows tiles a/a+1 and
+    the right one b/b+1.  The left pair is the pool's first 32 bytes, the right
+    pair its second 32 bytes, uploaded through the engine's own queue ($0B00,
+    flushed by $00:8385) as entries
+
+        [+0/+1] VRAM word address, [+2] $2115, [+3] byte count, [+4...] data
+
+    One glyph costs two 36 byte tile entries plus two 8 byte tile map cells.
+    """
+    a = Asm(E3_DRAWER)
+
+    def sload(off):
+        """A = the byte at $off,s, zero extended, leaving M=0 (the stack is
+        never grown here, so the offsets stay valid across calls)."""
+        a.hexs('E2 20')                    # sep #$20
+        a.hexs('A3 %02X' % off)            # lda $off,s
+        a.hexs('C2 20 29 FF 00')           # rep #$20 / and #$00ff
+
+    # ---- dispatch on the code in $12 -----------------------------------------
+    #   $c0..$c0+pages-1  two byte Chinese code (prefix + id)
+    #   $dc..$dc+FIXED_N  one byte code of a frequent character
+    #   everything else   the original drawer, whose first instructions the
+    #                     4 byte hook ate and which are replayed here
+    a.hexs('A5 12')                        # lda $12
+    a.hexs('C9 %02X' % PREFIX0)            # cmp #$c0
+    a.rel(0x90, 'occ')                     # bcc occ
+    a.hexs('C9 %02X' % (PREFIX0 + PAGES))  # cmp #$c0+pages
+    a.rel(0x90, 'setc')                    # bcc setc
+    a.hexs('C9 %02X' % FIXED0)             # cmp #$dc
+    a.rel(0x90, 'occ')                     # bcc occ (unused code space)
+    a.hexs('C9 %02X' % (FIXED0 + FIXED_N))  # cmp #$e0
+    a.rel(0x90, 'setf')                    # bcc setf
+    a.label('occ')
+    a.hexs('AD 6F 03 C9 1A')               # lda $036f / cmp #$1a (hook food)
+    a.rel(0x90, 'oc1')                     # bcc oc1
+    a.long_to(0x01FA7A)                    # jml $03:fa7a: past column 26 is lost,
+                                           # exactly like the original drawer
+    a.label('oc1')
+    a.long_to(0x01FA35)                    # jml $03:fa35 (the original drawer)
+
+    # ---- the code byte: glyph bank and id ------------------------------------
+    a.label('setc')
+    a.hexs('A5 12 38 E9 %02X 18 69 %02X 48'
+           % (PREFIX0, POOL_BANK0))        # bank = code - $c0 + $21 -> stack
+    a.hexs('AD E9 03 1A A8')               # lda $03e9 / inc a / tay
+    a.hexs('B9 EA 03')                     # lda $03ea,y (the glyph id = slot)
+    a.rel(0x80, 'gotid')                   # bra gotid
+    a.label('setf')
+    a.hexs('A9 %02X 48' % POOL_BANK0)      # lda #$21 / pha (one byte codes: page 0)
+    a.hexs('A5 12 38 E9 %02X' % FIXED0)    # lda $12 / sec / sbc #$dc = id
+    a.label('gotid')
+    a.hexs('C9 %02X' % SLOTS)              # cmp #SLOTS
+    a.far_rel(0xB0, 'cnbad', 'id')         # bcs cnbad (too far for rel)
+    a.hexs('48')                           # pha: id -> stack
+    a.hexs('A9 %02X' % GLYPH_COST)         # lda #GLYPH_COST
+    a.hexs('22 B6 9A 00')                  # jsl $009ab6: room in the queue page?
+    a.far_rel(0xB0, 'defer', 'guard')      # bcs defer
+
+    # ---- wrap like the engine's own $F2 handler -----------------------------
+    a.label('room')
+    a.hexs('AD 6F 03')                     # lda $036f
+    a.hexs('C9 %02X' % WRAP_COL)           # cmp #WRAP_COL
+    a.rel(0x90, 'nowrap')                  # bcc nowrap (two cells still fit)
+    a.hexs('EE 6E 03')                     # inc $036e
+    a.hexs('AD 6E 03 C9 10')               # lda $036e / cmp #$10
+    a.rel(0x90, 'w1')                      # bcc w1
+    a.hexs('9C 6E 03')                     # stz $036e (16 rows wrap)
+    a.label('w1')
+    a.hexs('9C 6F 03')                     # stz $036f (column 0)
+    a.hexs('EE 6D 03 AD 6D 03 C9 03')      # inc $036d / lda $036d / cmp #$03
+    a.rel(0x90, 'nowrap')                  # bcc nowrap
+    a.hexs('A9 03 8D 6D 03')               # lda #$03 / sta $036d
+    a.hexs('AD 73 03 09 20 8D 73 03')      # lda $0373 / ora #$20 / sta $0373
+    a.hexs('9C 71 03')                     # stz $0371 (box scroll request)
+    a.label('nowrap')
+
+    # ---- two free tile pairs for this slot ----------------------------------
+    a.hexs('FA')                           # plx: X = id (stack: [bank])
+    _sb, _sa = snes_of_rom(E3_SLOTPAIR)
+    a.hexs('BF %02X %02X %02X 48' % (_sa & 0xFF, _sa >> 8, _sb))   # lda $3e:slots,x / pha
+    _rb, _ra = snes_of_rom(E3_SLOTPAIR + SLOTS)
+    a.hexs('BF %02X %02X %02X 48' % (_ra & 0xFF, _ra >> 8, _rb))   # lda $3e:slots+SLOTS,x / pha
+    # stack now [bank][PA][PB] with PB on top
+    a.hexs('C2 30')                        # rep #$30
+    a.hexs('8A 29 FF 00')                  # txa / and #$00ff
+    for _ in range(6):
+        a.hexs('0A')                       # asl x6: id * 64 = the pool offset
+    a.hexs('A8')                           # tay
+    a.hexs('E2 30')                        # sep #$30 (X must be 8 bit for $09df)
+    a.hexs('A3 03 48 AB')                  # lda $03,s (the glyph bank) / pha / plb
+    a.hexs('AE DF 09')                     # ldx $09df (the queue append cursor)
+
+    # ---- left and right half: two 32 byte tile entries ----------------------
+    for off in (2, 1):                     # PA then PB
+        sload(off)
+        a.hexs('0A 0A 0A')                 # asl x3 (base tile * 8 words)
+        a.hexs('09 00 60')                 # ora #$6000
+        a.hexs('9D 00 0B E8 E8')           # sta $0b00,x (VRAM address), inx inx
+        a.hexs('E2 20 A9 80 9D 00 0B E8')  # sep #$20 / lda #$80 / sta / inx
+        a.hexs('A9 20 9D 00 0B E8')        # lda #$20 / sta / inx (32 bytes)
+        a.hexs('C2 20')                    # rep #$20
+        for _ in range(16):                # 16 words = the pair, DBR = pool bank
+            a.hexs('B9 00 80 9D 00 0B E8 E8 C8 C8')
+    a.hexs('E2 20 A9 03 48 AB')            # sep #$20 / lda #$03 / pha / plb (DBR back)
+    a.hexs('8E DF 09')                     # stx $09df
+
+    # ---- two tile map cells (the original drawer's tail, twice) -------------
+    for off, plus in ((2, 0), (1, 1)):     # PA at column c, PB at c+1
+        a.hexs('E2 20')                    # sep #$20: the header is written as bytes
+        a.hexs('AC 6E 03')                 # ldy $036e (row)
+        a.hexs('B9 8E FA 18 6D 6F 03')     # cell address low byte
+        if plus:
+            a.hexs('1A')                   # inc a: the next column
+        a.hexs('9D 00 0B E8')              # sta $0b00,x / inx
+        a.hexs('B9 7E FA 69 00 9D 00 0B E8')   # cell address high (carry)
+        a.hexs('A9 81 9D 00 0B E8')        # VMAIN $81: the upper and lower cell
+        a.hexs('A9 04 9D 00 0B E8')        # count = 4 bytes = two words
+        sload(off)                         # M=0
+        a.hexs('09 00 24 9D 00 0B E8 E8')  # ora #$2400 / sta / inx inx
+        a.hexs('1A 9D 00 0B E8 E8')        # inc a (the pair's second tile) / sta
+    a.hexs('8E DF 09')                     # stx $09df
+
+    # ---- bookkeeping --------------------------------------------------------
+    a.hexs('E2 20 A5 12 C9 %02X' % FIXED0)   # sep #$20 / lda $12 / cmp #$dc
+    a.rel(0xB0, 'noid')                    # bcs noid (one byte code: nothing to eat)
+    a.hexs('EE E9 03')                     # inc $03e9 (consume the id byte)
+    a.label('noid')
+    a.hexs('EE 6F 03')                     # inc $036f ($FA7A adds the second cell)
+    a.hexs('E2 30')                        # sep #$30
+    a.hexs('68 68 68')                     # pla x3: PB, PA, the glyph bank
+    a.long_to(0x01FA7A)                    # jml $03:fa7a (inc $036f / rts)
+
+    # ---- not yet drawable: give the frame back ------------------------------
+    a.label('defer')
+    a.hexs('AD E9 03')                     # lda $03e9
+    a.rel(0xF0, 'defer2')                  # beq defer2 (index 0: nothing to undo)
+    a.hexs('3A 8D E9 03')                  # dec a / sta $03e9: the consumer adds it
+                                           # back, so this code is tried again
+    a.label('defer2')
+    a.hexs('E2 30 68 68')                  # sep #$30 / pla pla (id, glyph bank)
+    a.long_to(0x01FA7D)                    # jml $03:fa7d (plain rts)
+
+    # ---- id out of range: eat the byte, leave the cells blank ---------------
+    a.label('cnbad')
+    a.hexs('E2 30 68 68')                  # sep #$30 / pla pla
+    a.hexs('EE E9 03')                     # inc $03e9
+    a.long_to(0x01FA7A)                    # jml $03:fa7a
+    return a.done()
+
+
+def build_msgclear():
+    """Blank the box text area once per message, with CPU direct writes.
+
+    Hooked over the row loader's first five bytes at $03:EB9E (replaced by
+    ``5C 00 88 3E``), which are replayed before jumping back to $03:EBA3.  The
+    loader runs for one line of text at a time and $0373 bit6 is clear exactly
+    when that line starts a new entry, so this blanks once per message.
+
+    The technique is the engine's own: its box opener $03:E9B6 fills VRAM words
+    $7800-$7FFF with the blank word $2C00 by writing $2116/$2118 directly, with
+    the screen on.  Only the text rows are cleared here, one word at a time, and
+    the address is re-set before every word so an NMI can damage at most one.
+    Rows 16..31 hold the box text: each text row is 64 tile map words, of which
+    column 0, 31, 32 and 63 are the box border, so 60 of them are blanked by
+    this loop ($7C01-$7C1E, $7C21-$7C3E, then 64 words further on).
+
+    The engine itself never clears between messages, so its box text simply
+    accumulates; blanking here is a deliberate behaviour change (documented in
+    the readme) that frees the 42 glyph slots from having to hold every glyph a
+    screen might otherwise still be showing.
+    """
+    a = Asm(E3_MSG)
+    a.hexs('AD 73 03 29 40')               # lda $0373 / and #$40
+    a.rel(0xD0, 'noarm')                   # bne noarm (a continuation line)
+    a.hexs('08 E2 30 C2 30')               # php / sep #$30 / rep #$30
+    a.hexs('A9 00 2C A8')                  # lda #$2c00 / tay (the blank word)
+    a.hexs('A2 01 7C')                     # ldx #$7c01 (row 16, column 1)
+    a.label('clr')
+    a.hexs('8A 29 1F 00')                  # txa / and #$001f
+    a.rel(0xF0, 'skip')                    # beq skip: column 0 is the border
+    a.hexs('C9 1F 00')                     # cmp #$001f
+    a.rel(0xF0, 'skip')                    # beq skip: column 31 as well
+    a.hexs('8E 16 21')                     # stx $2116
+    a.hexs('8C 18 21')                     # sty $2118
+    a.label('skip')
+    a.hexs('E8')                           # inx
+    a.hexs('E0 01 80')                     # cpx #$8001
+    a.rel(0x90, 'clr')                     # bcc clr
+    a.hexs('E2 30 28')                     # sep #$30 / plp
+    a.label('noarm')
+    a.hexs('A9 40 0C 73 03')               # lda #$40 / tsb $0373 (the hook's food)
+    a.long_to(0x01EBA3)                    # jml $03:eba3
+    return a.done()
+

@@ -1,0 +1,114 @@
+==============================================================================
+Doraemon - Nobita to Yousei no Kuni (Japan) (Rev 1). HiROM+Fast 09 size=524288 crc=55E44983
+   title='DORAEMON YOUSEINOKUNI' sjis='DORAEMON YOUSEINOKUNI'(False)
+   SJIS runs>=8: 9092, jp runs 58, jp chars 506, covered 2535 B (0.48%)  kinds={'kanji': 488, 'other': 155, 'ascii': 869, 'kata': 8, 'punct': 172, 'hira': 10}
+   longest: [{'n': 92, 'off': '0x02FF0C'}, {'n': 91, 'off': '0x02FB3C'}, {'n': 68, 'off': '0x03BD0A'}, {'n': 59, 'off': '0x06BFE6'}, {'n': 59, 'off': '0x07932F'}]
+   free>=2K: 0 B  []
+   FONT: none detected
+   ptr cands: [{'off': '0x04F9EA', 'n': 256, 'step': 2}, {'off': '0x00FC46', 'n': 73, 'step': 2}, {'off': '0x038584', 'n': 63, 'step': 2}, {'off': '0x0243EC', 'n': 27, 'step': 3}]
+==============================================================================
+Doraemon 2 - Nobita no Toys Land Daibouken (Japan).s HiROM+Fast 0A size=1048576 crc=D343B398
+   title='DORAEMON2 TOYSLAND' sjis='DORAEMON2 TOYSLAND'(False)
+   SJIS runs>=8: 9970, jp runs 67, jp chars 637, covered 3262 B (0.31%)  kinds={'ascii': 1422, 'kanji': 630, 'other': 281, 'kata': 6, 'punct': 2, 'hira': 1}
+   longest: [{'n': 261, 'off': '0x013F09'}, {'n': 191, 'off': '0x05CCF4'}, {'n': 154, 'off': '0x05D64A'}, {'n': 143, 'off': '0x05B70A'}, {'n': 124, 'off': '0x05D70B'}]
+   free>=2K: 101445 B  [{'off': '0x0690AF', 'size': 28497, 'fill': 'FF'}, {'off': '0x07C032', 'size': 16334, 'fill': 'FF'}, {'off': '0x00D202', 'size': 11678, 'fill': 'FF'}, {'off': '0x045911', 'size': 9967, 'fill': 'FF'}, {'off': '0x0EBDFC', 'size': 8708, 'fill': 'FF'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x002912', 'n': 256, 'step': 2}, {'off': '0x001596', 'n': 81, 'step': 2}, {'off': '0x0E0922', 'n': 54, 'step': 2}, {'off': '0x000299', 'n': 26, 'step': 3}]
+==============================================================================
+Doraemon 3 - Nobita to Toki no Hougyoku (Japan).sfc  HiROM+Fast 0B size=1572864 crc=560C5EAB
+   title='DORAEMON TOKIHOUGYOKU' sjis='DORAEMON TOKIHOUGYOKU'(False)
+   SJIS runs>=8: 12544, jp runs 19, jp chars 288, covered 733 B (0.05%)  kinds={'ascii': 87, 'kanji': 246, 'other': 35, 'kata': 42}
+   longest: [{'n': 128, 'off': '0x04CA67'}, {'n': 56, 'off': '0x007071'}, {'n': 32, 'off': '0x1169F4'}, {'n': 24, 'off': '0x00C900'}, {'n': 19, 'off': '0x085781'}]
+   free>=2K: 98093 B  [{'off': '0x0DB94E', 'size': 18098, 'fill': 'FF'}, {'off': '0x09CD69', 'size': 12951, 'fill': 'FF'}, {'off': '0x15D75E', 'size': 10402, 'fill': 'FF'}, {'off': '0x0CD85A', 'size': 10150, 'fill': 'FF'}, {'off': '0x16D9F8', 'size': 9736, 'fill': 'FF'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x0C1212', 'n': 254, 'step': 2}, {'off': '0x0903B8', 'n': 157, 'step': 2}, {'off': '0x09023C', 'n': 109, 'step': 2}]
+==============================================================================
+Doraemon 4 - Nobita to Tsuki no Oukoku (Japan).sfc   LoROM+Fast 0B size=1572864 crc=4097BC01
+   title='DORAEMON4NOBITATOTUKI' sjis='DORAEMON4NOBITATOTUKI'(False)
+   SJIS runs>=8: 11980, jp runs 99, jp chars 769, covered 4584 B (0.29%)  kinds={'ascii': 2470, 'kanji': 704, 'other': 281, 'kata': 34, 'punct': 7, 'hira': 31}
+   longest: [{'n': 376, 'off': '0x16C459'}, {'n': 352, 'off': '0x16BBBC'}, {'n': 204, 'off': '0x16B94A'}, {'n': 189, 'off': '0x16C65B'}, {'n': 184, 'off': '0x16E55D'}]
+   free>=2K: 17314 B  [{'off': '0x06D200', 'size': 4613, 'fill': '00'}, {'off': '0x172FFE', 'size': 4130, 'fill': '00'}, {'off': '0x0FCFEF', 'size': 3602, 'fill': '00'}, {'off': '0x0F1500', 'size': 2849, 'fill': '00'}, {'off': '0x1617BE', 'size': 2120, 'fill': '00'}]
+   FONT 0x015C00..0x017800 7168 B (448 tiles) eq=0.843 nonblank=0.946 r0blank=0.378
+   ptr cands: [{'off': '0x0058D6', 'n': 194, 'step': 2}, {'off': '0x028400', 'n': 170, 'step': 2}, {'off': '0x0095E4', 'n': 110, 'step': 2}]
+==============================================================================
+Hero Senki - Project Olympus (Japan).sfc             LoROM 0B size=1572864 crc=789DA99C
+   title='�-�- ���' sjis='ﾋ-ﾛ- ｾﾝｷ'(True)
+   SJIS runs>=8: 8222, jp runs 71, jp chars 2387, covered 5697 B (0.36%)  kinds={'kata': 47, 'ascii': 393, 'other': 263, 'kanji': 2270, 'punct': 2, 'hira': 70}
+   longest: [{'n': 346, 'off': '0x120350'}, {'n': 217, 'off': '0x134220'}, {'n': 178, 'off': '0x09807D'}, {'n': 152, 'off': '0x132296'}, {'n': 144, 'off': '0x12004C'}]
+   free>=2K: 71937 B  [{'off': '0x094F93', 'size': 12400, 'fill': '00'}, {'off': '0x0BE5A7', 'size': 6745, 'fill': '00'}, {'off': '0x086CEB', 'size': 4885, 'fill': '00'}, {'off': '0x116D15', 'size': 4846, 'fill': '00'}, {'off': '0x136FCE', 'size': 4146, 'fill': '00'}]
+   FONT 0x01A000..0x01B000 4096 B (256 tiles) eq=0.97 nonblank=0.975 r0blank=0.045
+   ptr cands: [{'off': '0x128000', 'n': 297, 'step': 2}, {'off': '0x0125A0', 'n': 255, 'step': 2}, {'off': '0x00E760', 'n': 233, 'step': 2}, {'off': '0x1592DE', 'n': 41, 'step': 3}, {'off': '0x13F49C', 'n': 30, 'step': 3}, {'off': '0x074012', 'n': 27, 'step': 3}]
+==============================================================================
+SRW4_DC_原版.smc                                       HiROM+Fast 0C size=4194304 crc=D326F0FD
+   title='SUPER ROBOT WARS4' sjis='SUPER ROBOT WARS4'(False)
+   SJIS runs>=8: 30174, jp runs 289, jp chars 4218, covered 15417 B (0.37%)  kinds={'other': 1266, 'kanji': 3737, 'ascii': 4225, 'punct': 112, 'kata': 212, 'hira': 269}
+   longest: [{'n': 266, 'off': '0x1BD277'}, {'n': 235, 'off': '0x21EB6C'}, {'n': 226, 'off': '0x1BCE70'}, {'n': 213, 'off': '0x1293DF'}, {'n': 156, 'off': '0x1BD554'}]
+   free>=2K: 1045997 B  [{'off': '0x36BBFF', 'size': 607230, 'fill': '00'}, {'off': '0x302538', 'size': 429770, 'fill': '00'}, {'off': '0x1BE4DC', 'size': 6948, 'fill': 'FF'}, {'off': '0x2FF7FF', 'size': 2049, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x00DD7E', 'n': 256, 'step': 2}, {'off': '0x280A04', 'n': 256, 'step': 2}, {'off': '0x052FC4', 'n': 254, 'step': 2}, {'off': '0x00DA7B', 'n': 128, 'step': 3}, {'off': '0x00DBFB', 'n': 53, 'step': 3}, {'off': '0x04B4D0', 'n': 30, 'step': 3}]
+==============================================================================
+SRW4_KKNK_4.06後期原版_JAPAN.smc                         ExHiROM+Fast 0D size=8388608 crc=50D1E809
+   title='SUPER ROBOT WARS4' sjis='SUPER ROBOT WARS4'(False)
+   SJIS runs>=8: 37605, jp runs 272, jp chars 3891, covered 14593 B (0.17%)  kinds={'other': 1237, 'kanji': 3647, 'ascii': 4233, 'punct': 52, 'kata': 159, 'hira': 85}
+   longest: [{'n': 266, 'off': '0x1BD277'}, {'n': 235, 'off': '0x21EB6C'}, {'n': 226, 'off': '0x1BCE70'}, {'n': 213, 'off': '0x1293DF'}, {'n': 156, 'off': '0x1BD554'}]
+   free>=2K: 3835989 B  [{'off': '0x51E75B', 'size': 3020962, 'fill': '00'}, {'off': '0x3CF40F', 'size': 232433, 'fill': '00'}, {'off': '0x410000', 'size': 151544, 'fill': '00'}, {'off': '0x43573B', 'size': 72487, 'fill': '00'}, {'off': '0x332CE6', 'size': 49691, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x32B800', 'n': 1024, 'step': 2}, {'off': '0x32FFFE', 'n': 513, 'step': 2}, {'off': '0x310000', 'n': 512, 'step': 2}, {'off': '0x00DAF9', 'n': 86, 'step': 3}, {'off': '0x00DBFB', 'n': 53, 'step': 3}, {'off': '0x00DA7B', 'n': 41, 'step': 3}]
+==============================================================================
+srw4_rankaku_後期原版_JAPAN.smc                          ExHiROM+Fast 0D size=8388608 crc=D01DBDAF
+   title='SUPER ROBOT WARS4' sjis='SUPER ROBOT WARS4'(False)
+   SJIS runs>=8: 32863, jp runs 270, jp chars 3968, covered 14598 B (0.17%)  kinds={'other': 1213, 'kanji': 3742, 'ascii': 4128, 'punct': 54, 'kata': 149, 'hira': 77}
+   longest: [{'n': 266, 'off': '0x1BD277'}, {'n': 235, 'off': '0x21EB6C'}, {'n': 226, 'off': '0x1BCE70'}, {'n': 213, 'off': '0x1293DF'}, {'n': 156, 'off': '0x1BD554'}]
+   free>=2K: 4572393 B  [{'off': '0x46F7C7', 'size': 3737654, 'fill': '00'}, {'off': '0x350C85', 'size': 750459, 'fill': '00'}, {'off': '0x332C38', 'size': 49865, 'fill': '00'}, {'off': '0x30CB98', 'size': 13416, 'fill': 'FF'}, {'off': '0x329DEA', 'size': 6679, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x32B800', 'n': 1024, 'step': 2}, {'off': '0x32FFFE', 'n': 513, 'step': 2}, {'off': '0x310000', 'n': 512, 'step': 2}, {'off': '0x00DA7B', 'n': 128, 'step': 3}, {'off': '0x00DBFB', 'n': 53, 'step': 3}, {'off': '0x04B4D0', 'n': 30, 'step': 3}]
+==============================================================================
+srw4_提坦斯完整_JAPAN.smc                                 HiROM+Fast 0C size=4194304 crc=DBE4DBD2
+   title='SUPER ROBOT WARS4' sjis='SUPER ROBOT WARS4'(False)
+   SJIS runs>=8: 32023, jp runs 290, jp chars 4215, covered 15759 B (0.38%)  kinds={'other': 1314, 'kanji': 4009, 'ascii': 4589, 'punct': 56, 'kata': 146, 'hira': 60}
+   longest: [{'n': 266, 'off': '0x1BD277'}, {'n': 235, 'off': '0x21EB6C'}, {'n': 226, 'off': '0x1BCE70'}, {'n': 192, 'off': '0x129408'}, {'n': 156, 'off': '0x1BD554'}]
+   free>=2K: 874510 B  [{'off': '0x36D2D4', 'size': 138541, 'fill': '00'}, {'off': '0x3D0E72', 'size': 127375, 'fill': '00'}, {'off': '0x3B5D8C', 'size': 107124, 'fill': '00'}, {'off': '0x349330', 'size': 93392, 'fill': '00'}, {'off': '0x39F431', 'size': 68559, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x2867C2', 'n': 260, 'step': 2}, {'off': '0x2935D6', 'n': 259, 'step': 2}, {'off': '0x290000', 'n': 257, 'step': 2}, {'off': '0x00DA7B', 'n': 128, 'step': 3}, {'off': '0x00DBFB', 'n': 53, 'step': 3}, {'off': '0x04B4D0', 'n': 30, 'step': 3}]
+==============================================================================
+srw4_TitaharuDX_v05_09_原版_JAPAN.smc                  HiROM+Fast 0C size=4194304 crc=C112B01C
+   title='SUPER ROBOT WARS4' sjis='SUPER ROBOT WARS4'(False)
+   SJIS runs>=8: 39037, jp runs 804, jp chars 12009, covered 36514 B (0.87%)  kinds={'other': 1594, 'kanji': 5532, 'ascii': 5674, 'punct': 1817, 'kata': 2085, 'hira': 4392}
+   longest: [{'n': 266, 'off': '0x1BD277'}, {'n': 235, 'off': '0x21EB6C'}, {'n': 226, 'off': '0x1BCE70'}, {'n': 192, 'off': '0x129408'}, {'n': 156, 'off': '0x1BD554'}]
+   free>=2K: 449069 B  [{'off': '0x300380', 'size': 64640, 'fill': '00'}, {'off': '0x3F056D', 'size': 64147, 'fill': '00'}, {'off': '0x3E97DA', 'size': 26663, 'fill': '00'}, {'off': '0x340CE0', 'size': 21280, 'fill': '00'}, {'off': '0x38AE97', 'size': 16746, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x39FFFE', 'n': 258, 'step': 2}, {'off': '0x283954', 'n': 257, 'step': 2}, {'off': '0x36FFFE', 'n': 257, 'step': 2}, {'off': '0x00DA7B', 'n': 128, 'step': 3}, {'off': '0x00DBFB', 'n': 53, 'step': 3}, {'off': '0x04B4D0', 'n': 30, 'step': 3}]
+==============================================================================
+SF8127.smc                                           LoROM 0A size=1048576 crc=56C05339
+   title='����� ���� ��� �����' sjis='ｼｮﾀﾞｲ ﾈｯｹﾂ ｺｳﾊ ｸﾆｵｸﾝ'(True)
+   SJIS runs>=8: 7803, jp runs 102, jp chars 908, covered 4025 B (0.38%)  kinds={'ascii': 1253, 'other': 455, 'kata': 32, 'kanji': 811, 'punct': 23, 'hira': 65}
+   longest: [{'n': 159, 'off': '0x01FAF7'}, {'n': 144, 'off': '0x00349E'}, {'n': 128, 'off': '0x047C89'}, {'n': 128, 'off': '0x05FC87'}, {'n': 84, 'off': '0x05E22C'}]
+   free>=2K: 0 B  []
+   FONT: none detected
+   ptr cands: [{'off': '0x01E4CE', 'n': 124, 'step': 2}, {'off': '0x00ACFA', 'n': 74, 'step': 2}, {'off': '0x05100A', 'n': 73, 'step': 2}]
+==============================================================================
+天3动漫2002剧情+奥运篇.smc                                   LoROM 0A size=1048576 crc=97623F6B
+   title='������ ���� 3' sjis='ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 3'(True)
+   SJIS runs>=8: 4331, jp runs 151, jp chars 1888, covered 5309 B (0.51%)  kinds={'ascii': 843, 'other': 331, 'kanji': 1820, 'kata': 49, 'punct': 14, 'hira': 19}
+   longest: [{'n': 153, 'off': '0x06B240'}, {'n': 122, 'off': '0x0E6513'}, {'n': 101, 'off': '0x0F8490'}, {'n': 92, 'off': '0x01A2B6'}, {'n': 81, 'off': '0x024480'}]
+   free>=2K: 20251 B  [{'off': '0x0B577F', 'size': 10376, 'fill': '00'}, {'off': '0x06EBFE', 'size': 5122, 'fill': '00'}, {'off': '0x09F660', 'size': 2464, 'fill': '00'}, {'off': '0x0A771F', 'size': 2289, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x0D0000', 'n': 335, 'step': 2}, {'off': '0x0CA2B4', 'n': 316, 'step': 2}, {'off': '0x0C5C80', 'n': 217, 'step': 2}]
+==============================================================================
+天3改版米迦勒 (1).sfc                                      LoROM 0A size=1048576 crc=97623F6B
+   title='������ ���� 3' sjis='ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 3'(True)
+   SJIS runs>=8: 4331, jp runs 151, jp chars 1888, covered 5309 B (0.51%)  kinds={'ascii': 843, 'other': 331, 'kanji': 1820, 'kata': 49, 'punct': 14, 'hira': 19}
+   longest: [{'n': 153, 'off': '0x06B240'}, {'n': 122, 'off': '0x0E6513'}, {'n': 101, 'off': '0x0F8490'}, {'n': 92, 'off': '0x01A2B6'}, {'n': 81, 'off': '0x024480'}]
+   free>=2K: 20251 B  [{'off': '0x0B577F', 'size': 10376, 'fill': '00'}, {'off': '0x06EBFE', 'size': 5122, 'fill': '00'}, {'off': '0x09F660', 'size': 2464, 'fill': '00'}, {'off': '0x0A771F', 'size': 2289, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x0D0000', 'n': 335, 'step': 2}, {'off': '0x0CA2B4', 'n': 316, 'step': 2}, {'off': '0x0C5C80', 'n': 217, 'step': 2}]
+==============================================================================
+天使之翼4 无限体力.sfc                                       LoROM 0B size=1572864 crc=6CF42497
+   title='������ ���� 4' sjis='ｷｬﾌﾟﾃﾝ ﾂﾊﾞｻ 4'(True)
+   SJIS runs>=8: 6518, jp runs 154, jp chars 1824, covered 6534 B (0.42%)  kinds={'ascii': 1720, 'kanji': 1734, 'kata': 17, 'other': 564, 'hira': 73, 'punct': 19}
+   longest: [{'n': 147, 'off': '0x077F2D'}, {'n': 94, 'off': '0x07F9C9'}, {'n': 94, 'off': '0x07FE2B'}, {'n': 90, 'off': '0x07F8E5'}, {'n': 87, 'off': '0x03445C'}]
+   free>=2K: 8194 B  [{'off': '0x0558B6', 'size': 3402, 'fill': '00'}, {'off': '0x056618', 'size': 2536, 'fill': '00'}, {'off': '0x032437', 'size': 2256, 'fill': '00'}]
+   FONT: none detected
+   ptr cands: [{'off': '0x0950C8', 'n': 613, 'step': 2}, {'off': '0x090000', 'n': 381, 'step': 2}, {'off': '0x003748', 'n': 257, 'step': 2}, {'off': '0x096B0F', 'n': 58, 'step': 3}, {'off': '0x0960B0', 'n': 56, 'step': 3}, {'off': '0x096158', 'n': 51, 'step': 3}]
+
+-> final.json
