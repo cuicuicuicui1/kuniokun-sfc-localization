@@ -30,6 +30,7 @@ Patches (all verified byte-for-byte against the original ROM):
   0x00FC85 (2) -> EA EA
   0x00FC92 (4) -> JML $3E:8080      ; widget dispatcher
 """
+from pathlib import Path
 import json
 import os
 import re
@@ -50,7 +51,7 @@ GLYPH_WIDEN = 1.12
 # (cnglyph.render16x16) and keeps GLYPH_THRESH.
 GLYPH8_THRESH = 100
 
-BASE = 'C:/Users/<user>/.zcode/workspace/default/sfc-recon'
+BASE = str(Path(__file__).resolve().parent)
 SRC_ROM = BASE + '/work_kuniokun_2mb.smc'
 OUT_ROM = BASE + '/kuniokun_cn.smc'
 OUT_IPS = BASE + '/kuniokun_cn.ips'
@@ -104,6 +105,45 @@ ITEM_GLYPH_MAX = 256
 ITEMDRAW_ROM = 0x1F4800                # $3e:c800
 ITEMBASE_ROM = 0x1F4A00                # $3e:ca00  three bytes: 0, 13, 26
 ITEM_HOOK = 0x00FCA5                   # cpu $01:fca5, the FB[code] lookup
+# ------------------------------------------------------- the battle HUD plate
+# $00:8C83 names the battle HUD's name plate tiles through FA/FB, one BYTE of
+# the name record per cell.  A four byte record is four cells, which is right
+# when the record holds four single byte codes -- but a translated name is two
+# two byte codes ([page][id]), so the plate drew FA[page] and FA[id] and came
+# out as four wrong glyphs (user screenshot: "=○Θ" beside the HP bar).
+#
+# HUDNAME_HOOK replaces the six instructions that do that lookup
+# ($00:8C91..$00:8CA2, 18 bytes).  For a code below $C0 it falls back to the
+# engine's own FA/FB.  For a two byte code it takes glyph  (cell >> 1) of the
+# record, uploads it into the name pair slots and sets $22/$23 for the caller.
+#
+# The plate is drawn during ACTIVE DISPLAY, so there is no VRAM DMA here (the
+# two existing glyph hooks could use one only because the status screen runs in
+# forced blank).  The glyph goes through the engine's own $0B00 queue instead,
+# which $00:8385 flushes in vblank: two 32 byte tile entries, no tile map cells
+# (the caller writes those from $22/$23).
+HUDNAME_ROM = 0x1F5000                 # $3E:D000, free up to DISPATCH_ROM
+HUDNAME_HOOK = 0x000C91                # cpu $00:8C91, 18 bytes, M/X 8 bit
+# The item name a battle message pastes in is [$DE][8x16 id] per hanzi, a code
+# only the status screen's renderer knows.  The message drawer's dispatch sends
+# $DE to the fixed-glyph path, where FIXED0 = $DF leaves $DC..$DE unused, so
+# $DE can be claimed here: the drawer branches to this routine, which uploads
+# the glyph through the $0B00 queue (the message box is drawn during active
+# display, so no VRAM DMA) and rejoins the drawer's own exit.
+ITEMMSG_ROM = 0x1F5400                 # $3E:D400, free up to DISPATCH_ROM
+PACE_ROM = 0x1F5800                    # $3E:D800, the drawer's pacing gate
+PACE_HOOK = 0x01EEE5                   # cpu $03:EEE5, 6 bytes, M/X 8 bit, DBR=$03
+# $03C4 is NOT scratch: it is the low horizontal-scroll byte in the last
+# five-byte record of the live BG3 HDMA table at $03AA-$03C8. HDMA reads it at
+# scanline 216 without any CPU opcode referencing $03C4. The old countdown
+# therefore shifted the bottom eight scanlines by 0..5 pixels while typing.
+# $03E7 is the original loader's otherwise-unused per-message byte, reset by
+# STZ $03E7 at $03:EBAC. It is beyond the HDMA terminator (and the loader's
+# overlapping 16-bit table-copy store at $03C9), before length/index $03E8/9.
+# Its ownership is checked by model tests and a physical-WRAM access trace,
+# not merely by absence of absolute CPU references. Do not use queue-tail
+# bytes here: existing 256-byte glyph/HUD batches can reach them.
+PACE_FRAMES = 0x03E7                   # per-message attempts until next glyph
 LABELDRAW_ROM = 0x1F4C00               # $3e:cc00
 LABEL_HOOK = 0x00F9BC                  # cpu $01:f9bc, the same lookup
                                        # inside the label interpreter
@@ -157,8 +197,20 @@ SLOTS_DEFAULT = SLOTS                  # what clamp_slots() clamps down from
 # body colouring: 450 names would need 280 glyphs and blow the pool.  Labels
 # get their own code pages, their own storage banks and their own two tile
 # pairs, exactly like the engine's kana names had their own font tiles.
+# v39 candidate: enabled by default, matching the configured release build.
+# HUDFIX's call ABI, per-glyph source and in-flight queue insertion are covered
+# by the complete caller test plus Mesen CPU regression, not isolated cells.
+HUDFIX = os.environ.get('HUDFIX', '1') == '1'    # $00:8C91 name plate hook
+ITEMSG = os.environ.get('ITEMSG', '1') == '1'    # drawer $DE item name hook
+# Drawer attempts between two drawn message characters (v37).  The engine types
+# at about one cell per frame on its own, which dumps a whole three line message
+# in about a second and a half - unreadable (user report, 2026-09-25).  While
+# the gate holds a character back the tick makes exactly one attempt per frame,
+# so PACE attempts come out as PACE message ticks (not video frames).  Holding A or B bypasses the gate
+# and fast-forwards at the drawer's own 3 chars per tick.
+PACE = int(os.environ.get('PACE', '6'))
 LABEL_GLYPHS = 2                        # a four byte record holds two glyphs
-LABEL_NAME_GLYPHS = 2                   # same, for a name a {E3}-{F7} slot
+LABEL_NAME_GLYPHS = 4 if ITEMSG else 2                   # same, for a name a {E3}-{F7} slot
 LABEL_NAME_SETS = 1                     # pastes into the middle of a message
 LABEL_ID0 = 128                         # body ids stop at SLOTS; label ids
                                         # start here, in the same pages
@@ -167,7 +219,7 @@ LABEL_ID0 = 128                         # body ids stop at SLOTS; label ids
 # picked by the label's row (mod LABEL_SETS): rows that are close enough to be
 # visible together differ by one or two, so they always land in different sets
 # and an old label is never overwritten by a new one.
-LABEL_SETS = 3                           # the box shows two text rows, so
+LABEL_SETS = 2 if ITEMSG else 3                           # the box shows two text rows, so
                                         # three sets already guarantee that
                                         # rows on screen together differ
 POOL_BANK0 = 0x21
@@ -251,6 +303,11 @@ DECOR_TILES = (0x20, 0x72, 0x85, 0x86, 0x93)
 # probe showed a label's glyphs landing in 0xe6-0xed / 0xf7-0xfe and being
 # erased by the next box redraw, so a label pair must not sit there.  Body
 # slots may: a body glyph is re-uploaded whenever it is drawn.
+#
+# v39-rc3 correction: protecting more glyph tiles cannot fix bottom-edge
+# drift. The cause was PACE_FRAMES aliasing the live HDMA scroll byte $03C4;
+# it was masked by held A/B tests, which reset the old countdown to zero.
+# Keep this glyph exclusion separate from the HDMA/pacing regression.
 BOX_GFX_TILES = (0xE6, 0xE7, 0xE8, 0xE9, 0xEA, 0xEB, 0xEC, 0xED,
                  0xF7, 0xF8, 0xF9, 0xFA, 0xFB, 0xFC, 0xFD, 0xFE)
 PROTECT_TILES = (set([0x00, 0x01]) | set(range(0x10, 0x20))
@@ -264,7 +321,12 @@ PROTECT_TILES = (set([0x00, 0x01]) | set(range(0x10, 0x20))
 # Tiles inside the font window that the engine draws as graphics, not as text:
 # the scene background and the dialogue box frame.  Seen in the tile maps of
 # every VRAM dump ($E0/$E1 in the scene rows, $F0 as the frame).
-GFX_TILES = (0xE0, 0xE1, 0xF0)
+# $00:8B13..8B9C draws HP bars using E7..EF (P1/P2), F7..FF (NPCs)
+# and cap F2. These are live graphics, NOT disposable dialogue glyph slots.
+# The original nine NPC bitmaps are byte-identical to the player set. When
+# HUDFIX is enabled, both sets use E7..EF, with their original palette bits.
+HUD_BAR_TILES = frozenset(range(0xE7, 0xF0)) | {0xF2}
+GFX_TILES = set((0xE0, 0xE1, 0xF0)) | HUD_BAR_TILES
 
 # katakana code -> hiragana code with the same reading (Unicode -0x60 pairs)
 _inv = {}
@@ -349,9 +411,8 @@ def status_script_code_runs():
 #           to two byte hanzi codes, so nothing draws their kana any more and
 #           reserving those tiles is pure waste.  Verified on the built ROM:
 #           985 two byte codes, zero font codes left.
-#   stat  - the status screen's drawing script, still rendered by the engine.
-#           This one is real and stays protected: it draws katakana every time
-#           the status screen opens, so its tiles must not go to the pool.
+#   stat  - historical metadata name; labels now use a dedicated renderer.
+#           Live name/condition raw tiles are protected unconditionally.
 PROTECT_GROUPS = set(
     g for g in os.environ.get('PROTECT_GROUPS', 'stat').split(',') if g)
 
@@ -372,10 +433,9 @@ def untranslated_codes():
                     break
                 if b < 0xE0:
                     codes.add(b)
-    if 'stat' in PROTECT_GROUPS:
-        for s, e in status_script_code_runs():      # status screen script
-            codes |= set(b for b in (data[s:e] if HUD_ORIG else rewrite_kana(data[s:e]))
-                         if 0 < b < 0xE0)
+    # These static status labels are now rendered by build_labeldrawer().
+    # Protecting their obsolete kana wastes the HP bar's tile budget. The
+    # still-live literal name/condition fields are protected below instead.
     return codes
 
 
@@ -1051,6 +1111,10 @@ def protected_tiles():
     if PROTECT_CODES is None:
         PROTECT_CODES = untranslated_codes()
     res = set(PROTECT_TILES) | set(GFX_TILES) | prompt_tiles()
+    if not HUDFIX:  # also works after load_build_params changes the switch
+        res.update(range(0xF7, 0x100))
+    # $01:FBBB reads these fields as tile IDs, not dialogue character codes.
+    res |= set(open(ORIG_ROM, 'rb').read()[0xFC55:0xFC75])
     for c in PROTECT_CODES:
         res.add(km.FA[c])
         res.add(km.FB[c])
@@ -1099,12 +1163,20 @@ STATUS_LABEL_HANZI = {}           # hanzi -> script code, filled in main()
 STATUS_LABEL_SLOT = {}            # script code -> pool slot
 STATUS_LITERAL_TILES = set()      # tiles the script's literal blocks draw
 LITERAL_TILES_RESTORE = []        # of those, the ones a pool slot sits on
+LITERAL_TILE_MOVE = {}            # old literal tile -> the idle tile it moved to
 STATUS_FIRST_TEXT = 0             # the script's first text block's address
 STATUS_SLOT_BASE = 0              # labels take slots 0..n-1
 ITEM_SLOT_BASE0 = 24              # the item values start above them
 ITEM_SLOT_SPAN = 4                # slots per value (longest name: 4)
                                   # 23 label slots + 3 * 4 = 35 <= SLOTS
 STATUS_SLOT_TABLE = 0x1F4B00      # $3E:CB00  code -> slot, $FF = not a label
+# The label's 8x16 glyph id lives here, NOT in FA.  Every code the status script
+# names is also a KEEP1 code, and KEEP1 exists precisely so those codes keep
+# pointing at the original kana tiles through FA -- writing the glyph id into FA
+# left the kana (く/に/り/き in the speaker names) pointing at tiles 0..22, which
+# the glyph pool then overwrote: the battle HUD's name plate came out blank or
+# as hanzi fragments.  A table of its own keeps the two uses apart.
+STATUS_LABEL_ID_TABLE = 0x1F4F00  # $3E:CF00  code -> 8x16 glyph id
 LITERALFIX_ROM = 0x1F4E00          # $3e:ce00
 LITERAL_HOOK = 0x00F976            # cpu $01:f976, SEP #$30 / LDY #$00
 # The status screen needs STATUS_SLOT_COUNT + 3 * ITEM_SLOT_SPAN slots on
@@ -1204,6 +1276,34 @@ def status_labels(rom, glyph_of):
     list=9 to list=4 and would let list screens corrupt each other.
     """
     blocks, used = status_script_blocks()
+    # The -- STATUS -- row is the script's only literal tile block: the
+    # interpreter writes those tile numbers straight into the map, so no font
+    # code names them and the pool has no idea they are on screen.  Four of the
+    # row's glyphs sit on tiles the pool can reach, and the hanzi a dialogue
+    # left in them is what made the row read as gibberish -- the defect that
+    # survived v28.  Protecting those tiles is not worth its price: free_pairs()
+    # pairs greedily, so pulling four tiles out of an unbroken run of pairs
+    # costs far more than four pairs and collapses the colouring window from
+    # list=9 to list=4.  The row moves instead.  Each colliding glyph is copied
+    # into a free tile the pool can never pair up -- both its neighbours are
+    # protected, so the 32 byte half-glyph DMA can never start there; these are
+    # the same idle tiles the single-character command labels used -- and the
+    # script is rewritten to name them.  Nothing is uploaded at run time, so
+    # there is no timing left to get wrong.
+    pool_reach = set()
+    for _t in free_pairs():
+        pool_reach.add(_t)
+        pool_reach.add(_t + 1)
+    idle = cmdwin_singles()
+    for _t in sorted(STATUS_LITERAL_TILES):
+        if _t not in pool_reach or _t in LITERAL_TILE_MOVE:
+            continue
+        if not idle:
+            raise SystemExit('no idle tile left to move the -- STATUS -- row to')
+        LITERAL_TILE_MOVE[_t] = idle.pop(0)
+    for _src, _dst in LITERAL_TILE_MOVE.items():
+        rom[km.FONT + _dst * 16:km.FONT + _dst * 16 + 16] = \
+            bytes(rom[km.FONT + _src * 16:km.FONT + _src * 16 + 16])
     codes = sorted(set(c for _v, _c, k, vals, _o in blocks if k == 'text'
                        for c in vals) - {0x00, 0x09, 0x1D})
     hanzi = status_label_hanzi()
@@ -1216,14 +1316,13 @@ def status_labels(rom, glyph_of):
         STATUS_LABEL_HANZI[ch] = codes[i]
         STATUS_LABEL_SLOT[codes[i]] = slots[i]
     STATUS_SLOT_COUNT = len(hanzi)
-    # FA carries the 8x16 glyph id (the hook reads it); FB is unused
-    fa = bytearray(rom[km.FA_OFF:km.FA_OFF + 256])
-    fb = bytearray(rom[km.FB_OFF:km.FB_OFF + 256])
+    # The 8x16 glyph id goes in its own table, and FA/FB are left alone: these
+    # codes are all KEEP1 codes too, so FA has to keep naming the original kana
+    # tiles (see STATUS_LABEL_ID_TABLE).
+    ids = bytearray([0xFF]) * 256
     for ch, c in STATUS_LABEL_HANZI.items():
-        fb[c] = 0
-        fa[c] = glyph_of[ch]
-    rom[km.FA_OFF:km.FA_OFF + 256] = bytes(fa)
-    rom[km.FB_OFF:km.FB_OFF + 256] = bytes(fb)
+        ids[c] = glyph_of[ch]
+    rom[STATUS_LABEL_ID_TABLE:STATUS_LABEL_ID_TABLE + 256] = bytes(ids)
     tab = bytearray([0xFF]) * 256
     for c, sl in STATUS_LABEL_SLOT.items():
         tab[c] = sl
@@ -1232,6 +1331,8 @@ def status_labels(rom, glyph_of):
     for vmadd, cnt, kind, vals, _o in blocks:
         cn = STATUS_LABELS.get(vmadd)
         if kind != 'text' or cn is None:
+            if kind == 'tiles':
+                vals = [LITERAL_TILE_MOVE.get(v, v) for v in vals]
             out += bytes([vmadd & 0xFF, vmadd >> 8, cnt])
             out += bytes(vals)
             continue
@@ -1261,6 +1362,12 @@ def status_labels(rom, glyph_of):
           % (len(hanzi), sorted(STATUS_LABEL_SLOT.values()), used, len(out) + 1))
     print('  literal tiles to restore: %s (first text block $%04X)'
           % (sorted('%02X' % t for t in LITERAL_TILES_RESTORE), STATUS_FIRST_TEXT))
+    if LITERAL_TILE_MOVE:
+        print('  -- STATUS -- row moved off the pool: %s'
+              % ' '.join('%02X->%02X' % (a, b)
+                         for a, b in sorted(LITERAL_TILE_MOVE.items())))
+    else:
+        print('  -- STATUS -- row already clear of the pool')
     return len(hanzi)
 
 
@@ -1412,8 +1519,15 @@ def load_build_params(path=None):
     allowed.  Both are recorded in cn_build_params.json next to the ROM.
     """
     global PROMPT_CLOBBERED, PROTECT_GROUPS, PROTECT_CODES, SLOTS
-    global STALEROW_ON, CMDWIN, HUD_ORIG
+    global STALEROW_ON, CMDWIN, HUD_ORIG, HUDFIX, ITEMSG, PACE, PACE_FRAMES
+    global LABEL_SETS, LABEL_NAME_GLYPHS
     par = json.load(open(path or (BASE + '/cn_build_params.json'), encoding='utf-8'))
+    HUDFIX = par.get('hudfix', HUDFIX)
+    ITEMSG = par.get('itemsg', ITEMSG)
+    PACE = par.get('pace', PACE)
+    PACE_FRAMES = par.get('pace_counter', 0x03C4)  # legacy metadata only
+    LABEL_SETS = par.get('label_sets', 2 if ITEMSG else 3)
+    LABEL_NAME_GLYPHS = par.get('label_name_glyphs', 4 if ITEMSG else 2)
     if 'stalerow' in par:
         STALEROW_ON = par['stalerow']
     if 'cmdwin' in par:
@@ -1865,6 +1979,290 @@ def build_literalfix():
     return a.done(), tiles
 
 
+def build_pace():
+    """The message drawer's pacing gate, hooked over $03:EEE5's first bytes.
+
+    $03:EEE5 runs once per drawn character (up to three attempts per tick) and
+    used to read `LDA #$08 / JSL $009AB6`.  That JSL is NOT a frame wait: it is
+    the $0B00 queue-space allocator ($00:9AB6: if the queue drained, reset both
+    cursors, else return the requested size plus the write cursor).  Its argument
+    is discarded by this call path, so the byte v31 changed paced nothing - the
+    engine types at about one cell per frame with or without it, on the original
+    ROM too (hw/_fld_orig.log vs hw/_fld_v36b.log, same message segments to the
+    frame).  The real gate lives here.
+
+    Entry: M/X 8 bit, DBR=$03 (the tick does PHK/PLB), A = don't care.  The gate
+    counts DRAWER ATTEMPTS in $03E7 and lets one through every PACE of them.
+    While it holds a character back the tick makes exactly one attempt per message tick
+    (the SEC return stops the three-attempt loop), so PACE attempts are PACE
+    ticks (the intro ticks every other video frame); on a fire tick the second attempt spends one more count, which is
+    exactly what reload = PACE accounts for (fire, PACE-1 holds, fire...).
+    P1 A/B held ($031A/$031C bit7) fast-forwards at three attempts per tick.
+    $00:BBF7 stores rising edges in $0316/$0318, and held bytes in $031A/$031C.
+    X/Y (bit6) are NOT A/B. Reset the countdown during bypass so releasing
+    mid-count resumes immediately rather than inheriting the old delay.  On "not yet" the gate returns
+    SEC, exactly like the engine's own busy exit at $03:EF2B, so the tick skips
+    the remaining attempts; on "go" it replays the original
+    `LDA #$08 / JSL $009AB6` (the queue reservation side effect stays) and
+    returns CLC into $03:EEEB.  No engine counter is consulted: a first cut
+    keyed on $0322 never counted on real hardware (that byte only moves in some
+    main loop paths), so the count lives entirely in this gate.
+
+    Blank cells draw through the SAME entry ($03:EF12, taken once $03E9 has
+    reached $03E8), so the gate checks for an exhausted buffer and lets those
+    through unpaced - they overwrite empty cells and a paced filler would hang
+    a 2-4 s invisible pause after every line before the next one starts.  The
+    control-code erasers ($03:FA1C) do not use this pacing gate.
+    The line-hold beat ($03:EF2D, the E0 phase in a trace) returns SEC before
+    the typewriter, so beats simply freeze the count.
+    """
+    a = Asm(PACE_ROM)
+    a.op(0x08)                             # php
+    a.op(0xE2, 0x30)                       # sep #$30
+    a.op(0x48)                             # pha
+    a.op(0xAD, 0x1A, 0x03)                 # lda $031A   (P1 held A/X byte)
+    a.op(0x0D, 0x1C, 0x03)                 # ora $031C   (P1 held B/Y byte)
+    a.op(0x29, 0x80)                       # and #$80    (A/B, not X/Y)
+    a.rel(0xD0, 'bypass')                  # bne bypass: held fast-forward
+    a.op(0xAC, 0xE9, 0x03)                 # ldy $03e9   (buffer index)
+    a.op(0xCC, 0xE8, 0x03)                 # cpy $03e8   (vs length)
+    a.rel(0xB0, 'bypass')                  # bcs bypass: exhausted, unpaced filler
+    a.op(0xAD, PACE_FRAMES & 0xFF, PACE_FRAMES >> 8) # lda pacing counter
+    a.rel(0xF0, 'fire')                    # beq fire: due now
+    a.op(0xCE, PACE_FRAMES & 0xFF, PACE_FRAMES >> 8) # dec pacing counter
+    a.label('hold')
+    a.op(0x68)                             # pla
+    a.op(0x28)                             # plp
+    a.op(0x38)                             # sec
+    a.op(0x6B)                             # rtl -> $03:EEEB, carry set
+    a.label('fire')
+    a.op(0xA9, PACE & 0xFF)                # lda #PACE
+    a.op(0x8D, PACE_FRAMES & 0xFF, PACE_FRAMES >> 8) # sta pacing counter
+    a.rel(0x80, 'go')
+    a.label('bypass')
+    a.op(0x9C, PACE_FRAMES & 0xFF, PACE_FRAMES >> 8) # stz pacing counter
+    a.label('go')
+    a.op(0x68)                             # pla
+    a.op(0x28)                             # plp
+    a.op(0xA9, 0x08)                       # lda #$08   (replay: 8 queue bytes)
+    a.op(0x22, 0xB6, 0x9A, 0x00)           # jsl $009ab6 (the queue allocator)
+    a.op(0x18)                             # clc
+    a.op(0x6B)                             # rtl -> $03:EEEB, carry clear
+    return a.done()
+
+
+def build_hudname():
+    """Battle HUD name plate: see HUDNAME_HOOK.
+
+    Entered with $18 = the byte index into the name record (char slot * 4 +
+    cell) and M/X 8 bit.  Cell k takes glyph  (k >> 1)  of the record, its left
+    half when k is even and its right half when k is odd, and leaves that cell's
+    two tiles in $22 (upper) / $23 (lower) for the caller to write.
+
+    Only the upload happens on even cells: the odd cell shares the glyph, and
+    when the queue is too full to stage it the tiles are simply left as they
+    are -- they still hold the same glyph from the previous frame, because the
+    pool never allocates a name pair.  One plate is on screen at a time
+    (measured from the user's battle savestate), so two name slots are enough
+    and the tile accounting does not change at all.
+    """
+    TABLE_N = (SLOTS + LABEL_GLYPHS * LABEL_SETS
+               + LABEL_NAME_GLYPHS * LABEL_NAME_SETS)
+    SLOT0 = SLOTS + LABEL_GLYPHS * LABEL_SETS
+    lo, loh = snes_of_rom(E3_SLOTPAIR), snes_of_rom(E3_SLOTHI)
+    ro, roh = snes_of_rom(E3_SLOTPAIR + TABLE_N), snes_of_rom(E3_SLOTHI + TABLE_N)
+    a = Asm(HUDNAME_ROM)
+
+    def ld_pair(low_t, hi_t):
+        """A = the 16 bit tile of pair entry X (low table + high table)."""
+        a.hexs('E2 20')                                  # sep #$20
+        a.hexs('BF %02X %02X %02X' % (hi_t[1] & 0xFF, hi_t[1] >> 8, hi_t[0]))
+        a.hexs('EB')                                     # xba
+        a.hexs('BF %02X %02X %02X' % (low_t[1] & 0xFF, low_t[1] >> 8, low_t[0]))
+        a.hexs('C2 20 48')                               # rep #$20 / pha
+
+    a.hexs('08 E2 30 8B')                # php / sep #$30 / phb
+    # Test the current two-byte PAIR, not the entire four-byte record.
+    # The second hanzi can be on another page, or this pair can be blank/kana.
+    a.hexs('A5 18 29 FE A8')             # lda $18 / and #$fe / tay
+    a.hexs('B9 46 1B C9 C0')             # lda $1b46,y / cmp #$c0
+    a.rel(0xB0, 'two')                   # bcs two: two two byte codes
+    a.hexs('A4 18 B9 46 1B')             # ldy $18 / lda $1b46,y
+    a.hexs('AA')                         # tax
+    a.hexs('BF 9E FA 03 85 22')          # lda $03fa9e,x / sta $22
+    a.hexs('BF 9E FB 03 85 23')          # lda $03fb9e,x / sta $23
+    a.hexs('AB 28 6B')                   # plb / plp / rtl -- this path pushed
+                                         # nothing, so it must NOT fall into fin
+    a.label('fin')
+    a.hexs('E2 30')                      # sep #$30 (X may be 16 bit by now)
+    for _ in range(5):                   # bank + right tile + left tile
+        a.hexs('68')                     # pla
+    a.hexs('C2 20 68 85 1E')             # rep / pla / sta $1e: the engine's value
+    a.hexs('E2 20')                      # sep: back to the 8 bit M of the entry
+    a.hexs('AB 28 6B')                   # plb / plp / rtl
+
+    a.label('two')
+    a.hexs('C2 20 A5 1E 48 E2 20')       # rep #$20 / lda $1e / pha / sep #$20:
+                                         # park the engine's $1e/$1f before
+                                         # borrowing them -- and M must go back
+                                         # to 8 bit, or the LDA $18 below reads
+                                         # two bytes and the slot comes out wrong
+    # slot = SLOT0 + (($18 & 3) >> 1)   -- which of the record's two glyphs
+    a.hexs('A5 18 29 03 4A')             # lda $18 / and #$03 / lsr a
+    a.hexs('18 69 %02X' % SLOT0)         # clc / adc #SLOT0
+    a.hexs('C2 20 29 FF 00 AA')          # rep #$20 / and #$00ff / tax
+    ld_pair(lo, loh)                     # push the left half tile
+    ld_pair(ro, roh)                     # push the right half tile
+    # pool offset = the id byte * 64  (id byte = LABEL_ID0 + idx, and the glyph
+    # lives at (LABEL_ID0 + idx) * POOL_STRIDE inside its page).  It goes in the
+    # zero page rather than on the stack: the bank sits on top of the stack, so
+    # a PLA would fetch the bank and not the offset.
+    a.hexs('E2 20 A5 18 29 FE A8')       # sep / lda $18 / and #$fe / tay
+    a.hexs('B9 47 1B')                   # lda $1b47,y   (the id byte)
+    a.hexs('C2 20 29 FF 00')             # rep / and #$00ff
+    for _ in range(6):
+        a.hexs('0A')                     # asl x6 -> id * 64
+    a.hexs('85 1E')                      # sta $1e (the pool offset, 16 bit)
+                                         # $1e is borrowed: the plate is drawn
+                                         # during ACTIVE DISPLAY, so an NMI can
+                                         # fire and the engine's own value has to
+                                         # come back -- it is pushed at the top
+                                         # of the two path and popped at fin
+    # pool bank = $21 + page - $c0
+    a.hexs('E2 20 B9 46 1B')             # sep / lda $1b46,y  (the page byte)
+    a.hexs('38 E9 C0 18 69 21 48')       # sec / sbc #$c0 / clc / adc #$21 / pha
+    # stack: [01,s]=bank [02,s]=right tile [04,s]=left tile
+    #
+    # Only even cells stage the glyph; the odd cell reuses what the even one
+    # put there.  Also skip when the queue is close to full -- the tiles keep
+    # the previous frame's glyph, which for the same record is the same glyph.
+    a.hexs('A5 18 29 01')                # lda $18 / and #$01
+    a.far_rel(0xD0, 'pick', 'hudodd')     # odd cell: nothing to stage
+    # Reserve 72 glyph bytes plus up to 48 bytes for the four-cell caller.
+    # Check the full cursor, not just its low byte. A busy queue defers glyphs.
+    a.hexs('C2 20 AD DF 09 C9 88 00 E2 20')
+    a.far_rel(0xB0, 'pick', 'hudq')       # insufficient headroom: no insertion
+
+    # $8C45 has already written a four-byte cell header at QUEUE_APPEND,
+    # but has NOT committed it. Insert the glyphs BEFORE that pending header.
+    # Moving only $09DF loses the append when $8C57 stores the saved X back.
+    a.hexs('C2 30 AE DF 09')             # rep #$30 / ldx $09df
+    a.hexs('BD 00 0B 9D 48 0B')          # move header word 0 forward 72 bytes
+    a.hexs('BD 02 0B 9D 4A 0B')          # move header word 1 forward 72 bytes
+    # At this point: bank(1), pairs(4), saved DP(2), DB(1), P(1),
+    # JSL return(3), caller's PHX(1). Update the X that PLX will restore.
+    a.hexs('E2 20 A3 0D 18 69 48 83 0D') # saved X += 72
+    a.hexs('A3 01 48 AB')                # lda $01,s / pha / plb: glyph bank
+    a.hexs('AE DF 09')                   # ldx $09df
+    for slot_off, off_extra in ((4, 0), (2, 32)):
+        # VRAM word address = $6000 + tile * 8
+        a.hexs('E2 20')                  # sep #$20: the round before left M 16
+        a.hexs('A3 %02X' % slot_off)     # lda $06,s / $04,s (the tile's low byte)
+        a.hexs('C2 30 29 FF 00 0A 0A 0A')  # rep #$30 / and / asl x3.  X *and* Y
+        # have to be 16 bit here: the pool offset is up to 32704, and a TAY with
+        # an 8 bit Y would drop its high byte and read the wrong page.
+        a.hexs('09 00 60')               # ora #$6000
+        a.hexs('9D 00 0B E8 E8')         # sta $0b00,x / inx inx
+        a.hexs('E2 20 A9 80 9D 00 0B E8')  # sep / lda #$80 / sta / inx ($2115)
+        a.hexs('A9 20 9D 00 0B E8')      # lda #$20 / sta / inx (32 bytes)
+        a.hexs('C2 30 A5 1E')            # rep / lda $1e: the pool offset
+        if off_extra:
+            a.hexs('18 69 %02X 00' % off_extra)        # clc / adc #32
+        a.hexs('A8')                     # tay
+        for _ in range(16):              # 16 words: the pair, from DBR:$8000+Y
+            a.hexs('B9 00 80 9D 00 0B E8 E8 C8 C8')
+    a.hexs('8E DF 09')                   # stx $09df
+    a.hexs('E2 20 A9 03 48 AB')          # sep / lda #$03 / pha / plb (DBR back)
+    a.label('pick')
+    # $22/$23 = the chosen half's pair: half 0 is the left pair, 1 the right
+    a.hexs('A5 18 29 01')                # lda $18 / and #$01
+    a.hexs('D0 0A')                      # bne useright
+    a.hexs('A3 04 85 22 1A 85 23')       # lda $04,s / sta $22 / inc a / sta $23
+    a.jmp_to('fin')
+    a.label('useright')
+    a.hexs('A3 02 85 22 1A 85 23')       # lda $02,s / sta $22 / inc a / sta $23
+    a.jmp_to('fin')
+    return a.done()
+
+
+def build_itemmsg():
+    """The item name a battle message pastes in: the drawer's $DE branch.
+
+    v23 gave the item names their own code -- [$DE][8x16 id], glyphs in the
+    table at $3F:8000 -- because the status screen's three values cannot share
+    the pool.  The message drawer only knows the Chinese page codes, so a name
+    pasted into a battle message came out as FA[$de] and FA[id]: two wrong
+    glyphs per hanzi, the four fragments in the user's screenshot.
+
+    Entered by JML from the drawer's dispatch with A = $12 = $DE, so PBR is $3E
+    and an RTS would return into the wrong bank: every exit is a JML into bank
+    $03, and the stack must be left exactly as the drawer's own paths leave it
+    because those exits RTS straight to the consumer.
+
+    The glyph is 8x16 (one column, tiles t/t+1), so the column advances once --
+    $03:FA7A does that -- and the id byte is eaten with INC $03E9, exactly like
+    the drawer's own two byte codes.  The slot is SLOT0 + (column & 3): the
+    glyphs of one name sit in four consecutive columns, so their low bits are
+    always distinct and four name pairs are enough.
+    """
+    SLOT0 = SLOTS + LABEL_GLYPHS * LABEL_SETS
+    lo, loh = snes_of_rom(E3_SLOTPAIR), snes_of_rom(E3_SLOTHI)
+    a = Asm(ITEMMSG_ROM)
+
+    a.hexs('08 E2 30 8B')                # php / sep #$30 / phb
+    # room for the 36 byte tile entry and the two 8 byte cells?
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - 44))
+    a.far_rel(0xB0, 'deter', 'ies')      # bcs deter: retry next frame
+    # slot = SLOT0 + ($036f & 3)
+    a.hexs('AD 6F 03 29 03')             # lda $036f / and #$03
+    a.hexs('18 69 %02X' % SLOT0)         # clc / adc #SLOT0
+    a.hexs('C2 20 29 FF 00 AA')          # rep #$20 / and #$00ff / tax
+    a.hexs('E2 20')                      # sep #$20
+    a.hexs('BF %02X %02X %02X' % (loh[1] & 0xFF, loh[1] >> 8, loh[0]))
+    a.hexs('EB')                         # xba
+    a.hexs('BF %02X %02X %02X' % (lo[1] & 0xFF, lo[1] >> 8, lo[0]))
+    a.hexs('C2 20 48')                   # rep #$20 / pha: the pair's upper tile
+    a.hexs('AE DF 09')                   # ldx $09df (the queue cursor)
+    # 32 bytes to VRAM word $6000 + tile * 8, from $3F:8000 + id * 32
+    a.hexs('E2 20 A3 01')                # sep / lda $01,s (the tile low byte)
+    a.hexs('C2 30 29 FF 00 0A 0A 0A')    # rep #$30 / and / asl x3 -> tile * 8
+    a.hexs('09 00 60')                   # ora #$6000
+    a.hexs('9D 00 0B E8 E8')             # sta $0b00,x / inx inx
+    a.hexs('E2 20 A9 80 9D 00 0B E8')    # sep / lda #$80 / sta / inx ($2115)
+    a.hexs('A9 20 9D 00 0B E8')          # lda #$20 / sta / inx (32 bytes)
+    a.hexs('AD E9 03 1A A8')             # lda $03e9 / inc a / tay
+    a.hexs('B9 EA 03')                   # lda $03ea,y (the glyph id)
+    a.hexs('C2 30 29 FF 00')             # rep #$30 / and #$00ff
+    for _ in range(5):
+        a.hexs('0A')                     # asl x5 -> id * 32
+    a.hexs('A8')                         # tay
+    a.hexs('E2 20 A9 3F 48 AB')          # sep / lda #$3f / pha / plb
+    for _ in range(16):                  # 16 words: the glyph, from DBR:$8000+Y
+        a.hexs('B9 00 80 9D 00 0B E8 E8 C8 C8')
+    a.hexs('E2 20 A9 03 48 AB')          # sep / lda #$03 / pha / plb
+    # the two cells at (row $036e, column $036f), like the drawer's own writer
+    a.hexs('E2 30 AC 6E 03')             # sep #$30 / ldy $036e
+    a.hexs('B9 8E FA 18 6D 6F 03')       # lda $fa8e,y / clc / adc $036f
+    a.hexs('9D 00 0B E8')                # sta $0b00,x / inx
+    a.hexs('B9 7E FA 69 00 9D 00 0B E8')  # lda $fa7e,y / adc #0 / sta / inx
+    a.hexs('A9 81 9D 00 0B E8')          # lda #$81 / sta / inx (VMAIN $81)
+    a.hexs('A9 04 9D 00 0B E8')          # lda #$04 / sta / inx (two words)
+    a.hexs('C2 20 A3 01')                # rep #$20 / lda $01,s (the tile)
+    a.hexs('09 00 24 9D 00 0B E8 E8')    # ora #$2400 / sta / inx inx
+    a.hexs('1A 9D 00 0B E8 E8')          # inc a (tile + 1) / sta / inx inx
+    a.hexs('8E DF 09')                   # stx $09df
+    a.hexs('EE E9 03')                   # inc $03e9 (consume the id byte)
+    a.hexs('E2 20 68 68')                # sep #$20 / pla x2 (the tile)
+    a.hexs('AB 28')                      # plb / plp
+    a.long_to(0x01FA7A)                  # jml $03:fa7a (inc $036f / rts)
+    # ---- not enough queue room: give the frame back -------------------------
+    a.label('deter')
+    a.hexs('AD E9 03 3A 8D E9 03')       # lda $03e9 / dec a / sta $03e9
+    a.hexs('AB 28')                      # plb / plp
+    a.long_to(0x01FA7D)                  # jml $03:fa7d (plain rts)
+    return a.done()
+
+
 def build_itemdrawer():
     """Item names on the status screen: the hook at CPU $01:FCA5.
 
@@ -2034,7 +2432,8 @@ def build_labeldrawer():
     a.label('lab')
     a.op(0x85, 0x1F)                       # STA $1F        (the slot)
     a.op(0x5A)                             # PHY
-    a.op(0xBF, 0x9E, 0xFA, 0x03)           # LDA $03FA9E,X  (the 8x16 glyph id)
+    _b3, _a3 = snes_of_rom(STATUS_LABEL_ID_TABLE)
+    a.op(0xBF, _a3 & 0xFF, _a3 >> 8, _b3)  # LDA $3E:LABELID,X (the 8x16 glyph id)
     a.op(0xC2, 0x30, 0x29, 0xFF, 0x00)     # REP #$30 / AND #$00FF
     for _ in range(5):
         a.op(0x0A)                         # ASL x5 -> id*32
@@ -2196,8 +2595,15 @@ def build_drawer_copy():
     a.rel(0x90, 'occ')                     # bcc occ
     a.hexs('C9 %02X' % (PREFIX0 + PAGES))  # cmp #$c0+pages
     a.far_rel(0x90, 'setc', 'setc')        # bcc setc (too far for rel now)
-    a.hexs('C9 %02X' % FIXED0)             # cmp #$dc
+    a.hexs('C9 %02X' % FIXED0)             # cmp #$df: FIXED0.. ends the CN range
     a.rel(0x90, 'occ')                     # bcc occ (unused code space)
+    if ITEMSG:
+        # BEQ on the PREVIOUS cmp would test $12 == FIXED0, and with FIXED_N=1
+        # that is the dash code $DF - every dash would land in the item-name
+        # branch (verify16: 2688 failures, all on $DF entries, the drawer
+        # drawing the name slot pair).  The item code needs its own compare.
+        a.hexs('C9 %02X' % ITEM_PREFIX)    # cmp #$de: the item name code
+        a.far_rel(0xF0, 'itemmsg', 'im')       # beq itemmsg: a pasted item name
     a.hexs('C9 %02X' % (FIXED0 + FIXED_N))  # cmp #$e0
     a.far_rel(0x90, 'setf', 'setf')        # bcc setf (too far for rel now)
     a.label('occ')
@@ -2472,6 +2878,11 @@ def build_drawer_copy():
     a.hexs('E2 30 68 68')                  # sep #$30 / pla pla
     a.hexs('EE E9 03')                     # inc $03e9
     a.long_to(0x01FA7A)                    # jml $03:fa7a
+
+    if ITEMSG:
+        # the $DE dispatch lands here and never comes back (see build_itemmsg)
+        a.label('itemmsg')
+        a.long_to(ITEMMSG_ROM)                 # jml $3e:d400
     return a.done()
 
 
@@ -2530,7 +2941,9 @@ def _band_stub(rom_at):
 
 
 STALEROW_STUB = 0x1F4400               # $3E:C400  wipe the stale rows above
-STALEROW_ON = os.environ.get('STALEROW', '1') != '0'
+# The old delta-row heuristic also erases fresh dialogue after F2 + blank fill.
+# Keep it opt-in for A/B diagnostics only; actual row-start/explicit clears remain.
+STALEROW_ON = os.environ.get('STALEROW', '0') != '0'
 
 
 def _stalerow_body(a, extra, tag):
@@ -3103,6 +3516,8 @@ def main():
              len(set().union(*windows))))
     PAGES = max(1, -(-(len(enc.slot) - FIXED_N) // max(1, SLOTS - FIXED_N)))
     while True:
+        if POOL_ROM + PAGES * 0x8000 > CODE_ROM or PREFIX0 + PAGES > ITEM_PREFIX:
+            raise SystemExit('glyph pool overlaps code bank or item prefix')
         try:
             enc.pack_pool()
             break
@@ -3218,6 +3633,9 @@ def main():
                'stalerow': bool(STALEROW_ON),
                'cmdwin': int(CMDWIN),
                'hud_orig': bool(HUD_ORIG),
+               'hudfix': bool(HUDFIX), 'hud_bar_shared': bool(HUDFIX),
+               'itemsg': bool(ITEMSG), 'pace': PACE, 'pace_counter': PACE_FRAMES,
+               'label_sets': LABEL_SETS, 'label_name_glyphs': LABEL_NAME_GLYPHS,
                'fixed': {k: v for k, v in FIXED_CODES.items()},
                'fixed0': FIXED0,
                'fixed_n': FIXED_N,
@@ -3228,6 +3646,28 @@ def main():
     # ---- 4. write the ROM
     rom = bytearray(open(SRC_ROM, 'rb').read())
     assert len(rom) == 0x200000
+
+    if os.environ.get('BASE_ONLY') == '1':
+        # Layer-coverage build: skip every layer and land back on the baseline -
+        # which is the original ROM plus the 2 MB padding and the header, so the
+        # checksum path below reproduces it byte for byte.  check_layers.py
+        # diffs this against the original to prove the layer switches are
+        # complete (a layer not gated on BASE_ONLY would show up here).
+        rom[0x7FDC:0x7FE0] = b'\x00\x00\x00\x00'
+        t = sum(rom) & 0xFFFF
+        chk = (t + 0x1FE) & 0xFFFF
+        rom[0x7FDC] = (chk ^ 0xFFFF) & 0xFF
+        rom[0x7FDD] = (chk ^ 0xFFFF) >> 8
+        rom[0x7FDE] = chk & 0xFF
+        rom[0x7FDF] = chk >> 8
+        rom[0x7FD7] = 0x0B
+        ver = sum(rom) & 0xFFFF
+        assert ver == chk, (hex(ver), hex(chk))
+        out = os.environ.get('OUT_ROM', OUT_ROM)
+        open(out, 'wb').write(rom)
+        print('BASE_ONLY build: %s written (baseline == original + header, '
+              'all layers skipped)' % out)
+        return
 
     pool = bytearray(PAGES * 0x8000)
     for ch in enc.order:
@@ -3269,6 +3709,45 @@ def main():
     rom[ITEM_HOOK:ITEM_HOOK + 4] = bytes([0x5C, _ad & 0xFF, _ad >> 8, _bk])
     print('item names: %d bytes at $%02X:%04X, hooked at $%04X'
           % (len(icode), _bk, _ad, ITEM_HOOK))
+
+    # ---- the battle HUD's name plate (see HUDNAME_HOOK) ---------------------
+    hcode = build_hudname() if HUDFIX else b''
+    if HUDFIX:
+        # Same bar pixels, same palettes, one shared set of nine font tiles.
+        # $14 only selects +$10 for NPC bar tiles; $19 still selects palette.
+        for tile in range(0xE7, 0xF0):
+            a0, b0 = FONT_ROM + tile * 16, FONT_ROM + (tile + 0x10) * 16
+            assert rom[a0:a0+16] == rom[b0:b0+16], 'HP bitmap dedup precondition'
+        assert rom[0xAD9:0xADB] == bytes.fromhex('A9 10')
+        assert rom[0xB77:0xB79] == bytes.fromhex('A9 F7')
+        rom[0xADA] = 0x00  # both player/NPC bars use E7..EF, not F7..FF
+        rom[0xB78] = 0xE7  # NPC empty segment also uses shared set
+        assert HUDNAME_ROM + len(hcode) <= DISPATCH_ROM, \
+            'the HUD name hook overruns the dispatch routine'
+        _p = bytes.fromhex('A418B9461B AABF9EFA03 8522 BF9EFB03 8523')
+        assert rom[HUDNAME_HOOK:HUDNAME_HOOK + 18] == _p, \
+            'the HUD name hook site: ' + rom[HUDNAME_HOOK:HUDNAME_HOOK + 18].hex(' ')
+        rom[HUDNAME_ROM:HUDNAME_ROM + len(hcode)] = hcode
+        _bk, _ad = snes_of_rom(HUDNAME_ROM)
+        rom[HUDNAME_HOOK:HUDNAME_HOOK + 4] = bytes([0x22, _ad & 0xFF, _ad >> 8, _bk])
+        for _i in range(4, 18):                # the JSL returns here, then slides
+            rom[HUDNAME_HOOK + _i] = 0xEA      # through the NOPs into the PLX
+        print('HUD name plate: %d bytes at $%02X:%04X, hooked at $%04X'
+              % (len(hcode), _bk, _ad, HUDNAME_HOOK))
+    else:
+        print('HUD name plate: OFF (HUDFIX=1 to enable)')
+
+    # ---- the item name a battle message pastes in (see ITEMMSG_ROM) ---------
+    if ITEMSG:
+        mcode = build_itemmsg()
+        assert ITEMMSG_ROM >= HUDNAME_ROM + len(hcode),         'the item message hook overlaps the HUD name hook'
+        assert ITEMMSG_ROM + len(mcode) <= DISPATCH_ROM,         'the item message hook overruns the dispatch routine'
+        rom[ITEMMSG_ROM:ITEMMSG_ROM + len(mcode)] = mcode
+        _bk, _ad = snes_of_rom(ITEMMSG_ROM)
+        print('item name in messages: %d bytes at $%02X:%04X, drawer branches at $DE'
+              % (len(mcode), _bk, _ad))
+    else:
+        print('item name in messages: OFF (ITEMSG=1 to enable)')
     if os.environ.get('LITERALFIX', '0') == '1':
         lfix, lfix_tiles = build_literalfix()
     else:
@@ -3317,6 +3796,47 @@ def main():
     rom[LABEL_HOOK:LABEL_HOOK + 4] = bytes([0x5C, _ad2 & 0xFF, _ad2 >> 8, _bk2])
     print('status labels: %d bytes at $%02X:%04X, hooked at $%04X'
           % (len(lcode), _bk2, _ad2, LABEL_HOOK))
+
+    # ---- the drawer's pacing gate (v37) --------------------------------------
+    # The engine types at about one cell per frame on its own, so a three line
+    # message flashed past in roughly a second and a half and the box pushed its
+    # oldest row out the moment a new one began - nothing stayed readable (user
+    # report, 2026-09-25: "第二行会显示被跳过的很快").  Two earlier patches here
+    # were measured on real traces to have changed nothing (see build_pace for
+    # why: $00:9AB6 is the queue allocator, and $00:FFBE is a ROM constant), so
+    # both are gone and the real gate is in: one character every PACE frames,
+    # A/B held fast-forwards.  The gate paces the box-full scroll too, because a
+    # row is only pushed when the next one starts typing - a slow typewriter
+    # keeps every line on screen for seconds before it moves.
+    pcode = build_pace()
+    for lo, hi, what in ((ITEMMSG_ROM, ITEMMSG_ROM + 0x400, 'the item message hook'),
+                         (DISPATCH_ROM, DISPATCH_ROM + 0x400, 'the dispatch')):
+        assert PACE_ROM >= hi or PACE_ROM + len(pcode) <= lo,             'the pace gate overlaps %s' % what
+    rom[PACE_ROM:PACE_ROM + len(pcode)] = pcode
+    _bkp, _adp = snes_of_rom(PACE_ROM)
+    assert rom[PACE_HOOK:PACE_HOOK + 6] == bytes([0xA9, 0x08, 0x22, 0xB6, 0x9A, 0x00]),         'pace hook site: ' + rom[PACE_HOOK:PACE_HOOK + 6].hex(' ')
+    rom[PACE_HOOK:PACE_HOOK + 6] = bytes([0x22, _adp & 0xFF, _adp >> 8, _bkp, 0xEA, 0xEA])
+    print('typewriter pace: %d bytes at $%02X:%04X, hooked at $03:EEE5, '
+          'one char per %d message ticks, held A/B fast-forwards'
+          % (len(pcode), _bkp, _adp, PACE))
+
+    # ---- idle auto-continue knob (EXPERIMENTAL, default = original) ----------
+    # When a message block ends the engine waits for A; if none comes within
+    # #$F0 = 240 engine passes it wipes the box and continues on its own.  The
+    # logic loop runs at 30 Hz, so that is 480 real frames = 8 s of dead air,
+    # and the field-trace gaps between message blocks are 570-720 real frames.
+    # Shortening it to 120 passes was BUILT AND MEASURED to make things WORSE:
+    # the early wipe lands inside the scene driver's own wait, and the pauses
+    # grew from 570-720 to 900+ real frames (hw/_chain_v38.log, three ~900 frame
+    # stalls, none in the v37 chain over the same input).  The default below
+    # leaves the engine byte untouched; IDLEPASS=120 replays the failed
+    # experiment for forensics.
+    IDLEPASS = int(os.environ.get('IDLEPASS', '240'))
+    if IDLEPASS != 240:
+        _idlec = 0x01EED7
+        assert rom[_idlec:_idlec + 2] == bytes([0xC9, 0xF0]),             'idle auto-continue site: ' + rom[_idlec:_idlec + 2].hex(' ')
+        rom[_idlec + 1] = IDLEPASS & 0xFF
+        print('idle auto-continue: $03:EED8 waits 240 -> %d passes (EXPERIMENTAL)'             % IDLEPASS)
 
     for (start, end), (table_off, count) in zip(REGIONS, TABLES):
         if table_off in NO_TRANSLATE:
@@ -3510,10 +4030,13 @@ def main():
     print('checksum 0x%04X / complement 0x%04X ; verify sum&FFFF = 0x%04X'
           % (chk, chk ^ 0xFFFF, ver))
 
-    open(OUT_ROM, 'wb').write(rom)
+    out_rom = os.environ.get('OUT_ROM', OUT_ROM)
+    open(out_rom, 'wb').write(rom)
     n = make_ips(open(ORIG_ROM, 'rb').read(), bytes(rom), OUT_IPS)
-    print('wrote %s (IPS: %d records)' % (os.path.basename(OUT_ROM), n))
+    print('wrote %s (IPS: %d records)' % (os.path.basename(out_rom), n))
 
 
 if __name__ == '__main__':
+    if os.environ.get('PYTHONHASHSEED') != '0':
+        raise SystemExit('Set PYTHONHASHSEED=0 before launching the builder (deterministic tile allocation).')
     main()

@@ -1,0 +1,342 @@
+# 当前修复：v39-rc3 / 文本框底边漂移 / CRC32 AB1795B9
+
+**纠正历史结论：文本框底边漂移不是“原版固有行为”。** 旧打字倒计时借用 `$03C4`，但它是 BG3 HDMA 表最后一条记录的水平滚动低字节；HDMA 在扫描线216读取它。新版本改用原引擎逐条消息清零的 `$03E7`。原版和修复版在正常打字测试中底边 HScroll 恒为0；rc2为0～6。按住A/B会将旧倒计时清零，掩盖此bug。
+
+ROM仅8字节改变：4处地址操作数 + 4字节校验和；字库、翻译、PACE6、已有HUD修复不变。18 PASS + 1 INFO；Mesen/Snes9x 1.63核心逐帧图像A/B通过；Mesen分段冷启动/游戏操作22360帧。完整说明见 `notes/修复记录_GPT_v39-rc3.md`。仍不是全流程验收，也没有完成残留日文/状态页字体修复。请冷启动，不读取rc2即时存档中的错误滚动量。F盘旧发布物及玩家存档未改。
+
+---
+
+# 当前优先状态：v39-rc2 / CRC32 DADB84AB
+
+已用无头 Mesen 冷启动进入实际游戏：旅馆移动、Start、状态页、走廊、电梯、大厅战斗及 NPC 台词。主路线 22360 帧，分支 2400 帧。修复错误残留行擦除、held A/B 节拍、中文池覆盖生命条；9 条文本校订。17 PASS + 1 INFO，当前工程回写后须复核。
+仍未完成：存档/命名 UI、状态页字形与状态词、商店/非空道具列表/长剧情、最终双核心验收。F 盘旧 ROM 未替换，玩家存档未修改。完整说明见 notes/修复记录_GPT_v39-rc2.md；重放入口 tools/replay_mesen_route.py + hw/regression_routes。
+
+---
+
+# 初代热血硬派（SFC）汉化 — 交接文档（致 GPT）
+
+
+
+> **2026-09-28 接管校正：以下 v38/更旧结论是历史记录，不是最终验收结论。**
+
+> 新候选版 **v39-rc1 / CRC32 990A69F4**：修复战斗 HUD 的 JML/RTL 返回错误、第二字/空白对定位、
+
+> 上传时覆盖调用者队列头及游标回写；补齐校验器的失败退出、指定目标、隔离构建与完整调用链测试。
+
+> Mesen 完整 HUD 定向 A/B：v38 六场景失败，候选版六场景通过。16 项自动检查通过，另 1 项仅信息报告。
+
+> **仍未通过自然战斗/状态屏联测、NMI/同屏压力、双核心最终验收；文件命名界面仍未汉化。**
+
+> 当前工程使用候选版；F 盘旧交付未更新。详见 `notes/修复记录_GPT_20260928.md`。
+
+
+
+
+
+> 2026-09-25。任务从上一任（Claude/ZCode 会话）移交给 GPT。
+
+> 请先读完这份文档再动手。**改动前必读 `notes/current-state.md`（936 行，权威状态），
+
+> 它比本文档细；两处冲突以 current-state.md 为准。**
+
+
+
+---
+
+
+
+## 0. 一句话现状
+
+
+
+汉化本体已完成并交付（v38，CRC32 `23A46750`）：全部对白/菜单/状态屏/道具名中文，
+
+打字节奏可调，战斗 HUD 名字牌与消息内道具名已启用，16 项自动校验全绿，
+
+模拟器端到端实测无冻结。**当前阶段 = 实机验收 + 少量待确认项**，不是从头开发。
+
+
+
+## 1. 红线（违反即失去信任，全部是甲方原话或实测结论）
+
+
+
+1. **不要 taskkill snes9x** —— 那是甲方在玩的游戏窗口。自己启动的 EmuHawk/Mesen 可关。
+
+2. **不要改 snes9x 的 `Key:FastForwardToggle`** —— 改过一次导致启动秒退。三倍速用
+
+   `TurboFrameSkip = 2`（已配好）。
+
+3. **`dl/roms/kuniokun__SF8127.smc`（日版原版）绝对只读**。
+
+4. **发布物 = IPS 补丁 + 文档，不含 ROM**；GitHub 仓库私密（甲方："私密仓库只能我看"）。
+
+5. 构建必须 `PYTHONHASHSEED=0`，否则集合迭代导致瓦片账每次不同（曾有外部模型因此翻车）。
+
+6. 双模拟器验收是**最后一步**（甲方明确），核心与前端都不同的两个模拟器才算。
+
+7. 甲方会自己实机测试并截图报 bug；**同一截图可能混多个问题、可能对应旧构建**，
+
+   先拆问题、先确认他跑的是哪个 CRC。
+
+8. **测试与结论必须动态实测**（Mesen2 无头 / 端到端），纯静态反汇编已多次翻车（见 §6）。
+
+
+
+## 2. 路径与产物
+
+
+
+| 用途 | 路径 |
+
+|---|---|
+
+| 工程目录 | `C:\Users\<user>\.zcode\workspace\default\sfc-recon`（git 私密仓库） |
+
+| 原版 ROM（只读） | `dl\roms\kuniokun__SF8127.smc`（1MB，CRC32 `56C05339`） |
+
+| 构建基线 | `work_kuniokun_2mb.smc` = 原版+1MB 零填充+档头 3 字节（`make_base.py` 生成，CRC32 `DE95E688`） |
+
+| 构建输出 | `kuniokun_cn.smc` + `kuniokun_cn.ips` |
+
+| 实机测试 | `F:\emulators\snes9x\Roms\kunio_cn_v38.smc` + `Saves\kunio_cn_v38.srm` |
+
+| 交付目录 | `F:\BaiduNetdiskDownload\SFC deepseek\初代热血硬派-汉化\`（`kuniokun_cn.v38.smc/.ips` + 无版本号 `kuniokun_cn.smc/.ips` = ipsverify 的比对对象，**两者必须同步更新**） |
+
+| Mesen2 | `F:\emulators\mesen2\Mesen.exe`（无头：`--testRunner <script.lua> <rom> --doNotSaveSettings`） |
+
+| EmuHawk | `F:\emulators\bizhawk\EmuHawk.exe --lua=hw/xxx.lua <rom绝对路径>` |
+
+
+
+**当前交付 = v38，CRC32 `23A46750`，sha1 `ad17c999f19e19f8685d75a4db82c950831bcdfd`。**
+
+工作区 / snes9x / 网盘三处已核对一致。
+
+
+
+## 3. 常用命令
+
+
+
+```bash
+
+# 构建（必须固定哈希种子）
+
+PYTHONHASHSEED=0 python cnbuild5.py            # 默认 = 交付配置（钩子 ON）
+
+HUDFIX=0 ITEMSG=0 python cnbuild5.py           # 关两个钩子
+
+BASE_ONLY=1 OUT_ROM=xxx.smc python cnbuild5.py # 纯原版对照（=原版逐字节）
+
+PACE=8 python cnbuild5.py                      # 打字节奏旋钮（默认 6）
+
+
+
+# 校验（16 项，必须全绿才算可交付）
+
+python verify_all.py
+
+
+
+# 单项
+
+python test_pace.py          # 打字节拍门模型测试
+
+python ipsverify.py          # IPS 往返（比对网盘无版本号对，必须 identical: True）
+
+python check_layers.py       # base/off/on 三档开关组合扫描
+
+
+
+# 模拟器取证（都是无头，日志落在 hw/）
+
+MSGTAG=x Mesen.exe --testRunner hw/mesen_msg.lua <rom>      # 消息引擎全状态 trace
+
+FLDTAG=x FLDMAX=12000 Mesen.exe --testRunner hw/mesen_field.lua <rom>   # 走到对话量节奏
+
+CHANTAG=x CHAINSEG=1 CHAINFRAMES=9000 Mesen.exe --testRunner hw/mesen_chain.lua <rom>
+
+#   ↑ 分段接力（savestate 续跑），绕开 testRunner ~20 分钟墙钟崩溃；AMASH=1=空闲期连打A
+
+BOXTAG=x BOXF=1800 Mesen.exe --testRunner hw/shotat.lua <rom>  # 到指定帧截图
+
+HW_TAG=x EmuHawk.exe --lua=hw/band.lua <rom绝对路径>            # BizHawk 实机 A/B
+
+
+
+# 解 snes9x 即时存档（甲方 Shift+F1 的 .001）
+
+python read_frz.py <Saves/kunio_cn_v38.001> <outdir>
+
+#   VRA=64KB VRAM；RAM=128KB（前 0x10000=$7E，后 0x10000=$7F）
+
+```
+
+
+
+## 4. 版本链（每版一个主题，细节全在 current-state.md）
+
+
+
+| 版 | 主题 | CRC32 |
+
+|---|---|---|
+
+| v29 | 状态屏 `-- STATUS --` 行搬到池够不到的瓦片 | `3DDA0839` |
+
+| v30 | 状态标签不再写 FA 表（独立表 `$3E:CF00`） | `53E877CD` |
+
+| v31 | ~~打字机 8→16 帧~~（后被证伪为空操作） | `779BC5EE` |
+
+| v32-v34 | HUD 名字牌钩子（默认 OFF）+ `$1E` 压栈保护 + 队列空门控 | `576A3152` |
+
+| v35 | 钩子全关 = v31 字节级 | `779BC5EE` |
+
+| v36 | ~~系统消息计时器 40→100~~（后被证伪为死代码） | `E48AF0DF` |
+
+| v37 | **打字节拍门** `build_pace()`（PACE=6，A/B 快进，补空旁路） | `9E044054` |
+
+| **v38** | **HUD 名字牌 + 消息道具名启用**（修 BEQ 借标志 bug） | **`23A46750`** |
+
+
+
+## 5. v38 里装了什么（层清单，全部有开关）
+
+
+
+| 层 | 开关 | 钩位 | 校验 |
+
+|---|---|---|---|
+
+| 文本重编码/字形池/排版 | 总是 | `$01:FA30` → `$3E:8200` 抽屉 | check16/verify16 |
+
+| 状态屏标签（烘焙 8×16 汉字） | `STATUS_LABELS=1` | `$01:F9BC` → `$3E:CC00` | test_labeldraw |
+
+| 道具名（状态屏 8×16 表 `$3F:8000`） | 总是 | `$01:FC79` → `$3E:C800` | test_itemdraw |
+
+| 残留行擦除 | `STALEROW=1` | 抽屉内 JSL `$3E:C400` | test_stalerow |
+
+| 选择框 是/否 | 总是 | 烘焙瓦片 44-4F | checkchoice |
+
+| 命令窗标签 | `CMDWIN=2` | `$03:F841` → `$3E:C600` | test_menuload |
+
+| 菜单关闭清行 ×3 | CMDWIN≥1 | `$1F85B/$1F706/$1FCC8` | test_menuclose |
+
+| **打字节拍门** | `PACE`（默认 6；=1 透明） | `$03:EEE5` → `$3E:9800` | test_pace |
+
+| **战斗 HUD 名字牌** | `HUDFIX=1`（交付=ON） | `$00:8C91` → `$3E:D000` | test_hudname |
+
+| **消息内道具名** | `ITEMSG=1`（交付=ON） | 抽屉 `$DE` 分支 → `$3E:D400` | test_itemmsg |
+
+| 闲置自动继续 | `IDLEPASS`（默认 240=原版；**别改**） | `$03:EED8` | — |
+
+
+
+## 6. 硬教训（前任用真实模拟器验证过的，别再踩）
+
+
+
+1. **`$00:9AB6` 不是"等 N 帧"** —— 是 $0B00 上传队列的空间分配器。v31 改它的参数 = 空操作。
+
+2. **`$00:FFBE` 是 ROM 头部区常量 0x00**（LoROM：`$00:FFBE`=文件 0x7FBE）→ 读它的 6 处代码全死。v36 改它 = 无效补丁。
+
+3. **`$0322` 不能当帧计数器** —— 只在部分主循环路径递增。v37 第一版用它导致"只有按 A 才出字"，模型测试测不出，端到端才抓到。
+
+4. **引擎逻辑循环 = 30Hz**（每 2 真帧一轮）。`$03A9`、擦屏 4 段 ~8 帧、打字 1 格/轮，全部吻合。
+
+5. **cmp 与 branch 之间插代码会换标志** —— v38 修复：`BEQ itemmsg` 借用了前面 `CMP #$df`（FIXED0）的标志，导致所有"—"（466 处）被送进道具名分支画成乱码。
+
+6. **闲置自动继续 240 轮不能砍** —— v38 实验砍到 120：提前擦屏落进场景驱动器自己的等待，停顿反噬 570-720→900+ 真帧。
+
+7. **"文本框漂移" = 框随场景横滚移动，原版固有**。同相位帧（F=1900）两版逐像素一致。教训：**对比两版截图必须先对齐 scroll 相位**（量 `$0903/$0904`），否则滚动相位差会伪造"位移回归"。
+
+8. **过场停顿的正确解法 = 按住 A**（`$03:EB07` 每轮检查 bit6；连打 A 跑 27000 帧零停顿）。停顿大多无光标提示，玩家不知道能按。
+
+9. Mesen2 `--testRunner` 有 **~20 分钟墙钟上限**（无声退出）。长流程用 `hw/mesen_chain.lua` 分段接力；savestate 的 save/load 都必须在 exec 回调里（挂 `$00:F2AA` 主循环路过点）。
+
+10. 活动画面期（消息框/战斗 HUD）**不能直接 DMA VRAM**——必须走引擎 `$0B00` 队列（条目 `[vmadd 2B][$2115 1B][count 1B][data...]`，游标 `$09DF`）。只有强制消隐期（状态屏）才能直传。
+
+11. 新汇编必须配"跑真实例程的模型测试"（用项目自带 `sim65816.py`）。它一轮抓出过 3 个真 bug。
+
+
+
+## 7. 待办（按优先级）
+
+
+
+1. **甲方实机验收 v38**：战斗 HUD 名字牌（已看过一次说正常）、装备消息里的道具名、
+
+   破折号消息（"呼————！"）、打字节奏（PACE 旋钮可调，嫌快/慢报数字）。
+
+2. **战斗冻结档**：如果甲方报战斗内异常，让他 `Shift+F1` 存档，`read_frz.py` 解包后
+
+   用 `hw/mesen_freeze.lua`/`mesen_pause.lua` 复现。HUD 钩子的实机验证目前只有模型测试背书。
+
+3. **"道具没有带" toast 的停留时长**：打字变慢后自然变长；若仍嫌快，需要冻结档定位
+
+   它的擦除点（词表条目在 `0x01E4CE` idx12，消息脚本格式）。
+
+4. **双模拟器验收**（最后）：两个核心不同的模拟器各跑一遍。
+
+5. 低优先级：把 v37/v38 的成果（打字节拍门、队列分配器结论）写进
+
+   `sfc-localization` 技能仓库（私密，`~/.zcode/skills/sfc-localization/`）。
+
+
+
+## 8. 工程结构与关键文件
+
+
+
+```
+
+sfc-recon/
+
+├─ cnbuild5.py          # 唯一构建脚本（~4000 行，所有层都在里面，层清单见 §5）
+
+├─ verify_all.py        # 16 项校验的总入口
+
+├─ sim65816.py          # 65816 模拟器（自研；PHK 已补）；模型测试共用
+
+├─ test_*.py            # 各层的模型测试（跑真实例程逐字节核对）
+
+├─ check_layers.py      # base/off/on 三档组合扫描
+
+├─ notes/
+
+│  ├─ current-state.md  # ★ 权威状态（936 行）：根因/修法/实测数据/坑
+
+│  └─ layers.md         # 层清单 + 开关
+
+├─ hw/                  # 模拟器脚本（Mesen2 lua + BizHawk lua）+ 取证日志
+
+│  ├─ mesen_chain.lua   # 分段接力（含 AMASH 实验开关）
+
+│  ├─ mesen_field.lua   # 走到 NPC 对话量节奏
+
+│  ├─ boxscan/shotat/vramall.lua   # 框区取证三件套
+
+├─ dl/roms/kuniokun__SF8127.smc   # 原版（只读！）
+
+├─ work_kuniokun_2mb.smc          # 构建基线
+
+└─ 交接文档_GPT.md                # 本文件
+
+```
+
+
+
+## 9. 验收标准（甲方原话转述）
+
+
+
+- 无乱码、无遗漏未翻译项（台词/菜单/状态屏/道具名/提示）
+
+- 术语统一、语义准确、符合中文表达
+
+- 打字节奏可读；过场等待可按 A 跳过
+
+- 交付 = IPS + 文档，不含 ROM；仓库私密
+
+- 最后一步：两个不同核心的模拟器都能跑通开局 → 战斗 → 状态屏

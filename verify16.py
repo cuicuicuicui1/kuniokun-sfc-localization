@@ -11,6 +11,7 @@
 
 Usage: python -u verify16.py
 """
+from pathlib import Path
 import json
 
 import kuniokun_map as km
@@ -19,7 +20,7 @@ cb.load_build_params()   # the switches this ROM was built with
 import sim65816
 import cnglyph
 
-BASE = 'C:/Users/<user>/.zcode/workspace/default/sfc-recon'
+BASE = str(Path(__file__).resolve().parent)
 
 rom = open(cb.OUT_ROM, 'rb').read()
 orig = open(cb.ORIG_ROM, 'rb').read()
@@ -992,3 +993,5 @@ else:
                 print('   foreign record kept off the label pairs')
 
 print('ALL CHECKS PASSED' if not fails else '%d FAILURES' % len(fails))
+
+raise SystemExit(1 if fails else 0)

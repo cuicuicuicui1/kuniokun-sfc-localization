@@ -12,6 +12,7 @@ The slot comes from the cursor: base 0 for $79c6 and one per column after
 column 6, so the glyphs of one value must land in slots 0, 1, 2, ... and never
 share a tile pair.  $7a06 and $7a46 must shift the base to 12 and 24.
 """
+import json
 import sys
 import sim65816 as S
 import kuniokun_map as km
@@ -20,7 +21,8 @@ rom = open('kuniokun_cn.smc', 'rb').read()
 SLOTPAIR_ROM = 0x1F0180
 GLYPH_ROM = 0x1F8000
 TABLE = 0x1DBC3
-N_ENT = 36 + 2 * 3 + 2 * 1          # SLOTS + label sets + name sets
+_par = json.load(open('cn_build_params.json', encoding='utf-8'))
+N_ENT = _par['slots'] + 2 * _par['label_sets'] + _par['label_name_glyphs']
 ITEM_BASE0 = 24                     # the item values start above the
 ITEM_SPAN = 4                       # status labels' slots 0..22
 
@@ -69,12 +71,14 @@ def run(record, cursor):
 
     cpu.dma_visible = True   # the uploads are DMA; watch them like CPU writes
     cpu.io_write = hook
-    cpu.push8(0)
-    cpu.push8(0)
-    try:
-        cpu.run(max_steps=400000)
-    except NotImplementedError:
-        pass
+    cpu.push8(0xDE)
+    cpu.push8(0xAD)
+    for _ in range(400000):
+        if (cpu.pbr, cpu.pc) == (0x01, 0xDEAE):
+            assert cpu.s == 0x1FF, 'status renderer stack imbalance'
+            break
+        cpu.step()
+    else: raise AssertionError('status renderer did not return')
     return ups, tiles
 
 

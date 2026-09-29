@@ -7,11 +7,12 @@ Sources
 
 Each renderer returns an 8x16 grid of 0/1 (1 = ink).
 """
+from pathlib import Path
 import gzip
 import json
 import os
 
-BASE = 'C:/Users/<user>/.zcode/workspace/default/sfc-recon'
+BASE = str(Path(__file__).resolve().parent)
 FONTS = os.path.join(BASE, 'fonts')
 
 _src = {}

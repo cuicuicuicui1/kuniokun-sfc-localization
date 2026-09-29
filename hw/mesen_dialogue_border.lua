@@ -1,0 +1,98 @@
+-- Bounded headless interaction. No gameplay RAM patching; only pad input and
+-- optional SRAM copy at boot. State loading/saving happens in exec callbacks.
+local out=assert(os.getenv('PLAY_OUT'));local tag=assert(os.getenv('PLAY_TAG'))
+local maxf=tonumber(os.getenv('PLAY_FRAMES') or '300')
+local mem=emu.memType.snesMemory
+local log=assert(io.open(out..'/'..tag..'.log','w'))
+local function p(s) log:write(s..'\n');log:flush() end
+local function r(a) return emu.read(a,mem)&255 end
+local events={}
+for lo,hi,keys in (os.getenv('PLAY_INPUT') or ''):gmatch('(%d+)%-(%d+):([%w,+]+)') do
+ local buttons={} for k in keys:gmatch('%w+') do buttons[#buttons+1]=k end
+ events[#events+1]={tonumber(lo),tonumber(hi),buttons}
+end
+local shots={}
+for f in (os.getenv('PLAY_SHOTS') or '30'):gmatch('%d+') do shots[tonumber(f)]=true end
+shots[maxf]=true
+local n=0;local ready=false;local wantSave=false
+local state=os.getenv('PLAY_STATE') or ''
+local seed=os.getenv('PLAY_SRAM') or ''
+if seed~='' then
+ assert(state=='','cannot load state and seed SRAM together')
+ local g=assert(io.open(seed,'rb'));local data=g:read('*a');g:close()
+ for i=1,#data do emu.write(i-1,data:byte(i),emu.memType.snesSaveRam) end
+end
+local function dump(label)
+ local g=assert(io.open(out..'/'..tag..'-'..label..'.png','wb'));g:write(emu.takeScreenshot());g:close()
+ for _,spec in ipairs({{'ram',mem,0x7E0000,0x2000},{'vram',emu.memType.snesVideoRam,0,0x10000}}) do
+  g=assert(io.open(out..'/'..tag..'-'..label..'.'..spec[1],'wb'))
+  local a={} for i=0,spec[4]-1 do a[#a+1]=string.char(emu.read(spec[3]+i,spec[2])&255) end
+  g:write(table.concat(a));g:close()
+ end
+ local st=emu.getState();p(string.format('PAD %s held=%02X/%02X edge=%02X/%02X hw=%02X%02X cpu=%02X:%04X',label,r(0x31A),r(0x31C),r(0x316),r(0x318),r(0x4219),r(0x4218),st['cpu.k'],st['cpu.pc']))
+ p(string.format('SHOT %s msg=%02X/%02X row=%02X col=%02X ix=%02X len=%02X',label,r(0x373),r(0x374),r(0x36E),r(0x36F),r(0x3E9),r(0x3E8)))
+end
+emu.addEventCallback(function()
+ local key={a=false,b=false,x=false,y=false,up=false,down=false,left=false,right=false,start=false,select=false,l=false,r=false}
+ if ready then for _,e in ipairs(events) do if n>=e[1] and n<e[2] then for _,k in ipairs(e[3]) do assert(key[k]~=nil,'unknown input '..k);key[k]=true end end end end
+ emu.setInput(key,0)
+ local actual=emu.getInput(0);for k,v in pairs(key) do assert(actual[k]==v,'input override failed: '..k) end
+end,emu.eventType.inputPolled)
+emu.addMemoryCallback(function()
+ if not ready then
+  ready=true
+  if state~='' then
+   local g=assert(io.open(state,'rb'));local data=g:read('*a');g:close()
+   assert(emu.loadSavestate(data),'loadSavestate failed');p('LOADED '..state)
+  else p('COLD BOOT') end
+  return
+ end
+ if wantSave then
+  wantSave=false
+  local data=assert(emu.createSavestate());local g=assert(io.open(out..'/'..tag..'.state','wb'));g:write(data);g:close()
+  p('SAVED frames='..n);log:close();emu.stop(0)
+ end
+end,emu.callbackType.exec,0x8000,0xFFFF,emu.cpuType.snes,mem)
+local draw=0
+emu.addMemoryCallback(function()
+ draw=draw+1
+ if (os.getenv('PLAY_TRACE') or '')=='1' then p(string.format('DRAW f=%d ix=%02X len=%02X code=%02X row=%02X col=%02X held=%02X/%02X edge=%02X/%02X',n,r(0x3E9),r(0x3E8),r(0x12),r(0x36E),r(0x36F),r(0x31A),r(0x31C),r(0x316),r(0x318))) end
+end,emu.callbackType.exec,0x3FA30,0x3FA30,emu.cpuType.snes,mem)
+emu.addEventCallback(function()
+ if not ready then return end
+ n=n+1
+ if shots[n] then dump(tostring(n)) end
+ if n%300==0 then p(string.format('FRAME %d draws=%d held=%02X/%02X',n,draw,r(0x31A),r(0x31C))) end
+ if n>=maxf then wantSave=true end
+end,emu.eventType.endFrame)
+
+-- Observe physical WRAM so indirect/indexed access and bank mirrors are covered.
+-- This script performs no gameplay-memory writes (apart from optional SRAM seed).
+local physical=assert(emu.memType.snesWorkRam,'physical SNES WRAM domain unavailable')
+local metrics=assert(io.open(out..'/'..tag..'-border.csv','w'))
+metrics:write('frame,bg3_h,bg3_v,hdma_h,counter,hdma_mask,msg,row,col\n')
+local access=assert(io.open(out..'/'..tag..'-ownership.csv','w'))
+access:write('kind,address,bank,pc,value,count\n')
+local counts={}
+local function watch(kind)
+ return function(address,value)
+  local st=emu.getState()
+  local key=string.format('%s,%04X,%02X,%04X,%02X',kind,address,st['cpu.k'],st['cpu.pc'],value&255)
+  counts[key]=(counts[key] or 0)+1
+ end
+end
+for _,address in ipairs({0x03C4,0x03E7}) do
+ emu.addMemoryCallback(watch('read'),emu.callbackType.read,address,address,emu.cpuType.snes,physical)
+ emu.addMemoryCallback(watch('write'),emu.callbackType.write,address,address,emu.cpuType.snes,physical)
+end
+emu.addEventCallback(function()
+ if not ready then return end
+ local st=emu.getState()
+ metrics:write(string.format('%d,%d,%d,%d,%d,%d,%d,%d,%d\n',n,st['ppu.layers[2].hscroll'],st['ppu.layers[2].vscroll'],r(0x3C4),r(0x3E7),st['dmaController.hdmaChannels'],r(0x373),r(0x36E),r(0x36F)))
+ if n>=maxf then
+  metrics:close()
+  local keys={};for k in pairs(counts) do keys[#keys+1]=k end;table.sort(keys)
+  for _,k in ipairs(keys) do access:write(k..','..counts[k]..'\n') end
+  access:close()
+ end
+end,emu.eventType.endFrame)

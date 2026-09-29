@@ -3,6 +3,8 @@
 *.sfc
 *.srm
 *.frz
+*.state
+*.ram
 *.bin
 *.vram
 *.wram
@@ -13,7 +15,14 @@
 dl/
 fonts/
 fontcmp/
-tools/
+# tools/ 默认仍不入库，只允许已审阅的无头回归入口。
+tools/*
+!tools/run_mesen_hud.py
+!tools/run_mesen_play.py
+!tools/replay_mesen_route.py
+!tools/run_snes9x_headless.py
+!tools/verify_dialogue_border.py
+!tools/replay_mesen_border_game.py
 testrom/
 tests/
 __pycache__/
@@ -23,6 +32,11 @@ __pycache__/
 # hw/ 里只保留模拟器探针脚本（.lua），其余是几万个截图和 VRAM dump
 hw/*
 !hw/*.lua
+# 只保留按键路线 JSON；SRAM、检查点和探针输出仍忽略。
+!hw/regression_routes/
+hw/regression_routes/*
+!hw/regression_routes/hp-cold.json
+!hw/regression_routes/hp-game.json
 
 # 只留交付用的补丁，其余实验补丁不入库
 *.ips

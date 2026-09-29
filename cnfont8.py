@@ -3,11 +3,12 @@
 Each glyph = 2 SNES tiles (upper 8x8, lower 8x8) = 32 bytes, packed with the
 same row-interleaved 2bpp format the game's own font uses.
 """
+from pathlib import Path
 import sys
 
 from PIL import Image, ImageDraw, ImageFont
 
-sys.path.insert(0, 'C:/Users/<user>/.zcode/workspace/default/sfc-recon')
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sfc_tools import pack_8x8
 
 FONTS = ['C:/Windows/Fonts/msyh.ttc', 'C:/Windows/Fonts/simsun.ttc',

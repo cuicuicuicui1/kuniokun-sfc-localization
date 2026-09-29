@@ -11,6 +11,7 @@ Slots come from the code, not from the cursor: all 23 labels are on screen at
 once, so each needs its own slot, and they must stay below the item values'
 base so the two never collide.
 """
+import json
 import os
 import sys
 import sim65816 as S
@@ -20,7 +21,9 @@ rom = open('kuniokun_cn.smc', 'rb').read()
 SLOTPAIR_ROM = 0x1F0180
 GLYPH_ROM = 0x1F8000
 SLOT_TABLE = 0x1F4B00
-N_ENT = 36 + 2 * 3 + 2 * 1
+LABEL_ID_TABLE = 0x1F4F00   # code -> 8x16 glyph id (the hook reads this, not FA)
+_par = json.load(open('cn_build_params.json', encoding='utf-8'))
+N_ENT = _par['slots'] + 2 * _par['label_sets'] + _par['label_name_glyphs']
 SCRIPT = 0x00F9DB
 ITEM_BASE0 = 24
 
@@ -69,12 +72,14 @@ def hook(addr, val):
 
 cpu.dma_visible = True   # the uploads are DMA; watch them like CPU writes
 cpu.io_write = hook
-cpu.push8(0)
-cpu.push8(0)
-try:
-    cpu.run(max_steps=4000000)
-except NotImplementedError:
-    pass
+cpu.push8(0xDE)
+cpu.push8(0xAD)
+for _ in range(4000000):
+    if (cpu.pbr, cpu.pc) == (0x01, 0xDEAE):
+        assert cpu.s == 0x1FF, 'status renderer stack imbalance'
+        break
+    cpu.step()
+else: raise AssertionError('status renderer did not return')
 
 print('label codes: %d, slots %d..%d' % (len(label_codes), min(slots.values()),
                                          max(slots.values())))
@@ -124,7 +129,7 @@ for vmadd, cnt, kind, vals in blocks():
             continue
         if c in slots:
             sl = slots[c]
-            gid = rom[km.FA_OFF + c]     # the hook reads FA as the glyph id
+            gid = rom[LABEL_ID_TABLE + c]   # the hook reads its own table, not FA
             want_ups.append((sp[sl][0], gid))
             want_tiles += [(a_up, sp[sl][0]), (a_dn, sp[sl][0] + 1)]
         else:
@@ -159,6 +164,50 @@ if os.environ.get('LITFIX', '0') == '1':
     if got_t != want_t:
         fails.append('tile $%02X in VRAM is not the font glyph: %s vs %s'
                      % (t, got_t.hex(' '), want_t.hex(' ')))
+
+# The -- STATUS -- row is the only block the interpreter writes as raw tile
+# numbers, so no font code names its cells and the pool cannot tell they are on
+# screen: a hanzi a dialogue left in one of those tiles is what the row used to
+# show.  The build moves each of the row's glyphs onto a tile the pool can never
+# pair up, so pin that down here -- every moved cell must sit outside the pool's
+# reach and still carry the original glyph's bitmap.
+reach = set()
+for _pair in sp:
+    for t in _pair: reach.update((t, t + 1))
+ORIG_ROM = 'dl/roms/kuniokun__SF8127.smc'
+if os.path.exists(ORIG_ROM):
+    o = open(ORIG_ROM, 'rb').read()
+    lit_orig, y = [], SCRIPT
+    while o[y] != 0xFF:
+        _vmadd = o[y] | (o[y + 1] << 8)
+        _cnt = o[y + 2]
+        y += 3
+        n = _cnt & 0x7F
+        if not (_cnt & 0x80):
+            lit_orig += list(o[y:y + n])
+        y += n
+    lit_now = [t for _v, _c, kind, vals in blocks() if kind == 'tiles' for t in vals]
+    if len(lit_now) != len(lit_orig):
+        fails.append('status row is %d cells, the original has %d'
+                     % (len(lit_now), len(lit_orig)))
+    else:
+        moved = 0
+        for k, (now, was) in enumerate(zip(lit_now, lit_orig)):
+            # every cell, not just the ones this build moved: an origin-位置 cell
+            # that the pool reaches is exactly the defect being guarded against
+            if now in reach:
+                fails.append('status row cell %d uses tile $%02X, which the pool '
+                             'reaches -- a dialogue hanzi left there is what the '
+                             'row shows' % (k, now))
+            if now == was:
+                continue
+            moved += 1
+            a = rom[0x0F8000 + now * 16:0x0F8000 + now * 16 + 16]
+            b = o[0x0F8000 + was * 16:0x0F8000 + was * 16 + 16]
+            if a != b:
+                fails.append('status row cell %d: tile $%02X does not carry the '
+                             'bitmap of $%02X' % (k, now, was))
+        print('status row: %d cells, %d moved off the pool' % (len(lit_now), moved))
 
 print('cells written: %d tile map words, %d upload words' % (len(tiles), len(ups)))
 print()

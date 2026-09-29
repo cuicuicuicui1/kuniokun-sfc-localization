@@ -1,68 +1,97 @@
 # 初代热血硬派（SFC）简体中文汉化 —— 工具链、逆向记录与教学
 
-《初代熱血硬派くにおくん》（Technōs Japan, 1992, 卡带编号 **SF8127**）的完整汉化工程：
-从零逆向字库与渲染链、构建可复现的中文 ROM、九个自动校验、模拟器探针，以及一路踩过的坑。
+《初代熱血硬派くにおくん》（卡带编号 **SF8127**）的简体中文汉化工程。
+当前为 **v39-rc3 候选版（2026-09-29 仓库同步）**，不是完整汉化或全流程通关验收版。
+仓库保留可复现构建、逆向分析、回归测试和失败记录；不包含游戏 ROM、玩家存档、字体或模拟器二进制。
 
-这个仓库的目的不只是"发布一个汉化补丁"，而是把**一套可复用的 SFC 汉化方法**留成可以照着走、
-可以审阅、可以被证伪的记录。文档写得比较细，是给以后要学习的人（包括我自己）看的。
+## 1. 当前版本与验收边界
 
----
-
-## 1. 成果
-
-| 项 | 值 |
+| 项 | 当前值 |
 |---|---|
-| 成品 ROM | 2 097 152 字节，CRC32 **`7D22699A`**，内部校验和 `0x616C` |
-| 补丁 | `kuniokun_cn.ips`，CRC32 **`A04263DD`**，**打在原版上** |
-| 原版要求 | `SF8127.smc`，1 048 576 字节，CRC32 **`56C05339`**，LoROM，8 Mbit |
-| 校验 | `python verify_all.py` → 10 项全绿；连续两次构建字节一致；IPS 往返逐字节一致 |
+| 原版输入 | 无 copier header，1,048,576 字节，CRC32 **`56C05339`** |
+| 汉化 ROM（仅本地生成） | 2,097,152 字节，CRC32 **`AB1795B9`** |
+| 补丁 | `kuniokun_cn.ips`，**只打在上述原版上，不叠加旧汉化补丁** |
+| 自动校验 | `python verify_all.py`：**18 PASS + 1 INFO，0 失败**；INFO 是人工占用表，不算 PASS |
+| 可复现性 | 同一原版、字体、环境及默认参数，两次构建 ROM / IPS / 三个元数据文件一致 |
 
-### 汉化范围
+SHA-256：
 
-| 范围 | 状态 |
-|---|---|
-| 剧情 / 战斗讯息 / 商店 / 地名 / 菜单标签 | **1013 条全部翻译** |
-| 说话人名 | **452 个名字 / 516 条记录**，全部改为 ≤2 字汉字 |
-| 选择框（原版 `はい／いいえ`） | **是／否**（v19） |
-| Start 暂停菜单（原版 きりょくをつかう 等） | **气力／道具／装备／状态／扔掉**（v22） |
-| 标题 logo、制作人员名单 | 有意保留（原版美术/字幕惯例） |
-| HUD 血条蓝条、状态画面 | 按作者要求**保持原版**（连片假名都不动，见 §7.6） |
-| 道具名表（110 条） | 保留原样；该表在 ROM 里**没有任何调用/跳转/指针引用**，是死代码（§7.7） |
+```text
+原版 ROM  8f289ac5677508f7c9de12a0117849ed55a0ac861abb0fcefb1e350af6978c04
+汉化 ROM  c3d192b4e48dfa98659af3457c2a1950302f37c73f4cffdb4be608507bc4b28d
+IPS       20075879b21f9c577ed254575957274e7ef0450e3f0c9e50e57921d97d2dd29d
+```
 
----
+### 本次累计纳入的修复
 
-## 2. 快速开始（按你的角色挑一条）
+- **rc3 文本框底边漂移**：旧打字倒计时 `$03C4` 实际属于 BG3 HDMA 表，导致最后 8 条扫描线水平漂移。改用消息载入时清零的 `$03E7`；相对 rc2 ROM 仅改 4 个地址操作数字节和 4 个校验和字节。
+- **rc2 打字/清行**：关闭会擦除新对白的旧 STALEROW 启发式；用持续按键状态判断长按 A/B 加速，松开恢复正常节拍；保护 HP 图形瓦片；校订 9 处译文。
+- **rc1 HUD/验证链**：修复战斗人名返回方式、第二字对齐和上传队列；补齐隔离构建、IPS 往返、模拟器及负例验证。
 
-### 我只想玩中文版
+底边回归：Mesen 原版/rc2/rc3 同输入各 4200 帧，3086 个底边可见帧中，旧版有 948 帧非零滚动，原版及修复版均为零；Mesen 与 Snes9x 1.63 核心各 41 帧像素采样，旧底边 6 种形态、修复版 1 种。
+Mesen 实际游戏操作分段完成 22360 帧，观察到菜单、移动、电梯选择和房间 NPC 对话。
+首次长段跟踪在约 12900 帧异常退出，**未计为通过**；通过结果来自最长 5000 帧的同 ROM 检查点接力。
+这些证据**不等于本次验证了自然战斗、全商店/装备或完整通关**。
 
-1. 自备原版 `SF8127.smc`（CRC32 `56C05339`）。
-2. 用 [FLIPS](https://www.romhacking.net/utilities/1040/) 或网页版
-   `marcrobledo.com/RomPatcher.js` 把 `kuniokun_cn.ips` 打到原版上。
-3. 用 Mesen2 / snes9x 打开，校验 CRC32 应为 `7D22699A`。
+### 汉化状态 / 仍需推进
 
-> 仓库里**不含**游戏 ROM（原版和成品都没有，原因见 §9）。
+剧情、消息、说话人标签、选择框、Start 菜单，以及状态标签/装备值已有汉化与对应测试，**不据此声称全游戏无日文、无乱码或不卡死**。
 
-### 我想自己重建一份
+- 存档/文件/命名 UI 仍有日文。
+- 状态页 8×16 汉字拥挤，部分状态词/角色名仍未汉化。
+- 多条台词同屏时的字形复用、长对白仍需继续处理。
+- 非空背包、商店、装备组合与全流程、最终双模拟器验收未完成。
 
-```bash
-# 1) 放好原版
-mkdir -p dl/roms && cp /你的/SF8127.smc dl/roms/kuniokun__SF8127.smc
+当前资料：[rc3 修复记录](notes/修复记录_GPT_v39-rc3.md)、[rc2 修复记录](notes/修复记录_GPT_v39-rc2.md)、[rc1 修复记录](notes/修复记录_GPT_20260928.md)、[当前状态](notes/current-state.md)、[当前交接](交接文档_GPT.md)。
+旧文档保留为历史，若与本节冲突，以本节及上述修复记录为准。
 
-# 2) 做构建基线：原版 + 1MB 零填充 + 3 个头字节
-#    (0x7FD7 大小 0x0A→0x0B、0x7FDC/0x7FDE 校验和/补码) —— 见 make_base.py
-python make_base.py            # 产出 work_kuniokun_2mb.smc
+## 2. 快速开始
 
-# 3) 构建（必须固定 hash 种子，否则码页分配不可复现）
-PYTHONHASHSEED=0 python cnbuild5.py
+### 使用补丁
 
-# 4) 全量校验
+1. 自备上述 CRC32 / SHA-256 的合法原版 ROM。
+2. 用支持 IPS 的补丁工具把 `kuniokun_cn.ips` 打到**原版副本**，保留原版。
+3. 核对结果大小及 CRC32 **`AB1795B9`**，冷启动模拟器。
+4. **不要加载旧汉化版的模拟器即时存档**：其内存可能保留错误滚动量。普通游戏内 SRAM 存档无需删除；请先备份。
+
+此前在用户的 Snes9x 1.63 环境中，“声音同步 / Sound Sync”开启曾导致启动黑屏，同一 ROM 关闭该选项后可启动。
+这只是该环境已复现的绕过方案，不是所有黑屏的通用结论；仓库脚本不修改玩家模拟器配置或存档。
+
+### 本地重建（Windows / PowerShell）
+
+要求 Python 3、Pillow；当前字体路径依赖 Windows 自带中文字体（如 `C:/Windows/Fonts/msyh.ttc`），16×16 字库输入为自备的 `fonts/unifont.hex.gz`。
+字体文件、Python/Pillow 版本或构建环境变量不同可能改变输出；这些资源不随仓库分发。
+请在仓库根目录、新的 PowerShell 会话执行，避免继承实验用 `PACE`、`STALEROW`、`BASE_ONLY` 等覆盖参数。
+
+```powershell
+python -m pip install Pillow
+# 自备原版放到 dl/roms/kuniokun__SF8127.smc
+# 自备 Unifont hex gzip 放到 fonts/unifont.hex.gz
+$env:PYTHONUTF8 = "1"
+$env:PYTHONHASHSEED = "0"
+python make_base.py
+python cnbuild5.py
 python verify_all.py
 ```
 
-### 我想学 SFC 汉化
+构建写入当前目录的 `kuniokun_cn.smc`、`kuniokun_cn.ips` 与 `cn_*.json` 构建元数据；请在独立副本中重建，不覆盖需要保留的旧发布物。
+`verify_all.py` 在临时副本中运行，不回写被测发布物；`--skip-layers` 只是诊断子集，不是发布验收。
 
-从 §7「技术要点」和 §8「怎么读这个仓库」开始。整个项目的推进顺序就是一条学习路径：
-**先确认一条资源链 → 再做到无改文往返 → 再做最小中文切片 → 最后才批量翻译**。
+### 无头模拟器回归
+
+Mesen、Snes9x libretro 核心须另行准备。下面的冷启动示例**不需要玩家存档**，输出目录的 ROM 副本、即时存档、RAM 和截图不应入库：
+
+```powershell
+python tools/run_mesen_play.py --mesen "F:/emulators/mesen2/Mesen.exe" --tag cold-smoke --frames 900 --shots "60,300,900" --out hw/cold-smoke
+python tools/run_mesen_hud.py kuniokun_cn.smc --mesen "F:/emulators/mesen2/Mesen.exe"
+python test_pace_hdma.py
+```
+
+- `hw/mesen_dialogue_border.lua` 可通过 `run_mesen_play.py --script ...` 逐帧记录底边 HDMA 滚动及倒计时读写。
+- `tools/replay_mesen_border_game.py` 使用 `hw/regression_routes/*.json` 分段回放；当前固定依赖本地 `hw/seed-v38.srm`（**不分发**）。必须先自行准备与路线 `required_sram_sha256` 匹配的测试 SRAM 副本；没有该输入时用上面的无 SRAM 冷启动示例，不可把不匹配路线当验收通过。
+- 路线中的 `candidate_crc32: DADB84AB` 是 **rc2 采集时标识**，不是当前发布 CRC。rc3 回放使用当前 `kuniokun_cn.smc`；检查点仅同 ROM 接力，画面进度须人工核对。
+- `tools/verify_dialogue_border.py --evidence <目录>` 需要完整原版/旧版/修复版及双核心证据集，不是对一次冷启动输出的通用验收器；原始证据在本地交付包中，不含于此仓库。
+- 所有脚本应使用新的独立输出目录；不要指向玩家 ROM/存档目录，不加载其他版本的即时存档。
 
 ---
 
@@ -70,7 +99,7 @@ python verify_all.py
 
 | 路径 | 内容 |
 |---|---|
-| **`cnbuild5.py`** | 构建器，唯一构建入口。约 2500 行，含全部钩子/stub 的汇编生成 |
+| **`cnbuild5.py`** | 构建器，唯一构建入口。含钩子/stub 的汇编生成；以源码为准 |
 | `kuniokun_map.py` | 字库与编码映射：FA/FB 表（码→瓦片）、字符表 |
 | `cnglyph.py` | 汉字点阵渲染：16×16 Unifont 为主，SimSun/STXihei 兜底；含"方框底边缺口"修正 |
 | `sfc_tools.py` | pack_8x8、IPS 生成等小工具 |
@@ -84,13 +113,24 @@ python verify_all.py
 | `ipsverify.py` | 交付 IPS 从原版重放 == 交付 ROM |
 | `prev_choice.py` / `prev_rom_cmdwin.py` | 不靠模拟器，直接从 ROM 渲染选择框 / 命令窗口 |
 | `read_frz.py` | 解析 snes9x 即时存档（gzip + NAM/CPU/REG/PPU/VRA/RAM/SRA… 分段），导出 VRAM/SRAM |
-| `hw/*.lua` | EmuHawk 探针：驱动游戏、dump VRAM、强制开选择框/菜单、A/B 截图比对 |
-| `交接文档.md` | **当前状态、红线、未完成项、坑（最该先读的一份）** |
+| `hw/*.lua` | Mesen / EmuHawk 探针；应按脚本使用对应模拟器 |
+| `tools/run_mesen_play.py` / `tools/run_snes9x_headless.py` | 无头按键、截图及同版本检查点回放（输出不入库） |
+| `test_pace_hdma.py` / `hw/mesen_dialogue_border.lua` | 打字倒计时与 HDMA 底边滚动隔离回归 |
+| `交接文档_GPT.md` / `notes/current-state.md` | **当前候选、测试边界、未完成项；先读开头的 v39-rc3 更新** |
+| `交接文档.md` | 历史交接记录（不是当前验收结论） |
 | `notes/current-state.md` | 阶段状态（G0–G6）、构建指针 |
 | `初代热血硬派-汉化补丁说明.md` | 面向玩家的补丁说明 + 完整版本记录 |
 | `汉化完成度报告.md` | 验收对照表：已翻译 / 有意保留 / 未做 |
 
 ---
+
+## 历史技术记录阅读提示
+
+以下 §4–§8 保留旧阶段的实现分析和踩坑过程，**不是 v39-rc3 的当前验收结论**。
+特别是 §5.7 的 STALEROW 清行启发式现已默认关闭（它会擦掉刚写完的对白）；
+§7.6/§7.7 的“保持原版”和“道具名死代码”判断已被后续状态页/消息渲染路径推翻。
+字形池着色也不等于完整的运行时安全证明，多消息同屏复用仍待修复。
+当前行为以源码、上方状态和 v39-rc1/rc2/rc3 修复记录为准。
 
 ## 4. 构建流程
 

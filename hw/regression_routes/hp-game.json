@@ -1,0 +1,59 @@
+{
+  "candidate_crc32": "DADB84AB",
+  "frames": 7240,
+  "input": "10-16:down;55-61:right;100-106:y;430-436:b;500-560:right;585-615:up;680-686:y;770-800:up;1030-1070:down;1100-1330:right;1420-1540:down;1780-2320:left;2370-2420:up;2470-2476:y;2830-2950:up;2980-3060:left;3120-3180:right;3200-3300:down;3320-3420:left;3550-3670:up;3700-4240:right;4450-4456:left;4520-4526:y;4940-5000:down;5450-5680:left;5740-5746:y;5860-5866:y;5980-5986:y;6340-6460:left;6490-6640:right;6790-6940:left;6380-6386:y;6420-6426:y;6460-6466:y;6500-6506:y;6540-6546:y;6580-6586:y;6620-6626:y;6660-6666:y;6700-6706:y;6740-6746:y;6780-6786:y;6820-6826:y;6860-6866:y;6900-6906:y;6940-6946:y;6980-6986:y;7020-7026:y;7060-7066:y;7100-7106:y;7140-7146:y",
+  "shots": [
+    420,
+    1020,
+    1770,
+    2820,
+    3540,
+    4440,
+    5440,
+    6340,
+    6460,
+    6640,
+    6790,
+    6990,
+    7240
+  ],
+  "checkpoints": [
+    {
+      "source_stage": "gameplay-status",
+      "frame": 420
+    },
+    {
+      "source_stage": "leave-hotel",
+      "frame": 1020
+    },
+    {
+      "source_stage": "hotel-corridor",
+      "frame": 1770
+    },
+    {
+      "source_stage": "find-stairs",
+      "frame": 2820
+    },
+    {
+      "source_stage": "stair-exit",
+      "frame": 3540
+    },
+    {
+      "source_stage": "corridor-top-right",
+      "frame": 4440
+    },
+    {
+      "source_stage": "elevator-lobby",
+      "frame": 5440
+    },
+    {
+      "source_stage": "lobby-talk",
+      "frame": 6340
+    },
+    {
+      "source_stage": "lobby-fight",
+      "frame": 7240
+    }
+  ],
+  "requires_state": true
+}

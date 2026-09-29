@@ -436,11 +436,8 @@ class CPU:
             self.set_m(v)
             self.z = (v == 0)
             self.n = bool(v & (0x80 if self.m8 else 0x8000))
-        elif op == 0xC6:                     # DEC dp
-            ad = self.dp + self.fetch()
-            v = (self.bus.rd(self.db, ad) - 1) & 0xFF
-            self.bus.wr(self.db, ad, v)
-            self.z = (v == 0)
+        elif op == 0xC6:                     # DEC dp (M-sized; updates N and Z)
+            self._rmw('dp', lambda value: value - 1, self.m8)
         elif op == 0x38:                     # SEC
             self.c = True
         elif op == 0x18:                     # CLC
@@ -640,6 +637,8 @@ class CPU:
             self.n = bool(self.a & 0x80)
         elif op == 0x8B:                     # PHB
             self.push8(self.db)
+        elif op == 0x4B:                     # PHK
+            self.push8(self.pbr)
         elif op == 0xAB:                     # PLB
             self.db = self.pop8()
         elif op == 0x5A:                     # PHY

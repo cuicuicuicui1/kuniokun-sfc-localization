@@ -13,7 +13,7 @@ sys.path.insert(0, '.')
 import cnbuild5 as cb
 import sim65816
 
-path = sys.argv[1] if len(sys.argv) > 1 else 'exp_c2.smc'
+path = sys.argv[1] if len(sys.argv) > 1 else cb.OUT_ROM
 rom = open(path, 'rb').read()
 cb.load_build_params()
 if cb.CMDWIN != 2:

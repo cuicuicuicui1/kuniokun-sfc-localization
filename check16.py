@@ -5,7 +5,6 @@ fresh cnglyph render, the drawer/wipe/arm blobs (no RTS, all exits JML into
 bank $03), and the IPS round trip.
 """
 import zlib
-import mos65xx
 import cnbuild5 as cb
 cb.load_build_params()   # the switches this ROM was built with
 import cnglyph
@@ -31,11 +30,14 @@ checks = [
     ('loader $03:EB9E', rom[cb.HOOK_LOAD:cb.HOOK_LOAD + 5],
      bytes([0xA9, 0x40, 0x0C, 0x73, 0x03])),
 ]
+failures = 0
 for name, got, want in checks:
+    failures += got != want
     print('%-22s %s  %s' % (name, got.hex(' '), 'OK' if got == want else
                             'MISMATCH want %s' % want.hex(' ')))
 for hook in (cb.HOOK_COPY1, cb.HOOK_COPY2):
     got = rom[hook:hook + 3]
+    failures += got != bytes([0x9D, 0xEA, 0x03])
     print('%-22s %s %s' % ('sanitize call $%06X' % hook, got.hex(' '),
                            'OK (removed)' if got == bytes([0x9D, 0xEA, 0x03])
                            else 'MISMATCH'))
@@ -47,18 +49,21 @@ for hook, name in ((cb.HOOK_A, 'widget preload'), (cb.HOOK_B, 'widget dispatch')
 # ---- slot table --------------------------------------------------------
 params = __import__('json').load(open('cn_build_params.json', encoding='utf-8'))
 NSLOT = params['slots']
+TABLE_N = NSLOT + cb.LABEL_GLYPHS * cb.LABEL_SETS + cb.LABEL_NAME_GLYPHS * cb.LABEL_NAME_SETS
 left = rom[cb.E3_SLOTPAIR:cb.E3_SLOTPAIR + NSLOT]
-right = rom[cb.E3_SLOTPAIR + NSLOT:cb.E3_SLOTPAIR + 2 * NSLOT]
-HI = rom[cb.E3_SLOTHI:cb.E3_SLOTHI + 2 * NSLOT]
+right = rom[cb.E3_SLOTPAIR + TABLE_N:cb.E3_SLOTPAIR + TABLE_N + NSLOT]
+HI = rom[cb.E3_SLOTHI:cb.E3_SLOTHI + 2 * TABLE_N]
 print('slot table %d slots: left %s right %s'
       % (NSLOT, left[:8].hex(' '), right[:8].hex(' ')))
 res = cb.protected_tiles()
 free = cb.free_pairs()
-allp = [left[i] | (HI[i] << 8) for i in range(NSLOT)] +        [right[i] | (HI[NSLOT + i] << 8) for i in range(NSLOT)]
+allp = [left[i] | (HI[i] << 8) for i in range(NSLOT)] +        [right[i] | (HI[TABLE_N + i] << 8) for i in range(NSLOT)]
 bad = [p for p in allp if 0 < p < 256 and p not in free]
 bad += [p for p in allp if p >= 256 and p not in cb.OUTSIDE_PAIRS]
 print('every slot pair free: %s (protected %d tiles, %d free pairs)'
       % ('OK' if not bad else 'MISMATCH %s' % bad, len(res), len(free)))
+
+failures += len(bad)
 
 # ---- pool --------------------------------------------------------------
 cell = __import__('json').load(open('cn_glyph_cell.json', encoding='utf-8'))
@@ -117,3 +122,7 @@ for i in range(cb.NAME_RECORDS):
     else:
         rec_ok += 1
 print('name records: %d in hanzi, %d wrong' % (rec_ok, rec_bad))
+
+failures += bad + lbad + rec_bad
+print('PASS' if not failures else f'FAIL: {failures} build-data mismatches')
+raise SystemExit(1 if failures else 0)

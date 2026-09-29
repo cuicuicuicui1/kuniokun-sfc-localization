@@ -11,12 +11,13 @@ characters stays 1.44 apart (old pipeline: 0.00 - 日 and 田 rendered IDENTICAL
 
 Fallbacks, in order: unifont (16x16 bitmap, pair-merged to 8 wide) then STXihei.
 """
+from pathlib import Path
 import os
 import sys
 
 from PIL import Image, ImageDraw, ImageFont
 
-BASE = 'C:/Users/<user>/.zcode/workspace/default/sfc-recon'
+BASE = str(Path(__file__).resolve().parent)
 if BASE not in sys.path:
     sys.path.insert(0, BASE)
 
