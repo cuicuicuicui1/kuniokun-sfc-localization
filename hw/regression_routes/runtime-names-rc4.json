@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "candidate_crc32": "48B37673",
+  "required_sram_sha256": "883c6625baef05cf171bcdd1d69a30366a4dfcfdf4510fa68eb3e057f9a75354",
+  "stages": [
+    {
+      "name": "cold",
+      "frames": 15120,
+      "input": "600-606:start;720-726:start;840-846:a;960-966:a;1080-1086:a;1200-1206:a;1510-1516:a;1750-1760:b;1990-2020:start;2080-2110:x;2180-2210:y;2280-2310:down;2350-2356:y;2410-2416:start;2530-2536:left;2560-2566:down;2590-2596:down;2620-2626:down;2650-2656:down;2680-2686:down;2710-2716:down;2740-2746:down;2780-2786:y;3130-3136:y;4020-4025:y;4320-4325:y;4620-4625:y;4920-4925:y;5220-5225:y;5520-5525:y;5820-5825:y;6120-6125:y;6420-6425:y;6870-6876:y;7020-7026:y;7170-7176:y;7320-7326:y;7470-7476:y;7620-7626:y;7770-7776:y;7920-7926:y;8070-8076:y;8220-8226:y;8370-8376:y;8520-8526:y;8670-8676:y;8820-8826:y;8970-8976:y;9120-9126:y;9270-9276:y;9420-9426:y;9570-9576:y;9720-9726:y;9870-9876:y;10020-10026:y;10170-10176:y;10320-10326:y;10470-10476:y;10620-10626:y;10770-10776:y;10920-10926:y;11070-11076:y;11220-11226:y;11520-13920:a;11700-11706:y;11880-11886:y;12060-12066:y;12240-12246:y;12420-12426:y;12600-12606:y;12780-12786:y;12960-12966:y;13140-13146:y;13320-13326:y;13500-13506:y;13680-13686:y;13860-13866:y;14040-14046:y;14220-14226:y;14400-14406:y;14580-14586:y;14830-14870:right;14900-14930:down;15000-15006:start",
+      "shots": [
+        14820,
+        15120
+      ],
+      "scope": "natural cold new-game route"
+    },
+    {
+      "name": "exit",
+      "state_from": "cold",
+      "frames": 650,
+      "input": "10-20:start;70-130:right;160-280:up;340-540:right",
+      "shots": [
+        140,
+        310,
+        650
+      ],
+      "fixture": false,
+      "scope": "natural pad-input gameplay"
+    },
+    {
+      "name": "elevator",
+      "state_from": "exit",
+      "frames": 690,
+      "input": "10-195:right;220-226:left;285-295:y;510-630:down",
+      "shots": [
+        250,
+        490,
+        690
+      ],
+      "fixture": false,
+      "scope": "natural pad-input gameplay"
+    },
+    {
+      "name": "combat",
+      "state_from": "elevator",
+      "frames": 2240,
+      "input": "10-165:left;180-230:up;250-260:y;290-960:b;300-306:y;370-376:y;440-446:y;510-516:y;580-586:y;650-656:y;720-726:y;790-796:y;860-866:y;930-936:y;1020-1060:left;1100-1400:y;1430-1470:left,y;1500-1550:up,y;1600-1920:y;1950-2050:left,y;2070-2130:right,y;2170-2180:start",
+      "shots": [
+        680,
+        1000,
+        1430,
+        1580,
+        1940,
+        2160,
+        2240
+      ],
+      "fixture": false,
+      "scope": "natural pad-input gameplay"
+    },
+    {
+      "name": "tech",
+      "state_from": "cold",
+      "frames": 1310,
+      "input": "10-20:y;270-280:down;420-430:down;570-580:down;750-760:b;890-900:start;960-970:y;1140-1150:b",
+      "shots": [
+        180,
+        350,
+        520,
+        720,
+        850,
+        1110,
+        1310
+      ],
+      "fixture": true,
+      "scope": "controlled runtime fixture"
+    },
+    {
+      "name": "items",
+      "state_from": "cold",
+      "frames": 1370,
+      "input": "10-20:right;70-80:y;340-350:down;510-520:down;680-690:down;840-850:b;1020-1030:start;1090-1100:right;1150-1160:y",
+      "shots": [
+        240,
+        430,
+        610,
+        780,
+        970,
+        1330,
+        1370
+      ],
+      "fixture": true,
+      "scope": "controlled runtime fixture"
+    },
+    {
+      "name": "item-message",
+      "state_from": "items",
+      "frames": 580,
+      "input": "10-20:y",
+      "shots": [
+        150,
+        350,
+        580
+      ],
+      "fixture": false,
+      "scope": "controlled runtime fixture"
+    }
+  ],
+  "warning": "tech/items modify isolated runtime level/inventory only; not natural acquisition. item-message uses the resulting fixture state."
+}

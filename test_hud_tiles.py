@@ -24,12 +24,16 @@ for t in bar|live:
 if shared:
  assert rom[0xAD9:0xADB]==bytes.fromhex('A9 00')
  assert rom[0xB77:0xB79]==bytes.fromhex('A9 E7')
- # Keep all remaining HP drawing instructions and palette selectors intact.
- for lo,hi in ((0xACC,0xAD9),(0xADB,0xAED),(0xAF0,0xB77),(0xB79,0xBC5)):
+ # Only the name-path allocator's immediate grows from 82 to 226 bytes.
+ # Preserve BOTH palette selectors, its JSL, carry/defer path, and all HP math.
+ assert orig[0xAE5:0xAEB]==bytes.fromhex('A9 52 22 B6 9A 00')
+ assert rom[0xAE5:0xAEB]==bytes.fromhex('A9 E2 22 B6 9A 00')
+ assert rom[0xAEB:0xAED]==orig[0xAEB:0xAED], 'HUD carry/defer branch changed'
+ for lo,hi in ((0xACC,0xAD9),(0xADB,0xAE6),(0xAE7,0xAED),(0xAF0,0xB77),(0xB79,0xBC5)):
   assert rom[lo:hi]==orig[lo:hi], ('HP code changed unexpectedly',hex(lo))
  for fill in range(9):
   for enemy in (False,True):
    old=0xE7+fill+(16 if enemy else 0);new=0xE7+fill
    assert orig[0xF8000+old*16:0xF8000+(old+1)*16]==rom[0xF8000+new*16:0xF8000+(new+1)*16]
-assert 0x108000+p['pages']*0x8000 <= 0x1F0000, 'glyph pool overwrites hook code'
+assert p.get('pool_rom',0x108000)+p['pages']*0x8000 <= 0x1F0000, 'glyph pool overwrites hook code'
 print('PASS: live HP/name/condition tiles excluded; 18 original bar bitmaps/palettes retained; code bank safe')

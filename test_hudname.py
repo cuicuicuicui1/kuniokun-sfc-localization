@@ -20,15 +20,20 @@ SLOT0 = par['slots'] + 2*par.get('label_sets',2)
 N = SLOT0 + par.get('label_name_glyphs',4)
 
 def pair(gid,half):
+    if par.get('hud_pairs'):
+        i=(_plate & (1 if par.get('hud_orig', True) else 3))*2+gid
+        return par['hud_pairs'][i+half*(len(par['hud_pairs'])//2)]
     i=SLOT0+gid+half*N
     return rom[0x1F0180+i] | rom[0x1F0700+i]<<8
 
 def glyph(rec,gid):
     code,ident=rec[gid*2:gid*2+2]
-    off=(0x21+code-0xC0)*0x8000+ident*64
+    off=(par.get("pool_bank0",0x21)+code-0xC0)*0x8000+ident*64
     return rom[off:off+64]
 
 def execute(rec, slot=0, cursor=0):
+    global _plate
+    _plate=slot
     c=S.CPU(rom);c.pc=0x8C34;c.db=0;c.x=0x5A;c.y=0x34
     w=c.bus.wr
     for i,b in enumerate(rec):w(0,0x1B46+slot*4+i,b)
@@ -64,13 +69,13 @@ def execute(rec, slot=0, cursor=0):
         if rec[gid*2]>=0xC0:
             t=pair(gid,half)
             assert t<256,'HUD caller cannot encode high tile bits'
-            upper,lower=t,t+1
+            lower,upper=t+1,t
             if half==0:
                 data=glyph(rec,gid)
                 for h in range(2):want_glyphs[0x6000+pair(gid,h)*8]=data[h*32:(h+1)*32]
         else:
-            upper=rom[0x1FA9E+rec[k]];lower=rom[0x1FB9E+rec[k]]
-        want_cells += [(base+k,bytes((upper,0x24))),(base+k-32,bytes((lower,0x24)))]
+            lower=rom[0x1FA9E+rec[k]];upper=rom[0x1FB9E+rec[k]]
+        want_cells += [(base+k,bytes((lower,0x24))),(base+k-32,bytes((upper,0x24)))]
     cells=[e for e in entries if len(e[1])==2]
     assert cells==want_cells, 'caller cell header/data was overwritten or misplaced'
     uploads=[e for e in entries if len(e[1])==32]

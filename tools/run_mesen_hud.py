@@ -12,6 +12,9 @@ def validate(rom,ram,rec,slot,cursor):
     par=json.loads((ROOT/'cn_build_params.json').read_text(encoding='utf-8'))
     first=par['slots']+2*par.get('label_sets',2);n=first+par.get('label_name_glyphs',4)
     def tile(g,h):
+        if par.get('hud_pairs'):
+            i=(slot & (1 if par.get('hud_orig', True) else 3))*2+g
+            return par['hud_pairs'][i+h*(len(par['hud_pairs'])//2)]
         i=first+g+h*n
         return rom[0x1F0180+i]|rom[0x1F0700+i]<<8
     end=int.from_bytes(ram[0x9DF:0x9E1],'little');q=ram[0xB00:0xC00]
@@ -31,10 +34,12 @@ def validate(rom,ram,rec,slot,cursor):
         if rec[2*g]>=0xC0:
             up=tile(g,h);down=up+1
             if h==0:
-                off=(0x21+rec[g*2]-0xC0)*0x8000+rec[g*2+1]*64
+                off=(par.get("pool_bank0",0x21)+rec[g*2]-0xC0)*0x8000+rec[g*2+1]*64
                 for half in range(2):expected_glyphs[0x6000+tile(g,half)*8]=rom[off+half*32:off+(half+1)*32]
         else:up=rom[0x1FA9E+rec[k]];down=rom[0x1FB9E+rec[k]]
-        expected_cells.extend(((base+k,bytes((up,0x24))),(base+k-32,bytes((down,0x24)))))
+        # FA/FB are originally bottom/top; Chinese pools are top/bottom.
+        if rec[2*g] < 0xC0: up,down=down,up
+        expected_cells.extend(((base+k,bytes((down,0x24))),(base+k-32,bytes((up,0x24)))))
     assert [e for e in entries if len(e[1])==2]==expected_cells,'tilemap cells/header placement'
     uploads=[e for e in entries if len(e[1])==32]
     for address,data in uploads:assert expected_glyphs.get(address)==data,'wrong glyph or half'

@@ -108,8 +108,11 @@ class CPU:
         stale Z of whichever CMP ran before it.
         """
         if self.m8:
-            self.a = v & 0xFF
-            self.z = (self.a == 0)
+            # Native M=8 changes only A; the hidden accumulator B survives.
+            # TAY/TAX with X=16 still transfer ALL sixteen bits. Discarding B
+            # falsely validated the item-message source index in earlier tests.
+            self.a = (self.a & 0xFF00) | (v & 0xFF)
+            self.z = ((self.a & 0xFF) == 0)
             self.n = bool(self.a & 0x80)
         else:
             self.a = v & 0xFFFF
@@ -362,6 +365,14 @@ class CPU:
             v = self.bus.rd(self.db, ad)
             if not self.m8:
                 v |= self.bus.rd(self.db, ad + 1) << 8
+            self.set_m(v)
+        elif op == 0xB1:                     # LDA (dp),Y; pointer is in bank zero
+            ad = (self.dp + self.fetch()) & 0xFFFF
+            base = self.bus.rd(0, ad) | (self.bus.rd(0, (ad + 1) & 0xFFFF) << 8)
+            tgt = (base + self.y) & 0xFFFF
+            v = self.bus.rd(self.db, tgt)
+            if not self.m8:
+                v |= self.bus.rd(self.db, (tgt + 1) & 0xFFFF) << 8
             self.set_m(v)
         elif op == 0xB7:                     # LDA [dp],Y   (24-bit pointer!)
             ad = self.dp + self.fetch()

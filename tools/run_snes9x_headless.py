@@ -4,7 +4,7 @@ ABI definitions follow the official libretro.h (saved in sources/).
 import argparse, ctypes as C, hashlib, json, os, re, zlib
 from pathlib import Path
 from PIL import Image
-p=argparse.ArgumentParser();p.add_argument('--core',required=True);p.add_argument('--rom',required=True);p.add_argument('--out',required=True);p.add_argument('--frames',type=int,default=900);p.add_argument('--shots',default='60,180,360,600,900');p.add_argument('--input',default='');p.add_argument('--route');p.add_argument('--sram');p.add_argument('--state');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--core',required=True);p.add_argument('--rom',required=True);p.add_argument('--out',required=True);p.add_argument('--frames',type=int,default=900);p.add_argument('--shots',default='60,180,360,600,900');p.add_argument('--input',default='');p.add_argument('--route');p.add_argument('--sram');p.add_argument('--state');p.add_argument('--fixture',choices=('menu-names',));a=p.parse_args()
 out=Path(a.out).resolve();out.mkdir(parents=True,exist_ok=True)
 rom=Path(a.rom).resolve();raw=rom.read_bytes();before=hashlib.sha256(raw).hexdigest()
 core=C.CDLL(str(Path(a.core).resolve()))
@@ -71,6 +71,13 @@ if a.state:
  assert core.retro_unserialize(statebuf,len(statedata)), 'state load failed'
 if a.sram:
  seed=Path(a.sram).read_bytes();assert len(seed)<=core.retro_get_memory_size(0);C.memmove(core.retro_get_memory_data(0),seed,len(seed))
+if a.fixture:
+ assert a.state, 'controlled menu fixture requires an existing same-ROM/core gameplay state'
+ assert core.retro_get_memory_size(2)>=0x140, 'system WRAM unavailable'
+ ptr=core.retro_get_memory_data(2)
+ C.memmove(ptr+0x0102,bytes((99,)),1)
+ C.memmove(ptr+0x011E,bytes((8,28,29,30,31,32,33,34,35)),9)
+ print('FIXTURE: runtime level=99, inventory IDs 28..35; no PC/scene or SRAM writes',flush=True)
 shots={int(f) for f in a.shots.split(',')};shots.add(a.frames)
 def save_frame(f):
  if not last: records.append({'frame':f,'video':False});return
@@ -91,5 +98,5 @@ for frame in range(a.frames):
 size=core.retro_serialize_size();state=C.create_string_buffer(size);assert core.retro_serialize(state,size);(out/'end.state').write_bytes(state.raw)
 core.retro_unload_game();core.retro_deinit()
 assert hashlib.sha256(rom.read_bytes()).hexdigest()==before
-report={'core':a.core,'name':sysinfo.name.decode(),'version':sysinfo.version.decode(),'rom_sha256':before,'rom_crc32':f'{zlib.crc32(raw):08X}','frames':a.frames,'shots':records,'environment_calls':env_calls,'variables':{k.decode():v.decode() for k,v in variables.items()},'input':a.input,'sram_seed':a.sram,'loaded_state':a.state,'scope':'bounded execution and screenshots; inspect images to determine game progression'}
+report={'core':a.core,'name':sysinfo.name.decode(),'version':sysinfo.version.decode(),'rom_sha256':before,'rom_crc32':f'{zlib.crc32(raw):08X}','frames':a.frames,'shots':records,'environment_calls':env_calls,'variables':{k.decode():v.decode() for k,v in variables.items()},'input':a.input,'sram_seed':a.sram,'loaded_state':a.state,'runtime_fixture':a.fixture,'scope':'bounded execution and screenshots; inspect images to determine game progression'}
 (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')

@@ -65,3 +65,7 @@ F_*.png
 
 *DORA*
 *Doraemon*
+
+# v39-rc4 bounded runtime-name regression (no ROMs/states/SRAM).
+!tools/replay_runtime_names.py
+!hw/regression_routes/runtime-names-rc4.json

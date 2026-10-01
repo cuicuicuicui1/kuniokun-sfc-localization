@@ -25,6 +25,8 @@ CHECKS = [
     ('test_itemdraw.py','状态画面道具名：110 条逐个跑 $01:FC75 渲染器'),
     ('test_labeldraw.py','状态画面标签：跑 $01:F971 解释器逐格核对 23 个字形'),
     ('test_hudname.py','战斗 HUD：完整 $00:8C34 调用链、560 条名字、队列边界'),
+    ('test_runtime_names.py','真实入口：道具分支可达、双敌方 HUD 与消息字形隔离'),
+    ('test_menulist.py','气力/道具非空列表：真实 reader、四项同屏、重开与队列'),
     ('test_itemmsg.py','消息里的道具名：跑抽屉 $DE 分支核对取 id/上传/写格/推列'),
     ('test_hud_tiles.py', 'HP 图形与中文字形隔离，原版敌我血条共享像素/保留调色板'),
     ('test_pace_hdma.py', '打字倒计时与 BG3 HDMA 底边滚动表隔离（旧版负例）'),

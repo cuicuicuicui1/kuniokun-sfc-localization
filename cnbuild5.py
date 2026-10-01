@@ -19,7 +19,7 @@ Encoding: [0xC5 + page][id], page 0..10, id 0..113
     for the dialog box and for list screens of any height.
   * slot -> tile pair comes from SLOTPAIR[], skipping the pairs that surviving
     original codes still draw (space, punctuation, digits, frame, decor).
-  * glyph bitmap at bank ($21 + page) : ($8000 + id*32) is DMA'd into its slot
+  * glyph bitmap at bank (POOL_BANK0 + page) : ($8000 + id*32) is DMA'd into its slot
     on every draw, so no glyph cache and no extra RAM are needed.
 
 Patches (all verified byte-for-byte against the original ROM):
@@ -100,6 +100,7 @@ ITEM_PREFIX = 0xDE                     # $db..$de are unused: the drawer's
                                        # Chinese range stops at $da and the one
                                        # byte codes start at $df
 ITEM_GLYPH_BANK = 0x3F
+ITEM_MENU_GLYPH_ROM = 0x1FA000       # $3F:A000: legible 16x16 list-only glyphs
 ITEM_GLYPH_ROM = 0x1F8000
 ITEM_GLYPH_MAX = 256
 ITEMDRAW_ROM = 0x1F4800                # $3e:c800
@@ -158,7 +159,7 @@ E3_MSG = CODE_ROM + 0x800              # $3E:8800  new entry: blank the box,
 B3_SANITIZE = 0x01E970
 B3_SANITIZE_LIMIT = 0x01E982
 B3_SANITIZE_END = 0x01E982        # text may use everything up to the $EA macro table
-POOL_ROM = 0x108000                    # bank $21 + page
+POOL_ROM = 0x100000                    # bank $20 + page
 POOL_STRIDE = 64                       # one Chinese glyph = 16x16 px = four tiles
 GLYPH_TILES = 4                        # tiles per glyph: TL, BL, TR, BR
 # Tables whose text is deliberately left in Japanese.  Empty now: the item
@@ -222,7 +223,7 @@ LABEL_ID0 = 128                         # body ids stop at SLOTS; label ids
 LABEL_SETS = 2 if ITEMSG else 3                           # the box shows two text rows, so
                                         # three sets already guarantee that
                                         # rows on screen together differ
-POOL_BANK0 = 0x21
+POOL_BANK0 = 0x20
 MAX_COL = 26                           # box width in cells
 MAX_ROWS = 16                          # box rows before the row counter wraps
 WRAP_COL = 25                          # first column that cannot hold a 2-cell glyph
@@ -751,7 +752,8 @@ class Encoder:
             ch = max(remaining,
                      key=lambda c: (len(satb[c]), wcount.get(c, 0), freq.get(c, 0)))
             banned = satb[ch]
-            free = [s for s in range(SLOTS) if s not in banned]
+            free = [s for s in range(SLOTS) if s not in banned
+                    and self.load[s] < (CODE_ROM - POOL_ROM) // 0x8000]
             if not free:
                 raise ValueError('cannot colour %r: %d blockers' % (ch, len(banned)))
             s = min(free, key=lambda x: (self.load[x], x))
@@ -1520,8 +1522,10 @@ def load_build_params(path=None):
     """
     global PROMPT_CLOBBERED, PROTECT_GROUPS, PROTECT_CODES, SLOTS
     global STALEROW_ON, CMDWIN, HUD_ORIG, HUDFIX, ITEMSG, PACE, PACE_FRAMES
-    global LABEL_SETS, LABEL_NAME_GLYPHS
+    global LABEL_SETS, LABEL_NAME_GLYPHS, POOL_ROM, POOL_BANK0
     par = json.load(open(path or (BASE + '/cn_build_params.json'), encoding='utf-8'))
+    POOL_ROM = par.get('pool_rom', 0x108000)
+    POOL_BANK0 = par.get('pool_bank0', 0x21)
     HUDFIX = par.get('hudfix', HUDFIX)
     ITEMSG = par.get('itemsg', ITEMSG)
     PACE = par.get('pace', PACE)
@@ -1570,6 +1574,8 @@ def fix_prompt_tiles(max_iter=12):
             base = lo[i] | (hi[i] << 8)
             pool.add(base)
             pool.add(base + 1)
+        for base in hud_pairs():
+            pool.update((base, base + 1))
         bad = need & pool
         if not bad:
             return sorted(prot)
@@ -1593,6 +1599,30 @@ def clamp_slots():
     if os.environ.get('SLOTS_FORCE'):          # measurement only
         SLOTS = int(os.environ['SLOTS_FORCE'])
     return SLOTS
+
+
+HUDPAIR_ROM = 0x1F0780  # private tables, outside both message slot tables
+
+def hud_pairs():
+    """Reserve combat glyphs permanently, separate from all message writers.
+
+    Original kana player names use protected static tiles. Only the two enemy
+    plates need Chinese: four 16x16 glyphs. Translating player HUD names must
+    instead budget eight glyphs. Upper/lower plates share column indices ONLY
+    in the original-player-name build, never between the two enemy plates.
+    """
+    if not HUDFIX:
+        return []
+    count = 4 if HUD_ORIG else 8
+    safe = [t for t in _available_pairs()
+            if t not in BOX_GFX_TILES and t + 1 not in BOX_GFX_TILES]
+    assert len(safe) >= count * 2, 'not enough reserved HUD pairs'
+    tail = safe[-count * 2:]
+    return tail[::2] + tail[1::2]
+
+def free_pairs():
+    held = set(hud_pairs())
+    return [t for t in _available_pairs() if t not in held]
 
 
 def build_slotpairs():
@@ -1711,7 +1741,7 @@ def status_label_tiles(n):
     return [(tiles[2 * i], tiles[2 * i + 1]) for i in range(n)]
 
 
-def free_pairs():
+def _available_pairs():
     """Base tiles t whose successor t+1 is free too.
 
     A glyph half is uploaded by one 32 byte DMA, so its two tiles have to be
@@ -2062,15 +2092,14 @@ def build_hudname():
     Only the upload happens on even cells: the odd cell shares the glyph, and
     when the queue is too full to stage it the tiles are simply left as they
     are -- they still hold the same glyph from the previous frame, because the
-    pool never allocates a name pair.  One plate is on screen at a time
-    (measured from the user's battle savestate), so two name slots are enough
-    and the tile accounting does not change at all.
+    private HUD reservation is not shared with any message-name/item pairs.
+    Both enemy plates get two distinct glyphs. Queue pressure may defer a new
+    glyph, so the complete ABI and real timing are still tested separately.
     """
-    TABLE_N = (SLOTS + LABEL_GLYPHS * LABEL_SETS
-               + LABEL_NAME_GLYPHS * LABEL_NAME_SETS)
-    SLOT0 = SLOTS + LABEL_GLYPHS * LABEL_SETS
-    lo, loh = snes_of_rom(E3_SLOTPAIR), snes_of_rom(E3_SLOTHI)
-    ro, roh = snes_of_rom(E3_SLOTPAIR + TABLE_N), snes_of_rom(E3_SLOTHI + TABLE_N)
+    TABLE_N = len(hud_pairs()) // 2
+    SLOT0 = 0
+    lo, loh = snes_of_rom(HUDPAIR_ROM), snes_of_rom(HUDPAIR_ROM + 16)
+    ro, roh = snes_of_rom(HUDPAIR_ROM + TABLE_N), snes_of_rom(HUDPAIR_ROM + 16 + TABLE_N)
     a = Asm(HUDNAME_ROM)
 
     def ld_pair(low_t, hi_t):
@@ -2107,8 +2136,8 @@ def build_hudname():
                                          # borrowing them -- and M must go back
                                          # to 8 bit, or the LDA $18 below reads
                                          # two bytes and the slot comes out wrong
-    # slot = SLOT0 + (($18 & 3) >> 1)   -- which of the record's two glyphs
-    a.hexs('A5 18 29 03 4A')             # lda $18 / and #$03 / lsr a
+    # Plate-specific slot: two glyphs per live enemy, four glyphs total.
+    a.hexs('A5 18 29 %02X 4A' % (7 if HUD_ORIG else 15))             # lda $18 / and #$03 / lsr a
     a.hexs('18 69 %02X' % SLOT0)         # clc / adc #SLOT0
     a.hexs('C2 20 29 FF 00 AA')          # rep #$20 / and #$00ff / tax
     ld_pair(lo, loh)                     # push the left half tile
@@ -2128,9 +2157,9 @@ def build_hudname():
                                          # fire and the engine's own value has to
                                          # come back -- it is pushed at the top
                                          # of the two path and popped at fin
-    # pool bank = $21 + page - $c0
+    # pool bank = POOL_BANK0 + page - $c0
     a.hexs('E2 20 B9 46 1B')             # sep / lda $1b46,y  (the page byte)
-    a.hexs('38 E9 C0 18 69 21 48')       # sec / sbc #$c0 / clc / adc #$21 / pha
+    a.hexs('38 E9 %02X 18 69 %02X 48' % (PREFIX0, POOL_BANK0))       # sec / sbc #$c0 / clc / adc #$21 / pha
     # stack: [01,s]=bank [02,s]=right tile [04,s]=left tile
     #
     # Only even cells stage the glyph; the odd cell reuses what the even one
@@ -2174,13 +2203,16 @@ def build_hudname():
     a.hexs('8E DF 09')                   # stx $09df
     a.hexs('E2 20 A9 03 48 AB')          # sep / lda #$03 / pha / plb (DBR back)
     a.label('pick')
-    # $22/$23 = the chosen half's pair: half 0 is the left pair, 1 the right
+    # The ORIGINAL caller puts $22 on the lower row (base) and $23 on the
+    # upper row (base-32). Pool pairs are top-first, unlike FA/FB kana.
+    # Therefore return lower=tile+1 in $22, upper=tile in $23.
+    # Half 0 is the left pair, half 1 is the right pair.
     a.hexs('A5 18 29 01')                # lda $18 / and #$01
     a.hexs('D0 0A')                      # bne useright
-    a.hexs('A3 04 85 22 1A 85 23')       # lda $04,s / sta $22 / inc a / sta $23
+    a.hexs('A3 04 85 23 1A 85 22')       # top -> $23, bottom -> $22
     a.jmp_to('fin')
     a.label('useright')
-    a.hexs('A3 02 85 22 1A 85 23')       # lda $02,s / sta $22 / inc a / sta $23
+    a.hexs('A3 02 85 23 1A 85 22')       # top -> $23, bottom -> $22
     a.jmp_to('fin')
     return a.done()
 
@@ -2211,8 +2243,19 @@ def build_itemmsg():
 
     a.hexs('08 E2 30 8B')                # php / sep #$30 / phb
     # room for the 36 byte tile entry and the two 8 byte cells?
-    a.hexs('AD DF 09 C9 %02X' % (0x100 - 44))
+    a.hexs('C2 20 AD DF 09 C9 %02X 00 E2 20' % (0x100 - 44))
     a.far_rel(0xB0, 'deter', 'ies')      # bcs deter: retry next frame
+    # A DE name can be the first visible entry of a message/list row. It
+    # bypasses the body drawer now, so it owns the same row-start blanking.
+    a.hexs('AD 6F 03')
+    a.far_rel(0xD0, 'rowready', 'ieskiprow')
+    a.hexs('C2 20 AD DF 09 C9 %02X 00 E2 20' % (0x101 - ROW_WIPE - 44))
+    a.far_rel(0xB0, 'deter', 'ierow')
+    a.hexs('C2 30 AE DF 09')
+    _rowwipe(a, 0, 'item')
+    _rowwipe(a, 0x20, 'item')
+    a.hexs('8E DF 09 E2 30')
+    a.label('rowready')
     # slot = SLOT0 + ($036f & 3)
     a.hexs('AD 6F 03 29 03')             # lda $036f / and #$03
     a.hexs('18 69 %02X' % SLOT0)         # clc / adc #SLOT0
@@ -2230,13 +2273,17 @@ def build_itemmsg():
     a.hexs('9D 00 0B E8 E8')             # sta $0b00,x / inx inx
     a.hexs('E2 20 A9 80 9D 00 0B E8')    # sep / lda #$80 / sta / inx ($2115)
     a.hexs('A9 20 9D 00 0B E8')          # lda #$20 / sta / inx (32 bytes)
-    a.hexs('AD E9 03 1A A8')             # lda $03e9 / inc a / tay
+    a.hexs('AD E9 03 1A')                # byte index of the following ID
+    # X/Y are 16-bit here; TAY transfers hidden B even when M=8. The previous
+    # VRAM address left B=$60..$67, which selected an unrelated WRAM byte.
+    a.hexs('C2 30 29 FF 00 A8 E2 20')    # explicitly zero-extend before TAY
     a.hexs('B9 EA 03')                   # lda $03ea,y (the glyph id)
     a.hexs('C2 30 29 FF 00')             # rep #$30 / and #$00ff
     for _ in range(5):
         a.hexs('0A')                     # asl x5 -> id * 32
     a.hexs('A8')                         # tay
     a.hexs('E2 20 A9 3F 48 AB')          # sep / lda #$3f / pha / plb
+    a.hexs('C2 20')                      # WORD copies: do not leave plane-1 queue garbage
     for _ in range(16):                  # 16 words: the glyph, from DBR:$8000+Y
         a.hexs('B9 00 80 9D 00 0B E8 E8 C8 C8')
     a.hexs('E2 20 A9 03 48 AB')          # sep / lda #$03 / pha / plb
@@ -2595,8 +2642,6 @@ def build_drawer_copy():
     a.rel(0x90, 'occ')                     # bcc occ
     a.hexs('C9 %02X' % (PREFIX0 + PAGES))  # cmp #$c0+pages
     a.far_rel(0x90, 'setc', 'setc')        # bcc setc (too far for rel now)
-    a.hexs('C9 %02X' % FIXED0)             # cmp #$df: FIXED0.. ends the CN range
-    a.rel(0x90, 'occ')                     # bcc occ (unused code space)
     if ITEMSG:
         # BEQ on the PREVIOUS cmp would test $12 == FIXED0, and with FIXED_N=1
         # that is the dash code $DF - every dash would land in the item-name
@@ -2604,6 +2649,8 @@ def build_drawer_copy():
         # drawing the name slot pair).  The item code needs its own compare.
         a.hexs('C9 %02X' % ITEM_PREFIX)    # cmp #$de: the item name code
         a.far_rel(0xF0, 'itemmsg', 'im')       # beq itemmsg: a pasted item name
+    a.hexs('C9 %02X' % FIXED0)             # DE must be tested BEFORE this lower bound
+    a.rel(0x90, 'occ')                     # unused code space
     a.hexs('C9 %02X' % (FIXED0 + FIXED_N))  # cmp #$e0
     a.far_rel(0x90, 'setf', 'setf')        # bcc setf (too far for rel now)
     a.label('occ')
@@ -3498,6 +3545,8 @@ def main():
     print('item names: %d distinct hanzi -> 8x16 table at $%02X:8000'
           % (len(ITEM_CHARS), ITEM_GLYPH_BANK))
 
+    assert open(SRC_ROM, 'rb').read()[0x100000:0x108000] == bytes(0x8000), 'new pool bank is occupied in baseline'
+
     # ---- 2. colouring windows
     per_table = {}
     for ti, (table_off, count) in enumerate(TABLES):
@@ -3624,6 +3673,8 @@ def main():
     # encoder state (KEEP1 / SLOTS / PAGES are decided inside this function)
     json.dump({'keep1': {'%s' % ch: c for ch, c in KEEP1.items()},
                'slots': SLOTS, 'pages': PAGES, 'prefix0': PREFIX0,
+               'pool_rom': POOL_ROM, 'pool_bank0': POOL_BANK0,
+               'menu_list': True, 'menu_list_rom': 0x1F6000, 'menu_item_glyph_rom': ITEM_MENU_GLYPH_ROM, 'menu_item_width': 2,
                'glyphs': len(enc.order),
                'stride': POOL_STRIDE,
                'wrap_col': WRAP_COL,
@@ -3634,6 +3685,7 @@ def main():
                'cmdwin': int(CMDWIN),
                'hud_orig': bool(HUD_ORIG),
                'hudfix': bool(HUDFIX), 'hud_bar_shared': bool(HUDFIX),
+               'hud_pairs': hud_pairs(), 'hud_top_first': True, 'hud_pair_rom': HUDPAIR_ROM,
                'itemsg': bool(ITEMSG), 'pace': PACE, 'pace_counter': PACE_FRAMES,
                'label_sets': LABEL_SETS, 'label_name_glyphs': LABEL_NAME_GLYPHS,
                'fixed': {k: v for k, v in FIXED_CODES.items()},
@@ -3685,6 +3737,18 @@ def main():
         itbl[i * 32:i * 32 + 16] = pack_8x8(g[:8])
         itbl[i * 32 + 16:i * 32 + 32] = pack_8x8(g[8:])
     rom[ITEM_GLYPH_ROM:ITEM_GLYPH_ROM + len(itbl)] = itbl
+    # The status widget still needs condensed 8x16 names. The list has room
+    # for six full 16x16 glyphs per field, so do not squash readable item names.
+    menu_glyphs=bytearray(ITEM_GLYPH_MAX*64)
+    for ch,i in ITEM_CHARS.items():
+        g=cnglyph.render16x16(ch)
+        menu_glyphs[i*64:i*64+64]=(pack_8x8([r[:8] for r in g[:8]])+
+                                 pack_8x8([r[:8] for r in g[8:]])+
+                                 pack_8x8([r[8:] for r in g[:8]])+
+                                 pack_8x8([r[8:] for r in g[8:]]))
+    assert rom[ITEM_MENU_GLYPH_ROM:ITEM_MENU_GLYPH_ROM+len(menu_glyphs)]==bytes(len(menu_glyphs)), 'menu item glyph destination occupied'
+    rom[ITEM_MENU_GLYPH_ROM:ITEM_MENU_GLYPH_ROM+len(menu_glyphs)]=menu_glyphs
+
     rom[ITEMBASE_ROM:ITEMBASE_ROM + 3] = bytes(
         [ITEM_SLOT_BASE0, ITEM_SLOT_BASE0 + ITEM_SLOT_SPAN,
          ITEM_SLOT_BASE0 + 2 * ITEM_SLOT_SPAN])
@@ -3711,6 +3775,10 @@ def main():
           % (len(icode), _bk, _ad, ITEM_HOOK))
 
     # ---- the battle HUD's name plate (see HUDNAME_HOOK) ---------------------
+    # Reserve the 144 additional glyph bytes before the full HUD caller.
+    if HUDFIX:
+        assert rom[0xAE5:0xAEB]==bytes.fromhex('A9 52 22 B6 9A 00'), 'HUD allocator caller changed'
+        rom[0xAE6]=0xE2
     hcode = build_hudname() if HUDFIX else b''
     if HUDFIX:
         # Same bar pixels, same palettes, one shared set of nine font tiles.
@@ -3865,6 +3933,13 @@ def main():
     # high byte of every entry's tile: 1 only for the label sets, which moved out
     # of the font window, 0 for everything else
     rom[E3_SLOTHI:E3_SLOTHI + len(slothi)] = slothi
+    held_hud = hud_pairs()
+    assert len(held_hud) <= 16
+    rom[HUDPAIR_ROM:HUDPAIR_ROM + len(held_hud)] = bytes(t & 255 for t in held_hud)
+    rom[HUDPAIR_ROM + 16:HUDPAIR_ROM + 16 + len(held_hud)] = bytes(t >> 8 for t in held_hud)
+    message_tiles = {int(lo) | int(hi) << 8 for lo, hi in zip(slotpairs, slothi)}
+    assert not message_tiles.intersection(held_hud), 'HUD/message glyph reservation collision'
+
     # row -> label pair set, right after the pair table (the drawer reads it)
     global E3_ROWSET
     E3_ROWSET = E3_SLOTPAIR + len(slotpairs)
@@ -4014,6 +4089,18 @@ def main():
         print("menu label loader hooked at $%04X (the menu input state)" % MENU_HOOK)
     else:
         print('command window: off (labelled pairs stay inside the font window)')
+
+    # Every short-name field is limited by the original 13-byte row buffer.
+    # Columns 0/13 are reserved separators in this build, hence 12 data bytes.
+    for table,count in ((0x1DBC3,110),(0x1E096,35)):
+        for ident in range(1,count+1):
+            ptr=int.from_bytes(rom[table+ident*2:table+ident*2+2],'little')
+            off=0x10000+ptr
+            end=rom.find(b'\xf2',off,off+64)
+            assert end>=off and end-off<=12, ('menu field does not fit',hex(table),ident,end-off)
+    from menulist_patch import install as install_menu_list
+    result=install_menu_list(rom,Asm,E3_SLOTPAIR,E3_SLOTHI,SLOTS,PAGES,POOL_BANK0,len(slotpairs)//2)
+    print('short-name list renderer: %d bytes @ ROM %06X; original command window bypassed' % (result['bytes'],result['rom']))
 
     # ---- 5. checksum (this ROM stores the complement first)
     rom[0x7FDC:0x7FE0] = b'\x00\x00\x00\x00'
