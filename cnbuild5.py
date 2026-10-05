@@ -11,15 +11,16 @@ Two independent text pipelines exist in the engine and both are patched:
       ROM 0x00FC2F / 0x00FC40 / 0x00FC51, which writes tilemap entries directly
       to $2118/$2119 at cursor $79C6 / $7A06 / $7A46.
 
-Encoding: [0xC5 + page][id], page 0..10, id 0..113
-  * $C5-$CF is dead space in the original code map, and stays below $E0 so the
+Encoding: [PREFIX0 + page][id]; limits are saved in cn_build_params.json.
+The rc8 configuration uses $C0..$DD, 30 pages and 33 body slots ($DF fixed).
+  * the allocated prefix range stays below $E0 so the
     macro expander copies it verbatim.
   * the id byte doubles as the VRAM slot.  A build-time graph colouring makes
     sure glyphs that can be on screen together never share a slot, which holds
     for the dialog box and for list screens of any height.
   * slot -> tile pair comes from SLOTPAIR[], skipping the pairs that surviving
     original codes still draw (space, punctuation, digits, frame, decor).
-  * glyph bitmap at bank (POOL_BANK0 + page) : ($8000 + id*32) is DMA'd into its slot
+  * glyph bitmap at bank (POOL_BANK0 + page) : ($8000 + id*64) is DMA'd into its slot
     on every draw, so no glyph cache and no extra RAM are needed.
 
 Patches (all verified byte-for-byte against the original ROM):
@@ -104,7 +105,7 @@ ITEM_MENU_GLYPH_ROM = 0x1FA000       # $3F:A000: legible 16x16 list-only glyphs
 ITEM_GLYPH_ROM = 0x1F8000
 ITEM_GLYPH_MAX = 256
 ITEMDRAW_ROM = 0x1F4800                # $3e:c800
-ITEMBASE_ROM = 0x1F4A00                # $3e:ca00  three bytes: 0, 13, 26
+ITEMBASE_ROM = 0x1F4A00                # $3e:ca00  STATUS pair indices: 24, 30, 36
 ITEM_HOOK = 0x00FCA5                   # cpu $01:fca5, the FB[code] lookup
 # ------------------------------------------------------- the battle HUD plate
 # $00:8C83 names the battle HUD's name plate tiles through FA/FB, one BYTE of
@@ -457,8 +458,20 @@ def snes_of_rom(off):
 
 # ============================================================== text utilities
 def units(part):
-    """The rendering units of a plain text run: one entry per character."""
-    return list(part)
+    """Chinese characters, with paired 8x16 ASCII readings for proper names.
+
+    Pair an uppercase reading run INCLUDING its internal spaces. The normal
+    pool reader already draws two cells, so this retains its ABI, cadence and
+    cache lifecycle while fitting source staff names into one 26-cell row.
+    It does not squeeze Chinese or guess official kanji.
+    """
+    out = []
+    for run in re.split(r'([A-Z][A-Z ()-]*)', part):
+        if run and 'A' <= run[0] <= 'Z':
+            out.extend(run[i:i+2] for i in range(0, len(run), 2))
+        else:
+            out.extend(run)
+    return out
 
 
 def pieces(s):
@@ -635,7 +648,27 @@ def reflow(s):
     return ''.join(out)
 
 
-def choose_windows(per_table):
+def credits_windows(main):
+    """True co-visible title/name sets in this game's fixed-time eventAC.
+
+    Message IDs are 1-based: the reader uses $03:93B3 with an empty first
+    pointer, while the extracted records begin at $03:93B5.  Cross-scene
+    title reuse is NOT an adjacent-message-index window.
+    """
+    scenes = ((0x28A,0x28B),(0x28A,0x28C,0x28D),
+              (0x293,0x294),(0x293,0x295),(0x293,0x296),
+              (0x28E,0x28F),(0x28E,0x290,0x291),(0x28E,0x292),
+              (0x297,0x298,0x299,0x29A),(0x297,0x29B,0x29C),
+              (0x29D,0x29E,0x29F,0x2A0),(0x2A1,0x2A2),
+              (0x2A3,0x2A4),(0x2A5,0x2A6),(0x2A5,0x2A7),
+              (0x2A8,0x2A9,0x2AA),(0x2A8,0x2AB,0x2AC),
+              (0x2A8,0x2B4,0x2B5,0x2B6),(0x2A8,0x2AF,0x2B0),
+              (0x2AD,0x2AE))
+    assert len(main) >= 0x2B6, 'credits main message table truncated'
+    return [set().union(*(main[mid-1] for mid in scene)) for scene in scenes]
+
+
+def choose_windows(per_table, main_row_windows=None):
     """Largest colouring windows that still fit in SLOTS colours.
 
     The main script shows one message at a time (its rows scroll), the list
@@ -644,7 +677,7 @@ def choose_windows(per_table):
     """
     for win_main in range(WIN_MAIN_MAX, 0, -1):
         for win_list in range(WIN_LIST_MAX, 0, -1):
-            windows = []
+            windows = credits_windows(per_table.get(0, []))
             for ti, gs in per_table.items():
                 win = win_main if ti == 0 else win_list
                 for i in range(len(gs)):
@@ -655,7 +688,10 @@ def choose_windows(per_table):
                     # are drawn with their own tile pairs from their own banks
                     # (see LABEL_*), so they never share a slot with a body
                     # glyph no matter which name labels which message.
-                    windows.append(u)
+                    if ti == 0 and win_main == 1 and main_row_windows and i in main_row_windows:
+                        windows.extend(main_row_windows[i])
+                    else:
+                        windows.append(u)
             if CMDWIN == 2:
                 # The command window shows all five labels at once, so their
                 # glyphs must not share a slot with each other.  They may share
@@ -671,7 +707,8 @@ def choose_windows(per_table):
             try:
                 enc.colour(windows)
             except ValueError as e:
-                print('  colouring failed at win_main=%d win_list=%d: %s' % (win_main, win_list, e))
+                print('  colouring not found at main=%d list=%d: %s'
+                      % (win_main, win_list, e))
                 continue
             return enc, windows, win_main, win_list
     raise SystemExit('no feasible colouring window')
@@ -694,6 +731,12 @@ def align_tokens(orig_text, mine):
     original sequence wins and my prose segments are re-distributed between it.
     """
     orig_tok = tokens(orig_text)
+    # F2F6 is a legal in-box line break; a checked reflow must not shift ED/EE
+    # or the terminator into another prose segment. Legacy missing-token
+    # inputs still take the restoration path below.
+    if ([t for t in tokens(mine) if t != 'F2F6']
+            == [t for t in orig_tok if t != 'F2F6']):
+        return mine
     my_seg = re.split(r'\{[0-9A-Fa-f]{2,4}\}', mine)
     if len(my_seg) < len(orig_tok) + 1:
         my_seg = my_seg + [''] * (len(orig_tok) + 1 - len(my_seg))
@@ -714,56 +757,13 @@ class Encoder:
         self.load = [0] * SLOTS
 
     def colour(self, windows):
-        """DSATUR colouring (dynamic saturation degree first).
-
-        Balanced slots matter because a slot is also a storage column: chars that
-        share a slot must live in different pool banks, so no slot may collect
-        more than PAGES glyphs.  The one byte codes own slots 0..FIXED_N-1 for
-        good (their code byte says which slot), so the rest uses the others.
-
-        Speaker-name glyphs ride in every window, so DSATUR assigns them first
-        (they saturate fastest) and each keeps a private slot.
-        """
-        freq = {}
-        wcount = {}
-        wsets = list(windows)
-        cw = {}                                 # char -> window indices
-        for wi, w in enumerate(wsets):
-            for ch in w:
-                freq[ch] = freq.get(ch, 0) + 1
-                wcount[ch] = wcount.get(ch, 0) + 1
-                cw.setdefault(ch, []).append(wi)
-        satb = {ch: set() for ch in freq}       # char -> slots banned around it
-        for ch in FIXED_CODES:                  # one byte codes: private slots
-            self.slot[ch] = FIXED_CODES[ch] - FIXED0
-            self.load[self.slot[ch]] += 1
-        # A pre-assigned slot must ban every character it can share a window
-        # with, or the pool hands out that slot again and one of the two draws
-        # the other's glyph.
-        for w in wsets:
-            pre = {self.slot[c] for c in w if c in self.slot}
-            if not pre:
-                continue
-            for c2 in w:
-                if c2 in satb and c2 not in self.slot:
-                    satb[c2] |= pre
-        remaining = set(freq) - set(self.slot)
-        while remaining:
-            ch = max(remaining,
-                     key=lambda c: (len(satb[c]), wcount.get(c, 0), freq.get(c, 0)))
-            banned = satb[ch]
-            free = [s for s in range(SLOTS) if s not in banned
-                    and self.load[s] < (CODE_ROM - POOL_ROM) // 0x8000]
-            if not free:
-                raise ValueError('cannot colour %r: %d blockers' % (ch, len(banned)))
-            s = min(free, key=lambda x: (self.load[x], x))
-            self.slot[ch] = s
-            self.load[s] += 1
-            remaining.discard(ch)
-            for wi in cw[ch]:
-                for c2 in wsets[wi]:
-                    if c2 in remaining:
-                        satb[c2].add(s)
+        """Colour only declared lifetimes, with deterministic bounded search."""
+        from glyph_coloring import colour_windows
+        self.slot, self.load, stats = colour_windows(
+            windows, SLOTS, (CODE_ROM - POOL_ROM) // 0x8000,
+            {ch: code - FIXED0 for ch, code in FIXED_CODES.items()})
+        print('  glyph core=%d clique=%d search=%d nodes' %
+              (stats['core'], stats['seed_clique'], stats['search_nodes']))
 
     def pack_pool(self):
         """(page, id) cells: id is the slot, page spreads chars that share a slot."""
@@ -1017,7 +1017,20 @@ def glyph64(ch):
     screen cell (upper word at column c, lower word at c+32) shows TL/BL and the
     right cell (c+1, c+33) shows TR/BR."""
     if ch not in _glyph_cache:
-        g = cnglyph.render16x16(ch)
+        if len(ch)==2 and all('A' <= c <= 'Z' or c in ' ()-' for c in ch) or len(ch)==1 and 'A' <= ch <= 'Z':
+            # The exact same 8x16 rasterizer as condensed item fields, but
+            # packed side-by-side; the real pool renderer remains unchanged.
+            cells = [render8x16(c, FONT_PATH, thresh=GLYPH8_THRESH,
+                               widen=GLYPH_WIDEN) if c != ' ' else [[0]*8 for _ in range(16)]
+                     for c in ch.ljust(2)]
+            g = [cells[0][y] + cells[1][y] for y in range(16)]
+        elif len(ch)==2 and all(c in ' ()-' for c in ch):
+            cells = [render8x16(c, FONT_PATH, thresh=GLYPH8_THRESH,
+                               widen=GLYPH_WIDEN) if c != ' ' else [[0]*8 for _ in range(16)]
+                     for c in ch]
+            g = [cells[0][y] + cells[1][y] for y in range(16)]
+        else:
+            g = cnglyph.render16x16(ch)
         tl = [row[:8] for row in g[:8]]
         bl = [row[:8] for row in g[8:]]
         tr = [row[8:] for row in g[:8]]
@@ -1169,8 +1182,9 @@ LITERAL_TILE_MOVE = {}            # old literal tile -> the idle tile it moved t
 STATUS_FIRST_TEXT = 0             # the script's first text block's address
 STATUS_SLOT_BASE = 0              # labels take slots 0..n-1
 ITEM_SLOT_BASE0 = 24              # the item values start above them
-ITEM_SLOT_SPAN = 4                # slots per value (longest name: 4)
-                                  # 23 label slots + 3 * 4 = 35 <= SLOTS
+ITEM_SLOT_SPAN = 6                # complete reviewed names, including a trailing digit
+                                  # label/STATUS values use separate pair indices;
+                                  # both halves of the existing table are valid
 STATUS_SLOT_TABLE = 0x1F4B00      # $3E:CB00  code -> slot, $FF = not a label
 # The label's 8x16 glyph id lives here, NOT in FA.  Every code the status script
 # names is also a KEEP1 code, and KEEP1 exists precisely so those codes keep
@@ -1240,15 +1254,13 @@ def status_script_blocks():
 
 
 def status_label_slot_list(n):
-    """n pool slots whose tiles the script's literal blocks do not draw.
+    """STATUS labels use distinct LEFT pairs below the item base24.
 
-    The -- STATUS -- row is written as raw tile numbers, so the label hook never
-    sees it and nothing keeps the pool off its tiles: slot 8's tiles were two of
-    that row's glyphs, and a hanzi uploaded into slot 8 landed on top of them --
-    the row came out as gibberish.  Protecting those tiles instead costs five
-    tiles and drops the colouring window from list=9 to list=4, which is not
-    worth it: the status screen needs 23 label slots plus 12 for the item values
-    and the pool has 36, so simply skipping the colliding slots is free.
+    The existing table contains BOTH halves of all body/name slots. STATUS
+    pauses dialogue, so its values may reuse inactive body/name pairs24..41
+    (18 8x16 pairs), including the first RIGHT pair when stride=41. Raw STATUS
+    fields, these static labels and the permanently private combat HUD remain
+    live and must never overlap; main() checks their actual physical tiles.
     """
     lo, hi, _np, _win = build_slotpairs()
     bad = set()
@@ -1257,7 +1269,7 @@ def status_label_slot_list(n):
         if t in STATUS_LITERAL_TILES or t + 1 in STATUS_LITERAL_TILES:
             bad.add(s_)
     out = [s_ for s_ in range(len(lo)) if s_ not in bad]
-    if len(out) < n + 3 * ITEM_SLOT_SPAN:
+    if len(out) < n or len(lo) < ITEM_SLOT_BASE0 + 3 * ITEM_SLOT_SPAN:
         raise SystemExit('only %d usable slots for %d labels + %d item values'
                          % (len(out), n, 3 * ITEM_SLOT_SPAN))
     if out[n - 1] >= ITEM_SLOT_BASE0:
@@ -1520,10 +1532,18 @@ def load_build_params(path=None):
     fixed point the build searches for, and SLOTS is whatever the tile budget
     allowed.  Both are recorded in cn_build_params.json next to the ROM.
     """
-    global PROMPT_CLOBBERED, PROTECT_GROUPS, PROTECT_CODES, SLOTS
+    global PROMPT_CLOBBERED, PROTECT_GROUPS, PROTECT_CODES, SLOTS, PAGES
+    global KEEP1, FIXED_CODES, FIXED0, FIXED_N, PREFIX0, CODE_BUDGET
     global STALEROW_ON, CMDWIN, HUD_ORIG, HUDFIX, ITEMSG, PACE, PACE_FRAMES
     global LABEL_SETS, LABEL_NAME_GLYPHS, POOL_ROM, POOL_BANK0
     par = json.load(open(path or (BASE + '/cn_build_params.json'), encoding='utf-8'))
+    PAGES = par['pages']
+    KEEP1 = dict(par['keep1'])
+    FIXED_CODES = dict(par.get('fixed', {}))
+    FIXED0 = par.get('fixed0', FIXED0)
+    FIXED_N = par.get('fixed_n', FIXED_N)
+    PREFIX0 = par.get('prefix0', PREFIX0)
+    CODE_BUDGET = FIXED0 - PREFIX0
     POOL_ROM = par.get('pool_rom', 0x108000)
     POOL_BANK0 = par.get('pool_bank0', 0x21)
     HUDFIX = par.get('hudfix', HUDFIX)
@@ -1804,6 +1824,19 @@ class Asm:
     def hexs(self, s):
         self.b += bytes.fromhex(s.replace(' ', ''))
 
+    def queue_load_x(self):
+        """Load the byte append cursor into X, even when the caller has X16.
+
+        Preserve the full accumulator (including hidden B), P and Y. Do not
+        use SEP #$10: it would truncate a live glyph-source offset in Y.
+        $09DE is graphics state; $09E0/$09E1 are signed train displacement.
+        """
+        self.hexs('08 C2 20 48 E2 20 AD DF 09 C2 20 29 FF 00 AA 68 28')
+
+    def queue_store_x(self):
+        """Commit only X's low byte at $09DF, preserving A/P and X/Y widths."""
+        self.hexs('08 C2 20 48 E2 20 8A 8D DF 09 C2 20 68 28')
+
     def label(self, name):
         assert name not in self.lab
         self.lab[name] = len(self.b)
@@ -2050,6 +2083,11 @@ def build_pace():
     a.op(0x08)                             # php
     a.op(0xE2, 0x30)                       # sep #$30
     a.op(0x48)                             # pha
+    # The original ending event has fixed-time subtitle/scene cues.
+    # Applying the dialogue delay makes the next EB07 call lose its message.
+    a.op(0xAD, 0x23, 0x1D)                 # lda current original event
+    a.op(0xC9, 0xAC)                       # cmp #$AC (credits)
+    a.rel(0xF0, 'bypass')                  # original cadence; reset countdown
     a.op(0xAD, 0x1A, 0x03)                 # lda $031A   (P1 held A/X byte)
     a.op(0x0D, 0x1C, 0x03)                 # ora $031C   (P1 held B/Y byte)
     a.op(0x29, 0x80)                       # and #$80    (A/B, not X/Y)
@@ -2168,21 +2206,22 @@ def build_hudname():
     a.hexs('A5 18 29 01')                # lda $18 / and #$01
     a.far_rel(0xD0, 'pick', 'hudodd')     # odd cell: nothing to stage
     # Reserve 72 glyph bytes plus up to 48 bytes for the four-cell caller.
-    # Check the full cursor, not just its low byte. A busy queue defers glyphs.
-    a.hexs('C2 20 AD DF 09 C9 88 00 E2 20')
+    # The cursor is one byte; adjacent $09E0 is live train displacement.
+    a.hexs('C2 20 AD DF 09 29 FF 00 C9 88 00 E2 20')
     a.far_rel(0xB0, 'pick', 'hudq')       # insufficient headroom: no insertion
 
     # $8C45 has already written a four-byte cell header at QUEUE_APPEND,
     # but has NOT committed it. Insert the glyphs BEFORE that pending header.
     # Moving only $09DF loses the append when $8C57 stores the saved X back.
-    a.hexs('C2 30 AE DF 09')             # rep #$30 / ldx $09df
+    a.hexs('C2 30')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     a.hexs('BD 00 0B 9D 48 0B')          # move header word 0 forward 72 bytes
     a.hexs('BD 02 0B 9D 4A 0B')          # move header word 1 forward 72 bytes
     # At this point: bank(1), pairs(4), saved DP(2), DB(1), P(1),
     # JSL return(3), caller's PHX(1). Update the X that PLX will restore.
     a.hexs('E2 20 A3 0D 18 69 48 83 0D') # saved X += 72
     a.hexs('A3 01 48 AB')                # lda $01,s / pha / plb: glyph bank
-    a.hexs('AE DF 09')                   # ldx $09df
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     for slot_off, off_extra in ((4, 0), (2, 32)):
         # VRAM word address = $6000 + tile * 8
         a.hexs('E2 20')                  # sep #$20: the round before left M 16
@@ -2200,7 +2239,7 @@ def build_hudname():
         a.hexs('A8')                     # tay
         for _ in range(16):              # 16 words: the pair, from DBR:$8000+Y
             a.hexs('B9 00 80 9D 00 0B E8 E8 C8 C8')
-    a.hexs('8E DF 09')                   # stx $09df
+    a.queue_store_x()  # never write adjacent train displacement
     a.hexs('E2 20 A9 03 48 AB')          # sep / lda #$03 / pha / plb (DBR back)
     a.label('pick')
     # The ORIGINAL caller puts $22 on the lower row (base) and $23 on the
@@ -2217,96 +2256,100 @@ def build_hudname():
     return a.done()
 
 
+def install_text_window_alignment(rom):
+    """Align the existing 32-scanline BG3 text band to complete glyph rows.
+
+    The original offset48 maps band184..215 to physical pixels1..32:
+    it clips our first pixel row and leaks the NEXT row's top pixels at215.
+    Bias existing V-scroll offsets by-1. No live text erasure, extra HDMA
+    record, queue state or glyph edit. Original circular scrolling remains.
+    """
+    table=0x1EAF7
+    expected=bytes((0x48+16*i)&255 for i in range(16))
+    assert rom[table:table+16]==expected, 'BG3 V-scroll table base changed'
+    record=0x1EACC+4*5
+    assert rom[record:record+5]==bytes.fromhex('20 00 01 48 00'), 'text HDMA record changed'
+    rom[table:table+16]=bytes((v-1)&255 for v in expected)
+    rom[record+3]=0x47
+    print('BG3 text band: existing V-scroll offsets biased -1, no next-row top-pixel leak')
+
+
 def build_itemmsg():
-    """The item name a battle message pastes in: the drawer's $DE branch.
+    """Draw message DE names at full 16x16, leaving the narrow status ABI alone.
 
-    v23 gave the item names their own code -- [$DE][8x16 id], glyphs in the
-    table at $3F:8000 -- because the status screen's three values cannot share
-    the pool.  The message drawer only knows the Chinese page codes, so a name
-    pasted into a battle message came out as FA[$de] and FA[id]: two wrong
-    glyphs per hanzi, the four fragments in the user's screenshot.
-
-    Entered by JML from the drawer's dispatch with A = $12 = $DE, so PBR is $3E
-    and an RTS would return into the wrong bank: every exit is a JML into bank
-    $03, and the stack must be left exactly as the drawer's own paths leave it
-    because those exits RTS straight to the consumer.
-
-    The glyph is 8x16 (one column, tiles t/t+1), so the column advances once --
-    $03:FA7A does that -- and the id byte is eaten with INC $03E9, exactly like
-    the drawer's own two byte codes.  The slot is SLOT0 + (column & 3): the
-    glyphs of one name sit in four consecutive columns, so their low bits are
-    always distinct and four name pairs are enough.
+    DE keeps the same two-byte token/id. Reuse the list's existing 64-byte
+    glyph table and both halves of the four reserved runtime-name slots.
+    No new VRAM/WRAM allocation: four consecutive full-width glyphs use four
+    distinct slots, selected by (buffer index >> 1) & 3. Preserve the byte queue
+    cursor, defer before capacity is exhausted, and wrap like the body drawer.
     """
     SLOT0 = SLOTS + LABEL_GLYPHS * LABEL_SETS
+    TABLE_N = SLOTS + LABEL_GLYPHS * LABEL_SETS + LABEL_NAME_GLYPHS * LABEL_NAME_SETS
+    assert LABEL_NAME_GLYPHS >= 4, 'full-width DE names need four existing slots'
     lo, loh = snes_of_rom(E3_SLOTPAIR), snes_of_rom(E3_SLOTHI)
     a = Asm(ITEMMSG_ROM)
-
-    a.hexs('08 E2 30 8B')                # php / sep #$30 / phb
-    # room for the 36 byte tile entry and the two 8 byte cells?
-    a.hexs('C2 20 AD DF 09 C9 %02X 00 E2 20' % (0x100 - 44))
-    a.far_rel(0xB0, 'deter', 'ies')      # bcs deter: retry next frame
-    # A DE name can be the first visible entry of a message/list row. It
-    # bypasses the body drawer now, so it owns the same row-start blanking.
+    a.hexs('08 E2 30 8B')  # PHP / SEP / PHB; every exit returns to bank03
     a.hexs('AD 6F 03')
-    a.far_rel(0xD0, 'rowready', 'ieskiprow')
-    a.hexs('C2 20 AD DF 09 C9 %02X 00 E2 20' % (0x101 - ROW_WIPE - 44))
-    a.far_rel(0xB0, 'deter', 'ierow')
-    a.hexs('C2 30 AE DF 09')
-    _rowwipe(a, 0, 'item')
-    _rowwipe(a, 0x20, 'item')
-    a.hexs('8E DF 09 E2 30')
+    a.rel(0xF0, 'fullrow')
+    a.hexs('C9 %02X' % WRAP_COL)
+    a.rel(0x90, 'glyphonly')
+    a.label('fullrow')
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - ROW_WIPE - GLYPH_COST))
+    a.rel(0x80, 'guardend')
+    a.label('glyphonly')
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - GLYPH_COST))
+    a.label('guardend')
+    a.far_rel(0xB0, 'deter', 'itemcapacity')
+
+    # Original F2/body wrap and scroll-state protocol; no renderer state scratch.
+    a.hexs('AD 6F 03 C9 %02X' % WRAP_COL)
+    a.rel(0x90, 'nowrap')
+    a.hexs('EE 6E 03 AD 6E 03 C9 10')
+    a.rel(0x90, 'wrappedrow')
+    a.hexs('9C 6E 03')
+    a.label('wrappedrow')
+    a.hexs('9C 6F 03 EE 6D 03 AD 6D 03 C9 03')
+    a.rel(0x90, 'nowrap')
+    a.hexs('A9 03 8D 6D 03 AD 73 03 09 20 8D 73 03 9C 71 03')
+    a.label('nowrap')
+    a.hexs('AD 6F 03')
+    a.far_rel(0xD0, 'rowready', 'itemrow')
+    a.hexs('C2 30');a.queue_load_x()
+    _rowwipe(a, 0, 'item');_rowwipe(a, 0x20, 'item')
+    a.queue_store_x();a.hexs('E2 30')
     a.label('rowready')
-    # slot = SLOT0 + ($036f & 3)
-    a.hexs('AD 6F 03 29 03')             # lda $036f / and #$03
-    a.hexs('18 69 %02X' % SLOT0)         # clc / adc #SLOT0
-    a.hexs('C2 20 29 FF 00 AA')          # rep #$20 / and #$00ff / tax
-    a.hexs('E2 20')                      # sep #$20
-    a.hexs('BF %02X %02X %02X' % (loh[1] & 0xFF, loh[1] >> 8, loh[0]))
-    a.hexs('EB')                         # xba
-    a.hexs('BF %02X %02X %02X' % (lo[1] & 0xFF, lo[1] >> 8, lo[0]))
-    a.hexs('C2 20 48')                   # rep #$20 / pha: the pair's upper tile
-    a.hexs('AE DF 09')                   # ldx $09df (the queue cursor)
-    # 32 bytes to VRAM word $6000 + tile * 8, from $3F:8000 + id * 32
-    a.hexs('E2 20 A3 01')                # sep / lda $01,s (the tile low byte)
-    a.hexs('C2 30 29 FF 00 0A 0A 0A')    # rep #$30 / and / asl x3 -> tile * 8
-    a.hexs('09 00 60')                   # ora #$6000
-    a.hexs('9D 00 0B E8 E8')             # sta $0b00,x / inx inx
-    a.hexs('E2 20 A9 80 9D 00 0B E8')    # sep / lda #$80 / sta / inx ($2115)
-    a.hexs('A9 20 9D 00 0B E8')          # lda #$20 / sta / inx (32 bytes)
-    a.hexs('AD E9 03 1A')                # byte index of the following ID
-    # X/Y are 16-bit here; TAY transfers hidden B even when M=8. The previous
-    # VRAM address left B=$60..$67, which selected an unrelated WRAM byte.
-    a.hexs('C2 30 29 FF 00 A8 E2 20')    # explicitly zero-extend before TAY
-    a.hexs('B9 EA 03')                   # lda $03ea,y (the glyph id)
-    a.hexs('C2 30 29 FF 00')             # rep #$30 / and #$00ff
-    for _ in range(5):
-        a.hexs('0A')                     # asl x5 -> id * 32
-    a.hexs('A8')                         # tay
-    a.hexs('E2 20 A9 3F 48 AB')          # sep / lda #$3f / pha / plb
-    a.hexs('C2 20')                      # WORD copies: do not leave plane-1 queue garbage
-    for _ in range(16):                  # 16 words: the glyph, from DBR:$8000+Y
-        a.hexs('B9 00 80 9D 00 0B E8 E8 C8 C8')
-    a.hexs('E2 20 A9 03 48 AB')          # sep / lda #$03 / pha / plb
-    # the two cells at (row $036e, column $036f), like the drawer's own writer
-    a.hexs('E2 30 AC 6E 03')             # sep #$30 / ldy $036e
-    a.hexs('B9 8E FA 18 6D 6F 03')       # lda $fa8e,y / clc / adc $036f
-    a.hexs('9D 00 0B E8')                # sta $0b00,x / inx
-    a.hexs('B9 7E FA 69 00 9D 00 0B E8')  # lda $fa7e,y / adc #0 / sta / inx
-    a.hexs('A9 81 9D 00 0B E8')          # lda #$81 / sta / inx (VMAIN $81)
-    a.hexs('A9 04 9D 00 0B E8')          # lda #$04 / sta / inx (two words)
-    a.hexs('C2 20 A3 01')                # rep #$20 / lda $01,s (the tile)
-    a.hexs('09 00 24 9D 00 0B E8 E8')    # ora #$2400 / sta / inx inx
-    a.hexs('1A 9D 00 0B E8 E8')          # inc a (tile + 1) / sta / inx inx
-    a.hexs('8E DF 09')                   # stx $09df
-    a.hexs('EE E9 03')                   # inc $03e9 (consume the id byte)
-    a.hexs('E2 20 68 68')                # sep #$20 / pla x2 (the tile)
-    a.hexs('AB 28')                      # plb / plp
-    a.long_to(0x01FA7A)                  # jml $03:fa7a (inc $036f / rts)
-    # ---- not enough queue room: give the frame back -------------------------
+
+    a.hexs('AD E9 03 4A 29 03 18 69 %02X' % SLOT0)
+    a.hexs('C2 30 29 FF 00 AA E2 20')
+    for offset in (0, TABLE_N):
+        a.hexs('BF %02X %02X %02X' % ((loh[1]+offset)&255, (loh[1]+offset)>>8, loh[0]))
+        a.hexs('EB')
+        a.hexs('BF %02X %02X %02X' % ((lo[1]+offset)&255, (lo[1]+offset)>>8, lo[0]))
+        a.hexs('C2 20 48 E2 20')
+    # Stack: right pair at1, left at3, saved DB at5, P at6.
+    a.hexs('AD E9 03 1A C2 30 29 FF 00 A8 E2 20 B9 EA 03')
+    a.hexs('C2 30 29 FF 00')
+    for _ in range(6):a.hexs('0A')
+    a.hexs('A8')  # Y=id*64, not truncated while copying either half
+    a.queue_load_x()
+    a.hexs('E2 20 A9 3F 48 AB C2 20')
+    for off in (3, 1):
+        a.hexs('A3 %02X 0A 0A 0A 09 00 60 9D 00 0B E8 E8' % off)
+        a.hexs('E2 20 A9 80 9D 00 0B E8 A9 20 9D 00 0B E8 C2 20')
+        for _ in range(16):a.hexs('B9 00 A0 9D 00 0B E8 E8 C8 C8')
+    a.hexs('E2 20 A9 03 48 AB')
+    for off,plus in ((3,0),(1,1)):
+        a.hexs('E2 30 AC 6E 03 B9 8E FA 18 6D 6F 03')
+        if plus:a.hexs('1A')
+        a.hexs('9D 00 0B E8 B9 7E FA 69 00 9D 00 0B E8')
+        a.hexs('A9 81 9D 00 0B E8 A9 04 9D 00 0B E8')
+        a.hexs('C2 20 A3 %02X 09 00 24 9D 00 0B E8 E8 1A 9D 00 0B E8 E8' % off)
+    a.queue_store_x()
+    a.hexs('EE E9 03 EE 6F 03 E2 20 68 68 68 68 AB 28')
+    a.long_to(0x01FA7A)  # second column advance, original RTS tail
     a.label('deter')
-    a.hexs('AD E9 03 3A 8D E9 03')       # lda $03e9 / dec a / sta $03e9
-    a.hexs('AB 28')                      # plb / plp
-    a.long_to(0x01FA7D)                  # jml $03:fa7d (plain rts)
+    a.hexs('AD E9 03 3A 8D E9 03 AB 28')
+    a.long_to(0x01FA7D)
     return a.done()
 
 
@@ -2331,7 +2374,9 @@ def build_itemdrawer():
     a.long_to(0x00FCA9)                    # -> the original STA $2118
     a.label('item')
     a.op(0x5A)                             # PHY (the upload's TAY clobbers it)
-    # slot = base(cursor) + (column - 6), clamped to 11
+    # Pair-table index = row base + (column - 6). The STATUS page owns
+    # these 18 pairs while the dialogue/name lanes are inactive; combat HUD
+    # pairs remain permanently separate. Do not truncate a source item name.
     a.op(0xA5, 0x20)                       # LDA $20
     a.op(0x38, 0xE9, 0xC6)                 # SEC / SBC #$C6
     for _ in range(6):
@@ -2658,20 +2703,20 @@ def build_drawer_copy():
     # speaker name, the colon) come through this path, so the wipe has to happen
     # here as well or the row would only be wiped once a Chinese glyph joined it.
     a.hexs('AD DF 09')                     # lda $09df (first free queue byte)
-    a.hexs('C9 %02X' % (0x101 - 8))        # cmp #$f9: the original drawer stages 8
+    a.hexs('C9 %02X' % (0x100 - 8))        # cmp #$f8: commit must not wrap to zero
     a.far_rel(0xB0, 'defer0', 'occr')      # bcs defer0: no room, retry next frame
     a.hexs('AD 6F 03')                     # lda $036f
     a.far_rel(0xD0, 'occ0', 'occ0')        # bne occ0: not the row's first cell
-    a.hexs('AD DF 09 C9 %02X' % (0x101 - ROW_WIPE - 8))
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - ROW_WIPE - 8))
                                            # lda $09df / cmp #$89: the row wipe
                                            # plus that 8 byte entry must fit
     a.far_rel(0xB0, 'defer0', 'occw')      # bcs defer0: retry next frame
-    a.hexs('AE DF 09')                     # ldx $09df (queue cursor)
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     a.hexs('5A')                           # phy (Y is the original drawer's)
     rowwipe(0, 'o')
     rowwipe(0x20, 'o')
     a.hexs('7A')                           # ply
-    a.hexs('8E DF 09')                     # stx $09df
+    a.queue_store_x()  # never write adjacent train displacement
     a.label('occ0')
     a.hexs('AD 6F 03 C9 1A')               # lda $036f / cmp #$1a (hook food)
     a.rel(0x90, 'oc1')                     # bcc oc1
@@ -2804,12 +2849,12 @@ def build_drawer_copy():
     a.hexs('C9 %02X' % WRAP_COL)           # cmp #WRAP_COL
     a.rel(0x90, 'g88')                     # bcc g88: only the glyph is staged
     a.label('gwide')
-    a.hexs('AD DF 09 C9 %02X' % (0x101 - ROW_WIPE_CHECK))
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - ROW_WIPE_CHECK))
                                            # lda $09df / cmp #$39: row wipe plus
                                            # glyph must fit in the queue page
     a.rel(0x80, 'gdone')                   # bra gdone
     a.label('g88')
-    a.hexs('AD DF 09 C9 %02X' % (0x101 - GLYPH_COST))
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - GLYPH_COST))
                                            # lda $09df / cmp #$a9
     a.label('gdone')
     a.far_rel(0xB0, 'defer', 'guard')      # bcs defer: no room, retry next frame
@@ -2884,7 +2929,7 @@ def build_drawer_copy():
         sload(off)                         # M=0
         a.hexs('09 00 24 9D 00 0B E8 E8')  # ora #$2400 / sta / inx inx
         a.hexs('1A 9D 00 0B E8 E8')        # inc a (the pair's second tile) / sta
-    a.hexs('8E DF 09')                     # stx $09df
+    a.queue_store_x()  # never write adjacent train displacement
 
     # ---- bookkeeping --------------------------------------------------------
     a.hexs('E2 20 A5 12 C9 %02X' % FIXED0)   # sep #$20 / lda $12 / cmp #$dc
@@ -2962,7 +3007,8 @@ def _band_stub(rom_at):
         a.hexs('0A')                       # asl x5: 32 words per map row
     a.hexs('18 69 03 7C')                  # clc / adc #$7c03
     a.hexs('85 16')                        # sta $16
-    a.hexs('E2 20 AE DF 09')               # sep #$20 / ldx $09df
+    a.hexs('E2 20')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     a.hexs('C2 20 A5 16 9D 00 0B E8 E8')   # rep / lda $16 / sta $0b00,x / inx inx
     a.hexs('E2 20 A9 80 9D 00 0B E8')      # sep / lda #$80 / sta / inx
     a.hexs('A9 34 9D 00 0B E8')            # lda #$34 / sta / inx
@@ -2972,7 +3018,7 @@ def _band_stub(rom_at):
     a.hexs('9D 00 0B E8 E8')               # sta $0b00,x / inx inx
     a.hexs('88')                           # dey
     a.rel(0xD0, 'w')                       # bne w
-    a.hexs('8E DF 09')                     # stx $09df
+    a.queue_store_x()  # never write adjacent train displacement
     a.hexs('E2 20 E6 14 A5 14 29 1F 85 14')   # sep / inc $14 / and #$1f / sta $14
     a.hexs('E6 15 A5 15 C9 04')            # inc $15 / lda $15 / cmp #4
     a.rel(0x90, 'row')                     # bcc row
@@ -3008,7 +3054,7 @@ def _stalerow_body(a, extra, tag):
     a.hexs('9D 00 0B E8 E8')           # sta $0b00,x / inx inx
     a.hexs('88')                       # dey
     a.rel(0xD0, 'sw%s%02X' % (tag, extra))
-    a.hexs('8E DF 09')                 # stx $09df (commit this entry)
+    a.queue_store_x()  # never write adjacent train displacement
 
 
 def build_stalerow(rom, count_only=False):
@@ -3066,7 +3112,7 @@ def build_stalerow(rom, count_only=False):
     # the stub stages ROW_WIPE bytes (two 56 byte entries), not twice that:
     # the old check reserved 2 * ROW_WIPE and so skipped far more often
     # than it had to
-    a.hexs('AD DF 09 C9 %02X' % (0x101 - ROW_WIPE - GLYPH_COST))
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - ROW_WIPE - GLYPH_COST))
     a.far_rel(0xB0, 'out', 'srr')          # bcs out: no room, leave the row stale
     # Two rows, one per column pair: columns 1 and 2 blank $0391, columns 3 and
     # 4 blank $0391-1.  The previous message can be two lines long (the user's
@@ -3083,7 +3129,7 @@ def build_stalerow(rom, count_only=False):
     a.hexs('AD 91 03 29 0F')               # lda $0391 / and #$0f
     a.label('r2')
     a.hexs('48')                           # pha: keep the row for the second half
-    a.hexs('AE DF 09')                     # ldx $09df
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     a.hexs('E2 20 68 48 C2 20')            # sep #$20 / pla / pha / rep: the row
                                            # back into A, one byte at a time
     a.hexs('29 FF 00')                     # and #$00ff
@@ -3118,9 +3164,12 @@ def _menuclose_stub(rom_at, replay, ret, tag):
     the menu open hook does.
     """
     a = Asm(rom_at)
-    a.hexs('08 E2 30')                     # php / sep #$30
+    # The $03:F706 caller just loaded $0374 into A. Both the no-pending
+    # branch and row wipe clobber it; replaying AND #$EF would otherwise
+    # clear session bits and, after a wipe, lose the hidden accumulator B.
+    a.hexs('08 C2 20 48 E2 30')            # php / rep #$20 / pha16 / sep #$30
     a.hexs('AD %02X %02X' % (MENUPEND & 0xFF, MENUPEND >> 8))
-    a.rel(0xF0, 'out' + tag)               # beq out: nothing pending
+    a.far_rel(0xF0, 'out' + tag, 'mc_out_'+tag)               # beq out: nothing pending
     a.hexs('29 1F 85 14')                  # and #$1f / sta $14 (first row)
     a.hexs('64 15')                        # stz $15 (rows done)
     a.label('row' + tag)
@@ -3132,13 +3181,14 @@ def _menuclose_stub(rom_at, replay, ret, tag):
                                            # always clears carry, so the room
                                            # check below is ours
     a.hexs('AD DF 09 C9 C1')               # lda $09df / cmp #$f9 - 56
-    a.rel(0xB0, 'flush' + tag)             # bcs flush: no room, empty it first
+    a.far_rel(0xB0, 'flush' + tag, 'mc_flush_'+tag)             # bcs flush: no room, empty it first
     a.hexs('C2 20 A5 14 29 FF 00')         # rep #$20 / lda $14 / and #$00ff
     for _ in range(5):
         a.hexs('0A')                       # asl x5: 32 words per map row
     a.hexs('18 69 03 7C')                  # clc / adc #$7c03 (map base + col 3)
     a.hexs('85 16')                        # sta $16
-    a.hexs('E2 20 AE DF 09')               # sep #$20 / ldx $09df
+    a.hexs('E2 20')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     a.hexs('C2 20 A5 16 9D 00 0B E8 E8')   # rep #$20 / lda $16 / sta $0b00,x / inx inx
     a.hexs('E2 20 A9 80 9D 00 0B E8')      # sep #$20 / lda #$80 ($2115) / sta / inx
     a.hexs('A9 34 9D 00 0B E8')            # lda #$34 (52 bytes) / sta / inx
@@ -3148,13 +3198,13 @@ def _menuclose_stub(rom_at, replay, ret, tag):
     a.hexs('9D 00 0B E8 E8')               # sta $0b00,x / inx inx
     a.hexs('88')                           # dey
     a.rel(0xD0, 'w' + tag)                 # bne w
-    a.hexs('8E DF 09')                     # stx $09df (commit)
+    a.queue_store_x()  # never write adjacent train displacement
     a.hexs('E2 20 E6 14 A5 14 29 1F 85 14')   # sep / inc $14 / and #$1f / sta $14
     a.hexs('E6 15 A5 15 C9 04')            # inc $15 / lda $15 / cmp #$04
-    a.rel(0x90, 'row' + tag)               # bcc row
+    a.far_rel(0x90, 'row' + tag, 'mc_row_'+tag)               # bcc row
     a.hexs('9C %02X %02X' % (MENUPEND & 0xFF, MENUPEND >> 8))   # stz $0bfb
     a.label('out' + tag)
-    a.hexs('28')                           # plp: back to the caller's widths
+    a.hexs('C2 20 68 28')                  # rep #$20 / pla16 / plp: full A, then widths/flags
     a.hexs(replay)                         # the instructions the hook ate
     a.long_to(ret)                         # jml back into bank $03
     a.label('flush' + tag)
@@ -3214,7 +3264,7 @@ def build_menuload(rom, table):
     a.far_rel(0xB0, 'done', 'all')         # bcs done: all of them staged
     a.hexs('85 15')                        # sta $15
     # room for both entries (2 x 36 bytes) or leave it to the next frame
-    a.hexs('AD DF 09 C9 %02X' % (0x101 - 72))
+    a.hexs('AD DF 09 C9 %02X' % (0x100 - 72))
     a.far_rel(0xB0, 'out', 'room')         # bcs out: no room, retry next frame
     # the table offset = index * 7
     a.hexs('A5 15 0A 0A 0A 38 E5 15')      # lda $15 / asl x3 / sec / sbc $15
@@ -3258,6 +3308,8 @@ def build_menuload(rom, table):
                                            # ldy $039a / lda $f851,y
     a.long_to(0x01F847)                    # jml back into that routine
     code = a.done()
+    assert MENU_STUB + len(code) <= MENU_TAB, "menu uploader overlaps its table"
+    assert MENU_TAB + len(table) <= ITEMDRAW_ROM, "menu table overlaps item drawer"
     for lo, hi, what in ((STALEROW_STUB, STALEROW_STUB + 0x100, 'stale-row stub'),
                          (MENUCLOSE_STUB, MENUCLOSE_STUB + 0x400, 'menu close stubs'),
                          (CODE_ROM, CODE_ROM + 0x200, 'the drawer'),
@@ -3291,8 +3343,8 @@ def build_menuclose(rom):
         a = _menuclose_stub(rom_at, replay, ret, tag)
         code = a.done()
         rom[rom_at:rom_at + len(code)] = code
-        assert a.lab['out' + tag] - 2 <= 127, (tag, a.lab)
-        assert a.lab['flush' + tag] - 2 <= 127, (tag, a.lab)
+        assert len(code) <= 0x100, (tag, 'menu-close stub exceeds its reserved page', len(code))
+        assert a.lab['flush' + tag] < len(code), (tag, a.lab)
         assert a.lab['row' + tag] < a.lab['flush' + tag]
         bk, ad = snes_of_rom(rom_at)
         site = MENUCLOSE_SITE if tag == 'a' else MENUCLOSE_SITE2
@@ -3541,6 +3593,11 @@ def main():
                 continue
             if ch not in ITEM_CHARS:
                 ITEM_CHARS[ch] = len(ITEM_CHARS)
+    for r in textrecs:
+        if r['table_rom_off'] == ITEM_TABLE:
+            key = '%06X' % r['text_rom_off']
+            prose = re.sub(r'\{[0-9A-Fa-f]{2,4}\}', '', fixed[key])
+            assert len(prose) <= ITEM_SLOT_SPAN, ('STATUS item lane exceeded', key, prose)
     assert len(ITEM_CHARS) <= ITEM_GLYPH_MAX, len(ITEM_CHARS)
     print('item names: %d distinct hanzi -> 8x16 table at $%02X:8000'
           % (len(ITEM_CHARS), ITEM_GLYPH_BANK))
@@ -3558,12 +3615,39 @@ def main():
             continue                    # their renderer picks one at run time
         per_table[ti] = [glyphs_of(fixed['%06X' % r['text_rom_off']]) for r in recs]
     windows = []
-    enc, windows, win_main, win_list = choose_windows(per_table)
+    # The measured 32-scanline text band can show at most THREE physical
+    # rows during a scroll beat (one partial row at either edge). Retaining
+    # every glyph of a five-row paragraph after it has left the band creates
+    # impossible cliques. Group literal glyphs by EXPLICIT row boundaries,
+    # not guessed macro widths. Each group retains all its auto-wrapped
+    # glyphs; macro glyph contracts remain in the shared tables/name lanes.
+    # Credits have their
+    # own non-neighbor multi-message lifetime sets above.
+    row_windows = {}
+    for r in sorted([r for r in textrecs if r['table_rom_off']==TABLES[0][0]], key=lambda r:r['index']):
+        if r['index']>=649:
+            continue
+        value=fixed['%06X' % r['text_rom_off']]
+        # Only explicit F2F6 row resets define these lifetimes. Dynamic
+        # insertions may add width/auto-wraps, but cannot remove an explicit
+        # row boundary: their original readers copy up to (not through) F2.
+        # Never use guessed macro widths or virtual wrapping for this proof.
+        rows=[glyphs_of(line) for line in value.split('{F2F6}')]
+        if len(rows)<=3:
+            continue
+        row_windows[r['index']]=[set().union(*rows[i:i+3]) for i in range(len(rows))]
+        assert set().union(*row_windows[r['index']])==per_table[0][r['index']]
+    print('fixed-text rolling three-row lifetime contracts: %d' % len(row_windows))
+    enc, windows, win_main, win_list = choose_windows(per_table, main_row_windows=row_windows)
     print('colouring: windows main=%d list=%d, %d windows, widest %d glyphs, '
           '%d distinct glyphs'
           % (win_main, win_list, len(windows), max(len(w) for w in windows),
              len(set().union(*windows))))
-    PAGES = max(1, -(-(len(enc.slot) - FIXED_N) // max(1, SLOTS - FIXED_N)))
+    # Storage follows the ACTUAL colouring columns. Fixed one-byte glyphs
+    # are uploaded on every draw from page0 (setf -> gotid -> guard), not
+    # globally resident slots; other pages may share a column when not
+    # co-visible. A glyph-count/(SLOTS-FIXED_N) estimate wastes a whole bank.
+    PAGES = max(1, max(enc.load))
     while True:
         if POOL_ROM + PAGES * 0x8000 > CODE_ROM or PREFIX0 + PAGES > ITEM_PREFIX:
             raise SystemExit('glyph pool overlaps code bank or item prefix')
@@ -3674,6 +3758,12 @@ def main():
     json.dump({'keep1': {'%s' % ch: c for ch, c in KEEP1.items()},
                'slots': SLOTS, 'pages': PAGES, 'prefix0': PREFIX0,
                'pool_rom': POOL_ROM, 'pool_bank0': POOL_BANK0,
+               'garage_story_sync': True, 'garage_story_sync_rom': 0x1F5C00, 'garage_story_sync_hook': 0x38E1A,
+               'ending_scene_reset': True, 'ending_scene_rom': 0x1F5D00, 'ending_scene_hook': 0x395A9,
+               'credits_original_cadence': True, 'credits_co_visible_windows': 20,
+               'colour_window_main': win_main, 'colour_window_list': win_list,
+               'rolling_row_messages': sorted(row_windows),
+               'status_item_span': ITEM_SLOT_SPAN, 'status_item_base': ITEM_SLOT_BASE0,
                'menu_list': True, 'menu_list_rom': 0x1F6000, 'menu_item_glyph_rom': ITEM_MENU_GLYPH_ROM, 'menu_item_width': 2,
                'glyphs': len(enc.order),
                'stride': POOL_STRIDE,
@@ -3686,7 +3776,7 @@ def main():
                'hud_orig': bool(HUD_ORIG),
                'hudfix': bool(HUDFIX), 'hud_bar_shared': bool(HUDFIX),
                'hud_pairs': hud_pairs(), 'hud_top_first': True, 'hud_pair_rom': HUDPAIR_ROM,
-               'itemsg': bool(ITEMSG), 'pace': PACE, 'pace_counter': PACE_FRAMES,
+               'itemsg': bool(ITEMSG), 'item_message_width': 2, 'text_window_vscroll_bias': -1, 'pace': PACE, 'pace_counter': PACE_FRAMES,
                'label_sets': LABEL_SETS, 'label_name_glyphs': LABEL_NAME_GLYPHS,
                'fixed': {k: v for k, v in FIXED_CODES.items()},
                'fixed0': FIXED0,
@@ -3749,6 +3839,16 @@ def main():
     assert rom[ITEM_MENU_GLYPH_ROM:ITEM_MENU_GLYPH_ROM+len(menu_glyphs)]==bytes(len(menu_glyphs)), 'menu item glyph destination occupied'
     rom[ITEM_MENU_GLYPH_ROM:ITEM_MENU_GLYPH_ROM+len(menu_glyphs)]=menu_glyphs
 
+    _stat_lo, _stat_hi, _stat_np, _stat_win = build_slotpairs()
+    item_pairs = [_stat_lo[i] | (_stat_hi[i] << 8)
+                  for i in range(ITEM_SLOT_BASE0, ITEM_SLOT_BASE0 + 3 * ITEM_SLOT_SPAN)]
+    label_pairs = {_stat_lo[i] | (_stat_hi[i] << 8)
+                   for i in status_label_slot_list(len(status_label_hanzi()))}
+    assert len(set(item_pairs)) == 3 * ITEM_SLOT_SPAN
+    assert all(0 <= t < 255 for t in item_pairs), 'STATUS pairs require 8-bit font tiles'
+    assert not set(item_pairs) & label_pairs, 'STATUS item/label lifetime collision'
+    assert not set(item_pairs) & set(hud_pairs()), 'STATUS item/combat HUD collision'
+    assert not {t + j for t in item_pairs for j in (0, 1)} & STATUS_LITERAL_TILES
     rom[ITEMBASE_ROM:ITEMBASE_ROM + 3] = bytes(
         [ITEM_SLOT_BASE0, ITEM_SLOT_BASE0 + ITEM_SLOT_SPAN,
          ITEM_SLOT_BASE0 + 2 * ITEM_SLOT_SPAN])
@@ -4101,6 +4201,22 @@ def main():
     from menulist_patch import install as install_menu_list
     result=install_menu_list(rom,Asm,E3_SLOTPAIR,E3_SLOTHI,SLOTS,PAGES,POOL_BANK0,len(slotpairs)//2)
     print('short-name list renderer: %d bytes @ ROM %06X; original command window bypassed' % (result['bytes'],result['rom']))
+
+    install_text_window_alignment(rom)
+
+    from garage_story_patch import install as install_garage_story_sync
+    from garage_story_patch import SYNC_ROM, SYNC_LIMIT
+    assert PACE_ROM + len(pcode) <= SYNC_ROM and SYNC_LIMIT <= DISPATCH_ROM, 'garage sync overlaps pace/list resources'
+    sync = install_garage_story_sync(rom, Asm)
+    print('garage battle/story sync: %d bytes @ ROM %06X; native teardown before event15 movement' % (sync['bytes'], sync['rom']))
+
+    from ending_scene_patch import install as install_ending_scene
+    from ending_scene_patch import SCENE_ROM, SCENE_LIMIT
+    assert SYNC_LIMIT <= SCENE_ROM and SCENE_LIMIT <= DISPATCH_ROM, 'ending scene overlaps garage/list resources'
+    # The complete code-bank reservation is owned here, after all existing
+    # components have been installed. install checks original hook + full page.
+    scene = install_ending_scene(rom, Asm)
+    print('ending station lifecycle: %d bytes @ ROM %06X; eventAC/FEB8 release stale gameplay train' % (scene['bytes'], scene['rom']))
 
     # ---- 5. checksum (this ROM stores the complement first)
     rom[0x7FDC:0x7FE0] = b'\x00\x00\x00\x00'

@@ -74,7 +74,14 @@ print('glyph cell map entries: %d ; one byte codes %s'
 bad = 0
 for ch, (page, slot) in list(cell.items()):
     off = cb.POOL_ROM + page * 0x8000 + slot * cb.POOL_STRIDE
-    g = cnglyph.render16x16(ch)
+    if len(ch)==2 and all('A'<=c<='Z' or c in ' ()-' for c in ch) or len(ch)==1 and 'A'<=ch<='Z':
+        # Independent fresh 8x16 raster and four-tile packing, not cb.glyph64.
+        from cnfont8 import render8x16
+        halves=[render8x16(c,cb.FONT_PATH,thresh=cb.GLYPH8_THRESH,widen=cb.GLYPH_WIDEN)
+                if c!=' ' else [[0]*8 for _ in range(16)] for c in ch.ljust(2)]
+        g=[halves[0][y]+halves[1][y] for y in range(16)]
+    else:
+        g = cnglyph.render16x16(ch)
     want = (st.pack_8x8(g[:8][:8] and [row[:8] for row in g[:8]]) +
             st.pack_8x8([row[:8] for row in g[8:]]) +
             st.pack_8x8([row[8:] for row in g[:8]]) +

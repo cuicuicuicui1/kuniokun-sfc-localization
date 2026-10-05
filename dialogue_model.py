@@ -31,9 +31,14 @@ def tick(cpu):
 
 
 def flush(cpu):
+    """Apply and immediately reclaim text entries, without clearing neighbors.
+
+    This is not cycle-accurate NMI behavior. test_menulist.flush_engine models
+    NMI's DD-only advancement; allocator/live-core tests cover real reclamation.
+    """
     w = cpu.bus.wram
-    start = w[0x9DD] | w[0x9DE]<<8
-    end = w[0x9DF] | w[0x9E0]<<8
+    start = w[0x9DD]
+    end = w[0x9DF]
     assert 0 <= start <= end <= 0x100, (start,end)
     entries = []
     while start < end:
@@ -46,5 +51,5 @@ def flush(cpu):
         for j in range(0,n,2):
             cpu.vram[(addr+j//2*step)&0x7FFF] = w[p+4+j] | w[p+5+j]<<8
         start += 4+n
-    w[0x9DD:0x9E1] = bytes(4)
+    w[0x9DD] = w[0x9DF] = 0 # Neighbor bytes belong to graphics/train state.
     return entries

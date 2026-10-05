@@ -62,6 +62,8 @@ def run_case(base, vblank=True, stub=STUB, back=BACK):
     c.bus.wram[0x4212] = 0x80 if vblank else 0x00
     c.bus.wram[0x09DD] = 0
     c.bus.wram[0x09DF] = 0
+    c.bus.wram[0x09DE] = 0xA5
+    c.bus.wram[0x09E0:0x09E2] = bytes.fromhex('f8ff')
     c.push8(0xDE)
     c.push8(0xAD)
     steps = 0
@@ -72,6 +74,8 @@ def run_case(base, vblank=True, stub=STUB, back=BACK):
             break
     else:
         return None, 'never returned to $%02X:%04X' % back
+    assert c.bus.wram[0x09DE]==0xA5, 'menu close changed other graphics queue state'
+    assert c.bus.wram[0x09E0:0x09E2]==bytes.fromhex('f8ff'), 'menu close changed train displacement'
     # apply the queue the way the engine's flusher does: [addr][vmain][count][data]
     q = 0x09DD
     a = c.bus.wram[0x09DD]
@@ -94,6 +98,48 @@ def run_case(base, vblank=True, stub=STUB, back=BACK):
         rows.append((rr, cells))
     return (rows, c.bus.wram[PEND], c.bus.wram[0x09DD], c.bus.wram[0x09DF],
             applied, steps), None
+
+
+def replay_abi_cases(rom):
+    """Compare the real $03:F703 caller with its untouched original replay.
+
+    A includes the hidden B byte. Stop BEFORE $F70B's next JSR so later LDA
+    cannot conceal the error. This is a finite CPU model, not PPU acceptance.
+    """
+    original = bytearray(rom)
+    original[0x01F706:0x01F70B] = bytes.fromhex('29 EF 8D 74 03')
+    cases, failures = 0, []
+    for pending in (0, 0x80, 0x9C):
+        for value in (0x00, 0x01, 0x10, 0x25, 0x91, 0xFF):
+            for hidden_b in (0x00, 0xAB):
+                results = []
+                for data in (original, rom):
+                    c = sim65816.CPU(data)
+                    c.pbr, c.pc = 0x03, 0xF703
+                    c.s = 0x01EF
+                    c.a = (hidden_b << 8) | 0x55
+                    c.m8 = c.x8 = True
+                    c.c = True
+                    c.db = 0
+                    c.bus.wram[0x0374] = value
+                    c.bus.wram[PEND] = pending
+                    c.bus.wram[0x4212] = 0x80
+                    for _ in range(50000):
+                        if (c.pbr, c.pc) == (0x03, 0xF70B):
+                            break
+                        c.step()
+                    else:
+                        raise AssertionError('drawing-end replay did not return')
+                    results.append((c.bus.wram[0x0374], c.a, c.s,
+                                    c.m8, c.x8, c.c, c.n, c.z))
+                cases += 1
+                if results[0] != results[1]:
+                    failures.append((pending, value, hidden_b, results))
+    print('drawing-end A/B + $0374 replay ABI: %d cases, %d failures %s'
+          % (cases, len(failures), 'OK' if not failures else 'BAD'))
+    for failure in failures[:3]:
+        print('  replay mismatch:', failure)
+    return not failures
 
 
 def main():
@@ -205,8 +251,10 @@ def main():
               % (row, pend, want, r9e, r92, 'OK' if good else 'BAD'))
         if not good:
             ok = False
+    ok = replay_abi_cases(rom) and ok
     print('ALL CHECKS PASSED' if ok else 'FAILURES')
+    return 0 if ok else 1
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

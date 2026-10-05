@@ -43,8 +43,9 @@ def install(rom, Asm, slot_table, high_table, slots, pages, pool_bank, slot_stri
     # NMI advances the READ cursor ($09DD), not the append cursor ($09DF).
     # The original allocator alone may reclaim consumed queue entries. Skipping
     # it leaves a full queue forever even though NMI has uploaded every byte.
-    # Out-of-contract 16-bit cursors defer without invoking its 8-bit compare.
-    hx('E2 20 AD E0 09');far(0xD0,'wait')
+    # Both cursors are bytes. $09E0/$09E1 are live train displacement,
+    # not the append cursor's high word; never wait for those bytes to clear.
+    hx('E2 20')
     hx('A9 58 22 B6 9A 00');far(0xB0,'wait')
     hx('E2 30 AD 9E 03 29 01')
     a.rel(0xF0,'rowzero');hx('A9 1A');a.rel(0x80,'rowbase')
@@ -52,8 +53,9 @@ def install(rom, Asm, slot_table, high_table, slots, pages, pool_bank, slot_stri
     a.label('rowbase');hx('85 14 AA BD 0A 04')
     far(0xD0,'ready')
     # Row-start clearing consumes 112 bytes, preserving the in-flight queue.
-    hx('C2 20 AD DF 09 C9 90 00 E2 20');far(0xB0,'wait')
-    hx('C2 30 AE DF 09')
+    hx('C2 20 AD DF 09 29 FF 00 C9 90 00 E2 20');far(0xB0,'wait')
+    hx('C2 30')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     for extra in (0,32):
         hx('E2 20 AD 6E 03 C2 20 29 FF 00')
         for _ in range(6):hx('0A')
@@ -62,7 +64,8 @@ def install(rom, Asm, slot_table, high_table, slots, pages, pool_bank, slot_stri
         hx('A0 1A 00')
         label='clear'+str(extra);a.label(label)
         hx('9D 00 0B E8 E8 88');a.rel(0xD0,label)
-    hx('8E DF 09 E2 30 A6 14 A9 01 9D 0A 04 9D 17 04')
+    a.queue_store_x()  # never write adjacent train displacement
+    hx('E2 30 A6 14 A9 01 9D 0A 04 9D 17 04')
     a.label('ready')
     hx('A6 14 BD 0A 04 85 15 BD 17 04 85 16')
     a.label('next')
@@ -84,34 +87,41 @@ def install(rom, Asm, slot_table, high_table, slots, pages, pool_bank, slot_stri
     hx('E2 20 A5 17 C9 %02X' % item_prefix);far(0xF0,'item')
     hx('C9 C0');far(0x90,'kana')
     hx('C9 %02X' % (0xC0+pages));far(0xB0,'kana')
-    hx('C2 20 AD DF 09 C9 A8 00 E2 20');far(0xB0,'wait')
+    hx('C2 20 AD DF 09 29 FF 00 C9 A8 00 E2 20');far(0xB0,'wait')
     # X still holds the layout slot. Save the tile pairs before borrowing
     # $1A/$1B/$1C as a long glyph pointer ($1C becomes the source ROM bank).
     get_pair(0,0x28);get_pair(slot_stride,0x2A)
     hx('E2 20 A5 17 38 E9 C0 18 69 %02X 85 1C' % pool_bank)
     hx('A5 15 1A 18 65 14 AA BD 0A 04 C2 30 29 FF 00')
     for _ in range(6):hx('0A')
-    hx('18 69 00 80 85 1A AE DF 09')
+    hx('18 69 00 80 85 1A')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     glyph_queue(0x28,0,32);glyph_queue(0x2A,32,32)
     cell(0x28,0);cell(0x2A,1)
-    hx('8E DF 09 E2 30 E6 15 E6 15 E6 16 E6 16')
+    a.queue_store_x()  # never write adjacent train displacement
+    hx('E2 30 E6 15 E6 15 E6 16 E6 16')
     a.jmp_to('savewait')
     a.label('item')
-    hx('C2 20 AD DF 09 C9 A8 00 E2 20');far(0xB0,'wait')
+    hx('C2 20 AD DF 09 29 FF 00 C9 A8 00 E2 20');far(0xB0,'wait')
     # Same 16x16 layout ownership as techniques, separate $3F:A000 font table.
     get_pair(0,0x28);get_pair(slot_stride,0x2A)
     hx('E2 20 A9 3F 85 1C A5 15 1A 18 65 14 AA BD 0A 04 C2 30 29 FF 00')
     for _ in range(6):hx('0A')
-    hx('18 69 00 A0 85 1A AE DF 09')
+    hx('18 69 00 A0 85 1A')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
     glyph_queue(0x28,0,32);glyph_queue(0x2A,32,32)
     cell(0x28,0);cell(0x2A,1)
-    hx('8E DF 09 E2 30 E6 15 E6 15 E6 16 E6 16')
+    a.queue_store_x()  # never write adjacent train displacement
+    hx('E2 30 E6 15 E6 15 E6 16 E6 16')
     a.jmp_to('savewait')
     a.label('kana')
-    hx('C2 20 AD DF 09 C9 F8 00 E2 20');far(0xB0,'wait')
-    hx('A5 17 A8 B9 9E FB 85 28 B9 9E FA 85 29 C2 30 AE DF 09 A5 20 9D 00 0B E8 E8')
+    hx('C2 20 AD DF 09 29 FF 00 C9 F8 00 E2 20');far(0xB0,'wait')
+    hx('A5 17 A8 B9 9E FB 85 28 B9 9E FA 85 29 C2 30')
+    a.queue_load_x()  # byte $09DF; preserve A/P and Y
+    hx('A5 20 9D 00 0B E8 E8')
     hx('E2 20 A9 81 9D 00 0B E8 A9 04 9D 00 0B E8 A5 28 9D 00 0B E8 A9 24 9D 00 0B E8 A5 29 9D 00 0B E8 A9 24 9D 00 0B E8')
-    hx('8E DF 09 E2 30 E6 15 E6 16')
+    a.queue_store_x()  # never write adjacent train displacement
+    hx('E2 30 E6 15 E6 16')
     a.jmp_to('savewait')
     a.label('endfield')
     hx('A5 15 C9 0E');far(0xB0,'done')

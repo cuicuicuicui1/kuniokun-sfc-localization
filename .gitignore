@@ -69,3 +69,18 @@ F_*.png
 # v39-rc4 bounded runtime-name regression (no ROMs/states/SRAM).
 !tools/replay_runtime_names.py
 !hw/regression_routes/runtime-names-rc4.json
+
+# v39-rc5 controlled original event08 regression (no ROMs or states).
+!tools/run_umeda_story.py
+
+# v39-rc6 game-specific BG3 screenshot/VRAM pixel regression.
+!tools/check_text_band_pixels.py
+
+# Underground-garage same-ROM replay + explicit controlled fixture (no ROM/save data).
+!tools/run_garage_story.py
+!tests/
+tests/*
+!tests/test_garage_runner.py
+
+# 玩家提供的截图只作本地证据，不随发布提交。
+notes/user_shots/

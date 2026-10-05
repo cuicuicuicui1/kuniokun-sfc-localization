@@ -31,14 +31,16 @@ def glyph(rec,gid):
     off=(par.get("pool_bank0",0x21)+code-0xC0)*0x8000+ident*64
     return rom[off:off+64]
 
-def execute(rec, slot=0, cursor=0):
+def execute(rec, slot=0, cursor=0, velocity=0xFFF8):
     global _plate
     _plate=slot
     c=S.CPU(rom);c.pc=0x8C34;c.db=0;c.x=0x5A;c.y=0x34
     w=c.bus.wr
     for i,b in enumerate(rec):w(0,0x1B46+slot*4+i,b)
     w(0,0x10,slot);w(0,0x1C03+slot,0x20)
-    w(0,0x9DF,cursor);w(0,0x9E0,cursor>>8)
+    assert 0 <= cursor < 256
+    w(0,0x9DF,cursor);w(0,0x9DE,0xA5)
+    w(0,0x9E0,velocity&255);w(0,0x9E1,velocity>>8)
     w(0,0x1E,0xEF);w(0,0x1F,0xBE)
     for i in range(0x100):w(0,0xB00+i,0xA5)
     w(0,0xC00,0x6D)
@@ -50,7 +52,9 @@ def execute(rec, slot=0, cursor=0):
     assert c.s==0x1FF and c.db==0 and c.m8 and c.x8, 'caller ABI corrupted'
     assert c.bus.rd(0,0x1E)==0xEF and c.bus.rd(0,0x1F)==0xBE, 'scratch not restored'
     assert c.bus.rd(0,0xC00)==0x6D, 'queue overflowed into live workspace'
-    end=c.bus.rd(0,0x9DF) | c.bus.rd(0,0x9E0)<<8
+    assert c.bus.rd(0,0x9DE)==0xA5, 'HUD changed other graphics queue state'
+    assert c.bus.rd(0,0x9E0) | c.bus.rd(0,0x9E1)<<8 == velocity, 'HUD changed train displacement'
+    end=c.bus.rd(0,0x9DF)
     assert cursor<=end<=255,(cursor,end)
     q=bytes(c.bus.rd(0,0xB00+i) for i in range(256))
     assert q[:cursor]==b'\xA5'*cursor, 'overwrote earlier queue entries'
@@ -88,7 +92,7 @@ def execute(rec, slot=0, cursor=0):
 count=0
 for i in range(560):
     rec=rom[0x4802A+i*16:0x4802E+i*16]
-    execute(rec,slot=i%4);count+=1
+    execute(rec,slot=i%4,velocity=(0,8,0xFFF8)[i%3]);count+=1
 rec=rom[0x4802A:0x4802E]
 for cursor in (0,8,32,40,64,80,120,136,160,200):execute(rec,cursor=cursor)
 for rec in (bytes.fromhex('00 00 47 26'),rom[0x4802A:0x4802C]+b'\0\0',b'\0\0'+rom[0x4802A:0x4802C]):execute(rec)

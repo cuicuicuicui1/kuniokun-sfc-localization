@@ -36,7 +36,8 @@ cpu = sim65816.CPU(rom)
 w = cpu.bus.wram
 w[cb.MENU_LOAD] = 1                       # armed, start from the first glyph
 w[0x09DF] = 0x00                          # empty queue, page $0B00
-w[0x09E0] = 0x0B
+w[0x09DE] = 0xA5  # unrelated graphics queue state
+w[0x09E0:0x09E2] = bytes.fromhex('f8ff')  # live negative train displacement
 
 cpu.pbr = cb.MENU_STUB >> 15
 cpu.pc = 0x8000 + (cb.MENU_STUB & 0x7FFF)
@@ -52,6 +53,8 @@ while steps < 200000 and cpu.s <= entry_s:
     cpu.step()
     steps += 1
 print('stub ran %d steps, s=%04X pc=%02X:%04X' % (steps, cpu.s, cpu.pbr, cpu.pc))
+
+assert w[0x09DE] == 0xA5 and w[0x09E0:0x09E2] == bytes.fromhex('f8ff'), 'menu uploader changed neighboring graphics/train state'
 
 # the first call stages three glyphs = six 36 byte entries, at the queue page
 Q = 0x0B00

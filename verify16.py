@@ -183,6 +183,23 @@ def _dec(ch, item=False):
     out, i = [], 0
     while i < len(ch):
         c = ch[i]
+        advance = 1
+        if not item and 'A' <= c <= 'Z':
+            j = i
+            while j < len(ch) and ('A' <= ch[j] <= 'Z' or ch[j] in ' ()-'):
+                j += 1
+            # Independent expectation: fixed two-cell ASCII pair boundaries,
+            # including internal spaces. No builder units()/encode() call.
+            run = ch[i:j]
+            for k in range(0, len(run), 2):
+                pair = run[k:k+2]
+                if pair == ' ':
+                    out.append(0)
+                else:
+                    page, slot = cell[pair]
+                    out.extend((cb.PREFIX0+page, slot))
+            i = j
+            continue
         if c == '{':
             j = ch.index('}', i)
             for b in bytes.fromhex(ch[i + 1:j]):

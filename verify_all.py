@@ -13,6 +13,7 @@ import zlib
 from build_context import stage_project, ROOT
 
 CHECKS = [
+    ('test_glyph_coloring.py', '确定性字形分配：全窗口、固定码、容量与负例'),
     ('check16.py',      '文本 round-trip、字形池、人名记录'),
     ('verify16.py',     '65816 模型逐字节仿真整条绘制流程'),
     ('safe16.py',       '槽位/瓦片占用表（人工核对用，不判 pass/fail）'),
@@ -27,8 +28,13 @@ CHECKS = [
     ('test_hudname.py','战斗 HUD：完整 $00:8C34 调用链、560 条名字、队列边界'),
     ('test_runtime_names.py','真实入口：道具分支可达、双敌方 HUD 与消息字形隔离'),
     ('test_menulist.py','气力/道具非空列表：真实 reader、四项同屏、重开与队列'),
+    ('test_credits_text.py','片尾30个人署名单行、20共显字形集合、宏换行与字库容量'),
+    ('test_ending_scene.py','片尾车站生命周期：限定eventAC/FEB8、原场景JSL、完整ABI'),
+    ('test_garage_sync.py','停车场原等待消费者：结算交接、NPC保留、原成功回放及ABI'),
+    ('test_train_queue.py','队列字节协议：列车位移隔离、真实分配器、边界与 ABI'),
     ('test_itemmsg.py','消息里的道具名：跑抽屉 $DE 分支核对取 id/上传/写格/推列'),
     ('test_hud_tiles.py', 'HP 图形与中文字形隔离，原版敌我血条共享像素/保留调色板'),
+    ('test_text_band.py', '字框32扫描线：完整两行、无下一行顶点泄露、原HDMA字段保护'),
     ('test_pace_hdma.py', '打字倒计时与 BG3 HDMA 底边滚动表隔离（旧版负例）'),
     ('test_pace.py',   '消息节拍：按住 A/B、松开恢复、边沿隔离、补空与队列'),
     ('check_layers.py', '开关组合覆盖：BASE_ONLY/off/on 三档构建+检查'),

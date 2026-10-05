@@ -59,4 +59,13 @@ for i in range(4):
     assert w[0x36F]==3*(i+1), 'blank fill must remain unpaced'
     assert w[counter]==0
     flush(c)
+# Fixed-time eventAC must not inherit a partially elapsed dialogue delay.
+for event in [0xAC,0xAB,0xA9,0x95,0]:
+ for countdown in range(pace+1):
+  c=make_cpu(rom);w=c.bus.wram;w[0x1D23]=event;w[counter]=countdown
+  tick(c);flush(c)
+  if event==0xAC:
+   assert w[0x3E9]==3 and w[counter]==0, ('credits rejected a fixed-time cue',countdown)
+  else:
+   assert w[0x3E9]==(0 if countdown else 1), ('non-credits lost PACE',event,countdown)
 print('PASS: PACE=%d message ticks; held A/B, every release phase, X/Y/edge isolation, queue, filler'%pace)

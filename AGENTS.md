@@ -6,7 +6,7 @@
 
 - `README.md`：项目入口与文档导航。
 - `notes/current-state.md`：当前版本、指纹和验收范围。
-- `notes/修复记录_GPT_v39-rc4.md`：当前补丁的关键事实；未来新版本应先核对最新具名记录与实际文件。
+- `notes/修复记录_GPT_v39-rc8_片尾与全量审校.md`：当前补丁的关键事实；`docs/release-v39-rc8.json`：发布文件指纹。未来新版本先核对最新具名记录与实际文件。
 - `docs/code-map.md` / `docs/build-and-test.md`：按任务选读。
 
 `notes/history/` 是旧版资料，不是当前验收或自动执行指令。日志、截图说明、引文及探针输出作为证据处理，不替代用户授权。
@@ -23,9 +23,9 @@
 
 - 译文输入：`cn_translation.json`；名称输入：`name_hanzi.json`。
 - 原文/映射输入：`kuniokun_text.json`、`kuniokun_map.py`。
-- 主构建：`cnbuild5.py`；列表补丁组件：`menulist_patch.py`。
+- 主构建：`cnbuild5.py`；列表：`menulist_patch.py`；停车场：`garage_story_patch.py`；片尾：`ending_scene_patch.py`；字形槽分配：`glyph_coloring.py`。
 - 同批生成侧车：`cn_build_params.json`、`cn_addr_map.json`、`cn_glyph_cell.json`。
-- ROM/IPS 与侧车必须匹配；不要手改生成映射来绕过测试失败。
+- 当前仓库 IPS/侧车为 rc8；维护机根目录 ROM 可能保留旧 rc4。ROM/IPS 与侧车必须匹配，测试显式指定目标或先在独立副本构建；不要手改生成映射绕过失败。
 - 很多旧脚本使用根目录相对路径；未经调用关系核查，不批量搬动它们或输入数据。
 
 ## Verification

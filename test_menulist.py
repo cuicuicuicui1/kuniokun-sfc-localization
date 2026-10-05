@@ -17,9 +17,9 @@ def flush_engine(c):
     # Model the ACTUAL NMI protocol: upload data and advance only $09DD.
     # $09DF stays committed until $00:9AB6 observes the consumed cursor.
     w=c.bus.wram
-    cursor=int.from_bytes(w[0x9DF:0x9E1],'little')
+    cursor=w[0x9DF]
     entries=flush(c)
-    w[0x9DF:0x9E1]=cursor.to_bytes(2,'little')
+    w[0x9DF]=cursor
     w[0x9DD]=cursor&255  # $09DE belongs to the other graphics queue
     return entries
 
@@ -34,11 +34,13 @@ def codes(table,ident):
     return rom[off:end]
 
 def call(c,pc,ret=0xE000):
+    before=(c.bus.wram[0x9DE],bytes(c.bus.wram[0x9E0:0x9E2]))
     c.pc=pc;c.pbr=c.db=3;c.s=0x1FF;c.m8=c.x8=True
     c.push8((ret-1)>>8);c.push8((ret-1)&255)
     for _ in range(60000):
         if (c.pbr,c.pc)==(3,ret):
             assert c.s==0x1FF and c.m8 and c.x8 and c.db==3,'caller ABI not preserved'
+            assert (c.bus.wram[0x9DE],bytes(c.bus.wram[0x9E0:0x9E2]))==before, 'list reader/renderer changed graphics/train state'
             return
         c.step()
     raise AssertionError('list renderer timeout')
@@ -90,8 +92,9 @@ for table,ids in [(0x1E096,[21,22,23,35]),(0x1DBC3,[1,10,48,100]),(0x1DBC3,[2,64
         for row in (0,1):
             w[0x39E]=row
             # Existing queue traffic must make the new renderer defer, not overwrite.
-            w[0x9DF:0x9E1]=(240).to_bytes(2,'little');w[0xB00:0xB00+240]=b'\xA5'*240
+            w[0x9DF]=240;w[0x9DE]=0xA5;w[0x9E0:0x9E2]=bytes.fromhex('f8ff');w[0xB00:0xB00+240]=b'\xA5'*240
             before=bytes(w[0xB00:0xC00]);call(c,0xF95D)
+            assert w[0x9DE]==0xA5 and w[0x9E0:0x9E2]==bytes.fromhex('f8ff'), 'list clobbered graphics/train neighbors'
             assert c.c and bytes(w[0xB00:0xC00])==before,'busy queue was overwritten'
             w[0x9DD:0x9E1]=bytes(4)
             for _ in range(60):

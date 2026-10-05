@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "version": "v39-rc8",
+  "repository_update_date": "2026-10-05",
+  "status": "scoped repair test build; not full-game or hardware acceptance",
+  "base_rom": {
+    "size": 1048576,
+    "sha256": "8f289ac5677508f7c9de12a0117849ed55a0ac861abb0fcefb1e350af6978c04",
+    "crc32": "56C05339"
+  },
+  "target_rom": {
+    "size": 2097152,
+    "sha256": "160243a6fc0e9077a682fd5e134d1be5a2743a74acea61ab87d00f4a0b647bef",
+    "crc32": "BD76DCA1"
+  },
+  "patch": {
+    "path": "kuniokun_cn.ips",
+    "size": 956610,
+    "sha256": "bd2155869fb4a8d6b8b9d7421732e1152ee1fa9108e78d2480d771c9edf019a5",
+    "crc32": "66AC3395"
+  },
+  "text_hash_convention": "sha256_lf hashes UTF-8 file bytes after CRLF -> LF normalization; binary ROM/IPS sha256 are raw bytes",
+  "generated_metadata": {
+    "cn_build_params.json": {
+      "sha256_lf": "8aec3ecd8cee2450ee4bb4b1f31f112a64ea94d2482747faf3a4f9d4f8d43975",
+      "bytes_lf": 25459
+    },
+    "cn_addr_map.json": {
+      "sha256_lf": "ae0ff3e2cc1840e6b2616ee7ba2d9d6465b19bbf414bfb7483c679b5901179b4",
+      "bytes_lf": 18236
+    },
+    "cn_glyph_cell.json": {
+      "sha256_lf": "c8dbbbd550c707ee1f217bcb3fc4d0940578a63fda6baa7dc462780dfb6816b4",
+      "bytes_lf": 20715
+    }
+  },
+  "source_fingerprints": {
+    "check16.py": {
+      "sha256_lf": "741ee19b49c5167575997a5b2ea362dc6f9c1bfd5a6feb036636e33f29986f32",
+      "bytes_lf": 5900
+    },
+    "cnbuild5.py": {
+      "sha256_lf": "f4fb12f51dc792e8cb8e8b4dc8cb81e1e2217e0e6385660970e4ac26ff689023",
+      "bytes_lf": 221478
+    },
+    "dialogue_model.py": {
+      "sha256_lf": "a79ed82c81baa29fd3ccad8f4597fa0350ed5a048c803b57ebc08421eae82bf5",
+      "bytes_lf": 1826
+    },
+    "menulist_patch.py": {
+      "sha256_lf": "4990d37e96b0b67c65ce62cdb3211de75935b828b414f548c28c1d69e196981d",
+      "bytes_lf": 7351
+    },
+    "ending_scene_patch.py": {
+      "sha256_lf": "9330c8228dbfcc0eb24727652fafb7ff2dada89b3173157a83b06e4b9b9e5227",
+      "bytes_lf": 3425
+    },
+    "garage_story_patch.py": {
+      "sha256_lf": "9034f06096ae06afc392afd067f09f5ce0d3ada6116280a97fd4c2b055efd982",
+      "bytes_lf": 2269
+    },
+    "glyph_coloring.py": {
+      "sha256_lf": "21332cd1fc0a2e8e1b2463e232cd09b7bb68ca1d8b5903969b8f5969435b9fbe",
+      "bytes_lf": 7043
+    },
+    "test_hudname.py": {
+      "sha256_lf": "9ab4aa4f1c5f4fdaa10b37954605b34cc3a0498e3bc8a7f40d45ecdc49b7414a",
+      "bytes_lf": 4626
+    },
+    "test_itemdraw.py": {
+      "sha256_lf": "e817c1dde36a4aecf9f230cdc5cecaf37c1af3fd4a11d3ff5301caece41fa5a7",
+      "bytes_lf": 6648
+    },
+    "test_itemmsg.py": {
+      "sha256_lf": "015aef211b41c5a4059ab9537b2ed60cc4f292aeef976fcafcb738f13401b883",
+      "bytes_lf": 3074
+    },
+    "test_menuclose.py": {
+      "sha256_lf": "a1642535a3f615665ef8fa15d963e825867b25c881046187d588118dd162fcde",
+      "bytes_lf": 9900
+    },
+    "test_menulist.py": {
+      "sha256_lf": "140f5fa4be5e3de8c31a2f805aea6395dcbddabda5baeaff99ae7a329bd2722a",
+      "bytes_lf": 7207
+    },
+    "test_menuload.py": {
+      "sha256_lf": "6b3879488723e41e9ffc4c65c9fb8e48c0ce5a76215633dfc32ecfb195a4e2e1",
+      "bytes_lf": 3433
+    },
+    "test_pace.py": {
+      "sha256_lf": "e3b8cacd70c286f9fd5264dbc41cc71fe8b4f3d170f3066fa42ca3bc5586bf73",
+      "bytes_lf": 2918
+    },
+    "test_runtime_names.py": {
+      "sha256_lf": "0fd0eff2601e029ccf09e7e5ab4f5f2b3120642cee279f07f8ea7e98e7b9a50f",
+      "bytes_lf": 8649
+    },
+    "test_credits_text.py": {
+      "sha256_lf": "32624170297f85c769333aac348000bf0a3090ebba5e9332674ddd59ca25c728",
+      "bytes_lf": 3990
+    },
+    "test_ending_scene.py": {
+      "sha256_lf": "eda479d5b299e49607e111a7fab531e49341d84350cd2dbd50d03bf08991e3a2",
+      "bytes_lf": 4773
+    },
+    "test_garage_sync.py": {
+      "sha256_lf": "ef0a2a73b85e780904b81c436037c78a0d1e82c46dffc59a7a3246b293d604e8",
+      "bytes_lf": 4332
+    },
+    "test_glyph_coloring.py": {
+      "sha256_lf": "31b0bda133e966fbdfd050ce01f8031792973f039e997e14c85caa142aae8853",
+      "bytes_lf": 1153
+    },
+    "test_text_band.py": {
+      "sha256_lf": "7cc7d0ef07ba637fa1e10e55e344207729d3ce0bf664d6c4e91d2f4638ef5bc7",
+      "bytes_lf": 1312
+    },
+    "test_train_queue.py": {
+      "sha256_lf": "79c779885d5a58b737ebcb11ab278f8a3487092890d8522184c1e6e377555554",
+      "bytes_lf": 6062
+    },
+    "tools/run_mesen_play.py": {
+      "sha256_lf": "8849a73aef11f232dea54e3378a03feefd4e714e17a7d24d2648b5a6316da7a5",
+      "bytes_lf": 3042
+    },
+    "tools/run_garage_story.py": {
+      "sha256_lf": "eeb6307f0300f74a92e11e5c148ff3b6963fb802c8a361deaefdb049453aba7c",
+      "bytes_lf": 13108
+    },
+    "tools/run_umeda_story.py": {
+      "sha256_lf": "de5758c4f07d9262e2e9d33dccf8a14b197833af714b875dce59ad6862b34dfe",
+      "bytes_lf": 3817
+    },
+    "tools/check_text_band_pixels.py": {
+      "sha256_lf": "b1887827a840ede9fd3e07f9e6c75ede7c6348bcd186cf5d556ed88aba698e1c",
+      "bytes_lf": 2560
+    },
+    "verify16.py": {
+      "sha256_lf": "de6649b51d32dba2345e9c409c6c91e5a803a05ba19146b0b97871755e746954",
+      "bytes_lf": 41893
+    },
+    "verify_all.py": {
+      "sha256_lf": "7ad5bfecf502f2a418354f5e3ad2b4ce03dda255d2e0aefe3ba36ff5731c0a4e",
+      "bytes_lf": 5156
+    },
+    "tests/test_garage_runner.py": {
+      "sha256_lf": "2aa7b88a84f931848581381eb367084a5cf292b1d4cfb972ad8a1ae10271b272",
+      "bytes_lf": 8048
+    },
+    "hw/mesen_garage_jump.lua": {
+      "sha256_lf": "c3a7b1b2eff335aef88e386b62a55442703ea8f50344d548c5982a9ba67d1b62",
+      "bytes_lf": 14494
+    },
+    "hw/mesen_garage_probe.lua": {
+      "sha256_lf": "e200af9348646bfffe2f7a16dd162055b9f43411b84d9ea904fcd3d3c91acd7d",
+      "bytes_lf": 11380
+    },
+    "hw/mesen_umeda_jump.lua": {
+      "sha256_lf": "2a0068d10f1bcedde23bec04f46920136287e3c43d4390f43d994340b4282ad3",
+      "bytes_lf": 10423
+    },
+    "hw/mesen_umeda_continue.lua": {
+      "sha256_lf": "e5160d6e01e414e98fa3e888a18fe3ed2dc94ad73913ad7e470b71458ed7e519",
+      "bytes_lf": 7130
+    },
+    "hw/mesen_text_visual_fixture.lua": {
+      "sha256_lf": "9f112603cccc0bd964dcf211a448bc67eb0e6d6f60363f62da0008435d92b566",
+      "bytes_lf": 6247
+    },
+    "hw/mesen_train_queue_fixture.lua": {
+      "sha256_lf": "2c20cab44e878d22691a1c2db262e0f0d9a518df4dc16ed229acc99e635aebbc",
+      "bytes_lf": 9352
+    },
+    "cn_translation.json": {
+      "sha256_lf": "67875e41cb16667df1ee3aa424bd9ab8e0b94edb6cb2015a52ddb3b195cc4b72",
+      "bytes_lf": 50319
+    },
+    "name_hanzi.json": {
+      "sha256_lf": "cbfb3f4e647dc43e9e0987a348c5c823e62b5c7b08f70720c99a4d26f753577c",
+      "bytes_lf": 10698
+    },
+    "notes/text-review-v39-rc8.json": {
+      "sha256_lf": "cc11558377d59114a44b29196b4f534ac6d48fe09540834f8c57924c6c9b32cb",
+      "bytes_lf": 575518
+    }
+  },
+  "translation_review": {
+    "identified": 1013,
+    "changed": 195,
+    "all_dynamic_combinations_played": false
+  },
+  "publication_checks": {
+    "date": "2026-10-05",
+    "pass": 26,
+    "info": 1,
+    "fail": 0,
+    "skip": 0,
+    "runner_safety_tests": 17,
+    "ips_replay_equal": true,
+    "includes_layer_builds": true,
+    "staged_checkout_rebuilt": true,
+    "staged_rom_ips_and_metadata_equal_delivery": true,
+    "staged_full_verification_pass": true
+  },
+  "delivery_checks": {
+    "pass": 26,
+    "info": 1,
+    "fail": 0,
+    "skip": 0,
+    "runner_safety_tests": 17,
+    "deterministic_builds": 2,
+    "ips_replay_equal": true,
+    "ending_messages": 52,
+    "busy_rejections": 0,
+    "cores": [
+      "Mesen2.1.1 private pinned 137ae7ce3bf3f539d007e2c4ef3cb3b6c97672a1",
+      "Snes9x1.63 890b5d4"
+    ],
+    "garage_native_gate": "4B ->4C, controlled low-HP original event15, zero writes continuation",
+    "umeda_native_train": "controlled original event08 ->09, zero writes continuation",
+    "music_scope": "APU request values/VM/map sequence matches original, no added station requests; not subjective listening/bit-exact PCM"
+  },
+  "limits": [
+    "No hardware confirmation",
+    "No natural full playthrough",
+    "No exhaustive dynamic name/item/location suffix combinations",
+    "Graphical/save/name UI not a full-game census"
+  ],
+  "distribution": "IPS, source, generated text metadata and documentation only; no ROM, save, fonts, emulator, dumps or player media"
+}

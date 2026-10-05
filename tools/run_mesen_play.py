@@ -25,10 +25,13 @@ def main():
  before={str(x):hashlib.sha256(x.read_bytes()).hexdigest() for x in watched}
  dest=out/(a.tag+'.smc');assert dest not in watched;shutil.copy2(a.rom,dest)
  env=dict(os.environ,PLAY_OUT=out.as_posix(),PLAY_TAG=a.tag,PLAY_FRAMES=str(a.frames),PLAY_INPUT=a.input,PLAY_SHOTS=a.shots,PLAY_TRACE='1' if a.trace else '',PLAY_STATE=a.state.resolve().as_posix() if a.state else '',PLAY_SRAM=a.sram.resolve().as_posix() if a.sram else '')
- r=subprocess.run([a.mesen,'--testRunner',str(a.script.resolve()),str(dest),'--doNotSaveSettings'],cwd=ROOT,env=env,timeout=max(180,a.frames//12),creationflags=0x08000000 if os.name=='nt' else 0)
+ mesen=str(Path(a.mesen).expanduser().resolve(strict=True))
+ r=subprocess.run([mesen,'--testRunner',str(a.script.resolve()),str(dest),'--doNotSaveSettings'],cwd=ROOT,env=env,timeout=max(180,a.frames//12),creationflags=0x08000000 if os.name=='nt' else 0)
  for x in watched:assert hashlib.sha256(x.read_bytes()).hexdigest()==before[str(x)],'source file modified'
  log=(out/(a.tag+'.log')).read_text(encoding='utf-8')
- assert r.returncode==0 and f'SAVED frames={a.frames}' in log,(r.returncode,log[-1000:])
+ import re
+ saved_frames=[int(x) for x in re.findall(r'^SAVED frames=(\d+)$',log,re.MULTILINE)]
+ assert r.returncode==0 and saved_frames and a.frames<=saved_frames[-1]<=a.frames+2,(r.returncode,log[-1000:])
  manifest={'script':str(a.script.resolve()),'rom_crc32':f'{zlib.crc32(a.rom.read_bytes()):08X}','frames':a.frames,'input':a.input,'state':str(a.state) if a.state else None,'sources_unchanged':before,'emulator_exit':r.returncode,'checkpoint':str(out/(a.tag+'.state')),'scope':'interactive trace, not automatic gameplay acceptance'}
  (out/(a.tag+'.json')).write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
  print(log[-2200:],flush=True)

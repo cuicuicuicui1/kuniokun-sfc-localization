@@ -44,7 +44,8 @@ w[0xB00:0xC00]=b'\xA5'*256
 w[0x36E]=5;w[0x36F]=2;w[0x12]=0xDE
 call(c,3,0xFA30)
 q=bytes(w[0xB00:0xC00]);target=int.from_bytes(q[:2],'little')
-assert q[4:36]==rom[0x1F8000+0x69*32:0x1F8000+0x69*32+32],'DE word copy left stale plane-1 bytes'
+assert q[4:36]==rom[p.get('menu_item_glyph_rom',0x1F8000)+0x69*64:p.get('menu_item_glyph_rom',0x1F8000)+0x69*64+32],'DE word copy left stale plane-1 bytes'
+assert q[40:72]==rom[p['menu_item_glyph_rom']+0x69*64+32:p['menu_item_glyph_rom']+0x69*64+64], 'DE right half source mismatch'
 flush(c)
 assert bytes(b for v in c.vram[target:target+16] for b in (v&255,v>>8))==q[4:36],'DE upload mismatch'
 
@@ -55,26 +56,28 @@ for ident in range(256):
     w[0xB00:0xC00]=b'\xA5'*256
     w[0x36E]=4;w[0x36F]=1+(ident&3);w[0x12]=0xDE;c.a=0x66DE
     call(c,3,0xFA30)
-    assert bytes(w[0xB04:0xB24])==rom[0x1F8000+ident*32:0x1F8000+ident*32+32],('DE selected wrong source glyph',ident)
+    assert bytes(w[0xB04:0xB24])==rom[p['menu_item_glyph_rom']+ident*64:p['menu_item_glyph_rom']+ident*64+32],('DE selected wrong source glyph',ident)
+    assert bytes(w[0xB28:0xB48])==rom[p['menu_item_glyph_rom']+ident*64+32:p['menu_item_glyph_rom']+ident*64+64],('DE right half source',ident)
 
 # Marker C9 DE alone never proved the branch reachable.
 c=make_cpu(rom,bytes.fromhex('de3cde13de73de74'));w=c.bus.wram
 w[0x36E]=5;w[0x36F]=2;w[0x12]=0xDE
 call(c,3,0xFA30)
-assert w[0x3E9]==1 and w[0x36F]==3,'DE is shadowed by ordinary-code dispatch'
+assert w[0x3E9]==1 and w[0x36F]==2+p.get('item_message_width',1),'DE is shadowed by ordinary-code dispatch'
 entries=flush(c)
 assert any(mode==0x80 and size==32 for _,mode,size in entries),'DE failed to upload its glyph'
 
-# Retry must look at the WHOLE queue cursor, not just its low byte. A full
-# 256-byte queue otherwise looks empty and the DE branch overwrites live data.
-for cursor in (212,255,256,511):
+# Busy byte cursor defers without touching neighboring train displacement.
+# 256/511 were invalid synthetic word cursors: $09E0 is NOT a high byte.
+for cursor in (212,255):
     c=make_cpu(rom,bytes.fromhex('de3c'));w=c.bus.wram
     w[0x36E]=5;w[0x36F]=2;w[0x12]=0xDE
-    w[0x9DF:0x9E1]=cursor.to_bytes(2,'little')
+    w[0x9DF]=cursor;w[0x9E0:0x9E2]=bytes.fromhex('f8ff')
     w[0xB00:0xD00]=bytes((i&255 for i in range(512)))
     before=bytes(w[0xB00:0xD00])
     call(c,3,0xFA30)
-    assert int.from_bytes(w[0x9DF:0x9E1],'little')==cursor,'busy cursor changed'
+    assert w[0x9DF]==cursor,'busy cursor changed'
+    assert w[0x9E0:0x9E2]==bytes.fromhex('f8ff'),'train displacement changed'
     assert bytes(w[0xB00:0xD00])==before,'busy DE dispatch overwrote the queue'
     assert w[0x36F]==2,'busy DE dispatch advanced the visible column'
 
@@ -112,7 +115,7 @@ for row in (4,5):
     while w[0x3E9]<len(codes):
         w[0x12]=w[0x3EA+w[0x3E9]]
         call(c,3,0xFA30);w[0x3E9]+=1;flush(c)
-    assert w[0x36F]==4,'item prefix/id counted as separate columns'
+    assert w[0x36F]==4*p.get('item_message_width',1),'item name width/ID consumption mismatch'
     for t,words in expected.items():assert c.vram[0x6000+t*8:0x6000+t*8+16]==words,'item message overwrote battle HUD'
 # Body glyphs use their entire reserved pool independently of the HUD.
 for ch,(page,ident) in p['cell'].items():

@@ -8,9 +8,9 @@ bitmap from $3f:8000 + id*32 into the tile pair of the slot the cursor names,
 then write the two tile map cells at the current column.  Digits and kana in
 the same name must still take the engine's own FA/FB path.
 
-The slot comes from the cursor: base 0 for $79c6 and one per column after
-column 6, so the glyphs of one value must land in slots 0, 1, 2, ... and never
-share a tile pair.  $7a06 and $7a46 must shift the base to 12 and 24.
+The STATUS pair index comes from the cursor: base24/30/36 and six columns
+per value. Both halves of the existing pair table are valid. Check all110
+names through all three original rows; no cropping or fifth-glyph alias.
 """
 import json
 import sys
@@ -24,13 +24,13 @@ TABLE = 0x1DBC3
 _par = json.load(open('cn_build_params.json', encoding='utf-8'))
 N_ENT = _par['slots'] + 2 * _par['label_sets'] + _par['label_name_glyphs']
 ITEM_BASE0 = 24                     # the item values start above the
-ITEM_SPAN = 4                       # status labels' slots 0..22
+ITEM_SPAN = 6                       # status labels' slots 0..22
 
 
 def slotpair():
     left = rom[SLOTPAIR_ROM:SLOTPAIR_ROM + N_ENT]
     right = rom[SLOTPAIR_ROM + N_ENT:SLOTPAIR_ROM + 2 * N_ENT]
-    return list(zip(left, right))
+    return [(t, t) for t in left + right]
 
 
 def name_at(n):
@@ -138,10 +138,20 @@ for cursor, base in ((0x7A06, ITEM_BASE0 + ITEM_SPAN),
     if tiles[0][0] != cursor:
         fails.append('cursor %04X: first cell at %04X' % (cursor, tiles[0][0]))
 
-print('checked %d records with hanzi' % checked)
-print('row $79C6 -> slot bases %s' % [sp[ITEM_BASE0 + k][0] for k in range(4)])
-print('row $7A06 -> slot bases %s' % [sp[ITEM_BASE0 + ITEM_SPAN + k][0] for k in range(4)])
-print('row $7A46 -> slot bases %s' % [sp[ITEM_BASE0 + 2 * ITEM_SPAN + k][0] for k in range(4)])
+# Long values must remain distinct in the second/third lanes too.
+for cursor, base in ((0x7A06, ITEM_BASE0 + ITEM_SPAN), (0x7A46, ITEM_BASE0 + 2 * ITEM_SPAN)):
+    for record in range(110):
+        us = name_at(record)
+        assert len(us) <= ITEM_SPAN, ('oversize STATUS source', record, len(us))
+        ups, tiles = run(record, cursor)
+        for k, (kind, glyph) in enumerate(us):
+            if kind == 'g':
+                assert (tiles[2*k][1] & 0x3FF) == sp[base+k][0], (record, cursor, k)
+
+print('checked %d records with hanzi through all three STATUS rows' % checked)
+print('row $79C6 -> slot bases %s' % [sp[ITEM_BASE0 + k][0] for k in range(ITEM_SPAN)])
+print('row $7A06 -> slot bases %s' % [sp[ITEM_BASE0 + ITEM_SPAN + k][0] for k in range(ITEM_SPAN)])
+print('row $7A46 -> slot bases %s' % [sp[ITEM_BASE0 + 2 * ITEM_SPAN + k][0] for k in range(ITEM_SPAN)])
 print()
 if fails:
     print('FAIL (%d)' % len(fails))
@@ -150,7 +160,7 @@ if fails:
 else:
     print('PASS: every glyph went to its own slot, its own tile pair and its '
           'own bitmap; digits and kana still take the FA/FB path; the three '
-          'rows use the slot bases 24 / 28 / 32')
+          'rows use the slot bases 24 / 30 / 36')
 
 # verify_all.py reads the exit code, so a FAIL has to leave one
 sys.exit(1 if fails else 0)
