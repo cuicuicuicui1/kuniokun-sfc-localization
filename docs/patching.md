@@ -2,6 +2,8 @@
 
 [返回首页](../README.md) · [当前版本与指纹](../notes/current-state.md)
 
+**优化版用户请先分清输入：** [rc2正常BPS](../patches/optimized-v2.0-rc2/README.md)针对未汉化优化版65D66D5D，输出1F37BC30；[不掉血增量BPS](../patches/optimized-v2.0-rc2-nohp/README.md)针对正常rc2，输出E3C341ED。下文根目录IPS只针对干净日版，不适用于优化版。
+
 ## 需要什么
 
 - 仓库根目录的 `kuniokun_cn.ips`（当前 v39-rc8；补丁 SHA-256 见当前状态）。

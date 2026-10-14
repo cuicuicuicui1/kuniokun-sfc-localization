@@ -1,0 +1,137 @@
+{
+  "status": "pass",
+  "version": "v1.5-test",
+  "candidate": {
+    "size": 2097152,
+    "crc32": "B4405973",
+    "sha256": "e4e8b700700588f4778a46bc83ac29376005cd136476ebc550d2291ed3c90cd1"
+  },
+  "source_optimization_crc32": "65D66D5D",
+  "source_donor_crc32": "38FA572A",
+  "source_original_changed_bytes": 6248,
+  "source_original_spans": 1019,
+  "source_total_spans": 1339,
+  "native_hooks": 46,
+  "reachable_instructions": 854,
+  "relocations": 98,
+  "relocated_code_data_guard_bytes": 8464,
+  "opcode_mutations_rejected": 854,
+  "macro_fix": {
+    "supported_terms": 15,
+    "co_visible_windows": 544,
+    "conflicts": 0,
+    "v14_native_negative_rejected": true,
+    "message_1F6_one_page_break_added": true
+  },
+  "native_name_records": 514,
+  "native_parameter_bytes": 24502,
+  "buffer_expansions": {
+    "substitution_cases": 7500,
+    "decoded_slices": 19800,
+    "max_slice_bytes": 28,
+    "guard_threshold": 96
+  },
+  "combat_model_cases": 98688,
+  "input_modifier_model_cases": 3024,
+  "friendly_fire_model_cases": 1024,
+  "operational_snapshot_parity_cases": 16,
+  "mesen_message_cases": 148,
+  "mesen_cold_frames": 6500,
+  "three_native_combat_entries": {
+    "action": "031C",
+    "post_defeat": "0337",
+    "real_hit_anger": "031D"
+  },
+  "continuous_text_calls": 11,
+  "menu_commands": [
+    4,
+    1,
+    0,
+    2,
+    3,
+    5,
+    4
+  ],
+  "controlled_friendly_fire_values": [
+    128,
+    0
+  ],
+  "namespace_reads_only_port_helpers": true,
+  "extended_font_hud_cases": 374,
+  "ui_cases": 6,
+  "snes9x_cold_frames": 6500,
+  "deterministic_rebuild": true,
+  "runtime_controls": [
+    "message ID/common words only for continuous test, no state restore between calls",
+    "one actor record substitution and one action/defeat selector for battle fixtures",
+    "anger fixture at real hit: enhanced flag, anger threshold and one random seed; no PC/ROM/story writes",
+    "two idle action fields zeroed for friendly-fire menu permission branch",
+    "five status cases use one-time player/condition fields; one normal case original state"
+  ],
+  "unverified": [
+    "hardware",
+    "natural full-game completion",
+    "exact user-reported new enemy natural encounter",
+    "old-save migration",
+    "all original graphics/save/name screens",
+    "real-pad L+R+X modifier changes; code parity model verified",
+    "all optimization hooks in natural gameplay",
+    "natural acquisition of every abnormal status"
+  ],
+  "menu_runtime_tag": "menu-loop-final",
+  "standalone_export_build": {
+    "status": "pass",
+    "candidate_sha256": "e4e8b700700588f4778a46bc83ac29376005cd136476ebc550d2291ed3c90cd1",
+    "private_jp_copy_created_in_isolated_stage": true,
+    "bundled_source_only": true,
+    "byte_identical": true,
+    "steps": [
+      {
+        "script": "configure_inputs.py",
+        "exit": 0
+      },
+      {
+        "script": "build_port.py",
+        "exit": 0
+      },
+      {
+        "script": "patch_ui.py",
+        "exit": 0
+      },
+      {
+        "script": "check_code.py",
+        "exit": 0
+      }
+    ],
+    "final_entry_preflight_rechecked": true,
+    "final_build_entry_sha256": "1aa703b0d4ee1187143cae4e6ca813dbaf62dcf74f9b7308dc04bfb205520d48"
+  },
+  "patch_validation": {
+    "status": "pass",
+    "candidate": {
+      "size": 2097152,
+      "sha256": "e4e8b700700588f4778a46bc83ac29376005cd136476ebc550d2291ed3c90cd1",
+      "crc32": "B4405973"
+    },
+    "bps_strict_replay": true,
+    "ips_strict_replay": true,
+    "negative_rejected": [
+      "jp",
+      "cn10",
+      "v1.4",
+      "headered",
+      "corrupt-bps"
+    ]
+  },
+  "delivered_cli_checks": {
+    "status": "pass",
+    "candidate_sha256": "e4e8b700700588f4778a46bc83ac29376005cd136476ebc550d2291ed3c90cd1",
+    "checks": [
+      "delivered BPS CLI exact replay",
+      "wrong source rejected without output",
+      "existing output preserved",
+      "multiple BPS files rejected",
+      "wrong private font rejected before config mutation"
+    ]
+  }
+}

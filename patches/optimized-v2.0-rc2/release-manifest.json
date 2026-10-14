@@ -1,0 +1,20 @@
+{
+  "version": "v2.0-rc2",
+  "date": "2026-10-13",
+  "target": {
+    "size": 4194304,
+    "crc32": "1F37BC30",
+    "sha256": "2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6"
+  },
+  "patch": {
+    "sha256": "b9d99b30642c9a05dce59453aa2564e92d7ec3e92aa57f0c70d6afca985396d2",
+    "size": 2650666,
+    "filename": "optimized-v2.0-rc2.bps"
+  },
+  "status": "tested_HUD_fix",
+  "source": {
+    "size": 1572864,
+    "sha256": "2008f9b34d2b48a168824c8c7d1e3c8924dbb0fa81de9a4eeff2823a635ffe08",
+    "crc32": "65D66D5D"
+  }
+}

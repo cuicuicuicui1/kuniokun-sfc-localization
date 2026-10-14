@@ -6,6 +6,8 @@
 
 - `README.md`：项目入口与文档导航。
 - `notes/current-state.md`：当前版本、指纹和验收范围。
+- `tools/optimized_rebuild/README.md`：当前优化版rc2完整构建入口；独立不掉血变体在variants/nohp，不能默认应用到正常版。
+- `tools/text_workbench/README.md`：离线校对工作台与修订提案校验，不直接修改ROM。
 - `notes/修复记录_GPT_v39-rc8_片尾与全量审校.md`：当前补丁的关键事实；`docs/release-v39-rc8.json`：发布文件指纹。未来新版本先核对最新具名记录与实际文件。
 - `docs/code-map.md` / `docs/build-and-test.md`：按任务选读。
 
@@ -27,6 +29,7 @@
 - 同批生成侧车：`cn_build_params.json`、`cn_addr_map.json`、`cn_glyph_cell.json`。
 - 当前仓库 IPS/侧车为 rc8；维护机根目录 ROM 可能保留旧 rc4。ROM/IPS 与侧车必须匹配，测试显式指定目标或先在独立副本构建；不要手改生成映射绕过失败。
 - 很多旧脚本使用根目录相对路径；未经调用关系核查，不批量搬动它们或输入数据。
+- 根目录冻结rc8与当前维护源码不同；优化版闭包独立，不拿根目录ROM/侧车验证rc2。普通rc2 BPS与不掉血增量BPS分别核对各自基座。
 
 ## Verification
 

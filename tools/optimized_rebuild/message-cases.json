@@ -1,0 +1,784 @@
+[
+  {
+    "id": 769,
+    "speaker": 1,
+    "capture": true
+  },
+  {
+    "id": 770,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 771,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 772,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 773,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 774,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 775,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 776,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 777,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 778,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 779,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 780,
+    "speaker": 287,
+    "capture": true
+  },
+  {
+    "id": 781,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 782,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 783,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 784,
+    "speaker": 1,
+    "capture": true
+  },
+  {
+    "id": 785,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 786,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 787,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 788,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 789,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 790,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 791,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 792,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 793,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 794,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 795,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 796,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 797,
+    "speaker": 467,
+    "capture": true
+  },
+  {
+    "id": 798,
+    "speaker": 513,
+    "capture": true
+  },
+  {
+    "id": 799,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 800,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 801,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 802,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 803,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 804,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 805,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 806,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 807,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 808,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 809,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 810,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 811,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 812,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 813,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 814,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 815,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 816,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 817,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 818,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 819,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 820,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 821,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 822,
+    "speaker": 467,
+    "capture": true
+  },
+  {
+    "id": 823,
+    "speaker": 513,
+    "capture": true
+  },
+  {
+    "id": 824,
+    "speaker": 1,
+    "capture": true
+  },
+  {
+    "id": 825,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 826,
+    "speaker": 293,
+    "capture": true
+  },
+  {
+    "id": 827,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 828,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 829,
+    "speaker": 1,
+    "capture": true
+  },
+  {
+    "id": 830,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 831,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 832,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 833,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 834,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 835,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 836,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 837,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 838,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 839,
+    "speaker": 1,
+    "capture": true
+  },
+  {
+    "id": 840,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 841,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 842,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 843,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 110,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 123,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 137,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 317,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 328,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 353,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 390,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 391,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 393,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 394,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 412,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 450,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 453,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 465,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 481,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 482,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 502,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 536,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 537,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 538,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 623,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 624,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 625,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 626,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 627,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 628,
+    "speaker": 287,
+    "capture": true
+  },
+  {
+    "id": 629,
+    "speaker": 293,
+    "capture": true
+  },
+  {
+    "id": 630,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 636,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 643,
+    "speaker": 1,
+    "capture": false
+  },
+  {
+    "id": 647,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 797,
+    "speaker": 287,
+    "capture": true
+  },
+  {
+    "id": 798,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 822,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 823,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 795,
+    "speaker": 287,
+    "capture": false
+  },
+  {
+    "id": 797,
+    "speaker": 293,
+    "capture": true
+  },
+  {
+    "id": 798,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 822,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 823,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 795,
+    "speaker": 293,
+    "capture": false
+  },
+  {
+    "id": 797,
+    "speaker": 467,
+    "capture": true
+  },
+  {
+    "id": 798,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 822,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 823,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 795,
+    "speaker": 467,
+    "capture": false
+  },
+  {
+    "id": 797,
+    "speaker": 513,
+    "capture": true
+  },
+  {
+    "id": 798,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 822,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 823,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 795,
+    "speaker": 513,
+    "capture": false
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 60,
+    "e": 60
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": true,
+    "d": 61,
+    "e": 61
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 62,
+    "e": 62
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 63,
+    "e": 63
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 64,
+    "e": 64
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 65,
+    "e": 65
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 66,
+    "e": 66
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 67,
+    "e": 67
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 68,
+    "e": 68
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 69,
+    "e": 69
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 70,
+    "e": 70
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 71,
+    "e": 71
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 72,
+    "e": 72
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": false,
+    "d": 73,
+    "e": 73
+  },
+  {
+    "id": 157,
+    "speaker": 467,
+    "capture": true,
+    "d": 74,
+    "e": 74
+  },
+  {
+    "id": 412,
+    "speaker": 512,
+    "capture": true,
+    "d": 74,
+    "e": 60
+  },
+  {
+    "id": 482,
+    "speaker": 512,
+    "capture": true,
+    "d": 74,
+    "e": 60
+  },
+  {
+    "id": 502,
+    "speaker": 512,
+    "capture": true,
+    "d": 74,
+    "e": 60
+  },
+  {
+    "id": 537,
+    "speaker": 512,
+    "capture": true,
+    "d": 74,
+    "e": 60
+  },
+  {
+    "id": 538,
+    "speaker": 512,
+    "capture": true,
+    "d": 74,
+    "e": 60
+  },
+  {
+    "id": 824,
+    "speaker": 512,
+    "capture": true,
+    "d": 74,
+    "e": 60
+  }
+]

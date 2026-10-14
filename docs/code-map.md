@@ -1,5 +1,7 @@
 # 源码导航：先认入口，再认文字消费者
 
+> 2026-10-15：当前优化版走 [optimized_rebuild](../tools/optimized_rebuild/README.md) 原基座重汉化，目标rc2／1F37BC30；不掉血版和离线工作台独立。旧optimized_port/v1.5仅为历史，不参与当前构建。
+
 [返回首页](../README.md) · [构建与测试](build-and-test.md)
 
 ## 推荐阅读顺序
@@ -25,6 +27,8 @@
 | 生成侧车 | `cn_build_params.json` | 实际参数/保护区/布局，用于解释对应 ROM |
 | 生成侧车 | `cn_glyph_cell.json` / `cn_addr_map.json` | 字形位置与文本回插地址，不是译文输入 |
 | 检查总入口 | `verify_all.py` / `build_context.py` | 必测列表与临时测试副本 |
+| 参数边界 | `test_character_tables.py` | 514条真实人物非姓名字段及后续参数逐字节保留；旧560条范围错误 |
+| 模型回归 | `test_cpu_dp_shift.py` | 直接页移位8/16位、bank0、标志和邻字节 |
 | 模型 | `sim65816.py` | 有限的 CPU/总线/PPU 模型，不是完整模拟器 |
 | 补丁检查 | `ipsverify.py` | 重放 IPS 与选定 ROM 逐字节比较 |
 | 真实运行 | `tools/`、`hw/` | 无头工具、模拟器探针、路线与诊断夹具 |
@@ -92,3 +96,13 @@
 - `test_credits_text.py`：30完整罗马字署名、20真实片尾共显集合、全来源窗口/列容量独立重建、F2F6宏对齐。
 - `notes/text-review-v39-rc8.json`：1013条日文/旧中文/审校中文与理由，**是审校证据，不是新的构建输入**。构建仍只读取`cn_translation.json`。
 - STATUS道具显示使用现有左右pair表24/30/36三组六列；对白暂停，不与静态标签/原raw字段/永久战斗HUD共享活瓦片。
+
+
+优化版原基座重汉化（2026-10-13）独立于旧移植工程，见 [optimized_rebuild](../tools/optimized_rebuild/README.md)，主构建 `build_native.py`，显示调度和原入口挂接在 `patch_native.py`。
+
+## 当前独立工具
+
+- tools/optimized_rebuild：build_native.py → build_positional_components.py → patch_native.py；source/是固定构建闭包。
+- tools/optimized_rebuild/variants/nohp：正常rc2的可选7处扣血指令变更，完整源指纹门；不修改正常构建。
+- tools/text_workbench：底稿生成、单HTML界面、修订文件校验和无ROM测试；share/为可下载的固定底稿。
+- patches/：正常优化版和不掉血版BPS分别配源／目标清单和应用器。

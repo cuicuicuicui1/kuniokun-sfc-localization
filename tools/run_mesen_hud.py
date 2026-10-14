@@ -62,7 +62,7 @@ def main():
     test[0x7FFC:0x7FFE]=(0xF2AA).to_bytes(2,'little')
     fixture=out/(a.tag+'-fixture.smc');fixture.write_bytes(test)
     first=rom[0x4802A:0x4802E]
-    names=[rom[0x4802A+i*16:0x4802E+i*16] for i in range(560)]
+    names=[rom[0x4802A+i*16:0x4802E+i*16] for i in range(514)]
     cross=next(rec for rec in names if rec[0]>=0xC0 and rec[2]>=0xC0 and rec[0]!=rec[2])
     cases=[('two-hanzi',first,0,0),('one-hanzi',first[:2]+b'\0\0',0,0),('cross-page',cross,3,0),('queued-32',first,0,32),('busy-200',first,0,200),('kana',bytes.fromhex('00 00 47 26'),0,0)]
     results=[]

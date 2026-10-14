@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "sha256": "2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6",
+  "source_zip_independent_build": "byte-identical ROM and three sidecars",
+  "source_zip_native_HUD_contract_and_scope": "pass",
+  "packaged_apply_cli": "byte-identical ROM; existing output and wrong source rejected",
+  "previous_failures": [
+    "result folder absent in source-only extract; scripts now create their output directory",
+    "first generated manifest missed nested source object; schema corrected and actual CLI replay passed"
+  ]
+}

@@ -19,7 +19,7 @@ _src = {}
 
 
 def load_unifont(path=None):
-    path = path or os.path.join(FONTS, 'unifont.hex.gz')
+    path = path or os.environ.get('SFC_UNIFONT_PATH') or os.path.join(FONTS, 'unifont.hex.gz')
     if 'uni' not in _src:
         g = {}
         for line in gzip.open(path, 'rt', encoding='utf-8', errors='replace'):

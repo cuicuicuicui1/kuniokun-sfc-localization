@@ -1,0 +1,8 @@
+{
+  "input": "opt",
+  "sha256": "2008f9b34d2b48a168824c8c7d1e3c8924dbb0fa81de9a4eeff2823a635ffe08",
+  "size": 4194304,
+  "font_start": 2097152,
+  "private_base_sha256": "613dd9c9b75a176217016d5f64970a73beea2634df0fcd59c42c4ed6838103c5",
+  "source_kind": "original optimization plus zero expansion and header only"
+}

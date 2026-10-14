@@ -1,0 +1,49 @@
+{
+  "status": "pass_with_documented_scope",
+  "variant": "v2.0-rc2-nohp",
+  "date": "2026-10-13",
+  "base": {
+    "sha256": "2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6",
+    "crc32": "1F37BC30",
+    "size": 4194304
+  },
+  "target": {
+    "sha256": "61e672105e7fd4f338ee17c6511bd2bd01fefa39d65ecc48d22fb314b0ddfa93",
+    "crc32": "E3C341ED",
+    "size": 4194304
+  },
+  "changed_bytes": 25,
+  "native_model_cases": 339,
+  "players_protected": [
+    0,
+    1
+  ],
+  "enemy_damage": "native 5 enemy actor slots unchanged; original damage and lethal effects verified",
+  "mesen": {
+    "cold_frames": 10500,
+    "ordinary_controller_only": true,
+    "normal_damage_entries": 5,
+    "normal_hp_decreases": 5,
+    "hack_damage_entries": 5,
+    "hack_hp_decreases": 0,
+    "hack_enemy_hp_decreases": 7,
+    "max_actors": 6,
+    "neighbor_checks": 1328
+  },
+  "snes9x": {
+    "version": "1.63 890b5d4",
+    "cold_frames": 10000,
+    "ordinary_controller_only": true,
+    "normal_hp_decreases": 20,
+    "hack_hp_decreases": 0
+  },
+  "scope": "combat HP loss, equipment/weapon self-damage, native train and optimized lethal HP-zero branches; reactions retained; normal recovery/new game/file loading unchanged",
+  "unverified": [
+    "real hardware",
+    "natural full story completion",
+    "all lethal scene outcomes after retained hit/knockdown animations",
+    "native dual-player gameplay; both player slots tested through native CPU consumers",
+    "old save compatibility"
+  ],
+  "separate_from_normal_release": true
+}

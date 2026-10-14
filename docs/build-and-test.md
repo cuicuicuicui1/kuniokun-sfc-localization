@@ -2,6 +2,13 @@
 
 [返回首页](../README.md) · [源码导航](code-map.md) · [当前指纹](../notes/current-state.md)
 
+## 先选择构建路线
+
+- **当前优化版rc2**：[optimized_rebuild完整说明](../tools/optimized_rebuild/README.md)，唯一完整入口build_native.py，自备原优化版、日版及匹配字体；目标CRC32 1F37BC30。
+- **独立不掉血变体**：[生成说明](../tools/optimized_rebuild/variants/nohp/README.md)，输入正常rc2，目标E3C341ED；不加入正常版构建。
+- **离线文本校对工具**：[工作台](../tools/text_workbench/README.md)，只处理底稿和修订稿，不需要ROM、字体或模拟器。
+- 下文是**根目录日版构建**。其维护源码已有514条人物表边界、模型和译文修正，不能把新重建件冒充冻结rc8。根目录冻结IPS和侧车仍按rc8发布清单识别。
+
 > **先用独立工作副本。** 当前脚本不是无副作用的构建命令：`make_base.py` 会写基线，`cnbuild5.py` 会改写 ROM、IPS 和生成侧车。仅设置 `OUT_ROM` 并不会隔离 IPS 或侧车输出。
 
 ## 1. 本地依赖

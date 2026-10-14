@@ -1,0 +1,19 @@
+{
+  "variant": "v2.0-rc2-nohp",
+  "source": {
+    "sha256": "2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6",
+    "crc32": "1F37BC30",
+    "size": 4194304
+  },
+  "target": {
+    "sha256": "61e672105e7fd4f338ee17c6511bd2bd01fefa39d65ecc48d22fb314b0ddfa93",
+    "crc32": "E3C341ED",
+    "size": 4194304
+  },
+  "patch": {
+    "filename": "optimized-v2.0-rc2-nohp.bps",
+    "sha256": "5578fee6d5b34700cde8b5d661950bc77f6a7af4c4b097f0c86942a6f7c7ac20",
+    "size": 93
+  },
+  "status": "tested_variant"
+}

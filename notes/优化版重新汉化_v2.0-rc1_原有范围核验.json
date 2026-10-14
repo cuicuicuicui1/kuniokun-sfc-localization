@@ -1,0 +1,4264 @@
+{
+  "status": "pass",
+  "date": "2026-10-13",
+  "scope": "previously localized content, including optimized changes consumed by those paths",
+  "target": {
+    "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+    "crc32": "AB097D26"
+  },
+  "counts": {
+    "main_messages": 769,
+    "other_table_entries": 319,
+    "identified_total": 1088,
+    "actor_records": 514,
+    "native_enemy_hud_calls": 1028,
+    "status_labels": 15
+  },
+  "scope_exclusions": [
+    "file/load/naming UI",
+    "title logo and unrelated scene graphics"
+  ],
+  "unchanged_excluded_regions": [
+    "bank02",
+    "title logo resource"
+  ],
+  "worker_dispositions": {
+    "1F6_replace_pattern": "false alarm; exact match and correct F2F6/EE/ED in final ROM",
+    "1DB_mamoru": "verb meaning protect, translation retained",
+    "staff_ascii": "approved romanized credits retained",
+    "ending_78": "optimized wording already translated; no new honorific added",
+    "status_module": "not installed; existing status writer already owns this resource"
+  },
+  "other_table_readback": [
+    {
+      "table": "0x1dbc5",
+      "index": 0,
+      "cn": "入场券{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 1,
+      "cn": "1区月票{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 2,
+      "cn": "2区月票{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 3,
+      "cn": "3区月票{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 4,
+      "cn": "摩托钥匙{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 5,
+      "cn": "电子卡锁{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 6,
+      "cn": "万能钥匙{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 7,
+      "cn": "列车卡{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 8,
+      "cn": "电话卡{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 9,
+      "cn": "信{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 10,
+      "cn": "冰麦芽糖水{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 11,
+      "cn": "威斯帕{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 12,
+      "cn": "东之吻{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 13,
+      "cn": "盖洛林{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 14,
+      "cn": "狗面人{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 15,
+      "cn": "蝮拳50{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 16,
+      "cn": "醋海带{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 17,
+      "cn": "当然饼干{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 18,
+      "cn": "虎纹薄饼{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 19,
+      "cn": "大吟酿{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 20,
+      "cn": "安眠药{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 21,
+      "cn": "危险药{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 22,
+      "cn": "刺猬玩偶{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 23,
+      "cn": "虎彻玩偶{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 24,
+      "cn": "春团治偶{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 25,
+      "cn": "阿龟钵偶{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 26,
+      "cn": "签名纸{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 27,
+      "cn": "票券{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 28,
+      "cn": "轰轰冒险5{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 29,
+      "cn": "最后的幻想5{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 30,
+      "cn": "银项链{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 31,
+      "cn": "金项链{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 32,
+      "cn": "白金项链{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 33,
+      "cn": "鸟爪吊坠{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 34,
+      "cn": "蓝石吊坠{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 35,
+      "cn": "水晶吊坠{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 36,
+      "cn": "海之猿{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 37,
+      "cn": "预付卡{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 38,
+      "cn": "出租车卡{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 39,
+      "cn": "劳保手套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 40,
+      "cn": "驾驶手套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 41,
+      "cn": "护腕{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 42,
+      "cn": "蛇之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 43,
+      "cn": "银手镯{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 44,
+      "cn": "铁指套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 45,
+      "cn": "梅安针{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 46,
+      "cn": "骷髅戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 47,
+      "cn": "拳击手套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 48,
+      "cn": "蝎之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 49,
+      "cn": "指节护具{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 50,
+      "cn": "金手镯{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 51,
+      "cn": "护臂{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 52,
+      "cn": "血染拳套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 53,
+      "cn": "白虎之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 54,
+      "cn": "铁拳套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 55,
+      "cn": "钢拳{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 56,
+      "cn": "死亡拳套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 57,
+      "cn": "龙神之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 58,
+      "cn": "凯撒拳套{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 59,
+      "cn": "鬼神之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 60,
+      "cn": "力量腕带{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 61,
+      "cn": "格斗之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 62,
+      "cn": "神奇之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 63,
+      "cn": "霍比特之戒{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 64,
+      "cn": "黑衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 65,
+      "cn": "红衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 66,
+      "cn": "格子衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 67,
+      "cn": "牡丹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 68,
+      "cn": "鹤纹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 69,
+      "cn": "樱纹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 70,
+      "cn": "月纹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 71,
+      "cn": "鲤纹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 72,
+      "cn": "韦驮天衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 73,
+      "cn": "唐狮子衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 74,
+      "cn": "死神衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 75,
+      "cn": "毘沙门衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 76,
+      "cn": "风神衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 77,
+      "cn": "雷神衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 78,
+      "cn": "龙纹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 79,
+      "cn": "应举衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 80,
+      "cn": "修罗衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 81,
+      "cn": "鵺纹衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 82,
+      "cn": "护身甲{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 83,
+      "cn": "罗特衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 84,
+      "cn": "苍龙衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 85,
+      "cn": "吉本衬里{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 86,
+      "cn": "厕所拖鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 87,
+      "cn": "凉鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 88,
+      "cn": "皮底拖鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 89,
+      "cn": "帆布鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 90,
+      "cn": "破洞鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 91,
+      "cn": "甲板鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 92,
+      "cn": "胶底鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 93,
+      "cn": "靴子{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 94,
+      "cn": "木屐{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 95,
+      "cn": "大妈凉鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 96,
+      "cn": "红鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 97,
+      "cn": "篮球鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 98,
+      "cn": "沙漠靴{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 99,
+      "cn": "安全鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 100,
+      "cn": "乐福鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 101,
+      "cn": "素面鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 102,
+      "cn": "翼纹皮鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 103,
+      "cn": "番长之鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 104,
+      "cn": "漆皮鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 105,
+      "cn": "迈克之鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 106,
+      "cn": "铁木屐{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 107,
+      "cn": "高跟鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 108,
+      "cn": "秘密球鞋{F2F3}"
+    },
+    {
+      "table": "0x1dbc5",
+      "index": 109,
+      "cn": "功夫鞋{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 0,
+      "cn": "等级{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 1,
+      "cn": "体力{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 2,
+      "cn": "气力{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 3,
+      "cn": "力量{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 4,
+      "cn": "敏捷{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 5,
+      "cn": "攻击力{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 6,
+      "cn": "防御力{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 7,
+      "cn": "运气{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 8,
+      "cn": "最大体力{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 9,
+      "cn": "最大气力{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 10,
+      "cn": "跳跃踢{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 11,
+      "cn": "揪领摔{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 12,
+      "cn": "格挡{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 13,
+      "cn": "必杀拳{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 14,
+      "cn": "必杀踢{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 15,
+      "cn": "坐身拳{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 16,
+      "cn": "音速拳{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 17,
+      "cn": "延髓斩{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 18,
+      "cn": "蓄力拳{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 19,
+      "cn": "德国背摔{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 20,
+      "cn": "气合{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 21,
+      "cn": "忍耐{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 22,
+      "cn": "快步{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 23,
+      "cn": "殴打{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 24,
+      "cn": "猛冲{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 25,
+      "cn": "站稳{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 26,
+      "cn": "胆量{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 27,
+      "cn": "顿悟{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 28,
+      "cn": "瞪眼{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 29,
+      "cn": "睡觉{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 30,
+      "cn": "猛打{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 31,
+      "cn": "根性{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 32,
+      "cn": "看破{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 33,
+      "cn": "击飞{F2F3}"
+    },
+    {
+      "table": "0x1e098",
+      "index": 34,
+      "cn": "祈祷{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 0,
+      "cn": "梅田东地下街{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 1,
+      "cn": "梅田西地下街{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 2,
+      "cn": "梅田北地下街{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 3,
+      "cn": "大阪酒店地下1层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 4,
+      "cn": "大阪酒店1层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 5,
+      "cn": "大阪酒店2层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 6,
+      "cn": "大阪酒店3层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 7,
+      "cn": "大阪酒店4层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 8,
+      "cn": "心斋桥地下街{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 9,
+      "cn": "心斋桥筋{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 10,
+      "cn": "心斋桥{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 11,
+      "cn": "难波惠美须桥筋{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 12,
+      "cn": "难波难难城{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 13,
+      "cn": "惠美须町地下街{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 14,
+      "cn": "惠美须町通天阁本通{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 15,
+      "cn": "通天阁2层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 16,
+      "cn": "通天阁5层东{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 17,
+      "cn": "通天阁5层西{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 18,
+      "cn": "通天阁5层南{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 19,
+      "cn": "通天阁5层北{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 20,
+      "cn": "通天阁屋顶{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 21,
+      "cn": "甲子园球场路{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 22,
+      "cn": "御堂筋梅田站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 23,
+      "cn": "御堂筋心斋桥站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 24,
+      "cn": "御堂筋难波站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 25,
+      "cn": "堺筋难波站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 26,
+      "cn": "堺筋惠美须町站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 27,
+      "cn": "大阪电铁梅田站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 28,
+      "cn": "大阪电铁甲子园站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 29,
+      "cn": "梅田地下轨道{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 30,
+      "cn": "心斋桥地下轨道{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 31,
+      "cn": "难波地下轨道{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 32,
+      "cn": "下水道地下1层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 33,
+      "cn": "下水道地下2层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 34,
+      "cn": "下水道地下3层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 35,
+      "cn": "下水道地下4层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 36,
+      "cn": "下水道地下5层{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 37,
+      "cn": "地下停车场{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 38,
+      "cn": "大阪港{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 39,
+      "cn": "惠美须桥大厦{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 40,
+      "cn": "老虎商店{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 41,
+      "cn": "老虎资料馆{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 42,
+      "cn": "游戏厅{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 43,
+      "cn": "大阪港仓库内{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 44,
+      "cn": "大阪站{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 45,
+      "cn": "梅田{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 46,
+      "cn": "难波{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 47,
+      "cn": "惠美须町{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 48,
+      "cn": "甲子园{F2F3}"
+    },
+    {
+      "table": "0x1e1d5",
+      "index": 49,
+      "cn": "大阪酒店{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 0,
+      "cn": "上升了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 1,
+      "cn": "下降了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 2,
+      "cn": "学会了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 3,
+      "cn": "使用了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 4,
+      "cn": "丢弃了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 5,
+      "cn": "获得了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 6,
+      "cn": "睡着了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 7,
+      "cn": "昏倒了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 8,
+      "cn": "感到恶心{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 9,
+      "cn": "效果消失{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 10,
+      "cn": "等级提升{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 11,
+      "cn": "不够啊{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 12,
+      "cn": "没有带{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 13,
+      "cn": "白{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 14,
+      "cn": "蓝{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 15,
+      "cn": "别小看我{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 16,
+      "cn": "别开玩笑了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 17,
+      "cn": "你{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 18,
+      "cn": "你们{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 19,
+      "cn": "笨蛋{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 20,
+      "cn": "渣滓{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 21,
+      "cn": "蠢货{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 22,
+      "cn": "同伴{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 23,
+      "cn": "敌人{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 24,
+      "cn": "国夫{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 25,
+      "cn": "力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 26,
+      "cn": "国夫和力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 27,
+      "cn": "国夫与力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 28,
+      "cn": "国夫 力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 29,
+      "cn": "你{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 30,
+      "cn": "你们{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 31,
+      "cn": "我{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 32,
+      "cn": "我们{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 33,
+      "cn": "同盟{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 34,
+      "cn": "联合{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 35,
+      "cn": "那家伙{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 36,
+      "cn": "那些家伙{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 37,
+      "cn": "电话{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 38,
+      "cn": "售货机{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 39,
+      "cn": "踢击游戏{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 40,
+      "cn": "抓娃娃机{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 41,
+      "cn": "占卜机{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 42,
+      "cn": "老虎机{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 43,
+      "cn": "电话卡{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 44,
+      "cn": "预付卡{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 45,
+      "cn": "金钱{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 46,
+      "cn": "大吉{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 47,
+      "cn": "中吉{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 48,
+      "cn": "吉{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 49,
+      "cn": "凶{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 50,
+      "cn": "大凶{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 51,
+      "cn": "保管{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 52,
+      "cn": "归还{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 53,
+      "cn": "大哥{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 54,
+      "cn": "一人{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 55,
+      "cn": "两人{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 56,
+      "cn": "鼓起斗志{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 57,
+      "cn": "蓄力了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 58,
+      "cn": "瞪了一眼{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 59,
+      "cn": "展现根性{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 60,
+      "cn": "祈祷了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 61,
+      "cn": "狂吐{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 62,
+      "cn": "吃了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 63,
+      "cn": "读了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 64,
+      "cn": "炫耀了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 65,
+      "cn": "试着戴上{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 66,
+      "cn": "喝了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 67,
+      "cn": "臭气{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 68,
+      "cn": "一口气{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 69,
+      "cn": "吹了过去{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 70,
+      "cn": "脸颊{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 71,
+      "cn": "凑了过去{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 72,
+      "cn": "恶心的{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 73,
+      "cn": "感觉{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 74,
+      "cn": "清爽的{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 75,
+      "cn": "软弱无力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 76,
+      "cn": "了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 77,
+      "cn": "好好地{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 78,
+      "cn": "国夫!{F7} 力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 79,
+      "cn": "完全{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 80,
+      "cn": "复活了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 81,
+      "cn": "一半{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 82,
+      "cn": "全部{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 83,
+      "cn": "取消{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 84,
+      "cn": "想回酒店{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 85,
+      "cn": "想要体力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 86,
+      "cn": "想要气力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 87,
+      "cn": "想全部恢复{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 88,
+      "cn": "想变健康{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 89,
+      "cn": "想要同伴{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 90,
+      "cn": "想变强{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 91,
+      "cn": "想受女孩欢迎{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 92,
+      "cn": "想变成女孩{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 93,
+      "cn": "想变幸福{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 94,
+      "cn": "想努力{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 95,
+      "cn": "道具{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 96,
+      "cn": "装备了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 97,
+      "cn": "下定决心{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 98,
+      "cn": "变得耐打{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 99,
+      "cn": "看破敌人招式{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 100,
+      "cn": "握紧拳头{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 101,
+      "cn": "怒火燃起{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 102,
+      "cn": "变成飞毛腿{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 103,
+      "cn": "变成暴走族{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 104,
+      "cn": "顿悟了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 105,
+      "cn": "忍住了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 106,
+      "cn": "河豚刺身{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 107,
+      "cn": "河豚火锅{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 108,
+      "cn": "大章鱼{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 109,
+      "cn": "大阪煎饼{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 110,
+      "cn": "猪肉包{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 111,
+      "cn": "芝士蛋糕{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 112,
+      "cn": "拉面{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 113,
+      "cn": "印度咖喱{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 114,
+      "cn": "芥末冰淇淋{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 115,
+      "cn": "烤鱿鱼{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 116,
+      "cn": "螃蟹{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 117,
+      "cn": "虾{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 118,
+      "cn": "变傻了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 119,
+      "cn": "变得不正常{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 120,
+      "cn": "早上{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 121,
+      "cn": "展示了{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 122,
+      "cn": "一个{F2F3}"
+    },
+    {
+      "table": "0x1e4ce",
+      "index": 123,
+      "cn": "信{F2F3}"
+    }
+  ],
+  "names_readback": [
+    {
+      "index": 0,
+      "jp": "よしひろ",
+      "cn": "良弘"
+    },
+    {
+      "index": 1,
+      "jp": "ひろし",
+      "cn": "浩"
+    },
+    {
+      "index": 2,
+      "jp": "こうじ",
+      "cn": "康二"
+    },
+    {
+      "index": 3,
+      "jp": "げんえい",
+      "cn": "源英"
+    },
+    {
+      "index": 4,
+      "jp": "まさ",
+      "cn": "正"
+    },
+    {
+      "index": 5,
+      "jp": "みほ",
+      "cn": "美穗"
+    },
+    {
+      "index": 6,
+      "jp": "なかざき",
+      "cn": "中崎"
+    },
+    {
+      "index": 7,
+      "jp": "ほくと",
+      "cn": "北斗"
+    },
+    {
+      "index": 8,
+      "jp": "おうみ",
+      "cn": "近江"
+    },
+    {
+      "index": 9,
+      "jp": "さおり",
+      "cn": "沙织"
+    },
+    {
+      "index": 10,
+      "jp": "いざわ",
+      "cn": "井泽"
+    },
+    {
+      "index": 11,
+      "jp": "うらべ",
+      "cn": "浦部"
+    },
+    {
+      "index": 12,
+      "jp": "わだ",
+      "cn": "和田"
+    },
+    {
+      "index": 13,
+      "jp": "わだ",
+      "cn": "和田"
+    },
+    {
+      "index": 14,
+      "jp": "やすゆき",
+      "cn": "安行"
+    },
+    {
+      "index": 15,
+      "jp": "まさき",
+      "cn": "正树"
+    },
+    {
+      "index": 16,
+      "jp": "こうじ",
+      "cn": "康二"
+    },
+    {
+      "index": 17,
+      "jp": "げんえい",
+      "cn": "源英"
+    },
+    {
+      "index": 18,
+      "jp": "まさ",
+      "cn": "正"
+    },
+    {
+      "index": 19,
+      "jp": "なかざき",
+      "cn": "中崎"
+    },
+    {
+      "index": 20,
+      "jp": "ほくと",
+      "cn": "北斗"
+    },
+    {
+      "index": 21,
+      "jp": "うらべ",
+      "cn": "浦部"
+    },
+    {
+      "index": 22,
+      "jp": "おぐら",
+      "cn": "小仓"
+    },
+    {
+      "index": 23,
+      "jp": "ほんだ",
+      "cn": "本田"
+    },
+    {
+      "index": 24,
+      "jp": "よしひろ",
+      "cn": "良弘"
+    },
+    {
+      "index": 25,
+      "jp": "のぼる",
+      "cn": "升"
+    },
+    {
+      "index": 26,
+      "jp": "たけし",
+      "cn": "武"
+    },
+    {
+      "index": 27,
+      "jp": "たかぎ",
+      "cn": "高木"
+    },
+    {
+      "index": 28,
+      "jp": "くめだ",
+      "cn": "久米"
+    },
+    {
+      "index": 29,
+      "jp": "かたぎり",
+      "cn": "片桐"
+    },
+    {
+      "index": 30,
+      "jp": "くにひろ",
+      "cn": "国弘"
+    },
+    {
+      "index": 31,
+      "jp": "いしぐろ",
+      "cn": "石黑"
+    },
+    {
+      "index": 32,
+      "jp": "きょうこ",
+      "cn": "京子"
+    },
+    {
+      "index": 33,
+      "jp": "かよこ",
+      "cn": "佳代"
+    },
+    {
+      "index": 34,
+      "jp": "もんま",
+      "cn": "门马"
+    },
+    {
+      "index": 35,
+      "jp": "まさみ",
+      "cn": "正美"
+    },
+    {
+      "index": 36,
+      "jp": "りょうこ",
+      "cn": "亮子"
+    },
+    {
+      "index": 37,
+      "jp": "うえだ",
+      "cn": "上田"
+    },
+    {
+      "index": 38,
+      "jp": "すやま",
+      "cn": "须山"
+    },
+    {
+      "index": 39,
+      "jp": "なおき",
+      "cn": "直树"
+    },
+    {
+      "index": 40,
+      "jp": "たけうち",
+      "cn": "竹内"
+    },
+    {
+      "index": 41,
+      "jp": "とうやま",
+      "cn": "远山"
+    },
+    {
+      "index": 42,
+      "jp": "なかはら",
+      "cn": "中原"
+    },
+    {
+      "index": 43,
+      "jp": "かずゆき",
+      "cn": "和行"
+    },
+    {
+      "index": 44,
+      "jp": "きよし",
+      "cn": "清"
+    },
+    {
+      "index": 45,
+      "jp": "やすだ",
+      "cn": "安田"
+    },
+    {
+      "index": 46,
+      "jp": "えいこ",
+      "cn": "荣子"
+    },
+    {
+      "index": 47,
+      "jp": "ゆうこ",
+      "cn": "优子"
+    },
+    {
+      "index": 48,
+      "jp": "さかえ",
+      "cn": "荣"
+    },
+    {
+      "index": 49,
+      "jp": "いわたに",
+      "cn": "岩谷"
+    },
+    {
+      "index": 50,
+      "jp": "はしもと",
+      "cn": "桥本"
+    },
+    {
+      "index": 51,
+      "jp": "のぼる",
+      "cn": "升"
+    },
+    {
+      "index": 52,
+      "jp": "たけし",
+      "cn": "武"
+    },
+    {
+      "index": 53,
+      "jp": "たかぎ",
+      "cn": "高木"
+    },
+    {
+      "index": 54,
+      "jp": "きたむら",
+      "cn": "北村"
+    },
+    {
+      "index": 55,
+      "jp": "ふるや",
+      "cn": "古谷"
+    },
+    {
+      "index": 56,
+      "jp": "おおの",
+      "cn": "大野"
+    },
+    {
+      "index": 57,
+      "jp": "いけだ",
+      "cn": "池田"
+    },
+    {
+      "index": 58,
+      "jp": "さとし",
+      "cn": "聪"
+    },
+    {
+      "index": 59,
+      "jp": "まもる",
+      "cn": "守"
+    },
+    {
+      "index": 60,
+      "jp": "たかぐち",
+      "cn": "高口"
+    },
+    {
+      "index": 61,
+      "jp": "いしかわ",
+      "cn": "石川"
+    },
+    {
+      "index": 62,
+      "jp": "まきはら",
+      "cn": "牧原"
+    },
+    {
+      "index": 63,
+      "jp": "ひろよし",
+      "cn": "弘义"
+    },
+    {
+      "index": 64,
+      "jp": "てらだ",
+      "cn": "寺田"
+    },
+    {
+      "index": 65,
+      "jp": "けんじ",
+      "cn": "健二"
+    },
+    {
+      "index": 66,
+      "jp": "ともみ",
+      "cn": "友美"
+    },
+    {
+      "index": 67,
+      "jp": "くりはら",
+      "cn": "栗原"
+    },
+    {
+      "index": 68,
+      "jp": "きむら",
+      "cn": "木村"
+    },
+    {
+      "index": 69,
+      "jp": "けいすけ",
+      "cn": "庆介"
+    },
+    {
+      "index": 70,
+      "jp": "えびぬま",
+      "cn": "海沼"
+    },
+    {
+      "index": 71,
+      "jp": "おおすみ",
+      "cn": "大隅"
+    },
+    {
+      "index": 72,
+      "jp": "しらい",
+      "cn": "白井"
+    },
+    {
+      "index": 73,
+      "jp": "しげる",
+      "cn": "茂"
+    },
+    {
+      "index": 74,
+      "jp": "ひらの",
+      "cn": "平野"
+    },
+    {
+      "index": 75,
+      "jp": "さとみ",
+      "cn": "里美"
+    },
+    {
+      "index": 76,
+      "jp": "まさかつ",
+      "cn": "正胜"
+    },
+    {
+      "index": 77,
+      "jp": "いなば",
+      "cn": "稻叶"
+    },
+    {
+      "index": 78,
+      "jp": "いまがわ",
+      "cn": "今川"
+    },
+    {
+      "index": 79,
+      "jp": "みつはる",
+      "cn": "光春"
+    },
+    {
+      "index": 80,
+      "jp": "けんた",
+      "cn": "健太"
+    },
+    {
+      "index": 81,
+      "jp": "よしだ",
+      "cn": "吉田"
+    },
+    {
+      "index": 82,
+      "jp": "せきもと",
+      "cn": "关口"
+    },
+    {
+      "index": 83,
+      "jp": "まもる",
+      "cn": "守"
+    },
+    {
+      "index": 84,
+      "jp": "えり",
+      "cn": "绘里"
+    },
+    {
+      "index": 85,
+      "jp": "かおる",
+      "cn": "薰"
+    },
+    {
+      "index": 86,
+      "jp": "ひさこ",
+      "cn": "久子"
+    },
+    {
+      "index": 87,
+      "jp": "りかこ",
+      "cn": "里佳"
+    },
+    {
+      "index": 88,
+      "jp": "あつし",
+      "cn": "笃"
+    },
+    {
+      "index": 89,
+      "jp": "つとむ",
+      "cn": "勤"
+    },
+    {
+      "index": 90,
+      "jp": "たかはし",
+      "cn": "高桥"
+    },
+    {
+      "index": 91,
+      "jp": "むかい",
+      "cn": "向井"
+    },
+    {
+      "index": 92,
+      "jp": "やまね",
+      "cn": "山根"
+    },
+    {
+      "index": 93,
+      "jp": "えびぬま",
+      "cn": "海沼"
+    },
+    {
+      "index": 94,
+      "jp": "おおすみ",
+      "cn": "大隅"
+    },
+    {
+      "index": 95,
+      "jp": "しらい",
+      "cn": "白井"
+    },
+    {
+      "index": 96,
+      "jp": "ゆきむら",
+      "cn": "行村"
+    },
+    {
+      "index": 97,
+      "jp": "きざき",
+      "cn": "木崎"
+    },
+    {
+      "index": 98,
+      "jp": "みやした",
+      "cn": "宫下"
+    },
+    {
+      "index": 99,
+      "jp": "なるみ",
+      "cn": "成美"
+    },
+    {
+      "index": 100,
+      "jp": "ながさき",
+      "cn": "长崎"
+    },
+    {
+      "index": 101,
+      "jp": "やまもと",
+      "cn": "山本"
+    },
+    {
+      "index": 102,
+      "jp": "さの",
+      "cn": "佐野"
+    },
+    {
+      "index": 103,
+      "jp": "なみこ",
+      "cn": "波子"
+    },
+    {
+      "index": 104,
+      "jp": "よこやま",
+      "cn": "横山"
+    },
+    {
+      "index": 105,
+      "jp": "しまざき",
+      "cn": "岛崎"
+    },
+    {
+      "index": 106,
+      "jp": "みつる",
+      "cn": "满"
+    },
+    {
+      "index": 107,
+      "jp": "ほりうち",
+      "cn": "堀内"
+    },
+    {
+      "index": 108,
+      "jp": "べっしょ",
+      "cn": "别所"
+    },
+    {
+      "index": 109,
+      "jp": "かげうら",
+      "cn": "影浦"
+    },
+    {
+      "index": 110,
+      "jp": "ふじむら",
+      "cn": "藤村"
+    },
+    {
+      "index": 111,
+      "jp": "まつき",
+      "cn": "松木"
+    },
+    {
+      "index": 112,
+      "jp": "たつお",
+      "cn": "达夫"
+    },
+    {
+      "index": 113,
+      "jp": "ふなき",
+      "cn": "船木"
+    },
+    {
+      "index": 114,
+      "jp": "みやと",
+      "cn": "宫户"
+    },
+    {
+      "index": 115,
+      "jp": "たかあき",
+      "cn": "隆昭"
+    },
+    {
+      "index": 116,
+      "jp": "しんじ",
+      "cn": "信二"
+    },
+    {
+      "index": 117,
+      "jp": "よしたか",
+      "cn": "义隆"
+    },
+    {
+      "index": 118,
+      "jp": "えびぬま",
+      "cn": "海沼"
+    },
+    {
+      "index": 119,
+      "jp": "おおすみ",
+      "cn": "大隅"
+    },
+    {
+      "index": 120,
+      "jp": "しらい",
+      "cn": "白井"
+    },
+    {
+      "index": 121,
+      "jp": "よしかず",
+      "cn": "义和"
+    },
+    {
+      "index": 122,
+      "jp": "かめおか",
+      "cn": "龟冈"
+    },
+    {
+      "index": 123,
+      "jp": "こうの",
+      "cn": "河野"
+    },
+    {
+      "index": 124,
+      "jp": "しげる",
+      "cn": "茂"
+    },
+    {
+      "index": 125,
+      "jp": "みきお",
+      "cn": "干夫"
+    },
+    {
+      "index": 126,
+      "jp": "ともたか",
+      "cn": "友隆"
+    },
+    {
+      "index": 127,
+      "jp": "おおにし",
+      "cn": "大西"
+    },
+    {
+      "index": 128,
+      "jp": "しげき",
+      "cn": "茂树"
+    },
+    {
+      "index": 129,
+      "jp": "むらの",
+      "cn": "村野"
+    },
+    {
+      "index": 130,
+      "jp": "わかやま",
+      "cn": "若山"
+    },
+    {
+      "index": 131,
+      "jp": "せいじ",
+      "cn": "诚二"
+    },
+    {
+      "index": 132,
+      "jp": "こが",
+      "cn": "古贺"
+    },
+    {
+      "index": 133,
+      "jp": "うちの",
+      "cn": "内野"
+    },
+    {
+      "index": 134,
+      "jp": "はるとも",
+      "cn": "春友"
+    },
+    {
+      "index": 135,
+      "jp": "けんご",
+      "cn": "健吾"
+    },
+    {
+      "index": 136,
+      "jp": "こういち",
+      "cn": "光一"
+    },
+    {
+      "index": 137,
+      "jp": "ふるかわ",
+      "cn": "古川"
+    },
+    {
+      "index": 138,
+      "jp": "あきら",
+      "cn": "明"
+    },
+    {
+      "index": 139,
+      "jp": "きしもと",
+      "cn": "岸本"
+    },
+    {
+      "index": 140,
+      "jp": "くまがい",
+      "cn": "熊谷"
+    },
+    {
+      "index": 141,
+      "jp": "なんば",
+      "cn": "难波"
+    },
+    {
+      "index": 142,
+      "jp": "もり",
+      "cn": "茂里"
+    },
+    {
+      "index": 143,
+      "jp": "すや",
+      "cn": "须也"
+    },
+    {
+      "index": 144,
+      "jp": "ねだち",
+      "cn": "根立"
+    },
+    {
+      "index": 145,
+      "jp": "せきかわ",
+      "cn": "关川"
+    },
+    {
+      "index": 146,
+      "jp": "みちこ",
+      "cn": "道子"
+    },
+    {
+      "index": 147,
+      "jp": "ともみ",
+      "cn": "友美"
+    },
+    {
+      "index": 148,
+      "jp": "まちこ",
+      "cn": "町子"
+    },
+    {
+      "index": 149,
+      "jp": "すみこ",
+      "cn": "澄子"
+    },
+    {
+      "index": 150,
+      "jp": "としみ",
+      "cn": "敏美"
+    },
+    {
+      "index": 151,
+      "jp": "きみよ",
+      "cn": "君代"
+    },
+    {
+      "index": 152,
+      "jp": "いたがき",
+      "cn": "板垣"
+    },
+    {
+      "index": 153,
+      "jp": "うさみ",
+      "cn": "宇佐"
+    },
+    {
+      "index": 154,
+      "jp": "こうすけ",
+      "cn": "康介"
+    },
+    {
+      "index": 155,
+      "jp": "なかつか",
+      "cn": "中冢"
+    },
+    {
+      "index": 156,
+      "jp": "かつとし",
+      "cn": "胜敏"
+    },
+    {
+      "index": 157,
+      "jp": "はやし",
+      "cn": "林"
+    },
+    {
+      "index": 158,
+      "jp": "ひでき",
+      "cn": "英树"
+    },
+    {
+      "index": 159,
+      "jp": "さとし",
+      "cn": "聪"
+    },
+    {
+      "index": 160,
+      "jp": "うえはら",
+      "cn": "上原"
+    },
+    {
+      "index": 161,
+      "jp": "ゆういち",
+      "cn": "雄一"
+    },
+    {
+      "index": 162,
+      "jp": "かねい",
+      "cn": "金井"
+    },
+    {
+      "index": 163,
+      "jp": "ちえこ",
+      "cn": "千惠"
+    },
+    {
+      "index": 164,
+      "jp": "ともこ",
+      "cn": "友子"
+    },
+    {
+      "index": 165,
+      "jp": "あきひろ",
+      "cn": "昭弘"
+    },
+    {
+      "index": 166,
+      "jp": "すがの",
+      "cn": "菅野"
+    },
+    {
+      "index": 167,
+      "jp": "やすこ",
+      "cn": "安子"
+    },
+    {
+      "index": 168,
+      "jp": "さとえ",
+      "cn": "里江"
+    },
+    {
+      "index": 169,
+      "jp": "もとこ",
+      "cn": "素子"
+    },
+    {
+      "index": 170,
+      "jp": "ごとうだ",
+      "cn": "后藤"
+    },
+    {
+      "index": 171,
+      "jp": "ひであき",
+      "cn": "英昭"
+    },
+    {
+      "index": 172,
+      "jp": "いさみ",
+      "cn": "勇"
+    },
+    {
+      "index": 173,
+      "jp": "かずこ",
+      "cn": "和子"
+    },
+    {
+      "index": 174,
+      "jp": "まりこ",
+      "cn": "真理"
+    },
+    {
+      "index": 175,
+      "jp": "まさとし",
+      "cn": "正义"
+    },
+    {
+      "index": 176,
+      "jp": "やまむら",
+      "cn": "山村"
+    },
+    {
+      "index": 177,
+      "jp": "いずみ",
+      "cn": "和泉"
+    },
+    {
+      "index": 178,
+      "jp": "たかこ",
+      "cn": "隆子"
+    },
+    {
+      "index": 179,
+      "jp": "みやこ",
+      "cn": "京子"
+    },
+    {
+      "index": 180,
+      "jp": "かつひと",
+      "cn": "胜人"
+    },
+    {
+      "index": 181,
+      "jp": "きよたか",
+      "cn": "清隆"
+    },
+    {
+      "index": 182,
+      "jp": "みやもと",
+      "cn": "宫本"
+    },
+    {
+      "index": 183,
+      "jp": "としこ",
+      "cn": "敏子"
+    },
+    {
+      "index": 184,
+      "jp": "ゆみこ",
+      "cn": "由美"
+    },
+    {
+      "index": 185,
+      "jp": "ふくもと",
+      "cn": "福本"
+    },
+    {
+      "index": 186,
+      "jp": "えいきち",
+      "cn": "荣吉"
+    },
+    {
+      "index": 187,
+      "jp": "せつこ",
+      "cn": "节子"
+    },
+    {
+      "index": 188,
+      "jp": "のりこ",
+      "cn": "典子"
+    },
+    {
+      "index": 189,
+      "jp": "よしこ",
+      "cn": "义子"
+    },
+    {
+      "index": 190,
+      "jp": "まこと",
+      "cn": "诚"
+    },
+    {
+      "index": 191,
+      "jp": "はやかわ",
+      "cn": "早川"
+    },
+    {
+      "index": 192,
+      "jp": "しんじ",
+      "cn": "信二"
+    },
+    {
+      "index": 193,
+      "jp": "ひらの",
+      "cn": "平野"
+    },
+    {
+      "index": 194,
+      "jp": "かつとし",
+      "cn": "胜敏"
+    },
+    {
+      "index": 195,
+      "jp": "あいこ",
+      "cn": "爱子"
+    },
+    {
+      "index": 196,
+      "jp": "れいこ",
+      "cn": "丽子"
+    },
+    {
+      "index": 197,
+      "jp": "ゆみの",
+      "cn": "弓野"
+    },
+    {
+      "index": 198,
+      "jp": "はせがわ",
+      "cn": "长谷"
+    },
+    {
+      "index": 199,
+      "jp": "ようこ",
+      "cn": "洋子"
+    },
+    {
+      "index": 200,
+      "jp": "みつこ",
+      "cn": "光子"
+    },
+    {
+      "index": 201,
+      "jp": "かおる",
+      "cn": "薰"
+    },
+    {
+      "index": 202,
+      "jp": "まさお",
+      "cn": "正雄"
+    },
+    {
+      "index": 203,
+      "jp": "いとう",
+      "cn": "伊藤"
+    },
+    {
+      "index": 204,
+      "jp": "かたやま",
+      "cn": "片山"
+    },
+    {
+      "index": 205,
+      "jp": "ゆき",
+      "cn": "雪"
+    },
+    {
+      "index": 206,
+      "jp": "きよみ",
+      "cn": "清美"
+    },
+    {
+      "index": 207,
+      "jp": "ささお",
+      "cn": "笹尾"
+    },
+    {
+      "index": 208,
+      "jp": "とびた",
+      "cn": "飞田"
+    },
+    {
+      "index": 209,
+      "jp": "せいこ",
+      "cn": "清子"
+    },
+    {
+      "index": 210,
+      "jp": "はるこ",
+      "cn": "春子"
+    },
+    {
+      "index": 211,
+      "jp": "なみ",
+      "cn": "波"
+    },
+    {
+      "index": 212,
+      "jp": "なぐも",
+      "cn": "南云"
+    },
+    {
+      "index": 213,
+      "jp": "はら",
+      "cn": "原"
+    },
+    {
+      "index": 214,
+      "jp": "やまざき",
+      "cn": "山崎"
+    },
+    {
+      "index": 215,
+      "jp": "ひでこ",
+      "cn": "英子"
+    },
+    {
+      "index": 216,
+      "jp": "あやこ",
+      "cn": "绫子"
+    },
+    {
+      "index": 217,
+      "jp": "ひろあき",
+      "cn": "弘昭"
+    },
+    {
+      "index": 218,
+      "jp": "いのうえ",
+      "cn": "井上"
+    },
+    {
+      "index": 219,
+      "jp": "おきの",
+      "cn": "冲野"
+    },
+    {
+      "index": 220,
+      "jp": "あきひさ",
+      "cn": "昭久"
+    },
+    {
+      "index": 221,
+      "jp": "えみこ",
+      "cn": "惠美"
+    },
+    {
+      "index": 222,
+      "jp": "おさだ",
+      "cn": "长田"
+    },
+    {
+      "index": 223,
+      "jp": "ながさわ",
+      "cn": "长泽"
+    },
+    {
+      "index": 224,
+      "jp": "いしい",
+      "cn": "石井"
+    },
+    {
+      "index": 225,
+      "jp": "まさひろ",
+      "cn": "正弘"
+    },
+    {
+      "index": 226,
+      "jp": "すぎうら",
+      "cn": "杉浦"
+    },
+    {
+      "index": 227,
+      "jp": "りょう",
+      "cn": "亮"
+    },
+    {
+      "index": 228,
+      "jp": "みどり",
+      "cn": "绿"
+    },
+    {
+      "index": 229,
+      "jp": "こうへい",
+      "cn": "康平"
+    },
+    {
+      "index": 230,
+      "jp": "たにむら",
+      "cn": "谷村"
+    },
+    {
+      "index": 231,
+      "jp": "のもと",
+      "cn": "野本"
+    },
+    {
+      "index": 232,
+      "jp": "じゅんじ",
+      "cn": "纯二"
+    },
+    {
+      "index": 233,
+      "jp": "あおやぎ",
+      "cn": "青柳"
+    },
+    {
+      "index": 234,
+      "jp": "さとう",
+      "cn": "佐藤"
+    },
+    {
+      "index": 235,
+      "jp": "たかみ",
+      "cn": "隆美"
+    },
+    {
+      "index": 236,
+      "jp": "としあき",
+      "cn": "敏昭"
+    },
+    {
+      "index": 237,
+      "jp": "さだお",
+      "cn": "贞夫"
+    },
+    {
+      "index": 238,
+      "jp": "しげこ",
+      "cn": "茂子"
+    },
+    {
+      "index": 239,
+      "jp": "はしずめ",
+      "cn": "桥爪"
+    },
+    {
+      "index": 240,
+      "jp": "ゆうじ",
+      "cn": "雄二"
+    },
+    {
+      "index": 241,
+      "jp": "まつもと",
+      "cn": "松本"
+    },
+    {
+      "index": 242,
+      "jp": "のぶゆき",
+      "cn": "信行"
+    },
+    {
+      "index": 243,
+      "jp": "やまぐち",
+      "cn": "山口"
+    },
+    {
+      "index": 244,
+      "jp": "たかはま",
+      "cn": "高滨"
+    },
+    {
+      "index": 245,
+      "jp": "ともお",
+      "cn": "友夫"
+    },
+    {
+      "index": 246,
+      "jp": "りょうじ",
+      "cn": "亮二"
+    },
+    {
+      "index": 247,
+      "jp": "ほしの",
+      "cn": "星野"
+    },
+    {
+      "index": 248,
+      "jp": "ちえこ",
+      "cn": "千惠"
+    },
+    {
+      "index": 249,
+      "jp": "おおい",
+      "cn": "大井"
+    },
+    {
+      "index": 250,
+      "jp": "ひろやす",
+      "cn": "弘安"
+    },
+    {
+      "index": 251,
+      "jp": "こいけ",
+      "cn": "小池"
+    },
+    {
+      "index": 252,
+      "jp": "さくらい",
+      "cn": "樱井"
+    },
+    {
+      "index": 253,
+      "jp": "てるひろ",
+      "cn": "照弘"
+    },
+    {
+      "index": 254,
+      "jp": "しげの",
+      "cn": "重野"
+    },
+    {
+      "index": 255,
+      "jp": "はっとり",
+      "cn": "服部"
+    },
+    {
+      "index": 256,
+      "jp": "ひらい",
+      "cn": "平井"
+    },
+    {
+      "index": 257,
+      "jp": "まつうら",
+      "cn": "松浦"
+    },
+    {
+      "index": 258,
+      "jp": "かずまさ",
+      "cn": "和正"
+    },
+    {
+      "index": 259,
+      "jp": "のりゆき",
+      "cn": "宪行"
+    },
+    {
+      "index": 260,
+      "jp": "なおや",
+      "cn": "直也"
+    },
+    {
+      "index": 261,
+      "jp": "たかゆき",
+      "cn": "隆行"
+    },
+    {
+      "index": 262,
+      "jp": "やまうち",
+      "cn": "山内"
+    },
+    {
+      "index": 263,
+      "jp": "はやさか",
+      "cn": "早坂"
+    },
+    {
+      "index": 264,
+      "jp": "こじま",
+      "cn": "小岛"
+    },
+    {
+      "index": 265,
+      "jp": "ひろかず",
+      "cn": "弘和"
+    },
+    {
+      "index": 266,
+      "jp": "まさお",
+      "cn": "正雄"
+    },
+    {
+      "index": 267,
+      "jp": "くりはら",
+      "cn": "栗原"
+    },
+    {
+      "index": 268,
+      "jp": "おおいわ",
+      "cn": "大岩"
+    },
+    {
+      "index": 269,
+      "jp": "しげる",
+      "cn": "茂"
+    },
+    {
+      "index": 270,
+      "jp": "かわい",
+      "cn": "河合"
+    },
+    {
+      "index": 271,
+      "jp": "ふみひこ",
+      "cn": "文彦"
+    },
+    {
+      "index": 272,
+      "jp": "ごんどう",
+      "cn": "权藤"
+    },
+    {
+      "index": 273,
+      "jp": "たけし",
+      "cn": "武"
+    },
+    {
+      "index": 274,
+      "jp": "よしのぶ",
+      "cn": "义信"
+    },
+    {
+      "index": 275,
+      "jp": "さわい",
+      "cn": "泽井"
+    },
+    {
+      "index": 276,
+      "jp": "ゆうすけ",
+      "cn": "雄介"
+    },
+    {
+      "index": 277,
+      "jp": "たなべ",
+      "cn": "田边"
+    },
+    {
+      "index": 278,
+      "jp": "あきお",
+      "cn": "昭夫"
+    },
+    {
+      "index": 279,
+      "jp": "とがし",
+      "cn": "富樫"
+    },
+    {
+      "index": 280,
+      "jp": "ないとう",
+      "cn": "内藤"
+    },
+    {
+      "index": 281,
+      "jp": "さかい",
+      "cn": "酒井"
+    },
+    {
+      "index": 282,
+      "jp": "たけひと",
+      "cn": "武人"
+    },
+    {
+      "index": 283,
+      "jp": "じゅんこ",
+      "cn": "纯子"
+    },
+    {
+      "index": 284,
+      "jp": "たけよ",
+      "cn": "武代"
+    },
+    {
+      "index": 285,
+      "jp": "うだがわ",
+      "cn": "宇田"
+    },
+    {
+      "index": 286,
+      "jp": "おおた",
+      "cn": "太田"
+    },
+    {
+      "index": 287,
+      "jp": "はるまさ",
+      "cn": "春正"
+    },
+    {
+      "index": 288,
+      "jp": "さかい",
+      "cn": "酒井"
+    },
+    {
+      "index": 289,
+      "jp": "なおこ",
+      "cn": "直子"
+    },
+    {
+      "index": 290,
+      "jp": "つくい",
+      "cn": "津井"
+    },
+    {
+      "index": 291,
+      "jp": "やすこ",
+      "cn": "安子"
+    },
+    {
+      "index": 292,
+      "jp": "はんや",
+      "cn": "半谷"
+    },
+    {
+      "index": 293,
+      "jp": "みよこ",
+      "cn": "美代"
+    },
+    {
+      "index": 294,
+      "jp": "ゆきお",
+      "cn": "行夫"
+    },
+    {
+      "index": 295,
+      "jp": "よしこ",
+      "cn": "义子"
+    },
+    {
+      "index": 296,
+      "jp": "でんすけ",
+      "cn": "传助"
+    },
+    {
+      "index": 297,
+      "jp": "タマキ",
+      "cn": "玉木"
+    },
+    {
+      "index": 298,
+      "jp": "ながた",
+      "cn": "长田"
+    },
+    {
+      "index": 299,
+      "jp": "しずこ",
+      "cn": "静子"
+    },
+    {
+      "index": 300,
+      "jp": "もりぐち",
+      "cn": "守口"
+    },
+    {
+      "index": 301,
+      "jp": "ひで",
+      "cn": "英"
+    },
+    {
+      "index": 302,
+      "jp": "やすひこ",
+      "cn": "安彦"
+    },
+    {
+      "index": 303,
+      "jp": "やえこ",
+      "cn": "八重"
+    },
+    {
+      "index": 304,
+      "jp": "たいじ",
+      "cn": "泰二"
+    },
+    {
+      "index": 305,
+      "jp": "ていこ",
+      "cn": "贞子"
+    },
+    {
+      "index": 306,
+      "jp": "すどう",
+      "cn": "须藤"
+    },
+    {
+      "index": 307,
+      "jp": "ゆかり",
+      "cn": "由加"
+    },
+    {
+      "index": 308,
+      "jp": "しんぺい",
+      "cn": "信平"
+    },
+    {
+      "index": 309,
+      "jp": "やす",
+      "cn": "安"
+    },
+    {
+      "index": 310,
+      "jp": "たむら",
+      "cn": "田村"
+    },
+    {
+      "index": 311,
+      "jp": "きよこ",
+      "cn": "清子"
+    },
+    {
+      "index": 312,
+      "jp": "ひさきち",
+      "cn": "久吉"
+    },
+    {
+      "index": 313,
+      "jp": "すえ",
+      "cn": "末"
+    },
+    {
+      "index": 314,
+      "jp": "いながき",
+      "cn": "稻垣"
+    },
+    {
+      "index": 315,
+      "jp": "ちほこ",
+      "cn": "千穗"
+    },
+    {
+      "index": 316,
+      "jp": "しみず",
+      "cn": "清水"
+    },
+    {
+      "index": 317,
+      "jp": "かずこ",
+      "cn": "和子"
+    },
+    {
+      "index": 318,
+      "jp": "はやし",
+      "cn": "林"
+    },
+    {
+      "index": 319,
+      "jp": "としこ",
+      "cn": "敏子"
+    },
+    {
+      "index": 320,
+      "jp": "ふくなが",
+      "cn": "福永"
+    },
+    {
+      "index": 321,
+      "jp": "ふじこ",
+      "cn": "藤子"
+    },
+    {
+      "index": 322,
+      "jp": "おざき",
+      "cn": "尾崎"
+    },
+    {
+      "index": 323,
+      "jp": "やちよ",
+      "cn": "八千"
+    },
+    {
+      "index": 324,
+      "jp": "おだ",
+      "cn": "织田"
+    },
+    {
+      "index": 325,
+      "jp": "はるこ",
+      "cn": "春子"
+    },
+    {
+      "index": 326,
+      "jp": "しもむら",
+      "cn": "下村"
+    },
+    {
+      "index": 327,
+      "jp": "きくこ",
+      "cn": "菊子"
+    },
+    {
+      "index": 328,
+      "jp": "げんた",
+      "cn": "源太"
+    },
+    {
+      "index": 329,
+      "jp": "さよ",
+      "cn": "小夜"
+    },
+    {
+      "index": 330,
+      "jp": "たにやま",
+      "cn": "谷山"
+    },
+    {
+      "index": 331,
+      "jp": "えつこ",
+      "cn": "悦子"
+    },
+    {
+      "index": 332,
+      "jp": "ぜんじ",
+      "cn": "善二"
+    },
+    {
+      "index": 333,
+      "jp": "きみ",
+      "cn": "君子"
+    },
+    {
+      "index": 334,
+      "jp": "そとむら",
+      "cn": "外村"
+    },
+    {
+      "index": 335,
+      "jp": "しまこ",
+      "cn": "岛子"
+    },
+    {
+      "index": 336,
+      "jp": "なかじま",
+      "cn": "中岛"
+    },
+    {
+      "index": 337,
+      "jp": "のぶこ",
+      "cn": "信子"
+    },
+    {
+      "index": 338,
+      "jp": "ほりえ",
+      "cn": "堀江"
+    },
+    {
+      "index": 339,
+      "jp": "まちこ",
+      "cn": "町子"
+    },
+    {
+      "index": 340,
+      "jp": "もうり",
+      "cn": "毛利"
+    },
+    {
+      "index": 341,
+      "jp": "あつこ",
+      "cn": "敦子"
+    },
+    {
+      "index": 342,
+      "jp": "しまず",
+      "cn": "岛津"
+    },
+    {
+      "index": 343,
+      "jp": "まさこ",
+      "cn": "正子"
+    },
+    {
+      "index": 344,
+      "jp": "ながい",
+      "cn": "永井"
+    },
+    {
+      "index": 345,
+      "jp": "かずみ",
+      "cn": "和美"
+    },
+    {
+      "index": 346,
+      "jp": "いちかわ",
+      "cn": "市川"
+    },
+    {
+      "index": 347,
+      "jp": "ちさと",
+      "cn": "千里"
+    },
+    {
+      "index": 348,
+      "jp": "ともぞう",
+      "cn": "友三"
+    },
+    {
+      "index": 349,
+      "jp": "てるよ",
+      "cn": "辉代"
+    },
+    {
+      "index": 350,
+      "jp": "いぬい",
+      "cn": "乾"
+    },
+    {
+      "index": 351,
+      "jp": "ちえみ",
+      "cn": "千惠"
+    },
+    {
+      "index": 352,
+      "jp": "いまむら",
+      "cn": "今村"
+    },
+    {
+      "index": 353,
+      "jp": "たえこ",
+      "cn": "妙子"
+    },
+    {
+      "index": 354,
+      "jp": "うえの",
+      "cn": "上野"
+    },
+    {
+      "index": 355,
+      "jp": "さちこ",
+      "cn": "幸子"
+    },
+    {
+      "index": 356,
+      "jp": "せいいち",
+      "cn": "诚一"
+    },
+    {
+      "index": 357,
+      "jp": "おがわ",
+      "cn": "小川"
+    },
+    {
+      "index": 358,
+      "jp": "あずさ",
+      "cn": "亚沙"
+    },
+    {
+      "index": 359,
+      "jp": "いちぞう",
+      "cn": "市造"
+    },
+    {
+      "index": 360,
+      "jp": "ふみこ",
+      "cn": "文子"
+    },
+    {
+      "index": 361,
+      "jp": "さえこ",
+      "cn": "冴子"
+    },
+    {
+      "index": 362,
+      "jp": "かみや",
+      "cn": "神谷"
+    },
+    {
+      "index": 363,
+      "jp": "とよみ",
+      "cn": "丰美"
+    },
+    {
+      "index": 364,
+      "jp": "こみやま",
+      "cn": "小宫"
+    },
+    {
+      "index": 365,
+      "jp": "しずこ",
+      "cn": "静子"
+    },
+    {
+      "index": 366,
+      "jp": "てつや",
+      "cn": "彻也"
+    },
+    {
+      "index": 367,
+      "jp": "ゆうぞう",
+      "cn": "雄三"
+    },
+    {
+      "index": 368,
+      "jp": "すみこ",
+      "cn": "澄子"
+    },
+    {
+      "index": 369,
+      "jp": "ささき",
+      "cn": "佐木"
+    },
+    {
+      "index": 370,
+      "jp": "ますみ",
+      "cn": "真澄"
+    },
+    {
+      "index": 371,
+      "jp": "くにこ",
+      "cn": "国子"
+    },
+    {
+      "index": 372,
+      "jp": "たどころ",
+      "cn": "田所"
+    },
+    {
+      "index": 373,
+      "jp": "みずほ",
+      "cn": "瑞穗"
+    },
+    {
+      "index": 374,
+      "jp": "にしもと",
+      "cn": "西本"
+    },
+    {
+      "index": 375,
+      "jp": "えりこ",
+      "cn": "绘里"
+    },
+    {
+      "index": 376,
+      "jp": "いしかわ",
+      "cn": "石川"
+    },
+    {
+      "index": 377,
+      "jp": "まつなが",
+      "cn": "松永"
+    },
+    {
+      "index": 378,
+      "jp": "みなこ",
+      "cn": "美奈"
+    },
+    {
+      "index": 379,
+      "jp": "みのる",
+      "cn": "稔"
+    },
+    {
+      "index": 380,
+      "jp": "たけよ",
+      "cn": "武代"
+    },
+    {
+      "index": 381,
+      "jp": "のりえ",
+      "cn": "纪江"
+    },
+    {
+      "index": 382,
+      "jp": "わたなべ",
+      "cn": "渡边"
+    },
+    {
+      "index": 383,
+      "jp": "りみ",
+      "cn": "里美"
+    },
+    {
+      "index": 384,
+      "jp": "しゅうじ",
+      "cn": "修二"
+    },
+    {
+      "index": 385,
+      "jp": "うたえ",
+      "cn": "歌江"
+    },
+    {
+      "index": 386,
+      "jp": "つねあき",
+      "cn": "常昭"
+    },
+    {
+      "index": 387,
+      "jp": "さいこ",
+      "cn": "佐伊"
+    },
+    {
+      "index": 388,
+      "jp": "みねきち",
+      "cn": "峰吉"
+    },
+    {
+      "index": 389,
+      "jp": "よし",
+      "cn": "义"
+    },
+    {
+      "index": 390,
+      "jp": "ひでまつ",
+      "cn": "英松"
+    },
+    {
+      "index": 391,
+      "jp": "てるこ",
+      "cn": "辉子"
+    },
+    {
+      "index": 392,
+      "jp": "はちろう",
+      "cn": "八郎"
+    },
+    {
+      "index": 393,
+      "jp": "とくえ",
+      "cn": "德江"
+    },
+    {
+      "index": 394,
+      "jp": "げんじ",
+      "cn": "源治"
+    },
+    {
+      "index": 395,
+      "jp": "さだこ",
+      "cn": "贞子"
+    },
+    {
+      "index": 396,
+      "jp": "へいはち",
+      "cn": "平八"
+    },
+    {
+      "index": 397,
+      "jp": "まさこ",
+      "cn": "正子"
+    },
+    {
+      "index": 398,
+      "jp": "なおじ",
+      "cn": "直次"
+    },
+    {
+      "index": 399,
+      "jp": "つるこ",
+      "cn": "鹤子"
+    },
+    {
+      "index": 400,
+      "jp": "としただ",
+      "cn": "敏正"
+    },
+    {
+      "index": 401,
+      "jp": "はつみ",
+      "cn": "初美"
+    },
+    {
+      "index": 402,
+      "jp": "けんぞう",
+      "cn": "健三"
+    },
+    {
+      "index": 403,
+      "jp": "ちよの",
+      "cn": "千代"
+    },
+    {
+      "index": 404,
+      "jp": "きよし",
+      "cn": "清"
+    },
+    {
+      "index": 405,
+      "jp": "さとこ",
+      "cn": "里子"
+    },
+    {
+      "index": 406,
+      "jp": "えいいち",
+      "cn": "荣一"
+    },
+    {
+      "index": 407,
+      "jp": "かつえ",
+      "cn": "胜江"
+    },
+    {
+      "index": 408,
+      "jp": "としお",
+      "cn": "敏夫"
+    },
+    {
+      "index": 409,
+      "jp": "きしこ",
+      "cn": "岸子"
+    },
+    {
+      "index": 410,
+      "jp": "ひでお",
+      "cn": "英夫"
+    },
+    {
+      "index": 411,
+      "jp": "こやま",
+      "cn": "小山"
+    },
+    {
+      "index": 412,
+      "jp": "かい",
+      "cn": "香依"
+    },
+    {
+      "index": 413,
+      "jp": "きむら",
+      "cn": "木村"
+    },
+    {
+      "index": 414,
+      "jp": "しらいし",
+      "cn": "白石"
+    },
+    {
+      "index": 415,
+      "jp": "やぐち",
+      "cn": "矢口"
+    },
+    {
+      "index": 416,
+      "jp": "かめやま",
+      "cn": "龟山"
+    },
+    {
+      "index": 417,
+      "jp": "よしだ",
+      "cn": "吉田"
+    },
+    {
+      "index": 418,
+      "jp": "つよし",
+      "cn": "刚"
+    },
+    {
+      "index": 419,
+      "jp": "あきひろ",
+      "cn": "昭弘"
+    },
+    {
+      "index": 420,
+      "jp": "みぎた",
+      "cn": "右田"
+    },
+    {
+      "index": 421,
+      "jp": "いしい",
+      "cn": "石井"
+    },
+    {
+      "index": 422,
+      "jp": "みやうち",
+      "cn": "宫内"
+    },
+    {
+      "index": 423,
+      "jp": "たかい",
+      "cn": "高井"
+    },
+    {
+      "index": 424,
+      "jp": "かねこ",
+      "cn": "金子"
+    },
+    {
+      "index": 425,
+      "jp": "ほしの",
+      "cn": "星野"
+    },
+    {
+      "index": 426,
+      "jp": "さか",
+      "cn": "沙香"
+    },
+    {
+      "index": 427,
+      "jp": "あゆかわ",
+      "cn": "鲇川"
+    },
+    {
+      "index": 428,
+      "jp": "よこたに",
+      "cn": "横谷"
+    },
+    {
+      "index": 429,
+      "jp": "やまぐち",
+      "cn": "山口"
+    },
+    {
+      "index": 430,
+      "jp": "やまだ",
+      "cn": "山田"
+    },
+    {
+      "index": 431,
+      "jp": "やすお",
+      "cn": "安雄"
+    },
+    {
+      "index": 432,
+      "jp": "いわた",
+      "cn": "岩田"
+    },
+    {
+      "index": 433,
+      "jp": "むねひこ",
+      "cn": "宗彦"
+    },
+    {
+      "index": 434,
+      "jp": "せきがわ",
+      "cn": "关川"
+    },
+    {
+      "index": 435,
+      "jp": "たぎ",
+      "cn": "多岐"
+    },
+    {
+      "index": 436,
+      "jp": "はっとり",
+      "cn": "服部"
+    },
+    {
+      "index": 437,
+      "jp": "わたなべ",
+      "cn": "渡边"
+    },
+    {
+      "index": 438,
+      "jp": "なかごみ",
+      "cn": "中込"
+    },
+    {
+      "index": 439,
+      "jp": "ふるさと",
+      "cn": "古里"
+    },
+    {
+      "index": 440,
+      "jp": "たかむら",
+      "cn": "高村"
+    },
+    {
+      "index": 441,
+      "jp": "しまお",
+      "cn": "岛夫"
+    },
+    {
+      "index": 442,
+      "jp": "すみとも",
+      "cn": "住友"
+    },
+    {
+      "index": 443,
+      "jp": "いとう",
+      "cn": "伊藤"
+    },
+    {
+      "index": 444,
+      "jp": "くぼ",
+      "cn": "久保"
+    },
+    {
+      "index": 445,
+      "jp": "にしかわ",
+      "cn": "西川"
+    },
+    {
+      "index": 446,
+      "jp": "たむら",
+      "cn": "田村"
+    },
+    {
+      "index": 447,
+      "jp": "おおた",
+      "cn": "太田"
+    },
+    {
+      "index": 448,
+      "jp": "ゆたか",
+      "cn": "丰"
+    },
+    {
+      "index": 449,
+      "jp": "よしひこ",
+      "cn": "义彦"
+    },
+    {
+      "index": 450,
+      "jp": "まゆみ",
+      "cn": "真弓"
+    },
+    {
+      "index": 451,
+      "jp": "おかだ",
+      "cn": "冈田"
+    },
+    {
+      "index": 452,
+      "jp": "やぎ",
+      "cn": "八木"
+    },
+    {
+      "index": 453,
+      "jp": "たお",
+      "cn": "田尾"
+    },
+    {
+      "index": 454,
+      "jp": "きど",
+      "cn": "木户"
+    },
+    {
+      "index": 455,
+      "jp": "かなもり",
+      "cn": "金森"
+    },
+    {
+      "index": 456,
+      "jp": "ひらた",
+      "cn": "平田"
+    },
+    {
+      "index": 457,
+      "jp": "よしだ",
+      "cn": "吉田"
+    },
+    {
+      "index": 458,
+      "jp": "むぎくら",
+      "cn": "麦仓"
+    },
+    {
+      "index": 459,
+      "jp": "かさい",
+      "cn": "笠井"
+    },
+    {
+      "index": 460,
+      "jp": "ゆふね",
+      "cn": "汤船"
+    },
+    {
+      "index": 461,
+      "jp": "いのまた",
+      "cn": "猪俣"
+    },
+    {
+      "index": 462,
+      "jp": "のだ",
+      "cn": "野田"
+    },
+    {
+      "index": 463,
+      "jp": "なかにし",
+      "cn": "中西"
+    },
+    {
+      "index": 464,
+      "jp": "かずよし",
+      "cn": "和义"
+    },
+    {
+      "index": 465,
+      "jp": "ひらやま",
+      "cn": "平山"
+    },
+    {
+      "index": 466,
+      "jp": "みき",
+      "cn": "美纪"
+    },
+    {
+      "index": 467,
+      "jp": "しょうこ",
+      "cn": "翔子"
+    },
+    {
+      "index": 468,
+      "jp": "もろおか",
+      "cn": "诸冈"
+    },
+    {
+      "index": 469,
+      "jp": "かずき",
+      "cn": "和树"
+    },
+    {
+      "index": 470,
+      "jp": "はるみ",
+      "cn": "春美"
+    },
+    {
+      "index": 471,
+      "jp": "よしえ",
+      "cn": "义江"
+    },
+    {
+      "index": 472,
+      "jp": "そのだ",
+      "cn": "园田"
+    },
+    {
+      "index": 473,
+      "jp": "ひろみち",
+      "cn": "弘道"
+    },
+    {
+      "index": 474,
+      "jp": "ふじみ",
+      "cn": "藤美"
+    },
+    {
+      "index": 475,
+      "jp": "かなこ",
+      "cn": "加奈"
+    },
+    {
+      "index": 476,
+      "jp": "かたやま",
+      "cn": "片山"
+    },
+    {
+      "index": 477,
+      "jp": "だいすけ",
+      "cn": "大辅"
+    },
+    {
+      "index": 478,
+      "jp": "みさお",
+      "cn": "操"
+    },
+    {
+      "index": 479,
+      "jp": "たみこ",
+      "cn": "民子"
+    },
+    {
+      "index": 480,
+      "jp": "さかた",
+      "cn": "坂田"
+    },
+    {
+      "index": 481,
+      "jp": "たからだ",
+      "cn": "宝田"
+    },
+    {
+      "index": 482,
+      "jp": "ひろえ",
+      "cn": "弘惠"
+    },
+    {
+      "index": 483,
+      "jp": "さち",
+      "cn": "幸"
+    },
+    {
+      "index": 484,
+      "jp": "みやはら",
+      "cn": "宫原"
+    },
+    {
+      "index": 485,
+      "jp": "たかよし",
+      "cn": "隆义"
+    },
+    {
+      "index": 486,
+      "jp": "ゆい",
+      "cn": "结衣"
+    },
+    {
+      "index": 487,
+      "jp": "まゆこ",
+      "cn": "真由"
+    },
+    {
+      "index": 488,
+      "jp": "かがみ",
+      "cn": "镜"
+    },
+    {
+      "index": 489,
+      "jp": "まさたけ",
+      "cn": "正武"
+    },
+    {
+      "index": 490,
+      "jp": "しのぶ",
+      "cn": "忍"
+    },
+    {
+      "index": 491,
+      "jp": "すみか",
+      "cn": "澄香"
+    },
+    {
+      "index": 492,
+      "jp": "あきずき",
+      "cn": "秋月"
+    },
+    {
+      "index": 493,
+      "jp": "けいじ",
+      "cn": "庆二"
+    },
+    {
+      "index": 494,
+      "jp": "たまこ",
+      "cn": "珠子"
+    },
+    {
+      "index": 495,
+      "jp": "はつえ",
+      "cn": "初江"
+    },
+    {
+      "index": 496,
+      "jp": "きのした",
+      "cn": "木下"
+    },
+    {
+      "index": 497,
+      "jp": "ひろたか",
+      "cn": "弘隆"
+    },
+    {
+      "index": 498,
+      "jp": "ようこ",
+      "cn": "洋子"
+    },
+    {
+      "index": 499,
+      "jp": "としこ",
+      "cn": "敏子"
+    },
+    {
+      "index": 500,
+      "jp": "しもむら",
+      "cn": "下村"
+    },
+    {
+      "index": 501,
+      "jp": "たけお",
+      "cn": "武夫"
+    },
+    {
+      "index": 502,
+      "jp": "ともこ",
+      "cn": "友子"
+    },
+    {
+      "index": 503,
+      "jp": "ひでこ",
+      "cn": "英子"
+    },
+    {
+      "index": 504,
+      "jp": "たなべ",
+      "cn": "田边"
+    },
+    {
+      "index": 505,
+      "jp": "かずま",
+      "cn": "和真"
+    },
+    {
+      "index": 506,
+      "jp": "あやか",
+      "cn": "绫香"
+    },
+    {
+      "index": 507,
+      "jp": "むつみ",
+      "cn": "睦美"
+    },
+    {
+      "index": 508,
+      "jp": "ひぐち",
+      "cn": "樋口"
+    },
+    {
+      "index": 509,
+      "jp": "かずあき",
+      "cn": "和昭"
+    },
+    {
+      "index": 510,
+      "jp": "しずか",
+      "cn": "静香"
+    },
+    {
+      "index": 511,
+      "jp": "くみ",
+      "cn": "久美"
+    },
+    {
+      "index": 512,
+      "jp": "くにお",
+      "cn": "国夫"
+    },
+    {
+      "index": 513,
+      "jp": "りき",
+      "cn": "力"
+    }
+  ],
+  "status_labels": [
+    {
+      "vram": "0x78c9",
+      "cn": "等级:"
+    },
+    {
+      "vram": "0x7902",
+      "cn": "最大体力:"
+    },
+    {
+      "vram": "0x7942",
+      "cn": "最大气力 :"
+    },
+    {
+      "vram": "0x7982",
+      "cn": "经验:"
+    },
+    {
+      "vram": "0x79c2",
+      "cn": "武器 :"
+    },
+    {
+      "vram": "0x7a02",
+      "cn": "衬里:"
+    },
+    {
+      "vram": "0x7a42",
+      "cn": "鞋  :"
+    },
+    {
+      "vram": "0x7892",
+      "cn": "状态  :"
+    },
+    {
+      "vram": "0x78d2",
+      "cn": "体力  :"
+    },
+    {
+      "vram": "0x7912",
+      "cn": "气力  :"
+    },
+    {
+      "vram": "0x7952",
+      "cn": "力    :"
+    },
+    {
+      "vram": "0x7992",
+      "cn": "敏捷  :"
+    },
+    {
+      "vram": "0x79d2",
+      "cn": "攻击力:"
+    },
+    {
+      "vram": "0x7a12",
+      "cn": "防御力 :"
+    },
+    {
+      "vram": "0x7a52",
+      "cn": "运气  :"
+    }
+  ],
+  "runtime_limit": "HUD subroutine CPU model; not PPU timing or natural whole-game completion"
+}

@@ -176,7 +176,7 @@ NO_TRANSLATE = set()
 # they never take part in the body colouring (see LABEL_* below).
 NAME_HANZI_FILE = '/name_hanzi.json'
 NAME_RECORD_BASE = 0x4802A
-NAME_RECORDS = 560
+NAME_RECORDS = 514                    # $09:802A..A049; $A04A starts parameter data
 
 TABLES = [(0x0193B5, 694), (0x01DBC5, 110), (0x01E098, 35),
           (0x01E1D5, 50), (0x01E4CE, 124)]
@@ -409,7 +409,7 @@ def status_script_code_runs():
 #           is the only font-block DMA in the ROM and it runs at boot.
 #           Fixing this properly needs ~2 more free tiles, or a dedicated
 #           renderer path for the item names; see notes/current-state.md.
-#   names - the 560 speaker-name records.  The build rewrites every one of them
+#   names - the 514 native speaker-name records.  The build rewrites every one of them
 #           to two byte hanzi codes, so nothing draws their kana any more and
 #           reserving those tiles is pure waste.  Verified on the built ROM:
 #           985 two byte codes, zero font codes left.
@@ -428,7 +428,7 @@ def untranslated_codes():
             codes |= set(b for b in (data[s:e] if HUD_ORIG else rewrite_kana(data[s:e]))
                          if 0 < b < 0xE0)
     if 'names' in PROTECT_GROUPS:
-        for i in range(560):                        # speaker name records
+        for i in range(NAME_RECORDS):               # native speaker name records
             rec = rewrite_kana(data[0x4802A + i * 16:0x4802A + i * 16 + 4])
             for b in rec:
                 if b == 0:
@@ -4097,7 +4097,7 @@ def main():
     # ---- 4c. every speaker name record: hanzi label codes --------------------
     # The label glyphs live in banks $3A/$3B (own storage, own tile pairs), so
     # the record carries [prefix][glyph id] instead of a pool code.  Records
-    # that are not kana names (42 of the 560 hold other data) keep their kana.
+    # are bounded by the next native bank09 table, never by a guessed record count.
     names = json.load(open(BASE + NAME_HANZI_FILE, encoding='utf-8'))
     ids = {}
     for name in names.values():
@@ -4112,6 +4112,11 @@ def main():
         page, idx = divmod(gid, per_page)
         off = POOL_ROM + page * 0x8000 + (LABEL_ID0 + idx) * POOL_STRIDE
         rom[off:off + POOL_STRIDE] = glyph64(ch)
+    native_name_start = int.from_bytes(rom[0x48000:0x48002], 'little')
+    native_name_end = int.from_bytes(rom[0x48002:0x48004], 'little')
+    assert native_name_start == 0x802A and native_name_end == 0xA04A, 'native character-table bounds changed'
+    assert (native_name_end - native_name_start) == NAME_RECORDS * 16
+    assert NAME_RECORD_BASE + NAME_RECORDS * 16 == 0x48000 + native_name_end - 0x8000
     n_name = n_kana = 0
     for i in range(NAME_RECORDS):
         o = NAME_RECORD_BASE + i * 16
@@ -4127,14 +4132,8 @@ def main():
             rom[o:o + 4] = bytes(codes) + b'\x00' * (4 - len(codes))
             n_name += 1
         else:
-            # The 42 records that are not kana names are leftover data (codes
-            # like $c8/$d6 that no name uses).  Their font tiles are not
-            # protected - 20 more tiles would cost 14 slot pairs - and their
-            # codes sit inside the Chinese range, so a stray draw would decode
-            # as a Chinese glyph.  Blanking them is the only safe answer: a
-            # blank label beats a hijacked code.
-            rom[o:o + 4] = b'\x00' * 4
-            n_kana += 1
+            raise ValueError('missing native character name translation: record %d at %06X: %r'
+                             % (i, o, kana))
     print('speaker names: %d records in hanzi (%d distinct glyphs, %d pages of '
           'label cells), %d leftover records blanked'
           % (n_name, len(ids), need, n_kana))
@@ -4160,7 +4159,7 @@ def main():
         for s, e in status_script_code_runs():
             rom[s:e] = rewrite_kana(bytes(rom[s:e]))
             nrun += 1
-    print('kana: %s, 560 speaker name records and %d status script runs '
+    print('kana: %s, 514 speaker name records and %d status script runs '
           'rewritten to hiragana'
           % ('item window' if 'item' in PROTECT_GROUPS else 'item window left alone',
              nrun))

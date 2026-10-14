@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-15",
+  "status": "pass_with_documented_scope",
+  "validated_code_tree": "637abdbdc58fe72ab657c8ff4ef8837a5814dbe8",
+  "verification_source": "Git index snapshot exported to an independent directory; private inputs supplied read-only",
+  "optimized": {
+    "version": "v2.0-rc2",
+    "crc32": "1F37BC30",
+    "sha256": "2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6",
+    "independent_source_build": "exactly matches approved ROM and three generated sidecars",
+    "static_checks": 26,
+    "static_warnings": 2,
+    "scope_and_HUD_queue_models": "pass",
+    "public_BPS_replay": "exact target",
+    "runner_portability": "Mesen120frames same-ROM checkpoint; default source-relative script and explicit private emulator",
+    "new_playthrough_or_hardware_claim": false
+  },
+  "nohp": {
+    "target": {
+      "sha256": "61e672105e7fd4f338ee17c6511bd2bd01fefa39d65ecc48d22fb314b0ddfa93",
+      "crc32": "E3C341ED"
+    },
+    "native_model_cases": 339,
+    "public_BPS_replay": "exact E3C341ED target"
+  },
+  "root_maintenance": {
+    "new_candidate_crc32": "0A7DCF20",
+    "new_candidate_sha256": "0e946a7f03815e7f9527faf49fec365803a981f9a97f3991faf43fdc5dc12e9f",
+    "checks": {
+      "PASS": 28,
+      "INFO": 1,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "layer_builds": "base/off/on pass",
+    "frozen_rc8_IPS_and_three_sidecar_Git_blobs": "unchanged",
+    "new_candidate_is_frozen_rc8": false,
+    "runtime_or_hardware_test_of_root_candidate": "not_run"
+  },
+  "workbench": {
+    "entries": 1541,
+    "texts": 1088,
+    "shared_names": 453,
+    "regenerated_HTML_and_catalog": "byte-identical to published share baseline",
+    "DOM_model_groups": 9,
+    "revision_file_rejection_cases": 12,
+    "actual_browser_visual_file_protocol_download_dialog": "not_run; policy rejected local file URL, no workaround used"
+  },
+  "publication_audit": {
+    "explicit_files_before_this_summary": 161,
+    "approved_BPS_files": 2,
+    "ROM_font_save_emulator_media_or_credentials_in_added_files": false,
+    "ignored_private_and_generated_path_examples": 8,
+    "current_document_links": 12,
+    "broken_current_links": 0,
+    "unrelated_local_experiments_staged": false
+  },
+  "limits": [
+    "no new natural full-story or hardware acceptance",
+    "not all dual-player/seven-live-actor combinations",
+    "old normal-save compatibility unverified",
+    "scope excludes file/naming UI, title and extra graphics"
+  ]
+}

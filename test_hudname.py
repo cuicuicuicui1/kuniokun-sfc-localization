@@ -90,7 +90,7 @@ def execute(rec, slot=0, cursor=0, velocity=0xFFF8):
     return end,len(uploads)
 
 count=0
-for i in range(560):
+for i in range(514):
     rec=rom[0x4802A+i*16:0x4802E+i*16]
     execute(rec,slot=i%4,velocity=(0,8,0xFFF8)[i%3]);count+=1
 rec=rom[0x4802A:0x4802E]

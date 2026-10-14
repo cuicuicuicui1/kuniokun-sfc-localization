@@ -1,0 +1,14 @@
+{
+  "opt": {
+    "path": "private/original-optimization.sfc",
+    "size": 1572864,
+    "sha256": "2008f9b34d2b48a168824c8c7d1e3c8924dbb0fa81de9a4eeff2823a635ffe08",
+    "crc32": "65D66D5D"
+  },
+  "jp": {
+    "path": "private/original-japanese.smc",
+    "size": 1048576,
+    "sha256": "8f289ac5677508f7c9de12a0117849ed55a0ac861abb0fcefb1e350af6978c04",
+    "crc32": "56C05339"
+  }
+}

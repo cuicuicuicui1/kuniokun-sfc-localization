@@ -1,0 +1,83 @@
+{
+  "status": "pass_with_documented_scope",
+  "output": {
+    "size": 4194304,
+    "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+    "crc32": "AB097D26"
+  },
+  "identified_records": 1088,
+  "main_messages": 769,
+  "original_other_table_entries": 319,
+  "glyph_cells_tested": 1140,
+  "native_name_records": 514,
+  "controlled_message_cases": 148,
+  "status_displays": 6,
+  "native_actor_count_observed": 6,
+  "drawer_neighbor_checks": 1202,
+  "original_actor_action_messages": [
+    "001",
+    "01C",
+    "087",
+    "088",
+    "089",
+    "302",
+    "309",
+    "31A"
+  ],
+  "checks": {
+    "static": {
+      "path": "qa-static-worker/results.json",
+      "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+      "status": "PASS"
+    },
+    "model": {
+      "path": "qa/positional-model.json",
+      "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+      "status": "pass"
+    },
+    "messages": {
+      "path": "qa/message-runtime-checks.json",
+      "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+      "status": "pass"
+    },
+    "status-vram": {
+      "path": "qa/status-vram-checks.json",
+      "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+      "status": "pass"
+    },
+    "garage": {
+      "path": "qa/final-garage/manifest.json",
+      "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+      "status": "pass"
+    },
+    "snes": {
+      "path": "qa/final-hud-snes/report.json",
+      "sha256": "71d4756da40c49c0bd32564922b5632597178fecfe7f9acf36abc092865a3251",
+      "status": "observed"
+    },
+    "cold": {
+      "path": "qa/final-hud-cold/final-hud-cold.json",
+      "frames": 13000,
+      "crc32": "AB097D26"
+    },
+    "enemy": {
+      "path": "qa/final-optimized-action/final-optimized-action.json",
+      "frames": 4300,
+      "crc32": "AB097D26"
+    }
+  },
+  "garage": "controlled event15, enemy starting HP1, playerHP200, Lua writes stop before KO, six active actors including Miho/Urabe and enemies, original map4B->4C",
+  "prior_test_not_inherited": [
+    "v1.5 player screenshot invalidates broad acceptance",
+    "first long-run Mesen attempts terminated at its default100-second timer; explicit timeout fixed",
+    "early garage fixture ran beyond bound or did not finalize; retained failures, final-garage is pass"
+  ],
+  "unverified": [
+    "hardware",
+    "natural full-game completion",
+    "all dual-player/seven-live-actor combinations",
+    "old saves",
+    "file/naming UI and graphical text complete localization",
+    "subjective audio verification"
+  ]
+}

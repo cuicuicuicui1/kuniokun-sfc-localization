@@ -1,0 +1,1106 @@
+{
+ "source": {
+  "size": 1572864,
+  "crc32": "65D66D5D",
+  "sha256": "2008f9b34d2b48a168824c8c7d1e3c8924dbb0fa81de9a4eeff2823a635ffe08"
+ },
+ "byte_locks": {
+  "bank22_code_228000_6D": {
+   "bank": "22",
+   "addr": "8000",
+   "len": 109,
+   "matched": true
+  },
+  "loader_dispatch_03EB68_54": {
+   "bank": "03",
+   "addr": "EB68",
+   "len": 54,
+   "matched": true
+  },
+  "loader_fetch_03EBAF_22": {
+   "bank": "03",
+   "addr": "EBAF",
+   "len": 22,
+   "matched": true
+  },
+  "macro_handlers_03EC2D_56": {
+   "bank": "03",
+   "addr": "EC2D",
+   "len": 56,
+   "matched": true
+  },
+  "macro_table_03EC0D_32": {
+   "bank": "03",
+   "addr": "EC0D",
+   "len": 32,
+   "matched": true
+  },
+  "menu_blob_03F743_52": {
+   "bank": "03",
+   "addr": "F743",
+   "len": 52,
+   "matched": true
+  },
+  "menu_blobcopy_209090_44": {
+   "bank": "20",
+   "addr": "9090",
+   "len": 43,
+   "matched": true
+  },
+  "menu_count1_03F7EB_4": {
+   "bank": "03",
+   "addr": "F7EB",
+   "len": 4,
+   "matched": true
+  },
+  "menu_count2_03F80D_4": {
+   "bank": "03",
+   "addr": "F80D",
+   "len": 4,
+   "matched": true
+  },
+  "menu_count3_03F81F_12": {
+   "bank": "03",
+   "addr": "F81F",
+   "len": 12,
+   "matched": true
+  },
+  "menu_cursor_col_03F8E5_10": {
+   "bank": "03",
+   "addr": "F8E5",
+   "len": 10,
+   "matched": true
+  },
+  "menu_cursor_row_03F8CA_7": {
+   "bank": "03",
+   "addr": "F8CA",
+   "len": 7,
+   "matched": true
+  },
+  "menu_dispatch_209020_56": {
+   "bank": "20",
+   "addr": "9020",
+   "len": 56,
+   "matched": true
+  },
+  "menu_drawer_03F95D_10": {
+   "bank": "03",
+   "addr": "F95D",
+   "len": 10,
+   "matched": true
+  },
+  "menu_entry_00F580_5": {
+   "bank": "00",
+   "addr": "F580",
+   "len": 5,
+   "matched": true
+  },
+  "menu_fetch_209000_16": {
+   "bank": "20",
+   "addr": "9000",
+   "len": 16,
+   "matched": true
+  },
+  "menu_inc_209013_13": {
+   "bank": "20",
+   "addr": "9013",
+   "len": 13,
+   "matched": true
+  },
+  "menu_input_03F7A8_10": {
+   "bank": "03",
+   "addr": "F7A8",
+   "len": 10,
+   "matched": true
+  },
+  "menu_oldtables_03F851_10": {
+   "bank": "03",
+   "addr": "F851",
+   "len": 10,
+   "matched": true
+  },
+  "menu_tables_03F845_12": {
+   "bank": "03",
+   "addr": "F845",
+   "len": 12,
+   "matched": true
+  },
+  "name_addr_03EC7F_22": {
+   "bank": "03",
+   "addr": "EC7F",
+   "len": 22,
+   "matched": true
+  },
+  "name_copy4a_03EC9C_4": {
+   "bank": "03",
+   "addr": "EC9C",
+   "len": 4,
+   "matched": true
+  },
+  "name_copy4b_03ECBC_4": {
+   "bank": "03",
+   "addr": "ECBC",
+   "len": 4,
+   "matched": true
+  },
+  "name_header_098000_4": {
+   "bank": "09",
+   "addr": "8000",
+   "len": 4,
+   "matched": true
+  },
+  "stub_2081E0_32": {
+   "bank": "20",
+   "addr": "81E0",
+   "len": 32,
+   "matched": true
+  },
+  "stub_208260_24": {
+   "bank": "20",
+   "addr": "8260",
+   "len": 24,
+   "matched": true
+  }
+ },
+ "names": {
+  "header": {
+   "start": 32810,
+   "end": 41034
+  },
+  "records": 514,
+  "sample": {
+   "0": "よしひろ",
+   "1": "ひろし",
+   "512": "くにお",
+   "513": "りき"
+  },
+  "param_ptrs": [
+   "A224",
+   "A9A4",
+   "A9C0",
+   "AA56",
+   "AA66",
+   "AAEE",
+   "AD82",
+   "ADB6",
+   "ADC2",
+   "ADEA",
+   "AE1A",
+   "AE3A",
+   "AEFA",
+   "AF22",
+   "AF27",
+   "AF67",
+   "B381",
+   "B831",
+   "B85E"
+  ],
+  "param_region": "starts at $09:A04A (non-text: 19 pointer blocks + record parameter bytes 4..15)"
+ },
+ "text_loader": {
+  "sites": {
+   "pointer_setup_patched_at": "$03:EB70 (JML $22:8000)",
+   "byte_fetch_patched_at": "$03:EBBB (JML $22:8050)"
+  },
+  "LDA $034B / CMP #$03 / BCS": true,
+  "LDA $034A / ASL / JML $03EB74 (original path)": true,
+  "SEC / SBC #$03 / STA $034B (index - $300)": true,
+  "ADD #$70 (table base low, $8070)": true,
+  "ADD #$80 (high byte, bank $22 window)": true,
+  "DBR=$22 before table read": true,
+  "read u16 LE, store $036B then $036A": true,
+  "JML $03EB9A (CLC / RTS return)": true,
+  "stream: fetch byte, STA $12, JML $03:EBBF": true,
+  "stream: DBR=$23 (extended text bank)": true,
+  "contract": {
+   "index": "i = $034A + 256*$034B (16-bit)",
+   "extension_when": "$034B >= 3 (i >= $300)",
+   "record_of": "for $034B < 3 the original path continues at $03:EB74 (A = $034A<<1)",
+   "table": "$22:8070 + 2*(i - $300), 16-bit little-endian",
+   "pointer_meaning": "address inside bank $23 (>= $8000)",
+   "return": "CLC+RTS via $03:EB9A (index 0 -> SEC+RTS via $03:EB9C)",
+   "stream": "byte = [bank:$23|caller][$20/$21], Y; A and $12 = byte; JML $03:EBBF",
+   "width": "text code = 1 byte (A/$12); index = 16-bit split as $034A/$034B; table entry = 16-bit LE; stream pointer = 16-bit",
+   "dbr": "$22 while reading the pointer table; $23 for extended stream bytes; PHB/PLB around both, restored before every JML back",
+   "dp": "scratch $20/$21 and result $12 live on the caller's direct page (D is never reloaded here), exactly like the original loader path"
+  }
+ },
+ "text_extension": {
+  "table_base": "$22:8070",
+  "entries": 76,
+  "first": "0000",
+  "last": "871D",
+  "bank23_span": [
+   "$8000",
+   "$8740"
+  ],
+  "new_text_json_crosscheck": true
+ },
+ "menu": {
+  "entry": "$00:F580 -> JML $20:9020 (Six-way dispatcher; $0368 = item+$80 sign)",
+  "items": 6,
+  "new_item_index_4": "$20:9058, the added どうしうち command",
+  "label_blob": "$03:F743 (52 cells, copied to $040A by $20:9090)",
+  "label_drawer": "$03:F95D (per-cell FB upper / FA lower via the 2-byte records)",
+  "cursor_drawer": "$03:F8BD reads $039F (row) + $0391 and $03A0 (col)",
+  "index": "$039A = cursor item; $039F/$03A0 = (row, col) from the tables below",
+  "table_rows_F845": [
+   "00",
+   "00",
+   "00",
+   "01",
+   "01",
+   "01"
+  ],
+  "table_cols_F84B": [
+   "00",
+   "0A",
+   "14",
+   "00",
+   "0A",
+   "14"
+  ],
+  "coordinates": [
+   {
+    "item": 0,
+    "row": 0,
+    "col": 0
+   },
+   {
+    "item": 1,
+    "row": 0,
+    "col": 10
+   },
+   {
+    "item": 2,
+    "row": 0,
+    "col": 20
+   },
+   {
+    "item": 3,
+    "row": 1,
+    "col": 0
+   },
+   {
+    "item": 4,
+    "row": 1,
+    "col": 10
+   },
+   {
+    "item": 5,
+    "row": 1,
+    "col": 20
+   }
+  ],
+  "blob_sha1": "218644fd62766dbc0180f6a53bd668c2cfd0932d",
+  "labels_decoded": [
+   {
+    "item": 0,
+    "row": 0,
+    "col": 0,
+    "label": "きりょくをつかう"
+   },
+   {
+    "item": 1,
+    "row": 0,
+    "col": 10,
+    "label": "アイテムをつかう"
+   },
+   {
+    "item": 2,
+    "row": 0,
+    "col": 20,
+    "label": "そうびする"
+   },
+   {
+    "item": 3,
+    "row": 1,
+    "col": 0,
+    "label": "ステータスをみる"
+   },
+   {
+    "item": 4,
+    "row": 1,
+    "col": 10,
+    "label": "どうしうち"
+   },
+   {
+    "item": 5,
+    "row": 1,
+    "col": 20,
+    "label": "すてる"
+   }
+  ]
+ },
+ "entry_sites": [
+  {
+   "site": "00:98EE",
+   "op": "JSL",
+   "target": "20:9470",
+   "align_back": 2,
+   "return_refs": [
+    "JSL 20:915B",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "00:9F79",
+   "op": "JML",
+   "target": "20:9300",
+   "align_back": 2,
+   "return_refs": [
+    "JML 00:9F7F",
+    "JML 00:9F99"
+   ],
+   "verified": true
+  },
+  {
+   "site": "00:F580",
+   "op": "JML",
+   "target": "20:9020",
+   "align_back": 2,
+   "return_refs": [
+    "JML 00:F59D",
+    "JML 00:F5A3",
+    "JML 00:F5A9",
+    "JML 00:F5AF",
+    "JML 00:F5B5",
+    "JML 00:F59C"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:C2F0",
+   "op": "JSL",
+   "target": "20:8630",
+   "align_back": 2,
+   "return_refs": [
+    "RTL",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E112",
+   "op": "JML",
+   "target": "20:81E0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E4B5"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E198",
+   "op": "JML",
+   "target": "20:82E0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E19D",
+    "JML 01:E73A",
+    "JML 01:E73C"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E384",
+   "op": "JSL",
+   "target": "20:8590",
+   "align_back": 2,
+   "return_refs": [
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E3C5",
+   "op": "JML",
+   "target": "20:85B0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E3D1"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E4A2",
+   "op": "JML",
+   "target": "20:8220",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E4B5",
+    "JML 01:E4B7",
+    "JML 01:E53C",
+    "JML 01:E53E"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E4A9",
+   "op": "JML",
+   "target": "20:81E0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E4B5"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E4DF",
+   "op": "JML",
+   "target": "20:8280",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E4E4",
+    "JML 01:E4E6",
+    "JML 01:E57E",
+    "JML 01:E580"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E530",
+   "op": "JML",
+   "target": "20:8260",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E53C",
+    "JML 01:E53E",
+    "JML 01:E4E4",
+    "JML 01:E4E6"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E537",
+   "op": "JML",
+   "target": "20:8240",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E53C",
+    "JML 01:E53E",
+    "JML 01:E53C",
+    "JML 01:E53E"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E56B",
+   "op": "JML",
+   "target": "20:82C0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E57E",
+    "JML 01:E580",
+    "JML 01:E19D"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E579",
+   "op": "JML",
+   "target": "20:82A0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E57E",
+    "JML 01:E580",
+    "JML 01:E57E",
+    "JML 01:E580"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E640",
+   "op": "JML",
+   "target": "20:84D0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E677",
+    "JML 01:E64D"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E65A",
+   "op": "JML",
+   "target": "20:8530",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E677",
+    "JML 01:E64D"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E6B6",
+   "op": "JML",
+   "target": "20:8340",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E6CF",
+    "JML 01:E6D1",
+    "JML 01:E8DB",
+    "JML 01:E8DD"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E6BD",
+   "op": "JML",
+   "target": "20:8380",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E6C2",
+    "JML 01:E6D1"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E735",
+   "op": "JML",
+   "target": "20:8300",
+   "align_back": 3,
+   "return_refs": [
+    "JML 01:E73A",
+    "JML 01:E73C",
+    "JML 01:E8F7",
+    "JML 01:E8F9"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E83A",
+   "op": "JML",
+   "target": "20:8440",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E83F",
+    "JML 01:E857",
+    "JML 07:FF74"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E8D6",
+   "op": "JML",
+   "target": "20:8360",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E8DB",
+    "JML 01:E8DD",
+    "JML 01:E6C2",
+    "JML 01:E6D1"
+   ],
+   "verified": true
+  },
+  {
+   "site": "01:E8EF",
+   "op": "JML",
+   "target": "20:8320",
+   "align_back": 2,
+   "return_refs": [
+    "JML 01:E8F7",
+    "JML 01:E8F9",
+    "JML 01:E6CF",
+    "JML 01:E6D1"
+   ],
+   "verified": true
+  },
+  {
+   "site": "02:92B0",
+   "op": "JSL",
+   "target": "20:911F",
+   "align_back": 2,
+   "return_refs": [
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:86D9",
+   "op": "JSL",
+   "target": "20:94A0",
+   "align_back": 2,
+   "return_refs": [
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:8800",
+   "op": "JSL",
+   "target": "20:8610",
+   "align_back": 2,
+   "return_refs": [
+    "JSL 07:D872",
+    "RTL",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:8805",
+   "op": "JSL",
+   "target": "20:9540",
+   "align_back": 3,
+   "return_refs": [
+    "JSL 03:EB07",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:8870",
+   "op": "JSL",
+   "target": "20:9540",
+   "align_back": 2,
+   "return_refs": [
+    "JSL 03:EB07",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:887C",
+   "op": "JSL",
+   "target": "20:94D0",
+   "align_back": 2,
+   "return_refs": [
+    "JSL 20:94A0",
+    "JSL 03:EB3D"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:888A",
+   "op": "JSL",
+   "target": "20:9511",
+   "align_back": 2,
+   "return_refs": [
+    "JSL 00:9A63",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:EB70",
+   "op": "JML",
+   "target": "22:8000",
+   "align_back": 2,
+   "return_refs": [
+    "JML 03:EB74"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:EBBB",
+   "op": "JML",
+   "target": "22:8050",
+   "align_back": 2,
+   "return_refs": [
+    "JML 03:EBBF",
+    "JML 03:EBBF"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:F736",
+   "op": "JML",
+   "target": "20:9090",
+   "align_back": 2,
+   "return_refs": [
+    "JML 03:F741",
+    "JML 03:F741"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:F7AE",
+   "op": "JSL",
+   "target": "20:9170",
+   "align_back": 3,
+   "return_refs": [
+    "JSL 20:9100"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:F811",
+   "op": "JML",
+   "target": "20:9013",
+   "align_back": 2,
+   "return_refs": [
+    "JML 03:F817",
+    "JML 00:F59D",
+    "JML 00:F5A3",
+    "JML 00:F5A9",
+    "JML 00:F5AF",
+    "JML 00:F5B5"
+   ],
+   "verified": true
+  },
+  {
+   "site": "03:F841",
+   "op": "JML",
+   "target": "20:9000",
+   "align_back": 2,
+   "return_refs": [
+    "JML 03:F851",
+    "JML 03:F817",
+    "JML 00:F59D",
+    "JML 00:F5A3",
+    "JML 00:F5A9"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:B57C",
+   "op": "JML",
+   "target": "20:8600",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:B580",
+    "JML 07:B594",
+    "JSL 07:D872",
+    "RTL",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:B92F",
+   "op": "JML",
+   "target": "20:90D0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:C7C1",
+    "JML 07:B934",
+    "JML 07:C7C1",
+    "JML 07:C7AC"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:BF3D",
+   "op": "JML",
+   "target": "20:9360",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:BF43",
+    "JSL 00:FA98",
+    "JML 07:BF5B"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:C7A7",
+   "op": "JML",
+   "target": "20:90E1",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:C7C1",
+    "JML 07:C7AC",
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:D693",
+   "op": "JSL",
+   "target": "20:9440",
+   "align_back": 2,
+   "return_refs": [
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:DB0D",
+   "op": "JSL",
+   "target": "20:A000",
+   "align_back": 2,
+   "return_refs": [
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:E232",
+   "op": "JSL",
+   "target": "20:863A",
+   "align_back": 2,
+   "return_refs": [
+    "RTL"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:F370",
+   "op": "JML",
+   "target": "20:92A0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:F374",
+    "JML 07:F382"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:F5BA",
+   "op": "JML",
+   "target": "20:9200",
+   "align_back": 3,
+   "return_refs": [
+    "JML 07:F5C0",
+    "JSL 00:FA98"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:FF70",
+   "op": "JML",
+   "target": "20:8470",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:FF74",
+    "JML 07:FF74",
+    "JML 07:FF74",
+    "JML 07:BD50",
+    "JML 07:FF84"
+   ],
+   "verified": true
+  },
+  {
+   "site": "07:FF80",
+   "op": "JML",
+   "target": "20:84A0",
+   "align_back": 2,
+   "return_refs": [
+    "JML 07:FF84",
+    "JML 07:FF84",
+    "JML 07:FF84",
+    "JML 07:BD83"
+   ],
+   "verified": true
+  }
+ ],
+ "rejected_patterns": [
+  {
+   "site": "00:B51A",
+   "byte": "DC",
+   "reason": "byte pattern inside a rewritten bank-$00 data table (an indirect JML would read its pointer from that same table)",
+   "window_sha1": "eb1bdd161f2c3d2f5cbc2ad2ad4ed5d1dfe336ca",
+   "matched": true
+  },
+  {
+   "site": "00:B51F",
+   "byte": "DC",
+   "reason": "byte pattern inside a rewritten bank-$00 data table",
+   "window_sha1": "1aad38e2147c94ea10d0d6ea490230fc9273b0fc",
+   "matched": true
+  },
+  {
+   "site": "00:FFC5",
+   "byte": "DC",
+   "reason": "byte pattern inside the ending-credits text data",
+   "window_sha1": "41ec0c6c7425472848b60a9c1f57b79fb07d95c9",
+   "matched": true
+  },
+  {
+   "site": "04:AC3B",
+   "byte": "DC",
+   "reason": "byte pattern inside a moved data block",
+   "window_sha1": "2199772a4596dcc84b694d692076b0e71e710a79",
+   "matched": true
+  },
+  {
+   "site": "04:C0DA",
+   "byte": "DC",
+   "reason": "byte pattern inside a rewritten record table",
+   "window_sha1": "e63411fadcd740733ff6d852eb661eab3b39917c",
+   "matched": true
+  }
+ ],
+ "bank_blocks": {
+  "20": {
+   "sha1": "256bd41601d3dd31ebe63ad9b689307254a9adad",
+   "expected_sha1": "256bd41601d3dd31ebe63ad9b689307254a9adad",
+   "blocks": [
+    {
+     "start": 32768,
+     "end": 32980,
+     "sha1": "41562ab83c7beb4a5409ef861897e570ff174dac"
+    },
+    {
+     "start": 32993,
+     "end": 33101,
+     "sha1": "a292e7e0c41d1248b2e70fbffc3be98201aa5c65"
+    },
+    {
+     "start": 33248,
+     "end": 33279,
+     "sha1": "b250390fd151278fea0cfa82bd8c41eafb8bc839"
+    },
+    {
+     "start": 33312,
+     "end": 33690,
+     "sha1": "84e4b2791116dbb9c8acd797fb481ab96739c412"
+    },
+    {
+     "start": 33744,
+     "end": 33781,
+     "sha1": "a36590adfcfbaa395161675214e93e82c9710545"
+    },
+    {
+     "start": 33792,
+     "end": 34294,
+     "sha1": "b9dce67acd4a64c2da33eb61fe312b973192112e"
+    },
+    {
+     "start": 34304,
+     "end": 34340,
+     "sha1": "e27a94399ed1f82d04d54fa0671fdada6a06fe38"
+    },
+    {
+     "start": 34352,
+     "end": 34422,
+     "sha1": "eff32dae7bad8d0d7b55bc5633c28af682a7e330"
+    },
+    {
+     "start": 34433,
+     "end": 34454,
+     "sha1": "1d4e6f8c4d20ed4057c1294440f62f314d3de139"
+    },
+    {
+     "start": 34465,
+     "end": 34517,
+     "sha1": "fc059d6a8abc8b0c64acccd5d3dca16269d1e915"
+    },
+    {
+     "start": 34528,
+     "end": 34533,
+     "sha1": "56d2b99523682ac4a684a7d5b917707cfaedc2ce"
+    },
+    {
+     "start": 34544,
+     "end": 34600,
+     "sha1": "4d36a50de352b38b557f8e9100e667aa2f803610"
+    },
+    {
+     "start": 34609,
+     "end": 34636,
+     "sha1": "c98c48c080e8cc8880e7255e6ab66b40e2901132"
+    },
+    {
+     "start": 36864,
+     "end": 36997,
+     "sha1": "1f56a8b9eaa187b96cd903f09db3b5b324c15c5c"
+    },
+    {
+     "start": 37008,
+     "end": 37051,
+     "sha1": "695112e44785e9347b7757736652dd88b7521c9c"
+    },
+    {
+     "start": 37072,
+     "end": 37106,
+     "sha1": "ec6267a3a25d959e9c31b2db3ba6eea59e6806f5"
+    },
+    {
+     "start": 37120,
+     "end": 37140,
+     "sha1": "59e1eb0f4b6d0e56494c9b2cf2c61fe0ced5afa6"
+    },
+    {
+     "start": 37151,
+     "end": 37460,
+     "sha1": "cb203ceebce2cca3c19a4925128e33bc9e0c1eee"
+    },
+    {
+     "start": 37472,
+     "end": 37504,
+     "sha1": "fe4f2fa950d5785098d47faa5c761f9bf06fa7b7"
+    },
+    {
+     "start": 37536,
+     "end": 37614,
+     "sha1": "08cbd5a2063e7177f098fa01e40350b7d6234118"
+    },
+    {
+     "start": 37632,
+     "end": 37688,
+     "sha1": "b489845b47c54c1f96202c7422165dfdc07df068"
+    },
+    {
+     "start": 37699,
+     "end": 37792,
+     "sha1": "61f3265d2b4b2124b57423b0cf25a8aff9deff29"
+    },
+    {
+     "start": 37808,
+     "end": 37909,
+     "sha1": "679fd96f193118c8e868856cb8b47e6e3dd281f2"
+    },
+    {
+     "start": 37952,
+     "end": 37970,
+     "sha1": "ba4c708c1f9b7c3f413f5251f67963522782d03a"
+    },
+    {
+     "start": 38000,
+     "end": 38026,
+     "sha1": "aa9b89efc80f6dc7f414c58a9f84f7f42003f9c0"
+    },
+    {
+     "start": 38048,
+     "end": 38087,
+     "sha1": "69af79d416aaf13f412d1dcffe23cc4dd77950f9"
+    },
+    {
+     "start": 38096,
+     "end": 38261,
+     "sha1": "2797007f4de2d5a2e51fb1a8158cf22e44dd2f50"
+    },
+    {
+     "start": 40960,
+     "end": 40968,
+     "sha1": "834f5e745afd006a5f3aa793dd89e8f4812efbeb"
+    }
+   ]
+  },
+  "22": {
+   "sha1": "2629df98d6e7cbf1f601a803f344283f788bd19e",
+   "expected_sha1": "2629df98d6e7cbf1f601a803f344283f788bd19e",
+   "blocks": [
+    {
+     "start": 32768,
+     "end": 33032,
+     "sha1": "b4346f558c6bce03f4365823a63558b78889332f"
+    }
+   ]
+  },
+  "23": {
+   "sha1": "baa200971b58a58767ea304f70eba49fc0ce4f69",
+   "expected_sha1": "baa200971b58a58767ea304f70eba49fc0ce4f69",
+   "blocks": [
+    {
+     "start": 32768,
+     "end": 34624,
+     "sha1": "027e60b6e61b777ef5d55ae1bc13a2a8e31a0a40"
+    }
+   ]
+  }
+ },
+ "unconfirmed": [
+  "Dynamic semantics of the 47 bank-$20/$22 entry stubs: this checker verifies bytes, instruction boundaries and return targets only; no emulator run was performed, so register/WRAM effects are unverified.",
+  "$20:9058 (menu item 4 \"doushiuchi\") semantics: reads $0E21/$0E22, toggles bit7 of $70 and calls JSL $07:D872 with A=$2C/$2F - inferred, not executed.",
+  "The two codes written to $0435/$0436 by $20:9090 ($34/$2B vs $20/$47) - purpose unconfirmed.",
+  "$20:9170 hidden-input handler (L+R+X gating): returned bitmask and its effect on cursor movement unverified.",
+  "Bank-$20 per-character byte tables ($8000-$814D, read via $0F01,X and written to $0E11,X): bytes locked, field meaning unconfirmed.",
+  "The 19 parameter pointers at $09:8004 ($A224..$B85E): structure verified, block contents not decoded.",
+  "Three of the five rejected JML[ind] patterns (B51A/B51F/C0DA) align by coincidence inside data; classification rests on the region evidence, not on control-flow semantics.",
+  "Bank-$03/-$01/-$07 hook call sites: role not asserted beyond the entry byte contract and the stub return sweep."
+ ],
+ "verified": true
+}

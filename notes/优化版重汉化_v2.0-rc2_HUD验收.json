@@ -1,0 +1,69 @@
+{
+  "version": "v2.0-rc2",
+  "date": "2026-10-13",
+  "status": "pass_with_documented_scope",
+  "target": {
+    "size": 4194304,
+    "crc32": "1F37BC30",
+    "sha256": "2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6"
+  },
+  "previous": "v2.0-rc1 AB097D26; player HUD counterexample supersedes its HUD acceptance",
+  "changes": "HUD player0 original Japanese kana; player1 and enemy plates16x16; complete native queue reservation/retry",
+  "changed_bytes": 2546,
+  "only_hud_and_checksum_changed": true,
+  "text_and_three_sidecars_unchanged": true,
+  "checks": {
+    "static": {
+      "path": "qa-static-worker/results.json",
+      "status": "PASS"
+    },
+    "glyph_model": {
+      "path": "qa/positional-model.json",
+      "status": "pass"
+    },
+    "scope": {
+      "path": "qa/scope-coverage.json",
+      "status": "pass"
+    },
+    "hud_contract": {
+      "path": "qa/hud16-contract.json",
+      "status": "pass"
+    },
+    "pixels": {
+      "path": "qa/hud16-pixels.json",
+      "status": "pass"
+    },
+    "state_pixels": {
+      "path": "qa/status-vram-checks.json",
+      "status": "pass"
+    }
+  },
+  "natural_cold_and_continuation_frames": 10500,
+  "natural_actor_max": 6,
+  "drawer_neighbor_checks": 717,
+  "controlled_four_plate_pixel_cases": 3,
+  "pixel_strokes_per_capture": 342,
+  "all_actor_name_records": 514,
+  "native_enemy_hud_model_calls": 1028,
+  "queue_pressure_cases": 5,
+  "status_displays": 6,
+  "independent_core": {
+    "name": "Snes9x",
+    "version": "1.63 890b5d4",
+    "cold_frames": 10000,
+    "fixture": "four HUD display parameters at original gameplay UI"
+  },
+  "unverified": [
+    "hardware",
+    "natural full story completion",
+    "all dual-player/seven-live-actor combinations",
+    "old saves"
+  ],
+  "worker": "static audit cancelled after main-agent native runtime confirmed full16px visibility; no unverified worker patch integrated",
+  "invalid_probes": [
+    "initial pre-build assertion failed; old baseline runner identity check failed after candidate was rebuilt; not accepted",
+    "menu attempt while station script was still running did not open menu; replaced by native hallway menu",
+    "player1 STATUS override checkpoint did not exit with P1 input; follow-up uses observed P1 STATUS exit",
+    "controlled Shoko initializer observed; taunt selector was not triggered, no all-action acceptance"
+  ]
+}

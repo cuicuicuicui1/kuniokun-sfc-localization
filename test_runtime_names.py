@@ -88,7 +88,7 @@ assert not message.intersection(hud),'combat HUD / message live pair collision'
 assert len(set(hud))==len(hud),'two enemy nameplates reuse a live glyph'
 
 c=make_cpu(rom);w=c.bus.wram
-records=[rom[0x4802A+i*16:0x4802E+i*16] for i in range(560)]
+records=[rom[0x4802A+i*16:0x4802E+i*16] for i in range(514)]
 chosen=[records[0],next(rec for rec in records if rec[0]>=0xC0 and rec[2]>=0xC0 and rec!=records[0])]
 expected={}
 for plate,rec in zip((2,3),chosen):

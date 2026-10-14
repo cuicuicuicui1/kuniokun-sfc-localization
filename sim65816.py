@@ -207,11 +207,11 @@ class CPU:
     def _ea(self, mode):
         """Decode an operand address (advancing pc).  Returns (bank, addr)."""
         if mode == 'dp':
-            return self.db, (self.dp + self.fetch()) & 0xFFFF
+            return 0, (self.dp + self.fetch()) & 0xFFFF
         if mode == 'dp,X':
-            return self.db, (self.dp + self.fetch() + self.x) & 0xFFFF
+            return 0, (self.dp + self.fetch() + self.x) & 0xFFFF
         if mode == 'dp,Y':
-            return self.db, (self.dp + self.fetch() + self.y) & 0xFFFF
+            return 0, (self.dp + self.fetch() + self.y) & 0xFFFF
         if mode == 'abs':
             return self.db, self.fetch16()
         if mode == 'abs,X':
@@ -547,6 +547,13 @@ class CPU:
             self.set_m(r)
             self.z = (r == 0)
             self.n = bool(r & top)
+        elif op in (0x06, 0x26):             # ASL dp / ROL dp (M-sized)
+            carry_in = self.c
+            top = 0x80 if self.m8 else 0x8000
+            def _shift(value):
+                self.c = bool(value & top)
+                return (value << 1) | (1 if op == 0x26 and carry_in else 0)
+            self._rmw('dp', _shift, self.m8)
         elif op in (0x0E, 0x4E):             # ASL abs / LSR abs
             if op == 0x0E:
                 def _fn(c, _t=0x80 if self.m8 else 0x8000, _s=self):

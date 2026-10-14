@@ -1,0 +1,269 @@
+{
+  "status": "pass_with_limits",
+  "date": "2026-10-12",
+  "candidate": {
+    "size": 2097152,
+    "crc32": "B4405973",
+    "sha256": "e4e8b700700588f4778a46bc83ac29376005cd136476ebc550d2291ed3c90cd1"
+  },
+  "ROM_changed_this_round": false,
+  "closed_scope": "final bounded complex-scene and crowd regression; no ongoing background work",
+  "observations": {
+    "cold-crowd": {
+      "max_active_actors": 6,
+      "max_group_members": 3,
+      "frames_at_least_five": 1842,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 0,
+      "maps": {
+        "00": 63,
+        "72": 510,
+        "26": 2834,
+        "51": 780,
+        "05": 3875,
+        "18": 1756,
+        "38": 183
+      },
+      "npc_records": {
+        "0001": 1805,
+        "0002": 3572,
+        "0003": 3514,
+        "0004": 1842,
+        "0000": 1928,
+        "0019": 788,
+        "001A": 680,
+        "001B": 644
+      }
+    },
+    "hallway-return": {
+      "max_active_actors": 3,
+      "max_group_members": 0,
+      "frames_at_least_five": 0,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 599,
+      "drawer_neighbor_corruptions": 0,
+      "maps": {
+        "05": 4501
+      },
+      "npc_records": {
+        "0002": 1700,
+        "0003": 1662
+      }
+    },
+    "umeda-crowd": {
+      "max_active_actors": 6,
+      "max_group_members": 5,
+      "frames_at_least_five": 1483,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 1086,
+      "drawer_neighbor_corruptions": 0,
+      "maps": {
+        "05": 76,
+        "13": 6426
+      },
+      "npc_records": {
+        "00BD": 14,
+        "00BE": 12,
+        "00BF": 23,
+        "00C0": 36,
+        "00C1": 24,
+        "00C2": 51,
+        "00C3": 688,
+        "00C4": 1003,
+        "00C5": 12,
+        "00C6": 14,
+        "00C7": 40,
+        "00CF": 196,
+        "0155": 30,
+        "0156": 28,
+        "0122": 1275,
+        "0027": 685,
+        "0028": 685,
+        "0125": 226,
+        "01E3": 819,
+        "0006": 685,
+        "00B3": 36,
+        "00B0": 32,
+        "0033": 1505,
+        "00B2": 11,
+        "0035": 685,
+        "00B4": 12,
+        "00B5": 2007,
+        "00B6": 22,
+        "00B7": 20,
+        "00B8": 2024,
+        "00B9": 21,
+        "00BA": 15,
+        "00BB": 40,
+        "00BC": 17,
+        "00B1": 18
+      }
+    },
+    "garage-crowd-final": {
+      "max_active_actors": 6,
+      "max_group_members": 3,
+      "frames_at_least_five": 4241,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 2425,
+      "drawer_neighbor_corruptions": 0,
+      "maps": {
+        "4B": 8002,
+        "1C": 1924,
+        "05": 76
+      },
+      "npc_records": {
+        "003C": 3403,
+        "013D": 1881,
+        "00CC": 88,
+        "00D6": 581,
+        "00C8": 265,
+        "00C9": 703,
+        "00D9": 243,
+        "00CE": 272,
+        "00DB": 5,
+        "00CD": 272,
+        "000B": 9553,
+        "00D7": 5,
+        "003A": 3715,
+        "003B": 3363,
+        "0005": 9901
+      }
+    },
+    "seven-actors-final": {
+      "max_active_actors": 7,
+      "max_group_members": 3,
+      "frames_at_least_five": 4569,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 2088,
+      "drawer_neighbor_corruptions": 0,
+      "maps": {
+        "4B": 8001,
+        "1C": 1924,
+        "05": 76
+      },
+      "npc_records": {
+        "003C": 1492,
+        "00D3": 756,
+        "013D": 1881,
+        "00D7": 5,
+        "00D0": 1843,
+        "00C8": 5,
+        "00D8": 3092,
+        "00CA": 333,
+        "00D1": 778,
+        "00DB": 5,
+        "00C9": 279,
+        "000B": 9552,
+        "00CF": 1843,
+        "003A": 1344,
+        "003B": 753,
+        "0005": 9900
+      }
+    },
+    "crowd-menu": {
+      "max_active_actors": 6,
+      "max_group_members": 3,
+      "frames_at_least_five": 2001,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 725,
+      "drawer_neighbor_corruptions": 0,
+      "maps": {
+        "4B": 2001
+      },
+      "npc_records": {
+        "003A": 2001,
+        "003B": 2001,
+        "000B": 2001,
+        "0005": 2001,
+        "003C": 2001
+      }
+    },
+    "crowd-nonempty-menu": {
+      "max_active_actors": 6,
+      "max_group_members": 3,
+      "frames_at_least_five": 2301,
+      "patch_writes_queue_boundary": 0,
+      "drawer_neighbor_checks": 812,
+      "drawer_neighbor_corruptions": 0,
+      "maps": {
+        "4B": 2301
+      },
+      "npc_records": {
+        "003A": 2301,
+        "003B": 2301,
+        "000B": 2301,
+        "0005": 2301,
+        "003C": 2301
+      }
+    }
+  },
+  "HUD_pressure_model": {
+    "status": "pass",
+    "candidate_sha256": "e4e8b700700588f4778a46bc83ac29376005cd136476ebc550d2291ed3c90cd1",
+    "native_HUD_cases": 3276,
+    "deferred_checks": 5148,
+    "max_attempts": 3,
+    "interleaved_newfont_item_cases": 748,
+    "actor_slots_preserved": 7,
+    "scope": "real native outer HUD allocator and drawer in CPU/queue model; full/dirty/consumed queues, both train velocity signs, seven actor arrays, persistent two enemy plates; not seven simultaneous HUD plates"
+  },
+  "speaker_checks": {
+    "cases": 66,
+    "native_records": 11,
+    "messages": 6,
+    "includes_Hiro_Miho_Urabe": true,
+    "evidence": "controlled individual same-ROM native calls; not simultaneous 11 actors"
+  },
+  "garage_6_actor_entry": {
+    "status": "pass",
+    "scene_proof": "entered4C=true nativeGateAccepted=1 nativeCalls=2933 expectedEntry=true result=PASS",
+    "scope": "controlled starting map/branch/stats; original KO/reward/door after prep stopped; final gate replay input-only"
+  },
+  "seven_actor_battle": {
+    "status": "pass",
+    "native_post_battle_message": "0153",
+    "max_active": 7,
+    "scope": "reserved player1 activated once and boosted stats/enemy HP24; story NPCs/enemy groups kept; no prep writes after fight start"
+  },
+  "seven_actor_entry": {
+    "status": "not_verified",
+    "experiment_result": "fail",
+    "scene_proof": "entered4C=false nativeGateAccepted=1 nativeCalls=8322 expectedEntry=true result=FAIL",
+    "gate_code_exact_source": {
+      "rom_start": "0174C2",
+      "rom_end_exclusive": "017B70",
+      "bytes": 1710,
+      "identical": true
+    },
+    "interpretation": "constructed player1 context did not complete synchronized entry; not established as a localization defect or natural 2P result"
+  },
+  "crowded_menus": {
+    "normal": 5,
+    "controlled_nonempty_inventory": 5,
+    "commands": [
+      "items",
+      "skills",
+      "equipment",
+      "status",
+      "discard"
+    ],
+    "scope": "six live actors retained in battle; nonempty fixture sets level99/item count8/IDs28..35 once, scrolls through pad, no actor or scene edits"
+  },
+  "failures_retained": [
+    "full-native-HP automated combat did not finish within frame cap, excluded from pass",
+    "early player1 setup before map initialization was reset by native script, excluded",
+    "seven-actor unboosted controller did not finish, excluded",
+    "initial return observer address sampled no returns, cold result is crowd-count only",
+    "constructed dual-player gate replay did not enter, retained as limitation"
+  ],
+  "unverified": [
+    "hardware",
+    "natural full-game completion",
+    "normal difficulty full-health parking battle victory",
+    "natural 2P/CPU join and synchronized dual-player entry",
+    "exact user-reported additional enemy natural encounter",
+    "all NPC/story combinations",
+    "old-save migration",
+    "all original graphics/save/name screens"
+  ]
+}

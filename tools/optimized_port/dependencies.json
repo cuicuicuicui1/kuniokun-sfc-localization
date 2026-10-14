@@ -1,0 +1,17 @@
+{
+  "cnbuild5.py": "814b0937faa5f8e96bf868fc51fafacfa736ca553e701d4926d9384f51b5757d",
+  "glyph_coloring.py": "6533a317869e412cd8cbde37edb583fff2e7d90167102c31a6002ff443c0dd1b",
+  "cn_build_params.json": "06192dfd4f17577c3b32f862538530997efdf20986670cbac8b864d0702187cc",
+  "cn_glyph_cell.json": "78a69079e4f604416e522c304d1296cd5e81ccc647aeceaa288bce0ded21765e",
+  "kuniokun_map.py": "80c3c4d2a762fa41264a8eca258a40385a6bf5d08dda760b0703c4f2277a6453",
+  "sfc_tools.py": "3fa365b9fef5056da5aa0e02a2309d848943325958e0b6cbdbb530ba454d6a96",
+  "cnglyph.py": "b31293babf16469e5d00553eb58d1bb0f34ce1190b43d770d7fea37760c3a722",
+  "cnfont8.py": "ff76015510114c8d5f9985d2b5c44063d30f9f30d13f9c677e83d74450b49f4a",
+  "dis65.py": "33f1322d83fb0318f4da7aafb03376083837afdae6cc0ec87f0c4ac50450c07e",
+  "sim65816.py": "6fad6945f60d58c840f9699f2c76a0fe06df1df0b446daa4ca743a0cfa580b8e",
+  "dialogue_model.py": "6ebf02f7273daa2f4145687075b890a5eea6a56dd939df2fefd7f4eb77cd3f50",
+  "font/simsun.ttc": "1526ac24375f51f6eb73bc2d3f8072dbe4a80a3a65217677c9d9a84f67dab2ab",
+  "font/msyh.ttc": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f",
+  "pixelfonts.py": "4fd16971f3a2aa8e6ec8a67aa6ae38a204e8e425e6093bd3ace98f14c3c715e9",
+  "font/unifont.hex.gz": "e66385c79a0b8b24a466f3129930e08a966a935b4bf3b28c6bb17a9df9bf791d"
+}
