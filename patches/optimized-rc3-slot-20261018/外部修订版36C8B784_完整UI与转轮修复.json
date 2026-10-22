@@ -1,0 +1,17 @@
+{
+  "source": {
+    "size": 4194304,
+    "sha256": "bd79235a808b9fa00121a49dcd22bb9cc6ea84ae4298281ad1b2b2b5a0b47fd8",
+    "crc32": "36C8B784"
+  },
+  "target": {
+    "size": 4194304,
+    "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+    "crc32": "15939ABD"
+  },
+  "patch": {
+    "filename": "外部修订版36C8B784_完整UI与转轮修复.bps",
+    "sha256": "020913564fbc8e553569b3d647138f679a28c7ee33c723610aa7d93aef5dc88b",
+    "size": 42509
+  }
+}

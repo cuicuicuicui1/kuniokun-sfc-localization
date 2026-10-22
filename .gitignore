@@ -156,3 +156,30 @@ tools/text_workbench/share/*
 !tools/text_workbench/share/汉化校对工作台.html
 !tools/text_workbench/share/catalog.json
 !tools/text_workbench/share/先读我.md
+
+# Revised rc3 workbench; retain the rc2 share baseline for old submissions.
+!tools/text_workbench/share-rc3/
+tools/text_workbench/share-rc3/*
+!tools/text_workbench/share-rc3/汉化校对工作台.html
+!tools/text_workbench/share-rc3/catalog.json
+!tools/text_workbench/share-rc3/先读我.md
+
+# Exact edited-base UI maintenance; source/patches only.
+!tools/optimized_rebuild/ui_repair/
+tools/optimized_rebuild/ui_repair/*
+!tools/optimized_rebuild/ui_repair/*.py
+!tools/optimized_rebuild/ui_repair/*.json
+!tools/optimized_rebuild/ui_repair/*.md
+!tools/optimized_rebuild/ui_repair/*.lua
+!patches/optimized-rc3-ui-20261018/
+patches/optimized-rc3-ui-20261018/*
+!patches/optimized-rc3-ui-20261018/*.bps
+!patches/optimized-rc3-ui-20261018/*.json
+!patches/optimized-rc3-ui-20261018/*.md
+
+# Slot reel repair for the exact edited/UI source lineages.
+!patches/optimized-rc3-slot-20261018/
+patches/optimized-rc3-slot-20261018/*
+!patches/optimized-rc3-slot-20261018/*.bps
+!patches/optimized-rc3-slot-20261018/*.json
+!patches/optimized-rc3-slot-20261018/*.md

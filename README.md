@@ -2,17 +2,23 @@
 
 本仓库维护日版汉化、操作优化版汉化，以及离线文本校对工具。**只提供补丁和源码，不提供游戏ROM、字体、模拟器或玩家存档。**
 
-更新：2026-10-15。三个ROM目标分开使用，不混用基座或即时存档。
+更新：**2026-10-23**。同步玩家修订、统一12点阵状态页及老虎机转轮修复。最新维护目标是 **15939ABD**，保留第三方台词编辑；[补丁入口](patches/optimized-rc3-slot-20261018/README.md) · [修复原因与历史验收](notes/老虎机转轮乱码修复_20261018.md) · [本次仓库同步与维护说明](notes/发布记录_GitHub_20261023.md)。
+
+先按已有ROM选择补丁。**最新维护补丁需要指定的第三方修订版，不能直接打到未汉化优化版上。** 源码普通rc3、第三方修订版和日版是不同路线，不混用基座或即时存档。
 
 | 版本 | 正确输入 | 目标CRC32 | 入口 |
 | --- | --- | --- | --- |
-| **优化版汉化 v2.0-rc2** | 原未汉化优化版 V4.1e，65D66D5D | **1F37BC30** | [BPS与应用说明](patches/optimized-v2.0-rc2/README.md) · [构建源码](tools/optimized_rebuild/README.md) |
-| **独立不掉血版 rc2-nohp** | 上一行正常rc2，1F37BC30 | **E3C341ED** | [增量BPS](patches/optimized-v2.0-rc2-nohp/README.md) · [生成脚本](tools/optimized_rebuild/variants/nohp/README.md) |
+| **最新：完整UI与转轮修复** | 第三方修订版，36C8B784 | **15939ABD** | [直接BPS与维护源码](patches/optimized-rc3-slot-20261018/README.md) |
+| 最新：仅补转轮 | 已做12点阵UI修复，8890880C | **15939ABD** | [增量BPS](patches/optimized-rc3-slot-20261018/README.md) |
+| **优化版汉化 v2.0-rc3** | 原未汉化优化版 V4.1e，65D66D5D | **403570B0** | [BPS与应用说明](patches/optimized-v2.0-rc3/README.md) · [构建源码](tools/optimized_rebuild/README.md) |
+| **独立不掉血版 rc3-nohp** | 上一行正常rc3，403570B0 | **4AB9BCEA** | [增量BPS](patches/optimized-v2.0-rc3-nohp/README.md) · [生成脚本](tools/optimized_rebuild/variants/nohp/README.md) |
 | 冻结日版 v39-rc8 | 干净无外部头日版，56C05339 | BD76DCA1 | [IPS应用说明](docs/patching.md) · [发布清单](docs/release-v39-rc8.json) |
+
+普通rc3已合入玩家270处修订（264处文本＋6个共享姓名）；[记录与验收](notes/优化版重汉化_v2.0-rc3_玩家修订_20261015.md)。第三方修订后的完整台词没有回导到这一套源码；最新维护写入器在冻结第三方底稿上修改UI，保留其台词。独立不掉血补丁仅用于表中的普通rc3，不用于最新UI维护件。
 
 ## 离线原文／译文校对
 
-[下载校对工作台HTML](tools/text_workbench/share/汉化校对工作台.html)（打开该文件后点GitHub的 **Download raw file / 下载原始文件**），保存后双击即可离线使用，无需安装或运行服务器。[使用说明](tools/text_workbench/share/先读我.md)。
+[下载校对工作台HTML](tools/text_workbench/share-rc3/汉化校对工作台.html)（打开该文件后点GitHub的 **Download raw file / 下载原始文件**），保存后双击即可离线使用，无需安装或运行服务器。[使用说明](tools/text_workbench/share-rc3/先读我.md)。
 
 工作台含 **1088条文本＋453个共享人物名词条**：原文与当前译文并排、输入修订、搜索分类、备注、已校对／待确认、JSON修订稿导入导出、CSV对照表。修改自动暂存于浏览器；**发回修改必须导出JSON，原HTML不会自动带上修订**。修订不会直接改ROM，合入后仍需重建字库和验证显示。[源码与维护方法](tools/text_workbench/README.md)。
 
@@ -32,6 +38,8 @@
 [HUD修复与验收](notes/优化版重汉化_v2.0-rc2_HUD修复_20261013.md) · [范围收尾](notes/优化版重新汉化_v2.0-rc1_原有范围收尾_20261013.md) · [不掉血验证](notes/优化版_rc2_不掉血hack_20261013.md)。
 
 按用户要求仅覆盖此前汉化内容，**存读档、命名键盘、标题和额外图形不扩展**。未实体机复测、未自然全故事通关、未穷举双人七演员组合或旧正常存档兼容。受控场景、CPU模型和自然按键证据分别记录。
+
+项目已转后期维护。历史实验副本和大量原始测试转储已清理，源码、构建合同和验收摘要保留；重测需自行准备同ROM检查点。[维护范围和本次发布验证](notes/发布记录_GitHub_20261023.md)。
 
 ## 工程入口
 

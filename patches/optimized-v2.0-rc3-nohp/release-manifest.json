@@ -1,0 +1,21 @@
+{
+  "version": "v2.0-rc3-nohp",
+  "date": "2026-10-15",
+  "source": {
+    "size": 4194304,
+    "crc32": "403570B0",
+    "sha256": "18485c43302e52159e5a710b203e62d427e73ac516a09338e2b47f5b0c3b81fb"
+  },
+  "target": {
+    "size": 4194304,
+    "crc32": "4AB9BCEA",
+    "sha256": "d27a2b98ca9f8a4f0a8e7cca0f775721023e1e8aee7e61105de2858b42740613"
+  },
+  "patch": {
+    "size": 148,
+    "crc32": "2144DF1C",
+    "sha256": "2bcc6b1fcaa2717679b7b9c0c913f4d72dd57a0dfbf0ba7ecbf64ebcce0240f0",
+    "filename": "optimized-v2.0-rc3-nohp.bps"
+  },
+  "status": "tested_user_text_revision; repository_sync_2026-10-23"
+}

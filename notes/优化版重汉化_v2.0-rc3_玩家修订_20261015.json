@@ -1,0 +1,3003 @@
+{
+  "status": "pass",
+  "date": "2026-10-15",
+  "baseline_fingerprint": "f9aa2f0623c70aeb85911e55b28398c3d787d03af7ed2143218bca5f2f6f71a7",
+  "new_fingerprint": "fe03f60f9c54ba731605a4b34b0e6ce17249e0366977f39fc4f268e0ba32f819",
+  "target_sha256": "18485c43302e52159e5a710b203e62d427e73ac516a09338e2b47f5b0c3b81fb",
+  "target_crc32": "403570B0",
+  "verified_catalog_entries": 1541,
+  "exact_revisions_applied": 270,
+  "other_entries_unchanged": 1271,
+  "csv_json_agree": true,
+  "changes": [
+    {
+      "key": "table:0193B5:0009",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 9,
+        "message": "0x00A"
+      },
+      "before": "{E2}:这个不能用!{F2F3}",
+      "after": "{E2}:这个无法使用!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0020",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 20,
+        "message": "0x015"
+      },
+      "before": "{F0}{E2}:那种{EE}的家伙我来收拾!{F2F3}",
+      "after": "{F0}{E2}:那个{EE}的家伙我来收拾!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0034",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 34,
+        "message": "0x023"
+      },
+      "before": "{E2}:你知道在跟谁说话吗!{F2F3}",
+      "after": "{E2}:你知道你在跟谁说话吗!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0055",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 55,
+        "message": "0x038"
+      },
+      "before": "{F0}{E2}:为什么打不赢啊———{F2F3}",
+      "after": "{F0}{E2}:为什么赢不了啊———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0057",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 57,
+        "message": "0x03A"
+      },
+      "before": "{E2}:等{E3}来再打{F2F3}",
+      "after": "{E2}:只能等{E3}过来了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0059",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 59,
+        "message": "0x03C"
+      },
+      "before": "{E2}:你是谁啊!?{F2F3}",
+      "after": "{E2}:你是什么人!?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0064",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 64,
+        "message": "0x041"
+      },
+      "before": "{F0}{E2}:4楼有我们的同伴———{F2F4}{F3}",
+      "after": "{F0}{E2}:4楼还有我们的同伴呢———{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0065",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 65,
+        "message": "0x042"
+      },
+      "before": "{E2}:不过浩这家伙真容易被人盯上啊{F2F3}",
+      "after": "{E2}:不过浩史这家伙真容易被人找茬啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0066",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 66,
+        "message": "0x043"
+      },
+      "before": "{E2}:是不是看着就好欺负?{F2F3}",
+      "after": "{E2}:果然是因为看起来很弱吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0067",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 67,
+        "message": "0x044"
+      },
+      "before": "{E2}:总之明天起的自由活动时间{F2F6}你小心点!{F2F3}",
+      "after": "{E2}:总之从明天开始的自由时间里{F2F6}还是小心点比较好!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0076",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 76,
+        "message": "0x04D"
+      },
+      "before": "{F0}{E2}:浩那家伙明天要约会吗?{F2F3}",
+      "after": "{F0}{E2}:浩史那家伙明天要约会吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0077",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 77,
+        "message": "0x04E"
+      },
+      "before": "{E2}:那跟{E3}去可就错了{F2F3}",
+      "after": "{E2}:那样的话带上{E3}去可就大错特错了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0078",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 78,
+        "message": "0x04F"
+      },
+      "before": "{E2}:对对{E3}可是个色鬼{F2F3}",
+      "after": "{E2}:就是就是{E3}可是个色鬼{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0080",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 80,
+        "message": "0x051"
+      },
+      "before": "{E2}:没{F7}没什么———{F2F3}",
+      "after": "{E2}:没{F7}没什么啦———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0082",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 82,
+        "message": "0x053"
+      },
+      "before": "{E2}:不过———{F7}别妨碍约会啊!{F2F3}",
+      "after": "{E2}:不过———{F7}不要妨碍人家的约会哦!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0083",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 83,
+        "message": "0x054"
+      },
+      "before": "{F0}{E2}:有种不祥的预感{F7}{F2F6}明天小心点{F2F3}",
+      "after": "{F0}{E2}:我有种不祥的预感{F7}{F2F6}明天小心点{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0084",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 84,
+        "message": "0x055"
+      },
+      "before": "{F0}{E2}:那么———{F7}睡吧{F2F3}",
+      "after": "{F0}{E2}:那么———{F7}睡觉吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0088",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 88,
+        "message": "0x059"
+      },
+      "before": "{E2}:真是个厉害家伙———{F2F3}",
+      "after": "{E2}:你这家伙也真是的———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0092",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 92,
+        "message": "0x05D"
+      },
+      "before": "{F0}{E2}:浩太慢了———{F2F3}",
+      "after": "{F0}{E2}:浩史真慢啊———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0093",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 93,
+        "message": "0x05E"
+      },
+      "before": "{E2}:哦{F7}{ED}是昨天的———{F2F3}",
+      "after": "{E2}:啊{F7}{ED}是昨天的———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0095",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 95,
+        "message": "0x060"
+      },
+      "before": "{F0}{E2}:总之，{ED}先退后{F2F3}",
+      "after": "{F0}{E2}:总之，{ED}你先退下吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0104",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 104,
+        "message": "0x069"
+      },
+      "before": "{F6}你怎么知道是{E3}?{F7}{F2F3}",
+      "after": "{F6}你是怎么认识{E3}的呢?{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0105",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 105,
+        "message": "0x06A"
+      },
+      "before": "{F0}{E2}:咦?{F7}这位就是浩说的{F2F6}{E3}君吗?{F2F3}",
+      "after": "{F0}{E2}:咦?{F7}这位就是浩史君说的{F2F6}{E3}君吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0107",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 107,
+        "message": "0x06C"
+      },
+      "before": "{F0}{E2}:浩这是怎么回事?{F2F3}",
+      "after": "{F0}{E2}:浩史这是怎么回事?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0110",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 110,
+        "message": "0x06F"
+      },
+      "before": "{F0}{E2}:让我说明原因{F7}{F2F6}现在大阪所有的学校{F2F6}都被大阪联合控制着{F2F3}",
+      "after": "{F0}{E2}:让我来说明原因{F7}{F2F6}现在大阪所有的学校{F2F6}都被大阪联合控制着{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0114",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 114,
+        "message": "0x073"
+      },
+      "before": "{F0}{E2}:说是同盟可现在还没有{F2F6}能与联合对抗的力量{F2F4}{F6}听浩说过{F2F6}{E3}君的事{F2F4}{F3}",
+      "after": "{F0}{E2}:说是同盟但现在还没有{F2F6}能与联合对抗的力量{F2F4}{F6}听浩史君说过{F2F6}{E3}君的事{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0115",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 115,
+        "message": "0x074"
+      },
+      "before": "{F0}{E2}:听说你打架从没输过———!{F2F3}",
+      "after": "{F0}{E2}:打架从来都没输过——对吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0116",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 116,
+        "message": "0x075"
+      },
+      "before": "{F0}{E2}:{E3}君，拜托了!{F7}{F2F6}请助我们一臂之力!{F5}{F2F3}",
+      "after": "{F0}{E2}:{E3}君，拜托了!{F7}{F2F6}请把你的力量借给我们吧!{F5}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0117",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 117,
+        "message": "0x076"
+      },
+      "before": "{F0}{E2}:说了些无聊的话抱歉{F2F3}",
+      "after": "{F0}{E2}:抱歉说了些无聊的话{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0119",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 119,
+        "message": "0x078"
+      },
+      "before": "{E2}:不过出什么事了吗?{F2F3}",
+      "after": "{E2}:是呀怎么了吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0121",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 121,
+        "message": "0x07A"
+      },
+      "before": "{F0}{E2}:我想，大概是{F7}认错了{F2F6}把你当成樱宫的学生{F2F4}{F6}因为热血高中的校服{F2F6}和樱宫的很像{F2F4}{F3}",
+      "after": "{F0}{E2}:我想，大概是{F7}认错了{F2F6}把你当成樱宫的学生{F2F4}{F6}因为热血高校的校服{F2F6}和樱宫的很像{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0122",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 122,
+        "message": "0x07B"
+      },
+      "before": "{F0}{E2}:说起来刚才那些家伙{F7}{F2F6}说了要去袭击樱宫!{F2F3}",
+      "after": "{F0}{E2}:说起来刚才那些家伙{F7}{F2F6}说要去袭击樱宫呢!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0123",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 123,
+        "message": "0x07C"
+      },
+      "before": "{F0}{E2}:我得赶紧回去{F2F4}{F6}别被联合的攻击卷进去{F2F6}大家快回酒店!{F2F4}{F3}",
+      "after": "{F0}{E2}:我得赶紧回去了{F2F4}{F6}为了避免卷入到联合的袭击里{F2F6}大家请先回酒店吧!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0124",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 124,
+        "message": "0x07D"
+      },
+      "before": "大阪啊{F7}大阪啊{F2F3}",
+      "after": "大阪{F7}大阪{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0125",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 125,
+        "message": "0x07E"
+      },
+      "before": "{F0}{E2}:良弘带路去梅田{F2F6}国夫你呢?{F2F3}",
+      "after": "{F0}{E2}:义弘要带我们去梅田逛逛{F2F6}国夫你呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0126",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 126,
+        "message": "0x07F"
+      },
+      "before": "{F0}{E2}:我累了回酒店了{F2F3}",
+      "after": "{F0}{E2}:我有点累了，先去酒店了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0127",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 127,
+        "message": "0x080"
+      },
+      "before": "{F0}{E2}:是嘛{F7}—{F7}—{F7}—再见!{F2F3}",
+      "after": "{F0}{E2}:是嘛{F7}—{F7}—{F7}—那再见啦!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0132",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 132,
+        "message": "0x085"
+      },
+      "before": "{F0}{E2}:反正酒店也一样{F2F6}一起去吧!{F2F3}",
+      "after": "{F0}{E2}:反正要住的酒店也一样{F2F6}一起走吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0133",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 133,
+        "message": "0x086"
+      },
+      "before": "{E2}:啊啊———{F7}{F2F3}",
+      "after": "{E2}:嗯———{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0134",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 134,
+        "message": "0x087"
+      },
+      "before": "{F0}{E2}:樱宫的家伙吧!给我认命!{F2F3}",
+      "after": "{F0}{E2}:樱宫的家伙!给我觉悟吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0136",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 136,
+        "message": "0x089"
+      },
+      "before": "{E2}:大阪还真搞不懂啊。{F2F3}",
+      "after": "{E2}:大阪这地方真是搞不懂啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0139",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 139,
+        "message": "0x08C"
+      },
+      "before": "{F0}{E2}:良弘他们应该跟在后面{F2F4}{F3}",
+      "after": "{F0}{E2}:义弘他们应该跟在后面{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0140",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 140,
+        "message": "0x08D"
+      },
+      "before": "{F0}{E2}:浩在{EC}{F2F6}被不良少年袭击了!{F4}{F2F3}",
+      "after": "{F0}{E2}:浩史在{EC}{F2F6}被不良少年袭击了!{F4}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0147",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 147,
+        "message": "0x094"
+      },
+      "before": "{E2}:吃了这次亏就老实点!{F2F3}",
+      "after": "{E2}:吃了这次亏给我就老实点!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0151",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 151,
+        "message": "0x098"
+      },
+      "before": "{F0}{E2}:听说浩住院就行了{F2F3}",
+      "after": "{F0}{E2}:浩史应该只需要住院休养就好了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0154",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 154,
+        "message": "0x09B"
+      },
+      "before": "{E2}:那家伙———{F7}浩被打的时候{F2F6}没能去救，一直在自责{F2F4}{F3}",
+      "after": "{E2}:那家伙———{F7}浩史被打的时候他没能去救{F2F6}正伤心着呢{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0157",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 157,
+        "message": "0x09E"
+      },
+      "before": "{F0}{E2}:我是浩的朋友，我叫美穗{F7}{F2F6}{E3}君在吗?{F2F4}{F3}",
+      "after": "{F0}{E2}:我是浩史的朋友，我叫美穗{F7}{F2F6}{E3}君在吗?{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0158",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 158,
+        "message": "0x09F"
+      },
+      "before": "{F0}{E2}:是浩说过的那个女孩吗?{F2F3}",
+      "after": "{F0}{E2}:是浩史说过的那个女孩吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0159",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 159,
+        "message": "0x0A0"
+      },
+      "before": "{F0}{E2}:我听说了浩被袭击的事{F2F3}",
+      "after": "{F0}{E2}:我听说了浩史被袭击的事{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0160",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 160,
+        "message": "0x0A1"
+      },
+      "before": "{F0}{E2}:袭击浩的是{F2F6}一个叫大阪联合的组织{F2F4}{F3}",
+      "after": "{F0}{E2}:袭击浩史的是{F2F6}一个叫大阪联合的组织{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0162",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 162,
+        "message": "0x0A3"
+      },
+      "before": "{F0}{E2}:浩是被联合打的吧{F2F3}",
+      "after": "{F0}{E2}:浩史是被联合打的吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0163",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 163,
+        "message": "0x0A4"
+      },
+      "before": "{F0}{E2}:为什么连无关的浩都!?{F2F3}",
+      "after": "{F0}{E2}:为什么会扯上毫无关系的浩史!?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0164",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 164,
+        "message": "0x0A5"
+      },
+      "before": "{F0}{E2}:因为浩站在了同盟这边{F2F3}",
+      "after": "{F0}{E2}:因为浩史站在了同盟这边{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0165",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 165,
+        "message": "0x0A6"
+      },
+      "before": "{F0}{E2}:那{E3}也?{F2F3}",
+      "after": "{F0}{E2}:那{E3}也是?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0167",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 167,
+        "message": "0x0A8"
+      },
+      "before": "{F0}{E2}:但不能把大家卷进来———{F2F3}",
+      "after": "{F0}{E2}:但不能把大家卷进来啊———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0169",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 169,
+        "message": "0x0AA"
+      },
+      "before": "{E2}:我们的话没问题{EA}!{F2F3}",
+      "after": "{E2}:我们没问题的{EA}!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0170",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 170,
+        "message": "0x0AB"
+      },
+      "before": "{E2}:替浩报仇!{F2F3}",
+      "after": "{E2}:要替浩史报仇!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0171",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 171,
+        "message": "0x0AC"
+      },
+      "before": "{F0}{E2}:说得是啊———{F7}{F2F6}逃跑可不像我们{F2F3}",
+      "after": "{F0}{E2}:说得是啊———{F7}{F2F6}逃跑可不像我们啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0172",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 172,
+        "message": "0x0AD"
+      },
+      "before": "{F0}{E2}:虽说一直都这样{F2F6}跟国夫在一起就绝不会无聊———{F7}{F2F6}我也要大干一场!{F2F3}",
+      "after": "{F0}{E2}:虽说一直都这样{F2F6}但跟国夫在一起就绝不会无聊———{F7}{F2F6}我也来帮忙吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0174",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 174,
+        "message": "0x0AF"
+      },
+      "before": "{E2}:又不是你要打的架{F2F3}",
+      "after": "{E2}:又不是要你去打架{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0177",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 177,
+        "message": "0x0B2"
+      },
+      "before": "{F0}{E2}:我要回樱宫{F2F6}把剩下的同伴召集起来{F2F3}",
+      "after": "{F0}{E2}:我得回樱宫{F2F6}把剩下的同伴召集起来{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0178",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 178,
+        "message": "0x0B3"
+      },
+      "before": "{F0}{E2}:那就由{ED}去打倒{F2F6}联合的梅田部队就行了吧?{F2F4}{F3}",
+      "after": "{F0}{E2}:那只要{ED}去打倒{F2F6}联合的梅田部队就行了吧?{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0179",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 179,
+        "message": "0x0B4"
+      },
+      "before": "{F0}{E2}:是{F2F3}",
+      "after": "{F0}{E2}:嗯{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0182",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 182,
+        "message": "0x0B7"
+      },
+      "before": "{F6}请用这个{F2F4}{F3}",
+      "after": "{F6}请收下这个{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0183",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 183,
+        "message": "0x0B8"
+      },
+      "before": "{F0}{E2}:请小心———{F7}{F2F3}",
+      "after": "{F0}{E2}:请多加小心———{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0184",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 184,
+        "message": "0x0B9"
+      },
+      "before": "{F0}{E2}:我送你去车站{F2F3}",
+      "after": "{F0}{E2}:我送你去车站吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0185",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 185,
+        "message": "0x0BA"
+      },
+      "before": "{F0}{E2}:我在自己房间{F2F6}有事就来找我{F2F3}",
+      "after": "{F0}{E2}:我就在自己房间{F2F6}有什么事就来找我{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0188",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 188,
+        "message": "0x0BD"
+      },
+      "before": "{F0}{E2}:中崎只叫我们去站台集合{F2F6}别的什么都不知道———{F2F4}{F3}",
+      "after": "{F0}{E2}:中崎只叫我们去站台集合{F2F6}别的就什么都不知道了——{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0189",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 189,
+        "message": "0x0BE"
+      },
+      "before": "{F0}{E2}:你们快走吧!{F2F3}",
+      "after": "{F0}{E2}:你们给我上!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0191",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 191,
+        "message": "0x0C0"
+      },
+      "before": "{F0}{E2}:再怎么厉害，也打不过20人吧{F2F3}",
+      "after": "{F0}{E2}:再怎么厉害也打不过20人吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0192",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 192,
+        "message": "0x0C1"
+      },
+      "before": "{F0}{E2}:是啊———{F7}那就差不多该走了{F2F3}",
+      "after": "{F0}{E2}:是啊———{F7}那就差不多该出来了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0193",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 193,
+        "message": "0x0C2"
+      },
+      "before": "{E2}:还活着吗!?{F2F3}",
+      "after": "{E2}:居然还活着吗!?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0194",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 194,
+        "message": "0x0C3"
+      },
+      "before": "{E2}:还想被塞进袋子吗!{F2F3}",
+      "after": "{E2}:还想吃点苦头吗!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0195",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 195,
+        "message": "0x0C4"
+      },
+      "before": "{F0}{E2}:我们不过是杂鱼{F7}—{F7}—{F7}—{F2F6}联合里还有更强的人{F2F4}{F3}",
+      "after": "{F0}{E2}:我们不过是杂鱼{F7}—{F7}—{F7}—{F2F6}联合里还有更强的人呢{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0198",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 198,
+        "message": "0x0C7"
+      },
+      "before": "{F6}地点在心斋桥的桥上{F2F6}中午请到桥上来{F2F4}{F3}",
+      "after": "{F6}地点在心斋桥的桥上{F2F6}中午的时候请到桥上来{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0199",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 199,
+        "message": "0x0C8"
+      },
+      "before": "{F0}{E2}:我听到你和美穗的谈话{F7}{F2F6}我也想替浩报仇!{F2F4}{F6}大家在哪集合?{F2F3}",
+      "after": "{F0}{E2}:我听到你和美穗的谈话{F7}{F2F6}我也想替浩史报仇!{F2F4}{F6}大家是在哪集合呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0200",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 200,
+        "message": "0x0C9"
+      },
+      "before": "{F0}{E2}:告诉我{E3}!{F2F3}",
+      "after": "{F0}{E2}:告诉我吧{E3}!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0202",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 202,
+        "message": "0x0CB"
+      },
+      "before": "{F0}{E2}:听说这附近聚集了可疑的家伙{F2F3}",
+      "after": "{F0}{E2}:我听说这附近聚集了可疑的家伙{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0203",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 203,
+        "message": "0x0CC"
+      },
+      "before": "{F6}可我听说的是{ED}，不是吗?{F5}{F2F3}",
+      "after": "{F6}不会是你们吧？{ED}{F5}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0205",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 205,
+        "message": "0x0CE"
+      },
+      "before": "{F0}{E2}:我是野田高中的近江{F2F3}",
+      "after": "{F0}{E2}:我是野田高校的近江{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0207",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 207,
+        "message": "0x0D0"
+      },
+      "before": "{F0}{E2}:我是惠美须高中的{E3}{F2F3}",
+      "after": "{F0}{E2}:我是惠美须高校的{E3}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0209",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 209,
+        "message": "0x0D2"
+      },
+      "before": "{F0}{E2}:现在还打不过联合{F7}{F2F6}但讨厌联合做法的人{F2F6}应该还有很多!{F2F3}",
+      "after": "{F0}{E2}:现在还赢不了联合{F7}{F2F6}但讨厌联合做法的人{F2F6}应该还有很多!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0210",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 210,
+        "message": "0x0D3"
+      },
+      "before": "{F0}{E2}:联合确实可怕{F2F6}但总比不敢说不愿意要好{F2F3}",
+      "after": "{F0}{E2}:联合确实很可怕{F2F6}但总比有讨厌的事说不出来要好{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0211",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 211,
+        "message": "0x0D4"
+      },
+      "before": "{F0}{E2}:我们就是想帮助{F2F6}那些被压迫的人!{F2F3}",
+      "after": "{F0}{E2}:我们想要帮助{F2F6}那些被压迫的人!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0212",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 212,
+        "message": "0x0D5"
+      },
+      "before": "{F0}{E2}:总之{ED}君帮了我们{F2F6}真是帮大忙了!{F2F3}",
+      "after": "{F0}{E2}:总之{ED}君能来帮我们{F2F6}真是帮大忙了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0214",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 214,
+        "message": "0x0D7"
+      },
+      "before": "{F0}{E2}:作战?{F2F3}",
+      "after": "{F0}{E2}:作战计划?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0216",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 216,
+        "message": "0x0D9"
+      },
+      "before": "{F0}{E2}:那就来分配任务吧{F2F3}",
+      "after": "{F0}{E2}:那就来分配每个人的任务吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0218",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 218,
+        "message": "0x0DB"
+      },
+      "before": "{F0}{E2}:传闻心斋桥和难波{F2F6}是通过下水道连通的{F2F4}{F3}",
+      "after": "{F0}{E2}:传闻心斋桥和难波{F2F6}是跟下水道连通的{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0219",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 219,
+        "message": "0x0DC"
+      },
+      "before": "{E2}:必须找到入口啊{F2F3}",
+      "after": "{E2}:必须得找到入口才行啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0221",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 221,
+        "message": "0x0DE"
+      },
+      "before": "{F0}{E2}:那我和沙织去吧{F2F3}",
+      "after": "{F0}{E2}:那我和沙织一起去吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0223",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 223,
+        "message": "0x0E0"
+      },
+      "before": "{F6}夹击比较好{F2F4}{F3}",
+      "after": "{F6}形成夹击比较好{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0224",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 224,
+        "message": "0x0E1"
+      },
+      "before": "{F0}{E2}:难波的话我去!{F2F3}",
+      "after": "{F0}{E2}:难波的话就让我去吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0226",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 226,
+        "message": "0x0E3"
+      },
+      "before": "{E2}:那难波我也一起去{F2F3}",
+      "after": "{E2}:那我也跟你一起去难波吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0227",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 227,
+        "message": "0x0E4"
+      },
+      "before": "{F0}{E2}:{F7}知道了———{F2F3}",
+      "after": "{F0}{E2}:{F7}我知道了———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0228",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 228,
+        "message": "0x0E5"
+      },
+      "before": "{F0}{E2}:那{F7}{ED}君和美穗{F2F6}去一趟梅田的集会所吧{F2F3}",
+      "after": "{F0}{E2}:那{F7}{ED}君和美穗{F2F6}去梅田的集会所吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0230",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 230,
+        "message": "0x0E7"
+      },
+      "before": "{F0}{E2}:进去需要钥匙{F7}{F2F3}",
+      "after": "{F0}{E2}:想进去的话需要钥匙{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0233",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 233,
+        "message": "0x0EA"
+      },
+      "before": "{F0}{E2}:{E3}收下吧!{F2F4}{F3}",
+      "after": "{F0}{E2}:{E3}请收下吧!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0234",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 234,
+        "message": "0x0EB"
+      },
+      "before": "{F0}{E2}:不过{F7}梅田的头目叫北斗{F2F6}是联合四天王之一{F2F6}别大意了!{F2F4}{F3}",
+      "after": "{F0}{E2}:不过{F7}梅田的老大叫北斗{F2F6}是联合四天王之一{F2F6}别大意了!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0235",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 235,
+        "message": "0x0EC"
+      },
+      "before": "{F0}{E2}:作战结束后在这里集合吧{F2F3}",
+      "after": "{F0}{E2}:作战结束后就回到这里集合吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0236",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 236,
+        "message": "0x0ED"
+      },
+      "before": "{E2}:好啊———{F2F3}",
+      "after": "{E2}:是啊———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0238",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 238,
+        "message": "0x0EF"
+      },
+      "before": "{F0}{E2}:美穗同学就在酒店等着{F2F3}",
+      "after": "{F0}{E2}:美穗同学就在酒店等着吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0239",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 239,
+        "message": "0x0F0"
+      },
+      "before": "{F0}{E2}:为什么?{F2F3}",
+      "after": "{F0}{E2}:为什么呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0241",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 241,
+        "message": "0x0F2"
+      },
+      "before": "{F0}{E2}:{F7}—{F7}—{F7}—知道了{F2F3}",
+      "after": "{F0}{E2}:{F7}—{F7}—{F7}—我知道了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0242",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 242,
+        "message": "0x0F3"
+      },
+      "before": "{F0}{E2}:这是?{F2F3}",
+      "after": "{F0}{E2}:这是什么?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0243",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 243,
+        "message": "0x0F4"
+      },
+      "before": "{F0}{E2}:那是———我哥哥的东西{F2F3}",
+      "after": "{F0}{E2}:这是———我哥哥的东西{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0244",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 244,
+        "message": "0x0F5"
+      },
+      "before": "{F0}{E2}:联合四天王之一———{F2F6}持国天·正树就是我哥哥{F2F4}{F3}",
+      "after": "{F0}{E2}:联合四天王之一——{F2F6}持国天·正树是我的哥哥{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0245",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 245,
+        "message": "0x0F6"
+      },
+      "before": "{F0}{E2}:为了消除学生争斗{F2F6}建立理想乡{F7}{F2F6}初代总长创立了{F2F6}大阪联合{F2F4}{F6}哥哥仰慕总长{F2F6}加入了联合———{F2F4}{F3}",
+      "after": "{F0}{E2}:为了消除学生争斗{F2F6}而建立的理想乡{F7}{F2F6}初代总长创立了{F2F6}大阪联合{F2F4}{F6}哥哥仰慕着那样的总长{F2F6}而加入了联合———{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0246",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 246,
+        "message": "0x0F7"
+      },
+      "before": "{F0}{E2}:那为什么会变成那样?{F7}{F2F3}",
+      "after": "{F0}{E2}:那为什么会变成这样?{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0250",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 250,
+        "message": "0x0FB"
+      },
+      "before": "{F0}{E2}:明知是错的，怎么能纵容呢{F2F4}{F3}",
+      "after": "{F0}{E2}:如果不承认这样的错误，那是不行的{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0254",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 254,
+        "message": "0x0FF"
+      },
+      "before": "{F0}{E2}:你知道这是联合的集会所{F2F6}还闯进来吗!{F2F3}",
+      "after": "{F0}{E2}:这里可是联合的集会所{F2F6}你明知道还敢闯进来吗!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0255",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 255,
+        "message": "0x100"
+      },
+      "before": "{F0}{E2}:真吵啊———{F7}怎么了?{F2F3}",
+      "after": "{F0}{E2}:真吵啊———{F7}怎么回事?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0256",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 256,
+        "message": "0x101"
+      },
+      "before": "{F0}{E2}:搞什么{ED}———{F2F6}上次的教训还没吃够吗?{F2F4}{F3}",
+      "after": "{F0}{E2}:怎么会是你们{ED}———{F2F6}上次的教训还没受够吗?{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0260",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 260,
+        "message": "0x105"
+      },
+      "before": "{F0}{E2}:喂———{F7}你不是联合的人吧?{F2F3}",
+      "after": "{F0}{E2}:你———{F7}你不是联合的人吧?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0262",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 262,
+        "message": "0x107"
+      },
+      "before": "{F0}{E2}:烦死了!是真的!{F2F3}",
+      "after": "{F0}{E2}:烦死了!是真的啦!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0264",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 264,
+        "message": "0x109"
+      },
+      "before": "{F0}{E2}:受同盟的井泽所托{F2F6}在调查难波的下水道时{F7}{F2F6}被联合抓住了{F2F4}{F3}",
+      "after": "{F0}{E2}:我受同盟的井泽所托{F2F6}在调查难波的下水道时{F7}{F2F6}被联合抓住了{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0265",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 265,
+        "message": "0x10A"
+      },
+      "before": "{F0}{E2}:你是同盟的人吗?{F2F3}",
+      "after": "{F0}{E2}:那你是同盟的人吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0266",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 266,
+        "message": "0x10B"
+      },
+      "before": "{F0}{E2}:是啊{F7}我得去向大家报告!{F2F3}",
+      "after": "{F0}{E2}:是啊{F7}我得去向大家报告才行!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0267",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 267,
+        "message": "0x10C"
+      },
+      "before": "{F0}{E2}:真是多亏了{ED}，谢谢!{F2F3}",
+      "after": "{F0}{E2}:真是多亏你了{ED}，谢谢!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0270",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 270,
+        "message": "0x10F"
+      },
+      "before": "{F0}{E2}:咦其他人呢?{F2F3}",
+      "after": "{F0}{E2}:咦，其他人呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0282",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 282,
+        "message": "0x11B"
+      },
+      "before": "{F0}{E2}:那良弘君和井泽君呢?{F2F3}",
+      "after": "{F0}{E2}:那义弘君和井泽君呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0285",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 285,
+        "message": "0x11E"
+      },
+      "before": "{F0}{E2}:可是难波站{F2F6}挤满了敌人{F2F3}",
+      "after": "{F0}{E2}:可是难波那边{F2F6}到处都是敌人{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0287",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 287,
+        "message": "0x120"
+      },
+      "before": "{F0}{E2}:下水道途中的门锁着{F2F6}过不去{F2F4}{F3}",
+      "after": "{F0}{E2}:下水道途中的门被锁着{F2F6}过不去的{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0288",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 288,
+        "message": "0x121"
+      },
+      "before": "{F0}{E2}:那钥匙我有{F7}{F2F3}",
+      "after": "{F0}{E2}:那把钥匙我有哦{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0291",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 291,
+        "message": "0x124"
+      },
+      "before": "{F0}{E2}:但是{F7}联合也不傻{F2F6}不会那么容易吧?{F2F3}",
+      "after": "{F0}{E2}:但是{F7}联合也不是傻瓜{F2F6}不会那么容易吧?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0292",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 292,
+        "message": "0x125"
+      },
+      "before": "{F0}{E2}:需要做些准备啊{F2F3}",
+      "after": "{F0}{E2}:需要做些准备才行{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0294",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 294,
+        "message": "0x127"
+      },
+      "before": "{F0}{E2}:那今天就解散{F2F3}",
+      "after": "{F0}{E2}:那今天就先解散吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0295",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 295,
+        "message": "0x128"
+      },
+      "before": "{F6}那个告密是真的啊!{F2F3}",
+      "after": "{F6}看来那个告密是真的啊!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0296",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 296,
+        "message": "0x129"
+      },
+      "before": "{F0}{E2}:就算说不是我们{F2F6}他们也不会信吧!{F2F3}",
+      "after": "{F0}{E2}:就算说不是我们{F2F6}你们也不会信吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0297",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 297,
+        "message": "0x12A"
+      },
+      "before": "{F0}{E2}:这里交给我们{F2F3}",
+      "after": "{F0}{E2}:这里就交给我们{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0299",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 299,
+        "message": "0x12C"
+      },
+      "before": "{F0}{E2}:可———{F7}但是{F2F3}",
+      "after": "{F0}{E2}:可———{F7}可是{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0302",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 302,
+        "message": "0x12F"
+      },
+      "before": "{F0}{E2}:{ED}也快去吧!{F2F3}",
+      "after": "{F0}{E2}:{ED}也快走吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0303",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 303,
+        "message": "0x130"
+      },
+      "before": "{F0}{E2}:良弘他们就交给你了!{F2F3}",
+      "after": "{F0}{E2}:义弘他们就交给你了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0305",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 305,
+        "message": "0x132"
+      },
+      "before": "{F0}{E2}:咦?{F7}{F2F6}美穗同学帮个忙{F2F3}",
+      "after": "{F0}{E2}:咦?{F7}{F2F6}美穗同学来帮下忙嘛{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0311",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 311,
+        "message": "0x138"
+      },
+      "before": "{F0}{E2}:跟随强者———{F7}{F2F6}就这么简单{F2F3}",
+      "after": "{F0}{E2}:我只跟随强者———{F7}{F2F6}就这么简单{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0312",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 312,
+        "message": "0x139"
+      },
+      "before": "{F0}{E2}:那么———{F7}尽力挣扎吧{F2F3}",
+      "after": "{F0}{E2}:那么———{F7}你们加油咯{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0313",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 313,
+        "message": "0x13A"
+      },
+      "before": "{F0}{E2}:想把女人{F7}夺回去的话{F7}{F2F6}只能来难波了———{F2F3}",
+      "after": "{F0}{E2}:想把女人{F7}夺回来的话{F7}{F2F6}只能去难波了———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0315",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 315,
+        "message": "0x13C"
+      },
+      "before": "{F0}{E2}:这样东京来的家伙也完了{F2F3}",
+      "after": "{F0}{E2}:这样一来东京的家伙也都完了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0316",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 316,
+        "message": "0x13D"
+      },
+      "before": "{E2}:唔!{F7}{E3}同学!{F2F3}",
+      "after": "{E2}:唔!{F7}{E3}老大!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0318",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 318,
+        "message": "0x13F"
+      },
+      "before": "{F0}{E2}:不过可惜了{F2F6}美穗已经不在这了!{F2F4}{F3}",
+      "after": "{F0}{E2}:不过真可惜{F2F6}美穗已经不在这了!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0320",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 320,
+        "message": "0x141"
+      },
+      "before": "{F0}{E2}:我负责管理难波{F2F6}我叫和田{F2F4}{F3}",
+      "after": "{F0}{E2}:我是负责支配难波地区的人{F2F6}我叫和田{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0321",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 321,
+        "message": "0x142"
+      },
+      "before": "{F0}{E2}:挺有两下子!{F2F3}",
+      "after": "{F0}{E2}:挺有两下子嘛!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0322",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 322,
+        "message": "0x143"
+      },
+      "before": "{F6}不过{F7}对我可不管用{F2F3}",
+      "after": "{F6}不过{F7}这点本事对我还差很远呢{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0323",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 323,
+        "message": "0x144"
+      },
+      "before": "{F0}{E2}:怎么样?{F2F6}我可以放了热血的人{F2F6}要不要把力量借给我?{F2F3}",
+      "after": "{F0}{E2}:怎么样?{F2F6}想保住热血那些家伙的话{F2F6}就把力量借给我吧?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0324",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 324,
+        "message": "0x145"
+      },
+      "before": "{F0}{E2}:怎———{F7}{F2F3}",
+      "after": "{F0}{E2}:同———{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0325",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 325,
+        "message": "0x146"
+      },
+      "before": "{F6}把同盟那帮人关在心斋桥的{F2F6}地下线路里了————{F2F4}{F3}",
+      "after": "{F6}同盟那些家伙被抓到{F2F6}心斋桥的地下线路里了————{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0326",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 326,
+        "message": "0x147"
+      },
+      "before": "{F6}那就马上开始{F2F3}",
+      "after": "{F6}那就马上开始吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0327",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 327,
+        "message": "0x148"
+      },
+      "before": "{F6}请{ED}告诉那些人，{F2F6}别和联合作对。{F2F4}{F3}",
+      "after": "{F6}去{ED}告诉那些人，{F2F6}不要和联合作对。{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0328",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 328,
+        "message": "0x149"
+      },
+      "before": "{F0}{E2}:那{F7}办完事就回来{F2F3}",
+      "after": "{F0}{E2}:那么{F7}办完事就回来啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0332",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 332,
+        "message": "0x14D"
+      },
+      "before": "{F0}{E2}:有人!{F2F3}",
+      "after": "{F0}{E2}:里面有人!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0333",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 333,
+        "message": "0x14E"
+      },
+      "before": "{F0}{E2}:不愧是和田先生{F2F3}",
+      "after": "{F0}{E2}:不愧是和田老大{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0335",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 335,
+        "message": "0x150"
+      },
+      "before": "{E2}:这样同盟也该老实了{F2F3}",
+      "after": "{E2}:这样一来同盟也该老实了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0336",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 336,
+        "message": "0x151"
+      },
+      "before": "{F0}{E2}:谁!{F7}{F2F3}",
+      "after": "{F0}{E2}:是谁!{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0339",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 339,
+        "message": "0x154"
+      },
+      "before": "{E2}:快进去!{F2F3}",
+      "after": "{E2}:快点进去吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0341",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 341,
+        "message": "0x156"
+      },
+      "before": "{F0}{E2}:听说近江他们被抓了{F2F6}我就来了———{F7}可是找不到啊{F2F3}",
+      "after": "{F0}{E2}:我听说近江他们被抓了{F2F6}我就来了———{F7}可是到处找不到啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0346",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 346,
+        "message": "0x15B"
+      },
+      "before": "{F6}那到心斋桥集合{F2F4}{F3}",
+      "after": "{F6}那到心斋桥集合吧{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0353",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 353,
+        "message": "0x162"
+      },
+      "before": "{F0}{E2}:最好别反抗联合{F7}{F2F3}",
+      "after": "{F0}{E2}:你们最好不要反抗联合{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0354",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 354,
+        "message": "0x163"
+      },
+      "before": "{F0}{E2}:{ED}救出了近江他们!?{F2F3}",
+      "after": "{F0}{E2}:{ED}近江他们怎么了!?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0356",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 356,
+        "message": "0x165"
+      },
+      "before": "{F0}{E2}:良弘君应该从难波逃出来了?{F2F3}",
+      "after": "{F0}{E2}:义弘君应该从难波逃出来了?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0359",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 359,
+        "message": "0x168"
+      },
+      "before": "{F0}{E2}:浦部是联合的间谍{F2F6}等发现的时候已经———{F2F3}",
+      "after": "{F0}{E2}:浦部是联合的间谍{F2F6}等我发现的时候已经——{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0368",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 368,
+        "message": "0x171"
+      },
+      "before": "{F0}{E2}:不过{F7}不先把同盟重建起来{F2F6}就算想救也救不了———{F2F3}",
+      "after": "{F0}{E2}:不过{F7}不先把同盟重建起来{F2F6}想帮忙也帮不了———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0370",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 370,
+        "message": "0x173"
+      },
+      "before": "{F0}{E2}:当然等重建完了{F2F6}你可要帮忙啊!{F2F3}",
+      "after": "{F0}{E2}:当然等重建完了{F2F6}还是会请你们帮忙的!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0374",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 374,
+        "message": "0x177"
+      },
+      "before": "{F0}{E2}:只能靠{ED}了，拜托!{F2F3}",
+      "after": "{F0}{E2}:只能靠{ED}了，拜托了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0376",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 376,
+        "message": "0x179"
+      },
+      "before": "{F0}{E2}:我会尽快回来的!{F2F3}",
+      "after": "{F0}{E2}:我们会尽快回来的!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0377",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 377,
+        "message": "0x17A"
+      },
+      "before": "{F0}{E2}:我一直被联合关着{F2F6}好不容易才逃了出来，{ED}{F2F3}",
+      "after": "{F0}{E2}:我一直被联合关着{F2F6}好不容易才逃了出来{ED}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0378",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 378,
+        "message": "0x17B"
+      },
+      "before": "{F0}{E2}:我担心热血的大家{F2F6}我回酒店了{F2F3}",
+      "after": "{F0}{E2}:我很担心热血的大家{F2F6}我先回酒店了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0384",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 384,
+        "message": "0x181"
+      },
+      "before": "{F0}{E2}:有什么事吗?{F2F6}无关的话就快出去!{F2F3}",
+      "after": "{F0}{E2}:有什么事吗?{F2F6}没什么事的话就快点滚!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0385",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 385,
+        "message": "0x182"
+      },
+      "before": "{F0}{E2}:说了快出去!{F2F3}",
+      "after": "{F0}{E2}:不是叫你快点滚了吗!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0387",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 387,
+        "message": "0x184"
+      },
+      "before": "{F0}{E2}:我有话跟你们的头目说{F2F3}",
+      "after": "{F0}{E2}:我有话跟你们的老大说{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0397",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 397,
+        "message": "0x18E"
+      },
+      "before": "{F0}{E2}:头目在哪?{F2F3}",
+      "after": "{F0}{E2}:你们的老大在哪呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0398",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 398,
+        "message": "0x18F"
+      },
+      "before": "{F0}{E2}:正树先生应该在甲子园{F2F6}找到他把这件事告诉他{F2F4}{F3}",
+      "after": "{F0}{E2}:正树老大应该在甲子园{F2F6}找到他把这件事告诉他吧{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0410",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 410,
+        "message": "0x19B"
+      },
+      "before": "{F0}{E2}:现在有些原因{F2F6}所以在协助{ED}{F2F3}",
+      "after": "{F0}{E2}:现在因为一些原因{F2F6}正在协助{ED}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0420",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 420,
+        "message": "0x1A5"
+      },
+      "before": "{F0}{E2}:我没法跟着第二代干{F2F3}",
+      "after": "{F0}{E2}:我追随不了这样的第二代总长{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0421",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 421,
+        "message": "0x1A6"
+      },
+      "before": "{F0}{E2}:那你为什么还在联合?{F2F3}",
+      "after": "{F0}{E2}:那你为什么还留在联合呢?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0422",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 422,
+        "message": "0x1A7"
+      },
+      "before": "{F0}{E2}:我要是反抗第二代{F2F6}我们队的人会被联合盯上{F7}{F2F6}我怕的是这个———{F2F4}{F3}",
+      "after": "{F0}{E2}:我要是反抗第二代总长{F2F6}我们队的部下会被联合盯上{F7}{F2F6}我害怕看到那种下场——{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0423",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 423,
+        "message": "0x1A8"
+      },
+      "before": "{F0}{E2}:明知是错的，我可不想纵容啊{F2F3}",
+      "after": "{F0}{E2}:如果不承认这样的错误，那是不行的{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0427",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 427,
+        "message": "0x1AC"
+      },
+      "before": "{F0}{E2}:美穗的事交给我!{F2F3}",
+      "after": "{F0}{E2}:美穗的事交给我吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0433",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 433,
+        "message": "0x1B2"
+      },
+      "before": "{F0}{E2}:现在酒店那帮家伙{F2F6}也该被良弘收拾了吧{F2F4}{F3}",
+      "after": "{F0}{E2}:现在酒店那帮家伙{F2F6}也该被义弘老大收拾了吧{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0434",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 434,
+        "message": "0x1B3"
+      },
+      "before": "{F0}{E2}:良弘?{F7}为什么!?{F7}{F2F3}",
+      "after": "{F0}{E2}:义弘?{F7}为什么!?{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0435",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 435,
+        "message": "0x1B4"
+      },
+      "before": "{F0}{E2}:对大阪联合二代总长{F2F6}竟敢这么无礼{F2F4}{F3}",
+      "after": "{F0}{E2}:竟然逮住了大阪联合第二代总长{F2F6}真是些无礼的家伙{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0436",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 436,
+        "message": "0x1B5"
+      },
+      "before": "{F0}{E2}:在床上跟兄弟道歉吧!{F2F3}",
+      "after": "{F0}{E2}:就在床上跟朋友道歉吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0437",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 437,
+        "message": "0x1B6"
+      },
+      "before": "{F0}{E2}:———良弘他———{F7}{F7}{F7}{F2F3}",
+      "after": "{F0}{E2}:———义弘他———{F7}{F7}{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0439",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 439,
+        "message": "0x1B8"
+      },
+      "before": "{F0}{E2}:热血高中也没什么了不起的嘛{F2F3}",
+      "after": "{F0}{E2}:热血高校也没什么了不起的嘛{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0440",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 440,
+        "message": "0x1B9"
+      },
+      "before": "{F0}{E2}:连同伴都保护不了的男人{F2F6}还当头目没救了!{F2F3}",
+      "after": "{F0}{E2}:连同伴都保护不了的男人{F2F6}这老大也没什么了不起的!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0442",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 442,
+        "message": "0x1BB"
+      },
+      "before": "{F0}{E2}:可别小看热血高中!{F2F3}",
+      "after": "{F0}{E2}:可别小看热血高校了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0443",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 443,
+        "message": "0x1BC"
+      },
+      "before": "{F0}{E2}:良弘骗了我们!{F2F3}",
+      "after": "{F0}{E2}:义弘骗了我们!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0444",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 444,
+        "message": "0x1BD"
+      },
+      "before": "{F0}{E2}:他说到难波来———!{F7}{F2F4}{F3}",
+      "after": "{F0}{E2}:他说到难波来吧——!{F7}{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0447",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 447,
+        "message": "0x1C0"
+      },
+      "before": "{F0}{E2}:和田先生{F7}正如良弘先生所说{F2F6}{ED}来了!{F2F3}",
+      "after": "{F0}{E2}:和田老大{F7}正如义弘老大所说{F2F6}{ED}果然来了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0452",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 452,
+        "message": "0x1C5"
+      },
+      "before": "{F0}{E2}:以我们的骨气发誓{F2F6}绝不让你们活着离开!{F2F3}",
+      "after": "{F0}{E2}:以我们的尊严发誓{F2F6}绝不让你们活着离开!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0453",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 453,
+        "message": "0x1C6"
+      },
+      "before": "{F0}{E2}:竟———{F7}竟然只是区区{F7}这个{ED}———{EE}{F2F4}{F3}",
+      "after": "{F0}{E2}:竟———{F7}竟然被区区{F7}这个{ED}———{EE}{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0454",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 454,
+        "message": "0x1C7"
+      },
+      "before": "{F0}{E2}:我叫木崎，是正树先生的手下{F2F4}{F3}",
+      "after": "{F0}{E2}:我叫木崎，是正树老大的部下{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0456",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 456,
+        "message": "0x1C9"
+      },
+      "before": "{F0}{E2}:但{F7}正树先生说一个人就行{F2F3}",
+      "after": "{F0}{E2}:但{F7}正树老大说一个人就行{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0457",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 457,
+        "message": "0x1CA"
+      },
+      "before": "{F0}{E2}:拜托了!{F7}{F2F6}请救救正树先生!{F2F4}{F3}",
+      "after": "{F0}{E2}:拜托了!{F7}{F2F6}请帮帮正树老大!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0460",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 460,
+        "message": "0x1CD"
+      },
+      "before": "{F0}{E2}:那么轮到我上场了!{F2F3}",
+      "after": "{F0}{E2}:最后的打架高手登场啦!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0462",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 462,
+        "message": "0x1CF"
+      },
+      "before": "{F0}{E2}:我们守着入口{F2F3}",
+      "after": "{F0}{E2}:我们会守好入口的{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0463",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 463,
+        "message": "0x1D0"
+      },
+      "before": "{F0}{E2}:来———{F7}你们来了————{F2F6}正树先生{F7}在上面———{F7}{F2F4}{F3}",
+      "after": "{F0}{E2}:你———{F7}你们来了————{F2F6}正树老大{F7}在上面———{F7}{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0468",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 468,
+        "message": "0x1D5"
+      },
+      "before": "{F0}{E2}:正树先生拜托了———{F7}{F7}{F7}{F2F3}",
+      "after": "{F0}{E2}:正树老大就拜托你了———{F7}{F7}{F7}{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0469",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 469,
+        "message": "0x1D6"
+      },
+      "before": "{F0}{E2}:你这蠢货让开!{F2F3}",
+      "after": "{F0}{E2}:你这蠢货给我滚开!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0470",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 470,
+        "message": "0x1D7"
+      },
+      "before": "{F0}{E2}:不让开就收拾你!{F2F3}",
+      "after": "{F0}{E2}:不滚开就干倒你!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0471",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 471,
+        "message": "0x1D8"
+      },
+      "before": "{F0}{E2}:这种杂鱼打不倒我!{F2F3}",
+      "after": "{F0}{E2}:这种杂鱼是打不倒我的!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0472",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 472,
+        "message": "0x1D9"
+      },
+      "before": "{F0}{E2}:我有话跟小仓说!{F2F6}快让开!{F2F3}",
+      "after": "{F0}{E2}:我有话跟小仓说!{F2F6}都给我滚开!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0473",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 473,
+        "message": "0x1DA"
+      },
+      "before": "{F0}{E2}:小仓，我这就来!{F2F3}",
+      "after": "{F0}{E2}:小仓，我来找你了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0475",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 475,
+        "message": "0x1DC"
+      },
+      "before": "{F0}{E2}:可为什么还追求武力?{F2F3}",
+      "after": "{F0}{E2}:可为什么追求力量?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0476",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 476,
+        "message": "0x1DD"
+      },
+      "before": "{F0}{E2}:武力就那么了不起吗?{F2F3}",
+      "after": "{F0}{E2}:力量有那么了不起吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0477",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 477,
+        "message": "0x1DE"
+      },
+      "before": "{F0}{E2}:你说点什么啊!{F2F3}",
+      "after": "{F0}{E2}:你倒是说点什么啊!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0479",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 479,
+        "message": "0x1E0"
+      },
+      "before": "{F0}{E2}:蠢货?{F7}废物?{F7}垃圾?{F2F6}不就是因为没武力{F2F6}才会被这样骂吗?{F7}{F2F6}再蠢的人只要有让人怕的武力{F2F6}谁都会低头!{F2F4}{F3}",
+      "after": "{F0}{E2}:蠢货?{F7}废物?{F7}垃圾?{F2F6}不就是因为没力量{F2F6}才会被这样骂吗?{F7}{F2F6}再蠢的人只要有让人怕的力量{F2F6}谁都会低头向他!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0480",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 480,
+        "message": "0x1E1"
+      },
+      "before": "{F0}{E2}:你这家伙还真顽强啊——{F2F3}",
+      "after": "{F0}{E2}:还真顽强啊，得来硬的了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0481",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 481,
+        "message": "0x1E2"
+      },
+      "before": "{F0}{E2}:{EE}，别插手!{F7}{F2F6}这场架由我来打!{F2F3}",
+      "after": "{F0}{E2}:{EE}，别插手!{F7}{F2F6}这是我的战斗!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0482",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 482,
+        "message": "0x1E3"
+      },
+      "before": "{F0}{E2}:联合{F7}已经停不下来了{F2F4}{F3}",
+      "after": "{F0}{E2}:联合{F7}已经阻止不了了{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0485",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 485,
+        "message": "0x1E6"
+      },
+      "before": "{F0}{E2}:想要回美穗{F2F6}就来大阪港!{F7}{F2F6}在那里做个了断!{F2F4}{F3}",
+      "after": "{F0}{E2}:想要回美穗的话{F2F6}就来大阪港!{F7}{F2F6}在那里做个了断!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0487",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 487,
+        "message": "0x1E8"
+      },
+      "before": "{F0}{E2}:好痛———{F7}{F2F6}良弘从后面打了我{F2F3}",
+      "after": "{F0}{E2}:好痛———{F7}{F2F6}义弘从后面袭击了我{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0489",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 489,
+        "message": "0x1EA"
+      },
+      "before": "{F0}{E2}:正树被良弘打了———{F2F3}",
+      "after": "{F0}{E2}:正树被义弘枪击了———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0490",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 490,
+        "message": "0x1EB"
+      },
+      "before": "{F0}{E2}:应该没有生命危险{F2F3}",
+      "after": "{F0}{E2}:不过应该没有生命危险{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0491",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 491,
+        "message": "0x1EC"
+      },
+      "before": "{F0}{E2}:你要去啊———{F7}去良弘那里{F2F3}",
+      "after": "{F0}{E2}:你要去———{F7}去义弘那里是吧{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0493",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 493,
+        "message": "0x1EE"
+      },
+      "before": "{F0}{E2}:因为我觉得他们其实是好人{F2F3}",
+      "after": "{F0}{E2}:因为我觉得他们真的都是好人{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0494",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 494,
+        "message": "0x1EF"
+      },
+      "before": "{F0}{E2}:说得对{F2F3}",
+      "after": "{F0}{E2}:说的也是{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0495",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 495,
+        "message": "0x1F0"
+      },
+      "before": "{F0}{E2}:办完就马上追上去{F2F3}",
+      "after": "{F0}{E2}:办完我们就马上赶上来{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0497",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 497,
+        "message": "0x1F2"
+      },
+      "before": "{E2}:最后一战了加油!{F2F3}",
+      "after": "{E2}:最后一战了加油啊!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0498",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 498,
+        "message": "0x1F3"
+      },
+      "before": "{F0}{E2}:你总算来了———{F2F3}",
+      "after": "{F0}{E2}:来的好啊———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0499",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 499,
+        "message": "0x1F4"
+      },
+      "before": "{F0}{E2}:但是{F7}以联合四天王本田之名{F2F6}不会让你过去!{F2F4}{F3}",
+      "after": "{F0}{E2}:但是{F7}我以联合四天王本田之名{F2F6}绝不会让你从这里过去!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0502",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 502,
+        "message": "0x1F7"
+      },
+      "before": "{F0}{E2}:正好{F7}跟上一代总长一样!{F2F3}",
+      "after": "{F0}{E2}:就像{F7}初代总长一样!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0504",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 504,
+        "message": "0x1F9"
+      },
+      "before": "{F0}{E2}:因为他碍事{F2F6}我把他关在某个地方了!{F2F3}",
+      "after": "{F0}{E2}:因为他太碍事了{F2F6}我把他关在某个地方了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0505",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 505,
+        "message": "0x1FA"
+      },
+      "before": "{F0}{E2}:你竟然!{F2F3}",
+      "after": "{F0}{E2}:你竟然这么做!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0507",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 507,
+        "message": "0x1FC"
+      },
+      "before": "{F0}{E2}:那么———{F2F3}",
+      "after": "{F0}{E2}:那也就是说———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0508",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 508,
+        "message": "0x1FD"
+      },
+      "before": "{F0}{E2}:没错———{F7}{F2F6}我为了打倒{ED}{F2F6}才潜入热血高中的!{F2F3}",
+      "after": "{F0}{E2}:没错———{F7}{F2F6}我为了打倒{ED}{F2F6}才潜入热血高校的!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0509",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 509,
+        "message": "0x1FE"
+      },
+      "before": "{F0}{E2}:真无聊———{F2F3}",
+      "after": "{F0}{E2}:真无聊啊你———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0511",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 511,
+        "message": "0x200"
+      },
+      "before": "{F0}{E2}:我说，真无聊{F2F3}",
+      "after": "{F0}{E2}:我说，你真无聊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0512",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 512,
+        "message": "0x201"
+      },
+      "before": "{F0}{E2}:{ED}就不想用自己的力量{F2F6}让别人听你的吗?{F7}{F2F6}不想让那些小看你的家伙{F2F6}对你刮目相看吗?{F2F4}{F3}",
+      "after": "{F0}{E2}:{ED}难道不想用自己的力量{F2F6}让别人听你的话吗?{F7}{F2F6}不想让那些小看你的家伙{F2F6}对你刮目相看吗?{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0513",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 513,
+        "message": "0x202"
+      },
+      "before": "{F0}{E2}:当个没人愿意追随的{F2F6}猴山大王吗?{F2F4}{F3}",
+      "after": "{F0}{E2}:这么想当个没人愿意{F2F6}追随的猴山大王吗?{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0515",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 515,
+        "message": "0x204"
+      },
+      "before": "{F0}{E2}:来吧良弘!{F2F3}",
+      "after": "{F0}{E2}:来吧义弘!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0516",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 516,
+        "message": "0x205"
+      },
+      "before": "{F0}{E2}:我会跟你算清这笔账!{F2F4}{F3}",
+      "after": "{F0}{E2}:我会跟你做个了结的!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0517",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 517,
+        "message": "0x206"
+      },
+      "before": "{F0}{E2}:有{ED}那么大的力量———{F7}{F2F6}明明能凌驾他人之上{F7}{F2F6}为何不用那份力量{F2F4}{F3}",
+      "after": "{F0}{E2}:如果{ED}有那么强大的力量———{F7}{F2F6}明明能凌驾他人之上{F7}{F2F6}为什么不使用那份力量呢{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0518",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 518,
+        "message": "0x207"
+      },
+      "before": "{F0}{E2}:凌驾他人之上什么的———{F2F6}那种事无所谓———{F2F4}{F3}",
+      "after": "{F0}{E2}:凌驾他人之上什么的———{F2F6}那种事根本无所谓———{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0519",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 519,
+        "message": "0x208"
+      },
+      "before": "{F0}{E2}:不过，我可不会做{F2F6}有损自尊的事!{F2F4}{F3}",
+      "after": "{F0}{E2}:只是，我绝不会做{F2F6}有损自尊心的事而已!{F2F4}{F3}"
+    },
+    {
+      "key": "table:0193B5:0521",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 521,
+        "message": "0x20A"
+      },
+      "before": "{F0}{E2}:{E3}君{F7}谢谢———{F2F3}",
+      "after": "{F0}{E2}:{E3}君{F7}谢谢你们———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0537",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 537,
+        "message": "0x21A"
+      },
+      "before": "{F0}{E2}:我就知道{ED}{F2F6}一定能办到——{F2F3}",
+      "after": "{F0}{E2}:我就知道{ED}{F2F6}一定能办到的——{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0539",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 539,
+        "message": "0x21C"
+      },
+      "before": "{F0}{E2}:接下来该我们{F2F6}把大阪搞热闹起来!{F2F3}",
+      "after": "{F0}{E2}:接下来该我们{F2F6}把大阪搞热闹起来了!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0542",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 542,
+        "message": "0x21F"
+      },
+      "before": "{F0}{E2}:一切从现在开始!{F2F6}上吧!{F2F3}",
+      "after": "{F0}{E2}:一切从现在开始!{F2F6}走吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0544",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 544,
+        "message": "0x221"
+      },
+      "before": "{F0}{E2}:大家怎么都在这?{F2F3}",
+      "after": "{F0}{E2}:大家怎么会在这里?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0546",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 546,
+        "message": "0x223"
+      },
+      "before": "{F0}{E2}:浩，你已经没事了吗?{F2F3}",
+      "after": "{F0}{E2}:浩史，你已经没事了吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0548",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 548,
+        "message": "0x225"
+      },
+      "before": "{F0}{E2}:果然是良弘?{F2F3}",
+      "after": "{F0}{E2}:果然是义弘吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0550",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 550,
+        "message": "0x227"
+      },
+      "before": "{F0}{E2}:他高高在上太久了{F2F6}到头来只会{F7}{F2F6}看不起别人了{F2F3}",
+      "after": "{F0}{E2}:他高高在上太久了{F2F6}到头来只会看不起别人{F7}{F2F6}变的不会正常看待别人了{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0551",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 551,
+        "message": "0x228"
+      },
+      "before": "{F0}{E2}:说不定良弘才是{F2F6}最可怜的那个呢———{F2F3}",
+      "after": "{F0}{E2}:说不定义弘才是{F2F6}最可怜的那个人———{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0553",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 553,
+        "message": "0x22A"
+      },
+      "before": "{F0}{E2}:{E3}走了!{F2F3}",
+      "after": "{F0}{E2}:{E3}走啦!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0555",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 555,
+        "message": "0x22C"
+      },
+      "before": "{F0}{E2}:也许良弘{F2F6}就是另一个我{F2F6}我和良弘都不知道{F2F6}什么是对什么是错{F2F6}也许只是在挣扎{F2F3}",
+      "after": "{F0}{E2}:也许义弘{F2F6}是另一个我吧{F2F6}我和义弘都不知道{F2F6}谁是对的谁是错的{F2F6}也许只是在挣扎而已{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0556",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 556,
+        "message": "0x22D"
+      },
+      "before": "{F0}{E2}:可是———{F2F6}就这样一点一点{F7}{F2F6}成为自己想成为的大人{F2F6}不就好了吗?{F2F3}",
+      "after": "{F0}{E2}:可是———{F2F6}就这样一点一点{F7}{F2F6}成为自己想成为的大人{F2F6}不是很好吗?{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0557",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 557,
+        "message": "0x22E"
+      },
+      "before": "{F0}{E2}:{F7}—{F7}—{F7}—{F7}—{F7}—{F7}说得对{F2F3}",
+      "after": "{F0}{E2}:{F7}—{F7}—{F7}—{F7}—{F7}—{F7}说的也是{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0558",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 558,
+        "message": "0x22F"
+      },
+      "before": "{F0}{E2}:为了弄清楚{F2F6}自己能做什么{F7}{F2F6}可不能停在这里啊{F2F3}",
+      "after": "{F0}{E2}:为了弄清楚{F2F6}自己能做到什么程度{F7}{F2F6}也不能在这里止步不前啊{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0559",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 559,
+        "message": "0x230"
+      },
+      "before": "{F0}{E2}:走吧，回到大家身边去!{F2F3}",
+      "after": "{F0}{E2}:走吧，回到大家身边去吧!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0566",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 566,
+        "message": "0x237"
+      },
+      "before": "{F0}{E2}:喂{F7}—{F7}—{F7}康二?{F7}是我{F7}—{F7}—{F7}—{F2F3}",
+      "after": "{F0}{E2}:喂{F7}—{F7}—{F7}浩二?{F7}是我{F7}—{F7}—{F7}—{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0604",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 604,
+        "message": "0x25D"
+      },
+      "before": "{E2}:我连话都不想跟野蛮人说!{F2F3}",
+      "after": "{E2}:我不想跟野蛮人说话!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0615",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 615,
+        "message": "0x268"
+      },
+      "before": "{E2}:热天真夏啊{F2F6}热热热啊!{F2F3}",
+      "after": "{E2}:夏天真热啊{F2F6}热热热啊!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0625",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 625,
+        "message": "0x272"
+      },
+      "before": "{F0}{E2}:你搞什么，蠢货!{F2E2}的愤怒一击!{F2F3}",
+      "after": "{F0}{E2}:你在搞什么，蠢货!{F2E2}的愤怒一击!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0629",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 629,
+        "message": "0x276"
+      },
+      "before": "{F0}{E2}:{E0}!{F7}{E3}!{F2F6}没事吧? 撑住!{F2F3}",
+      "after": "{F0}{E2}:{E0}!{F7}{E3}!{F2F6}没事吧? 振作起来!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0642",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 642,
+        "message": "0x283"
+      },
+      "before": "{F6}喂!{F7}好痛!{F2F3}",
+      "after": "{F6}看!{F7}好痛!{F2F3}"
+    },
+    {
+      "key": "table:0193B5:0647",
+      "target": {
+        "kind": "table",
+        "table": 103349,
+        "index": 647,
+        "message": "0x288"
+      },
+      "before": "{F0}{E2}:{E3}君拜托了!{F7}{F2F6}请助我们一臂之力!{F2F3}",
+      "after": "{F0}{E2}:{E3}君拜托了!{F7}{F2F6}请把你的力量借给我们吧!{F2F3}"
+    },
+    {
+      "key": "table:01DBC5:0029",
+      "target": {
+        "kind": "table",
+        "table": 121797,
+        "index": 29,
+        "message": null
+      },
+      "before": "最后的幻想5{F2F3}",
+      "after": "最终幻想5{F2F3}"
+    },
+    {
+      "key": "table:01E098:0019",
+      "target": {
+        "kind": "table",
+        "table": 123032,
+        "index": 19,
+        "message": null
+      },
+      "before": "德国背摔{F2F3}",
+      "after": "德式背摔{F2F3}"
+    },
+    {
+      "key": "table:01E4CE:0053",
+      "target": {
+        "kind": "table",
+        "table": 124110,
+        "index": 53,
+        "message": null
+      },
+      "before": "大哥{F2F3}",
+      "after": "哥哥!{F2F3}"
+    },
+    {
+      "key": "message:307",
+      "target": {
+        "kind": "extended",
+        "message": 775
+      },
+      "before": "{F0}{E2}:那么，{F7}去会会{F2F6}那个梅田部队吧!{F2F3}",
+      "after": "{F0}{E2}:那么，{F7}去会会{F2F6}那个叫什么梅田部队吧!{F2F3}"
+    },
+    {
+      "key": "message:308",
+      "target": {
+        "kind": "extended",
+        "message": 776
+      },
+      "before": "{E2}:希望你有点骨气!{F2F3}",
+      "after": "{E2}:总该有点骨气吧你？{F2F3}"
+    },
+    {
+      "key": "message:338",
+      "target": {
+        "kind": "extended",
+        "message": 824
+      },
+      "before": "{F0}{E2}:{ED}君!{F2F6}真的{F7}——{F7}——{F7}——{F7}谢谢你{F7}——{F7}——{F7}——{F2F3}",
+      "after": "{F0}{E2}:{ED}君!{F2F6}真的{F7}——{F7}——{F7}——{F7}谢谢你们{F7}——{F7}——{F7}——{F2F3}"
+    },
+    {
+      "key": "message:339",
+      "target": {
+        "kind": "extended",
+        "message": 825
+      },
+      "before": "{F0}{E2}:那么——{F7}{F2F6}我也该回伙伴那儿了。{F2F7}{F6}再见，{E0}!{F2F3}",
+      "after": "{F0}{E2}:那么——{F7}{F2F6}我也该回伙伴那儿了。{F2F7}{F6}再见!{E0}{F2F3}"
+    },
+    {
+      "key": "message:33A",
+      "target": {
+        "kind": "extended",
+        "message": 826
+      },
+      "before": "{F0}{E2}:{E1}君!{F7}——{F7}——{F7}——谢谢!{F2F3}",
+      "after": "{F0}{E2}:{E1}君!{F7}——{F7}——{F7}——谢谢你!{F2F3}"
+    },
+    {
+      "key": "message:33B",
+      "target": {
+        "kind": "extended",
+        "message": 827
+      },
+      "before": "{F0}{E2}:托你的福，玩得很开心。{F2F6}{F7}{F7}再见!{F2F3}",
+      "after": "{F0}{E2}:托你的福，我玩得很开心{F2F6}{F7}{F7}再见!{F2F3}"
+    },
+    {
+      "key": "name:よしひろ",
+      "target": {
+        "kind": "name",
+        "kana": "よしひろ"
+      },
+      "before": "良弘",
+      "after": "义弘"
+    },
+    {
+      "key": "name:ひろし",
+      "target": {
+        "kind": "name",
+        "kana": "ひろし"
+      },
+      "before": "浩",
+      "after": "浩史"
+    },
+    {
+      "key": "name:こうじ",
+      "target": {
+        "kind": "name",
+        "kana": "こうじ"
+      },
+      "before": "康二",
+      "after": "浩二"
+    },
+    {
+      "key": "name:げんえい",
+      "target": {
+        "kind": "name",
+        "kana": "げんえい"
+      },
+      "before": "源英",
+      "after": "元永"
+    },
+    {
+      "key": "name:まさ",
+      "target": {
+        "kind": "name",
+        "kana": "まさ"
+      },
+      "before": "正",
+      "after": "雅"
+    },
+    {
+      "key": "name:ゆきむら",
+      "target": {
+        "kind": "name",
+        "kana": "ゆきむら"
+      },
+      "before": "行村",
+      "after": "幸村"
+    }
+  ],
+  "version": "v2.0-rc3",
+  "target": {
+    "size": 4194304,
+    "crc32": "403570B0",
+    "sha256": "18485c43302e52159e5a710b203e62d427e73ac516a09338e2b47f5b0c3b81fb"
+  },
+  "nohp_target": {
+    "size": 4194304,
+    "crc32": "4AB9BCEA",
+    "sha256": "d27a2b98ca9f8a4f0a8e7cca0f775721023e1e8aee7e61105de2858b42740613"
+  },
+  "tests": {
+    "static": "26 checks: 24 PASS, 2 explained WARN, 0 FAIL",
+    "exact_edits": 270,
+    "unchanged_catalog_entries": 1271,
+    "body_glyphs": 1153,
+    "main_messages": 769,
+    "other_table_entries": 319,
+    "actor_records": 514,
+    "native_hud_calls": 1028,
+    "independent_builds": 2,
+    "mesen_cold_frames": 10500,
+    "mesen_max_actors": 6,
+    "controlled_message_samples": 16,
+    "status_vram_cases": 6,
+    "snes_cold_frames": 10000,
+    "nohp_cpu_cases": 339,
+    "snes_normal_hp_decreases": 19,
+    "snes_nohp_hp_decreases": 0,
+    "bps_replays": 2,
+    "bps_negative_cases": 6,
+    "workbench_dom_groups": 9,
+    "workbench_python_negative_cases": 12
+  },
+  "scope": "270 user edits only; no added localization scope",
+  "untested": [
+    "hardware",
+    "natural full story",
+    "all seven-actor two-player combinations",
+    "old save compatibility",
+    "actual browser visual UI"
+  ],
+  "publication": "local working tree only; no commit or push this revision"
+}

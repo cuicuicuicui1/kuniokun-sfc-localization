@@ -1,0 +1,733 @@
+{
+  "status": "pass",
+  "input": {
+    "size": 4194304,
+    "sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936",
+    "crc32": "8890880C"
+  },
+  "target": {
+    "size": 4194304,
+    "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+    "crc32": "15939ABD"
+  },
+  "build": {
+    "slot_code": 1601536,
+    "slot_code_bytes": 807,
+    "slot_first_row_reservation": 220,
+    "slot_glyph_queue_bytes": 152,
+    "blocks": [
+      {
+        "first_tile": 74,
+        "tiles": 8,
+        "original_rom_offset": 1016992,
+        "sha256": "75e99547b2e71c9dcd4e8c96b1ef03374afb9e27a123dd589384a7ed9049f1d4"
+      },
+      {
+        "first_tile": 83,
+        "tiles": 1,
+        "original_rom_offset": 1017136,
+        "sha256": "7832a10f52cb0a6a7d05440f3224dc166c92016a6f010c85f337ba732bab8dc5"
+      }
+    ],
+    "excluded_tile": 82,
+    "retained": "Previous yes/no and complete STATUS12 code/data; all message and gameplay bytes",
+    "trigger": "Original first map row with prompt-set 1; busy retries same row before any upload",
+    "input_sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936",
+    "size": 4194304,
+    "changed_bytes": 703,
+    "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+    "crc32": "15939ABD"
+  },
+  "input_state": {
+    "sha256": "39403cf959dbe3a9bb30e7441a65779e02bb328ad9ecf293e24abf49f3fb9d28",
+    "scope": "Supplied Snes9x state, native format0001"
+  },
+  "tests": {
+    "model": {
+      "status": "pass",
+      "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+      "queue_pressure_cases": 72,
+      "actual_reel_old_fails_new_pass": {
+        "old": false,
+        "new": true
+      },
+      "native_reel_symbol_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "yesno_reels_switches": 40,
+      "protected_status_title_tile": "unchanged",
+      "scope": "Original 65816 consumers and modeled NMI queue; not PPU timing"
+    },
+    "player_state_route": {
+      "status": "pass",
+      "rounds": 2,
+      "stopped_three": 2,
+      "reel_frames_verified": 42,
+      "yesno_frames_verified": 2,
+      "bad_frames": [],
+      "seen_reel_tile_ids": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "events": [
+        {
+          "frame": 0,
+          "set": 0,
+          "stage": 3,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 3,
+          "set": 0,
+          "stage": 4,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 121,
+          "set": 1,
+          "stage": 0,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 123,
+          "set": 1,
+          "stage": 1,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 131,
+          "set": 1,
+          "stage": 2,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 155,
+          "set": 1,
+          "stage": 8,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 219,
+          "set": 1,
+          "stage": 9,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 453,
+          "set": 1,
+          "stage": 10,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 549,
+          "set": 1,
+          "stage": 4,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 765,
+          "set": 0,
+          "stage": 4,
+          "message": 576,
+          "stopped": 3
+        },
+        {
+          "frame": 829,
+          "set": 0,
+          "stage": 0,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 831,
+          "set": 0,
+          "stage": 1,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 839,
+          "set": 0,
+          "stage": 2,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 863,
+          "set": 0,
+          "stage": 3,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 865,
+          "set": 0,
+          "stage": 4,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 983,
+          "set": 1,
+          "stage": 0,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 985,
+          "set": 1,
+          "stage": 1,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 993,
+          "set": 1,
+          "stage": 2,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1017,
+          "set": 1,
+          "stage": 8,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1081,
+          "set": 1,
+          "stage": 9,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 1263,
+          "set": 1,
+          "stage": 10,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1359,
+          "set": 1,
+          "stage": 4,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1579,
+          "set": 0,
+          "stage": 4,
+          "message": 576,
+          "stopped": 3
+        },
+        {
+          "frame": 1643,
+          "set": 0,
+          "stage": 0,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1645,
+          "set": 0,
+          "stage": 1,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1653,
+          "set": 0,
+          "stage": 2,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1677,
+          "set": 0,
+          "stage": 3,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1685,
+          "set": 0,
+          "stage": 4,
+          "message": 577,
+          "stopped": 3
+        }
+      ],
+      "scope": "Player-supplied state, ordinary controller only, no fixture writes"
+    },
+    "old_state_negative": {
+      "status": "fail",
+      "rounds": 2,
+      "stopped_three": 2,
+      "reel_frames_verified": 0,
+      "yesno_frames_verified": 2,
+      "bad_frames": [
+        {
+          "frame": 220,
+          "owner": "reels"
+        },
+        {
+          "frame": 230,
+          "owner": "reels"
+        },
+        {
+          "frame": 240,
+          "owner": "reels"
+        },
+        {
+          "frame": 250,
+          "owner": "reels"
+        },
+        {
+          "frame": 260,
+          "owner": "reels"
+        },
+        {
+          "frame": 270,
+          "owner": "reels"
+        },
+        {
+          "frame": 280,
+          "owner": "reels"
+        },
+        {
+          "frame": 290,
+          "owner": "reels"
+        },
+        {
+          "frame": 300,
+          "owner": "reels"
+        },
+        {
+          "frame": 310,
+          "owner": "reels"
+        },
+        {
+          "frame": 320,
+          "owner": "reels"
+        },
+        {
+          "frame": 330,
+          "owner": "reels"
+        },
+        {
+          "frame": 340,
+          "owner": "reels"
+        },
+        {
+          "frame": 350,
+          "owner": "reels"
+        },
+        {
+          "frame": 360,
+          "owner": "reels"
+        },
+        {
+          "frame": 370,
+          "owner": "reels"
+        },
+        {
+          "frame": 380,
+          "owner": "reels"
+        },
+        {
+          "frame": 390,
+          "owner": "reels"
+        },
+        {
+          "frame": 400,
+          "owner": "reels"
+        },
+        {
+          "frame": 410,
+          "owner": "reels"
+        },
+        {
+          "frame": 420,
+          "owner": "reels"
+        },
+        {
+          "frame": 430,
+          "owner": "reels"
+        },
+        {
+          "frame": 440,
+          "owner": "reels"
+        },
+        {
+          "frame": 450,
+          "owner": "reels"
+        },
+        {
+          "frame": 1090,
+          "owner": "reels"
+        },
+        {
+          "frame": 1100,
+          "owner": "reels"
+        },
+        {
+          "frame": 1110,
+          "owner": "reels"
+        },
+        {
+          "frame": 1120,
+          "owner": "reels"
+        },
+        {
+          "frame": 1130,
+          "owner": "reels"
+        },
+        {
+          "frame": 1140,
+          "owner": "reels"
+        },
+        {
+          "frame": 1150,
+          "owner": "reels"
+        },
+        {
+          "frame": 1160,
+          "owner": "reels"
+        },
+        {
+          "frame": 1170,
+          "owner": "reels"
+        },
+        {
+          "frame": 1180,
+          "owner": "reels"
+        },
+        {
+          "frame": 1190,
+          "owner": "reels"
+        },
+        {
+          "frame": 1200,
+          "owner": "reels"
+        },
+        {
+          "frame": 1210,
+          "owner": "reels"
+        },
+        {
+          "frame": 1220,
+          "owner": "reels"
+        },
+        {
+          "frame": 1230,
+          "owner": "reels"
+        },
+        {
+          "frame": 1240,
+          "owner": "reels"
+        },
+        {
+          "frame": 1250,
+          "owner": "reels"
+        },
+        {
+          "frame": 1260,
+          "owner": "reels"
+        }
+      ],
+      "seen_reel_tile_ids": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "events": [
+        {
+          "frame": 0,
+          "set": 0,
+          "stage": 3,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 3,
+          "set": 0,
+          "stage": 4,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 121,
+          "set": 1,
+          "stage": 0,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 123,
+          "set": 1,
+          "stage": 1,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 131,
+          "set": 1,
+          "stage": 2,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 155,
+          "set": 1,
+          "stage": 8,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 219,
+          "set": 1,
+          "stage": 9,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 453,
+          "set": 1,
+          "stage": 10,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 549,
+          "set": 1,
+          "stage": 4,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 765,
+          "set": 0,
+          "stage": 4,
+          "message": 576,
+          "stopped": 3
+        },
+        {
+          "frame": 829,
+          "set": 0,
+          "stage": 0,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 831,
+          "set": 0,
+          "stage": 1,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 839,
+          "set": 0,
+          "stage": 2,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 863,
+          "set": 0,
+          "stage": 3,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 865,
+          "set": 0,
+          "stage": 4,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 983,
+          "set": 1,
+          "stage": 0,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 985,
+          "set": 1,
+          "stage": 1,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 993,
+          "set": 1,
+          "stage": 2,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1017,
+          "set": 1,
+          "stage": 8,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1081,
+          "set": 1,
+          "stage": 9,
+          "message": 566,
+          "stopped": 0
+        },
+        {
+          "frame": 1263,
+          "set": 1,
+          "stage": 10,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1359,
+          "set": 1,
+          "stage": 4,
+          "message": 566,
+          "stopped": 3
+        },
+        {
+          "frame": 1579,
+          "set": 0,
+          "stage": 4,
+          "message": 576,
+          "stopped": 3
+        },
+        {
+          "frame": 1643,
+          "set": 0,
+          "stage": 0,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1645,
+          "set": 0,
+          "stage": 1,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1653,
+          "set": 0,
+          "stage": 2,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1677,
+          "set": 0,
+          "stage": 3,
+          "message": 577,
+          "stopped": 3
+        },
+        {
+          "frame": 1685,
+          "set": 0,
+          "stage": 4,
+          "message": 577,
+          "stopped": 3
+        }
+      ],
+      "scope": "Player-supplied state, ordinary controller only, no fixture writes"
+    },
+    "mesen_reels": "264 checked rolling frames, all8 native symbols, stop-three and exit; old264 fail/new0 fail",
+    "mesen_cold_frames": 10500,
+    "mesen_yesno": "Original contaminated-glyph negative plus left/right/confirm/exit PASS",
+    "mesen_status_cases": 6,
+    "mesen_status_open_close_cycles": 12,
+    "negative_checks": [
+      "UI版8890880C_转轮修复.bps wrong base",
+      "UI版8890880C_转轮修复.bps truncated",
+      "UI版8890880C_转轮修复.bps corrupt",
+      "外部修订版36C8B784_完整UI与转轮修复.bps wrong base",
+      "外部修订版36C8B784_完整UI与转轮修复.bps truncated",
+      "外部修订版36C8B784_完整UI与转轮修复.bps corrupt",
+      "builder wrong UI base",
+      "builder repeat installation",
+      "builder wrong optimization"
+    ],
+    "exit_comparison": "Same frame4000 pixels and full WRAM identical to old ROM after both rounds",
+    "build_repeat": "byte-identical; complete 36C8B784 ->8890880C ->15939ABD source chain rebuilt",
+    "bps_replays": "Both direct and incremental equal tested target"
+  },
+  "patches": [
+    {
+      "source": {
+        "size": 4194304,
+        "sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936",
+        "crc32": "8890880C"
+      },
+      "target": {
+        "size": 4194304,
+        "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+        "crc32": "15939ABD"
+      },
+      "patch": {
+        "filename": "UI版8890880C_转轮修复.bps",
+        "sha256": "2b973a98abc4aae221fb4e600097cf348c2d69f322b1e2008773f5ded0d1264f",
+        "size": 1149
+      }
+    },
+    {
+      "source": {
+        "size": 4194304,
+        "sha256": "bd79235a808b9fa00121a49dcd22bb9cc6ea84ae4298281ad1b2b2b5a0b47fd8",
+        "crc32": "36C8B784"
+      },
+      "target": {
+        "size": 4194304,
+        "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+        "crc32": "15939ABD"
+      },
+      "patch": {
+        "filename": "外部修订版36C8B784_完整UI与转轮修复.bps",
+        "sha256": "020913564fbc8e553569b3d647138f679a28c7ee33c723610aa7d93aef5dc88b",
+        "size": 42509
+      }
+    }
+  ],
+  "scope": "Native slot reel glyph ownership only. Prior complete STATUS12 and all third-party text preserved. No full-game/hardware claim.",
+  "evidence_notes": [
+    "Native-state playback is ordinary input after loading the supplied file; not cold boot.",
+    "Mesen reel fixture chooses message236 and prompt-set1 at original init; no PC or story-success writes.",
+    "An attempted arcade-to-STATUS key route did not enter STATUS on either old or new ROM; equal state, not counted as STATUS proof. STATUS verified in six separate same-ROM cold-checkpoint cases."
+  ]
+}

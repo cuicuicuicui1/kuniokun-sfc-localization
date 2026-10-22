@@ -1,0 +1,21 @@
+{
+  "version": "v2.0-rc3",
+  "date": "2026-10-15",
+  "source": {
+    "size": 1572864,
+    "crc32": "65D66D5D",
+    "sha256": "2008f9b34d2b48a168824c8c7d1e3c8924dbb0fa81de9a4eeff2823a635ffe08"
+  },
+  "target": {
+    "size": 4194304,
+    "crc32": "403570B0",
+    "sha256": "18485c43302e52159e5a710b203e62d427e73ac516a09338e2b47f5b0c3b81fb"
+  },
+  "patch": {
+    "size": 2650717,
+    "crc32": "2144DF1C",
+    "sha256": "3bf0b21ab4c8a1afce7c43609ec912a68a06b342b5c1405ff56a9fa339be5c5a",
+    "filename": "optimized-v2.0-rc3.bps"
+  },
+  "status": "tested_user_text_revision; repository_sync_2026-10-23"
+}

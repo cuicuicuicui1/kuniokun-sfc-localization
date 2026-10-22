@@ -1,4 +1,4 @@
-"""Apply the exact optimization-original BPS; reject overwrites and wrong input."""
+"""Apply the manifest-pinned BPS; reject overwrites and wrong input."""
 from pathlib import Path
 import argparse,json,hashlib,os,tempfile
 from bps_codec import decode
@@ -7,7 +7,7 @@ def apply(source,patch,output,manifest):
  source,patch,output,manifest=map(lambda p:Path(p).resolve(),(source,patch,output,manifest))
  if output.exists() or output in (source,patch,manifest):raise ValueError('输出已存在或与输入同名；请选择新文件，原件不会覆盖')
  m=json.loads(manifest.read_text(encoding='utf8'));raw=source.read_bytes();bps=patch.read_bytes()
- if len(raw)!=m['source']['size'] or hashlib.sha256(raw).hexdigest()!=m['source']['sha256']:raise ValueError('原版不匹配：需要 CRC32 65D66D5D 的未汉化优化 ROM')
+ if len(raw)!=m['source']['size'] or hashlib.sha256(raw).hexdigest()!=m['source']['sha256']:raise ValueError(f"输入不匹配：需要清单指定的源 ROM（CRC32 {m['source'].get('crc32','unknown')}）")
  if hashlib.sha256(bps).hexdigest()!=m['patch']['sha256']:raise ValueError('补丁指纹不匹配')
  result=decode(bps,raw)
  if len(result)!=m['target']['size'] or hashlib.sha256(result).hexdigest()!=m['target']['sha256']:raise ValueError('输出验证失败')

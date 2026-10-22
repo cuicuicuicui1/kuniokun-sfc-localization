@@ -5,6 +5,7 @@ embedded. The output has no fetches, external assets, or absolute source paths.
 """
 from pathlib import Path
 import argparse
+import datetime
 import hashlib
 import json
 import re
@@ -79,8 +80,20 @@ def main():
     p.add_argument('--build', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--catalog', type=Path)
+    p.add_argument('--base-version', help='ROM version label for this catalog')
+    p.add_argument('--date', help='Catalog date, YYYY-MM-DD')
+    p.add_argument('--base-rom-crc32', help='Eight hexadecimal digits')
     a = p.parse_args()
     data = load_catalog(a.build)
+    if a.base_version:
+        data['base_version'] = a.base_version
+    if a.date:
+        datetime.date.fromisoformat(a.date)
+        data['date'] = a.date
+    if a.base_rom_crc32:
+        if not re.fullmatch('[0-9A-Fa-f]{8}', a.base_rom_crc32):
+            p.error('--base-rom-crc32 requires eight hexadecimal digits')
+        data['base_rom_crc32'] = a.base_rom_crc32.upper()
     raw = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
     safe = raw.replace('&', '\\u0026').replace('<', '\\u003c').replace('>', '\\u003e')
     template = (HERE/'workbench.html').read_text(encoding='utf8')

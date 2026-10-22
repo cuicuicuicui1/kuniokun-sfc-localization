@@ -1,10 +1,15 @@
-"""Optional no-HP-loss variant of the exact optimized Chinese rc2 ROM.
+"""Optional no-HP-loss variant of an explicitly approved optimized Chinese ROM.
 No font or localization build is run. Never overwrites the source/output.
 """
 from pathlib import Path
 import argparse,hashlib,json,zlib
 SHA='2129698c8e9f8d438b2a4480b2c764a965e5203e0c78af83d7b712c6136299d6'
 SIZE=0x400000
+BASES={
+ SHA:{'version':'v2.0-rc2','crc32':'1F37BC30'},
+ '18485c43302e52159e5a710b203e62d427e73ac516a09338e2b47f5b0c3b81fb':
+  {'version':'v2.0-rc3','crc32':'403570B0'},
+}
 # Final physical offsets and complete native opcode guards.
 PATCHES=[
  (0x1E8A,'DD A9 1B','4C 9B 9E','player battle damage: keep current HP, retain native hit/HUD update'),
@@ -16,8 +21,13 @@ PATCHES=[
  (0x101446,'99 0E 01','EA EA EA','optimized lethal effect player branch; enemy branch remains'),
 ]
 
+def base_info(raw):
+ sha=hashlib.sha256(raw).hexdigest()
+ if len(raw)!=SIZE or sha not in BASES:raise ValueError('requires an exact approved optimized localization base (rc2 or rc3)')
+ return dict(BASES[sha],sha256=sha,size=SIZE)
+
 def install(raw):
- if len(raw)!=SIZE or hashlib.sha256(raw).hexdigest()!=SHA:raise ValueError('requires exact optimized localization rc2 (CRC32 1F37BC30)')
+ base_info(raw)
  rom=bytearray(raw);writes=[]
  for off,old,new,label in PATCHES:
   expected=bytes.fromhex(old);replacement=bytes.fromhex(new)
@@ -34,7 +44,8 @@ def main():
  raw=source.read_bytes();rom,writes=install(raw)
  output.parent.mkdir(parents=True,exist_ok=True);report.parent.mkdir(parents=True,exist_ok=True)
  with output.open('xb') as f:f.write(rom)
- result={'status':'candidate','variant':'v2.0-rc2-nohp','source':{'sha256':SHA,'crc32':'1F37BC30','size':SIZE},'target':{'sha256':hashlib.sha256(rom).hexdigest(),'crc32':f'{zlib.crc32(rom):08X}','size':len(rom)},'writes':writes,'scope':'player HP loss from combat, HP-draining equipment, native train and optimized lethal effect; original healing/init/load and enemy damage retained'}
+ info=base_info(raw)
+ result={'status':'candidate','variant':info['version']+'-nohp','source':info,'target':{'sha256':hashlib.sha256(rom).hexdigest(),'crc32':f'{zlib.crc32(rom):08X}','size':len(rom)},'writes':writes,'scope':'player HP loss from combat, HP-draining equipment, native train and optimized lethal effect; original healing/init/load and enemy damage retained'}
  with report.open('x',encoding='utf8') as f:json.dump(result,f,ensure_ascii=False,indent=2)
  print(json.dumps(result,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()

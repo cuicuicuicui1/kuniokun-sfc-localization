@@ -4,12 +4,17 @@
 
 ## 先选择构建路线
 
-- **当前优化版rc2**：[optimized_rebuild完整说明](../tools/optimized_rebuild/README.md)，唯一完整入口build_native.py，自备原优化版、日版及匹配字体；目标CRC32 1F37BC30。
-- **独立不掉血变体**：[生成说明](../tools/optimized_rebuild/variants/nohp/README.md)，输入正常rc2，目标E3C341ED；不加入正常版构建。
+- **最新外部修订版UI维护**：[ui_repair](../tools/optimized_rebuild/ui_repair/README.md)，底稿36C8B784→build_ui_repair.py→8890880C→build_slot_repair.py→**15939ABD**；最后一步另需原优化65D66D5D。保留第三方台词编辑、12点阵状态页并修复老虎机原转轮。
+- **原优化版完整rc3**：[optimized_rebuild完整说明](../tools/optimized_rebuild/README.md)，入口build_native.py，自备原优化版、日版及匹配字体；目标CRC32 403570B0，不能代替上行外部底稿。
+- **独立不掉血变体**：[生成说明](../tools/optimized_rebuild/variants/nohp/README.md)，输入正常rc3，目标4AB9BCEA；不加入正常版构建。
 - **离线文本校对工具**：[工作台](../tools/text_workbench/README.md)，只处理底稿和修订稿，不需要ROM、字体或模拟器。
 - 下文是**根目录日版构建**。其维护源码已有514条人物表边界、模型和译文修正，不能把新重建件冒充冻结rc8。根目录冻结IPS和侧车仍按rc8发布清单识别。
 
 > **先用独立工作副本。** 当前脚本不是无副作用的构建命令：`make_base.py` 会写基线，`cnbuild5.py` 会改写 ROM、IPS 和生成侧车。仅设置 `OUT_ROM` 并不会隔离 IPS 或侧车输出。
+
+已按[当前维护说明](../notes/发布记录_GitHub_20261023.md)精简旧转储、重复构建和覆盖缓存。源码与输入合同保留；运行器传`--mesen`或设置`MESEN_EXE`指向自备模拟器。旧私有证据路径、历史暂存ROM不保证仍存在。
+
+2026-10-22第二轮又清理未采用的Latin／16px BDF及Asar展开文件；当前维护所需Ark12 zh_cn、Unifont、Windows字体未改。Asar不是现有汉化构建依赖，确需它时从保留的`tools/asar.zip`解压到新的独立工具目录。
 
 ## 1. 本地依赖
 
@@ -28,7 +33,7 @@ python -m pip install "Pillow==12.3.0"
 | `fonts/unifont.hex.gz` | 16×16 位图字体输入；不随 Git 分发 |
 | `C:/Windows/Fonts/msyh.ttc` | 当前 `cnfont8.py` 调用路径的字体输入 |
 | `C:/Windows/Fonts/simsun.ttc` | `cnglyph.py` 的部分字体路径与兜底输入 |
-| `work_kuniokun_2mb.smc` | 由 `make_base.py` 从正确原版生成 |
+| `work_kuniokun_2mb.smc` | 可再生成副本已清理；日版根构建先执行 `make_base.py`，优化版完整构建由其入口另行生成 |
 
 `cnglyph.py` 还有字体兜底路径。不同字体文件、Pillow、构建开关均可能改变字形或布局；替换字体后产生的是新候选，不能仅按相似截图宣称复现旧版。
 
@@ -173,7 +178,7 @@ python -m unittest discover -s tests -p test_garage_runner.py -v
 
 ## rc8源码注意事项
 
-2026-10-05 根目录 IPS 与三份侧车已同步 rc8；维护机旧根目录 ROM 仍为 rc4，不用于默认验收。新源码必须在独立副本构建，或显式选择与 IPS/侧车匹配的 rc8 目标。rc8最终配置987字形、33槽、30页，采用`glyph_coloring.py`；三份生成侧车来自同批构建。不要手改slot/cell或删掉失败窗口绕过容量错误。
+2026-10-05 根目录 IPS 与三份侧车已同步 rc8；旧根目录 ROM 已在维护清理中移除。新源码必须在独立副本构建，或显式选择与 IPS/侧车匹配的 rc8 目标。rc8最终配置987字形、33槽、30页，采用`glyph_coloring.py`；三份生成侧车来自同批构建。不要手改slot/cell或删掉失败窗口绕过容量错误。
 
 片尾有独立的固定节拍/20真实共显集合/F6五格缩进处理；列车phase80原型已被日版反例否决。只有在eventAC/map27/FEB8清phase0才是最终实现。原正文PACE6与所有普通列车行为保留。
 

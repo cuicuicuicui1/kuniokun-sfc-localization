@@ -1,0 +1,17 @@
+{
+  "source": {
+    "size": 4194304,
+    "sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936",
+    "crc32": "8890880C"
+  },
+  "target": {
+    "size": 4194304,
+    "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+    "crc32": "15939ABD"
+  },
+  "patch": {
+    "filename": "UI版8890880C_转轮修复.bps",
+    "sha256": "2b973a98abc4aae221fb4e600097cf348c2d69f322b1e2008773f5ded0d1264f",
+    "size": 1149
+  }
+}

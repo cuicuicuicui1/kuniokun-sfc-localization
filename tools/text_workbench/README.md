@@ -1,6 +1,8 @@
 # 离线汉化校对工作台
 
-针对优化版重汉化 rc2 的实际文本底稿。生成的“汉化校对工作台.html”是一个独立文件：无需服务器、Python、联网、ROM 或字体。可以发给别人，双击浏览器打开。
+当前rc3修订底稿在[share-rc3](share-rc3/先读我.md)，已包含用户2026-10-15的270处修订。旧rc2底稿保留在share目录，用于验证原rc2修订。
+
+针对优化版实际构建文本生成底稿。生成的“汉化校对工作台.html”是一个独立文件：无需服务器、Python、联网、ROM 或字体。可以发给别人，双击浏览器打开。
 
 包含五张原表的1013条、优化扩展表75条，以及453个共享人物名词条。原文和当前译文分栏，单独输入修订，固定游戏标记自动保留；支持搜索、分类、已修订／已校对／待确认筛选、备注、恢复原译、导入／导出 JSON、导出 CSV 对照表。
 
@@ -12,7 +14,7 @@
 
 生成（需实际构建后的私有工作目录；只读，不构建ROM）：
 
-    python build_workbench.py --build "实际优化版构建目录" --output "汉化校对工作台.html" --catalog "catalog.json"
+    python build_workbench.py --build "实际优化版构建目录" --output "汉化校对工作台.html" --catalog "catalog.json" --base-version "优化版 v2.0-rc3" --date 2026-10-15 --base-rom-crc32 403570B0
 
 校验别人发回的修订（只需随包底稿，仍不修改构建输入或ROM）：
 
@@ -22,11 +24,11 @@
 
 ## 直接下载使用
 
-[离线HTML](share/汉化校对工作台.html)：在GitHub文件页点击Download raw file／下载原始文件，保存后双击。旁边[先读我](share/先读我.md)说明如何导出JSON发回修订；[catalog.json](share/catalog.json)是对应固定底稿。HTML不需要其他文件。
+[rc3离线HTML](share-rc3/汉化校对工作台.html)：在GitHub文件页点击Download raw file／下载原始文件，保存后双击。旁边[先读我](share-rc3/先读我.md)说明如何导出JSON发回修订；[catalog.json](share-rc3/catalog.json)是对应固定底稿。HTML不需要其他文件。
 
 无ROM检查（Python标准库＋Node，无第三方DOM依赖）：
 
-    node test_workbench.js "share/汉化校对工作台.html" "临时输出/ui-export.json"
-    python test_revisions.py "share/catalog.json" "临时输出/ui-export.json"
+    node test_workbench.js "share-rc3/汉化校对工作台.html" "临时输出/ui-export.json"
+    python test_revisions.py "share-rc3/catalog.json" "临时输出/ui-export.json"
 
 界面检查在DOM/localStorage模型中执行实际内联脚本；不是浏览器视觉、file协议或真实下载对话框验收。

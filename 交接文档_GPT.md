@@ -1,18 +1,23 @@
 # 维护交接
 
-2026-10-15。先核对[当前状态](notes/current-state.md)和Git状态，再选路线。仓库同时保留三个目标，不混用基座、补丁或即时存档。
+2026-10-23。先核对[当前状态](notes/current-state.md)、[本次仓库同步](notes/发布记录_GitHub_20261023.md)和Git状态，再选路线。普通源码重建与第三方冻结底稿UI维护是两条独立路线，不混用基座、补丁或即时存档。
 
 | 路线 | 构建入口 | 目标CRC32 |
 | --- | --- | --- |
-| 当前优化版rc2 | tools/optimized_rebuild/build_native.py | 1F37BC30 |
-| 独立不掉血版 | tools/optimized_rebuild/variants/nohp/make_nohp.py，输入正常rc2 | E3C341ED |
+| 最新第三方修订版UI维护 | ui_repair/build_ui_repair.py：36C8B784→8890880C，再用build_slot_repair.py（另需原优化版65D66D5D） | **15939ABD** |
+| 当前优化版rc3 | tools/optimized_rebuild/build_native.py | 403570B0 |
+| 独立不掉血版 | tools/optimized_rebuild/variants/nohp/make_nohp.py，输入正常rc3 | 4AB9BCEA |
 | 日版冻结rc8 | 根目录IPS／三份侧车冻结；根维护源码已有后续更改 | BD76DCA1 |
+
+用户270处修订已回插并验证，详见[rc3记录](notes/优化版重汉化_v2.0-rc3_玩家修订_20261015.md)。新校对底稿在tools/text_workbench/share-rc3；旧share底稿保留，便于校验原rc2修订。真实输入是五表候选、optimization-cn-text及name_hanzi，不能只改生成cn_translation。该工作台绑定普通rc3；第三方后续台词只存在于冻结底稿，不用工作台全量覆盖它。
+
+已按后期维护要求删除旧实验归档、重复工程及大量原始运行数据。先读[公开维护说明](notes/发布记录_GitHub_20261023.md)，不要照历史路径恢复已删除的文件；当前源码、输入合同、补丁与验收摘要保留。
 
 ## 最短接手顺序
 
 1. [AGENTS.md](AGENTS.md)、[当前状态](notes/current-state.md)。
-2. [优化版源码说明](tools/optimized_rebuild/README.md)、[rc2 HUD修复](notes/优化版重汉化_v2.0-rc2_HUD修复_20261013.md)。
-3. [补丁应用](patches/optimized-v2.0-rc2/README.md)、[验收JSON](notes/优化版重汉化_v2.0-rc2_HUD验收.json)。
+2. 最新UI读[末级维护源码](tools/optimized_rebuild/ui_repair/README.md)、[转轮修复](notes/老虎机转轮乱码修复_20261018.md)；普通rc3读[完整构建](tools/optimized_rebuild/README.md)。
+3. [最新维护补丁](patches/optimized-rc3-slot-20261018/README.md)或[普通rc3补丁](patches/optimized-v2.0-rc3/README.md)，分别核对源／目标SHA。
 4. 做文本校对时读 [工作台](tools/text_workbench/README.md)，修订稿先校验为提案，再合入真实候选／扩展表／姓名输入。
 5. 处理日版历史时读 [rc8记录](notes/修复记录_GPT_v39-rc8_片尾与全量审校.md)、[源码导航](docs/code-map.md)和[构建文档](docs/build-and-test.md)。
 
@@ -29,7 +34,7 @@
 
 所有声明绑定ROM SHA，受控显示／剧情夹具、CPU模型、自然按键和硬件分别标记。[当前状态](notes/current-state.md)列出验收。未自然全故事通关／实体机复测／七演员双人组合穷举／旧正常存档兼容。
 
-旧optimized_port/v1.5有玩家反例，仅作历史，不参与rc2构建。根目录冻结日版rc8不是优化版回归目标；root cnbuild5.py的后续边界修正不冒充旧冻结产物。
+旧optimized_port/v1.5有玩家反例，仅作历史，不参与rc3构建。根目录冻结日版rc8不是优化版回归目标；root cnbuild5.py的后续边界修正不冒充旧冻结产物。
 
 校对工作台可直接分享HTML；暂存是浏览器本机数据，必须导出JSON才会带上修改。代码／DOM模型及修订文件验证通过，实际浏览器视觉尚未验收。不要把校对提案当成已经回插的ROM。
 

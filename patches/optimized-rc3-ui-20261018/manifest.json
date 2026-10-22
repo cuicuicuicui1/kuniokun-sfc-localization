@@ -1,0 +1,72 @@
+{
+  "status": "pass",
+  "date": "2026-10-18",
+  "input": {
+    "filename": "初代热血硬派_优化版汉化_v2.0-rc3_20261017_修订版.sfc",
+    "size": 4194304,
+    "crc32": "36C8B784",
+    "sha256": "bd79235a808b9fa00121a49dcd22bb9cc6ea84ae4298281ad1b2b2b5a0b47fd8"
+  },
+  "output": {
+    "filename": "初代热血硬派_优化版汉化_v2.0-rc3_UI修复_20261018.sfc",
+    "size": 4194304,
+    "crc32": "8890880C",
+    "sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936"
+  },
+  "patch": {
+    "filename": "老虎机与状态12点阵修复.bps",
+    "sha256": "2d79ba252244ff25b17abb3dc4b8b525874a4debf09a8c8452b6b58f887cf2c0",
+    "bytes": 41493
+  },
+  "tests": {
+    "model": {
+      "status": "pass",
+      "sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936",
+      "native_choice_queue_cases": 54,
+      "old_stale_options_fail_new_pass": {
+        "old": false,
+        "new": true
+      },
+      "native_status_labels": 15,
+      "native_status_player_condition_cases": 6,
+      "native_equipment_cases": 333,
+      "original_message_pointer_and_text_bytes": "unchanged",
+      "changed_bytes": 25325,
+      "scope": "Native CPU/queue consumer model; no PPU timing claim"
+    },
+    "status_runtime_cases": 6,
+    "status_open_close_cycles": 12,
+    "conditions": [
+      "普通",
+      "醉酒",
+      "麻痹"
+    ],
+    "display_changes": "condition + long/empty equipment + low/high numbers between native menu openings",
+    "emulator": "Dedicated Mesen 2.1.1; Snes9x 2002 7.2.0 for supplied version0001 native save",
+    "cold_boot_frames": 10500,
+    "choice": "Native queue / stale VRAM adversary / left-right / confirm / exit passed",
+    "supplied_state_route": "Original yes-no interaction -> ordinary menu STATUS -> exit; cold-boot compatibility separate",
+    "gameplay_after_status": {
+      "pixel_sha256": "5eb97524afb7d197569fd5d17888ca92cedcd35bf3b1aa11f6eb0ff7b0b0aa9f",
+      "ram_sha256": "59fc87ba5d8b9197c7e2494153f88f67fe98b479a2265a3abe70576756e7d6da",
+      "comparison": "identical to unpatched supplied base at frame1600"
+    },
+    "negative_checks": [
+      "BPS wrong base",
+      "BPS truncated",
+      "BPS corruption",
+      "builder wrong base",
+      "builder repeated patched ROM",
+      "builder pre-edit rc3"
+    ],
+    "repeated_build": "private builder twice and maintained builder twice byte-identical",
+    "patch_replay": "byte-identical"
+  },
+  "preserved": "All supplied external dialogue/pointers, parameter1F582A, original input ROM and save unchanged; no gameplay/HUD changes",
+  "not_tested": [
+    "hardware",
+    "natural full-story clear",
+    "all two-player NPC combinations"
+  ],
+  "fixture_boundary": "Status conditions, values and equipment are controlled display parameters; Riki selection restored to original controller after drawing. Mesen choice ID and stale VRAM are controlled. No story-success or PC writes."
+}

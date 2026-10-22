@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-23",
+  "status": "pass",
+  "scope": "Publication of existing frozen artifacts; source rebuild and CPU/queue/workbench models, no new emulator run",
+  "targets": {
+    "rc3": {
+      "crc32": "403570B0",
+      "sha256": "18485c43302e52159e5a710b203e62d427e73ac516a09338e2b47f5b0c3b81fb"
+    },
+    "rc3_nohp": {
+      "crc32": "4AB9BCEA",
+      "sha256": "d27a2b98ca9f8a4f0a8e7cca0f775721023e1e8aee7e61105de2858b42740613"
+    },
+    "ui_latest": {
+      "crc32": "15939ABD",
+      "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb"
+    }
+  },
+  "checks": [
+    {
+      "name": "public_file_types_syntax_json_links",
+      "status": "pass"
+    },
+    {
+      "name": "staged_UI_two_stage_build",
+      "status": "pass",
+      "crc32": "15939ABD",
+      "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb"
+    },
+    {
+      "name": "ui_consumer_models",
+      "status": "pass",
+      "seconds": 1.71
+    },
+    {
+      "name": "slot_consumer_models",
+      "status": "pass",
+      "seconds": 1.12
+    },
+    {
+      "name": "rc3_native_build",
+      "status": "pass",
+      "seconds": 2.38
+    },
+    {
+      "name": "rc3_independent_readback",
+      "status": "pass",
+      "seconds": 0.53
+    },
+    {
+      "name": "rc3_scope_models",
+      "status": "pass",
+      "seconds": 3.43
+    },
+    {
+      "name": "rc3_hud_models",
+      "status": "pass",
+      "seconds": 0.42
+    },
+    {
+      "name": "five_BPS_replays_and_negative_cases",
+      "status": "pass",
+      "replays": 5,
+      "rejections": 15
+    },
+    {
+      "name": "portable_apply_rc3",
+      "status": "pass",
+      "seconds": 0.27
+    },
+    {
+      "name": "safe_apply_latest",
+      "status": "pass",
+      "seconds": 0.28
+    },
+    {
+      "name": "workbench_rebuild",
+      "status": "pass",
+      "seconds": 0.29
+    },
+    {
+      "name": "workbench_DOM_models",
+      "status": "pass",
+      "seconds": 0.47
+    },
+    {
+      "name": "workbench_revision_negatives",
+      "status": "pass",
+      "seconds": 0.25
+    }
+  ],
+  "native_readback": {
+    "total": 26,
+    "PASS": 24,
+    "WARN": 2,
+    "FAIL": 0,
+    "warn_scope": [
+      "inherited control-sequence differences",
+      "optimization-original character parameter differences relative to Japanese"
+    ]
+  },
+  "ui_model": {
+    "status": "pass",
+    "sha256": "47685520673b973b8337e3235f299fdeda5805054b4031b2a0f154b4d2da5936",
+    "native_choice_queue_cases": 54,
+    "old_stale_options_fail_new_pass": {
+      "old": false,
+      "new": true
+    },
+    "native_status_labels": 15,
+    "native_status_player_condition_cases": 6,
+    "native_equipment_cases": 333,
+    "original_message_pointer_and_text_bytes": "unchanged",
+    "changed_bytes": 25325,
+    "scope": "Native CPU/queue consumer model; no PPU timing claim"
+  },
+  "slot_model": {
+    "status": "pass",
+    "sha256": "facad37c1e98bef1508fe5e1fec2f0ffcfa86e1ac779ba7a0f5007f0bb7688fb",
+    "queue_pressure_cases": 72,
+    "actual_reel_old_fails_new_pass": {
+      "old": false,
+      "new": true
+    },
+    "native_reel_symbol_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "yesno_reels_switches": 40,
+    "protected_status_title_tile": "unchanged",
+    "scope": "Original 65816 consumers and modeled NMI queue; not PPU timing"
+  },
+  "workbench": {
+    "entries": 1541,
+    "fingerprint": "fe03f60f9c54ba731605a4b34b0e6ce17249e0366977f39fc4f268e0ba32f819",
+    "dom_groups": 9,
+    "revision_rejection_cases": 12,
+    "catalog_and_html_rebuilt_identically": true
+  },
+  "private_inputs_unchanged": true,
+  "temporary_build_removed": true,
+  "not_run": [
+    "new emulator route",
+    "hardware",
+    "natural full story",
+    "real browser visual QA"
+  ],
+  "validated_code_and_patch_sha256": {
+    ".gitignore": "5d15158c80c663eba6519d80f96cdc63bff878c78b7846ab7a1fc6db94195913",
+    "notes/优化版重汉化_v2.0-rc3_玩家修订_20261015.json": "f2f1578c484472aac99575245d1ffe95e102930ac1c31795a603c774d78b600b",
+    "tools/optimized_rebuild/apply_patch.py": "6da9c529fe00f9ecdb3e34932a404ed461560644553bdf237cc1502991f936fd",
+    "tools/optimized_rebuild/inventory-worker/candidate-translations.json": "a8bc8d05a7ed2bef0c9050fdc9cfe5e87b855e9db413fd8cf2c9f44e14fa2d46",
+    "tools/optimized_rebuild/optimization-cn-text.json": "2cc1aa12251919e929a8125153d913e347f316ed42fe2b6d7fa5c9d945702596",
+    "tools/optimized_rebuild/source/cn_translation.json": "cc573cd92a4c05634025f465a492c899053719b48a5965acd501aac8239382be",
+    "tools/optimized_rebuild/source/name_hanzi.json": "57a155efc389069d971b20146d6d22fcc3191513b09be301e56a6eeaccbd0603",
+    "tools/optimized_rebuild/variants/nohp/make_nohp.py": "ab9323846ad355baa71db782f06f1d28aff789d6d0a945a88df3a2d7499cf903",
+    "tools/text_workbench/build_workbench.py": "3d5bacab7a925a58bb0879d2009e2c3acb11e1deb0581e64fdfbaea6e56865fc",
+    "patches/optimized-v2.0-rc3/apply_patch.py": "6da9c529fe00f9ecdb3e34932a404ed461560644553bdf237cc1502991f936fd",
+    "patches/optimized-v2.0-rc3/bps_codec.py": "e592b2f19638392bf99208812372ed34916f68ff44738d90db4393e7c120d512",
+    "patches/optimized-v2.0-rc3/optimized-v2.0-rc3.bps": "3bf0b21ab4c8a1afce7c43609ec912a68a06b342b5c1405ff56a9fa339be5c5a",
+    "patches/optimized-v2.0-rc3/release-manifest.json": "03526d8ce9149793f5dc1967f9fab05a0c5bbd580247c9b56cdb85f9a9dd60f0",
+    "patches/optimized-v2.0-rc3-nohp/apply_patch.py": "6da9c529fe00f9ecdb3e34932a404ed461560644553bdf237cc1502991f936fd",
+    "patches/optimized-v2.0-rc3-nohp/bps_codec.py": "e592b2f19638392bf99208812372ed34916f68ff44738d90db4393e7c120d512",
+    "patches/optimized-v2.0-rc3-nohp/optimized-v2.0-rc3-nohp.bps": "2bcc6b1fcaa2717679b7b9c0c913f4d72dd57a0dfbf0ba7ecbf64ebcce0240f0",
+    "patches/optimized-v2.0-rc3-nohp/release-manifest.json": "1e9546362cab8c545e95d9cb8af3cae3422b048504fe5b51f097ccc1655842f5",
+    "patches/optimized-rc3-ui-20261018/manifest.json": "c0507653d3026aeb8cbbb3ea802f82420a4bc1719af78ad6ef92186c5a7e5b4b",
+    "patches/optimized-rc3-ui-20261018/老虎机与状态12点阵修复.bps": "2d79ba252244ff25b17abb3dc4b8b525874a4debf09a8c8452b6b58f887cf2c0",
+    "patches/optimized-rc3-slot-20261018/UI版8890880C_转轮修复.bps": "2b973a98abc4aae221fb4e600097cf348c2d69f322b1e2008773f5ded0d1264f",
+    "patches/optimized-rc3-slot-20261018/UI版8890880C_转轮修复.json": "0d7eb3bbf34a1cb3f8890980e5785e402347b6d687451c0090472f866a4556c7",
+    "patches/optimized-rc3-slot-20261018/verification.json": "f0839bb054bb32aba6dc7191599d1bafab1be51678d603880a1bb2ac413a49a2",
+    "patches/optimized-rc3-slot-20261018/外部修订版36C8B784_完整UI与转轮修复.bps": "020913564fbc8e553569b3d647138f679a28c7ee33c723610aa7d93aef5dc88b",
+    "patches/optimized-rc3-slot-20261018/外部修订版36C8B784_完整UI与转轮修复.json": "c3e92b633de37416035d584fbc6599611ba6d9f40c97a0c66ea103ce7e0e052c",
+    "tools/optimized_rebuild/ui_repair/build_slot_repair.py": "42926581a6a45846e4c24e328a07c8544efe92613d951097db27540d5d01204d",
+    "tools/optimized_rebuild/ui_repair/build_ui_repair.py": "467f62c53a42304b5823650969ce38dded752edcca679ef004c854b8424925a6",
+    "tools/optimized_rebuild/ui_repair/input-contract.json": "c0234fd37375856668faabba9cefaffe079518300563bbf951b078118b60f210",
+    "tools/optimized_rebuild/ui_repair/mesen_choice12.lua": "4e3a339933fe60c3b1642cd3d55a629fe39d7725efb54b6a911377d5cac5d8e6",
+    "tools/optimized_rebuild/ui_repair/mesen_slot_reels.lua": "c3254e5b71ed8f6788939a6b263fd8d12b46b9bb51b355bd7bc84ae7a03b4868",
+    "tools/optimized_rebuild/ui_repair/mesen_status12.lua": "8b75a8daf1dc88db7e58aa34270050613d44fe3e68656a1e8c62c509aa582768",
+    "tools/optimized_rebuild/ui_repair/slot_reels_patch.py": "287a41d415a60576974f1b95c0e9579d8607264b53002860bd3134985f7c1cd2",
+    "tools/optimized_rebuild/ui_repair/status12_patch.py": "5c147218b883ea24b8cbb1ba7bf6eee83009b16993ff6374eff7634c53047499",
+    "tools/optimized_rebuild/ui_repair/test_slot_repair.py": "8aec26a710403a0fce7fe49f734585ef29e80304b1a8742da89909d5561814fc",
+    "tools/optimized_rebuild/ui_repair/test_ui_repair.py": "477ef4a26b99ee7a360932724b92acb4a0729f4e3845cac3c6df14b7a32462e6",
+    "tools/optimized_rebuild/ui_repair/ui_asm.py": "1088386c81b070bfc9852b0f24e5ceb8e5fb922f02be4eefa9efce3cf00350df",
+    "tools/optimized_rebuild/ui_repair/ui_display_patch.py": "283f85832e78b41e325b4c4db6d5333f3f62271277d3b6d356050c331f86062a",
+    "tools/text_workbench/share-rc3/catalog.json": "cd12eaef09167e4eedbffbdfe9791fee1f4d9032f92d6276582940a56bd159db",
+    "tools/text_workbench/share-rc3/汉化校对工作台.html": "00bcb9085fd35426a246bba28c383b23e246ff2a5a289ac9e48122d84b5ea83e"
+  }
+}
